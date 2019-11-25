@@ -1,0 +1,162 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{url}
+\usepackage{tocloft}             % Paket für Table of Contents
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,    
+    linkcolor=black,    % Farbe der internen Links (u.a. Table of Contents)
+    urlcolor=black,    % Farbe der url-links
+    citecolor=black} % Farbe der Literaturverzeichnis-Links
+
+\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+\usepackage{draftwatermark} % Wasserzeichen ``Entwurf'' 
+\SetWatermarkText{}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{blue}{#1}}
+
+
+\begin{document}
+    \hspace{0.87\textwidth}
+    \begin{minipage}{120pt}
+        \vspace{-1.8cm}
+      \includegraphics[width=80pt]{../../logo.pdf}
+        \centering
+        \small Zusammenkunft aller Physik-Fachschaften
+    \end{minipage}
+    \begin{center}
+        \huge{Positionspapier der Zusammenkunft aller Physik-Fachschaften}\vspace{.25\baselineskip}\\
+        \normalsize
+    \end{center}
+    \vspace{1cm}
+
+Die ZaPF bef"urwortet den von Bund und Ländern im November 2018 beschlossenen Aufbau einer Nationalen Forschungsdateninfrastruktur (NFDI).
+Derzeit läuft die erste von drei Ausschreibungsrunden für die Konsortien. 
+Diese sollen sicherstellen, dass Dienste und Strukturen des Forschungsdatenmanagements, welche bereits  verfügbar sind und in die NFDI integriert oder neu geschaffen werden sollen, den Bedarfen der jeweiligen Fachgemeinschaft gerecht werden. 
+Pro Förderrunde werden aus allen Diziplinen zehn Konsortien gefördert. 
+
+Aktuell bewerben sich aus dem Bereich der Physik vier Konsortien, die jedoch selbst zusammen nur Teilbereiche der Physik abdecken. 
+Derzeit findet innerhalb der verschiedenen Fachgemeinschaften ein Diskussionsprozess darüber statt, wie mit den Herausforderungen, die sich hieraus ergeben, umgegangen werden soll. 
+Dieser Diskussionsprozess wird durch die Deutsche Physikalische Gesellschaft (DPG) kanalisiert.
+    
+Die nachfolgende Position der ZaPF trägt studentische Perspektiven zur Debatte bei.
+
+\section{Ein Konsortium für die Physik}
+
+Die ZaPF spricht sich für die Einrichtung eines Konsortiums für die gesamte Physik aus. 
+Das Ziel der NFDI ist die Einrichtung einer Dateninfrastruktur für die gesamte Forschung. 
+Eine weitere Unterteilung innerhalb der Physik erachtet die ZaPF als Wettbewerbsnachteil im Ausschreibungsprozess der DFG gegen"uber dem gemeinsamen Auftreten anderer Disziplinen im Bewerbungsprozess und daher als kontraproduktiv.
+
+
+\section{Lehre}
+Um eine nachhaltige Nutzung der NFDI zu erreichen, ist es sinnvoll, eine frühe Einbindung in die Lehre sicherzustellen. 
+Dazu fordert die ZaPF, dass die Anwendung und der Umgang mit der NFDI in den Übungen und Praktika des Grundlagenstudiums geübt wird. 
+Dazu sollte die NFDI eine geeignete Testumgebung zur Verfügung stellen, die die Funktionalität der NFDI emuliert.
+Dies fördert sowohl das wissenschaftliche Arbeiten im Studium, als auch die Akzeptanz und Nutzungskompetenz der NFDI bei jungen Forschenden. 
+Um dies weiter zu fördern, k"onnen Musterdaten, Beispiele und "Ubungsaufgaben universit"ats"ubergreifend gesammelt und als Open Educational Ressources zur Verfügung gestellt werden.
+
+Die gute wissenschaftliche Praxis bei der Erstellung von Abschlussarbeiten kann durch die Verwendung der NFDI unterstützt werden, indem die Aufbereitung der Daten nach dem FAIR-Prinzip (Findability, Accessibility, Interoperability und Reusability)\footnotemark\footnotetext{The FAIR Guiding Principles for scientific data management and stewardship\\ \url{https://doi.org/10.1038/sdata.2016.18}} geübt und institutionalisiert wird. 
+Daher sollte die NFDI Möglichkeiten der effizienten Nutzung bereitstellen, siehe dazu auch Abschnitt \ref{sec:schnittsstelle}. 
+
+\section{Zugang}
+\label{sec:zugang}
+
+Der Zugang zur NFDI soll den \glqq FAIR Guiding Principles for scientific data management and stewardship\grqq\ entsprechen\footnotemark[1].  
+Lesezugang sollte zu den ver"offentlichten Daten ohne Account m"oglich sein. 
+Um Schreibzugang f"ur Studierende zu erm"oglichen, sollte auf die OAuth-Systeme der Universit"aten zur"uckgegriffen werden. 
+Um internationale Kooperationen zu erleichtern, kann auch ein Schreibzugang für eduroam-Nutzende geschaffen werden.
+
+Die in der NFDI hinterlegten Daten sollen im Allgemeinen mit einer offenen Lizenz wie z.B. der CreativeCommons 4.0 Attribution-ShareAlike versehen werden\footnote{\url{https://creativecommons.org/licenses/by-sa/4.0/}}. Zum Schutz unpublizierter Daten kann von der offenen Lizenz abgewichen werden. Außerdem ist die Offenheit bei beziehbaren Daten gemäß den geltenden Datenschutzbestimmungen einzuschränken. Au"seruniversit"aren Forschungseinrichtungen und forschungsnahen Unternehmen sollte der Zugang zur NFDI erm"oglicht werden, um die auftretenden Synergieeffekte zum gesellschaftlichen Fortschritt zu nutzen.
+
+
+\section{Dienste und Sicherheit}
+
+Sicherheit muss bequem sein. 
+Wenn Sicherheitsvorkehrungen unangenehm oder aufw"andig sind, werden sie nicht genutzt oder es werden Umgehungen der Schutzfunktionen gefunden.
+
+Um die Unabh"angigkeit der Wissenschaft von kommerziellen Unternehmen und die Kollaboration zwischen den Nutzenden zu gew"ahrleisten, sollte die NFDI dar"uber hinaus eigene Dienste zum kollaborativen Arbeiten betreiben. 
+Mindestens folgende Dienste sollten angeboten werden: 
+Versionskontrolle, Daten-, Kontaktdaten- und Kalendereintrags"ubermittlung, Kommunikation (Messenger, Videokonferenz), Ver"offentlichung, Peer Review, Umfragen und Abstimmungen, Continuous Integration und kollaborative Dokumentenbearbeitung. 
+Dabei soll eine hohe Verf"ugbarkeit gew"ahrleistet werden.
+
+Diese Dienste sollten "uber sichere und benutzerfreundliche Protokolle angeboten werden, unter Nutzung einer geeigneten PKI zur Zertifizierung und Verschlüsselung.
+Bei allen Diensten sollen Integrit"at, Authentizit"at und -- soweit geboten -- Vertraulichkeit garantiert werden. 
+Explizite Nutzerfreundlichkeit und Sicherheitsma"snahmen werden regelm"a"sig in geeigneter Weise "uberpr"uft.
+
+
+\section{Schnittstelle und Struktur}
+\label{sec:schnittsstelle}
+
+Um eine effiziente Nutzung einer NFDI zu erm"oglichen, m"ussen standardisierte Tools verf"ugbar sein, die eine Darstellung eines Datensatzes in geeigneter Form erm"oglichen. Als Hilfe f"ur die Nutzenden sollten diese als freie Software entwickelt und entsprechend dokumentiert werden. 
+
+Die Datens"atze in einer NFDI m"ussen mit einem Mindestsatz an Metadaten versehen werden, die deren Entstehung und Zuordnung zu einem Forschungsfeld nachvollziehbar machen. Dies macht einerseits deren Herkunft nachvollziehbar, andererseits gew"ahrleistet diese Forderung das Kriterium der Auffindbarkeit (Findability) im Sinne von FAIR.
+
+F"ur die weitergehende Analyse der Daten muss es m"oglich sein, die NFDI "uber entsprechende Schnittstellen an von Nutzenden entwickelte Programme sowie in der Community etablierte Anwendungen anzubinden.
+
+Dies sichert die Zugänglichkeit (Accessibility) und Interoperabilität (Interoperability) im Sinne von FAIR.
+Mindestens sollten Schnittstellen f"ur die freien Programmiersprachen C, Python, R, und octave vorhanden sein.
+
+Es muss sichergestellt werden, dass die Integrit"at der in die NFDI eingetragenen Datenstrukturen gew"ahrleistet ist. 
+Dazu m"ussen entsprechende Algorithmen zur Validierung der Datenstruktur entwickelt und eingesetzt werden. 
+Nach M"oglichkeit soll eine Verifikation der Daten vorgenommen werden. 
+In dieser Hinsicht w"are es w"unschenswert, die Wiederholung von Studien zur Verifizierung zu unterst"utzen. 
+
+Die Daten der NFDI sollten durch die Forschenden, die die Daten zur Verfügung stellen, durch weitere differenzierte Metadaten ergänzt und dokumentiert werden. 
+Nur hierdurch kann die Vergleichbarkeit und Wiederverwendbarkeit von Daten aus unterschiedlichen Quellen und damit deren Nachnutzung (Reusability) sichergestellt werden. Dies kann für Replikationsstudien und zuk"unftige Meta-Forschung an den Daten der NFDI von Nutzen sein. 
+Außerdem erleichtert es für Forschende auf frühen Karrierestufen das Verständnis der Datensätze, sodass das Angebot der NFDI ein breiteres Nutzungsspektrum abdecken kann. 
+
+\vfill
+\begin{flushright}
+	Verabschiedet am 3.11.2019 in Freiburg.
+\end{flushright}
+
+
+\end{document}
+
