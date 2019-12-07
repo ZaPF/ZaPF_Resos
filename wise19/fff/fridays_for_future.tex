@@ -1,0 +1,90 @@
+\documentclass[a4paper]{scrartcl}
+\usepackage[utf8]{inputenc}
+% Sprache und Encodings
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+
+
+% Typographisch interessante Pakete
+\usepackage{microtype} % Randkorrektur und andere Anpassungen
+
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,	% Farbe der internen Links (u.a. Table of Contents)
+  urlcolor=black,	% Farbe der url-links
+  citecolor=black} % Farbe der Literaturverzeichnis-Links
+
+% Absaetze nicht Einruecken
+\setlength{\parindent}{0pt} \setlength{\parskip}{2pt}
+
+% Formatierung auf A4 anpassen
+\usepackage{geometry}
+
+\usepackage{titlesec}	% Abstand nach Überschriften neu definieren
+\titlespacing{\subsection}{0ex}{3ex}{-1ex}
+\titlespacing{\subsubsection}{0ex}{3ex}{-1ex}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+
+\newcommand{\add}[1]{
+	\textcolor{blue}{#1}}
+
+\begin{document}
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+  \vspace{-1.8cm}
+  \includegraphics[width=80pt]{../logo.pdf}
+  \centering
+  \small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+\begin{center}
+  \vspace{1cm}
+  \huge{Resolution zur Solidarisierung mit Fridays for Future} \\
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+    Die Bewegung Fridays for Future setzt sich für die Anerkennung wissenschaftlicher Tatsachen bezüglich des Klimawandels innerhalb der Bevölkerung ein. Als Zusammenschluss physikalischer Fachschaften unterstützt die ZaPF dieses gesellschaftliche Engagement wie folgt:\\
+    Die ZaPF solidarisiert sich mit der Bewegung \glqq{}Fridays For
+    Future\grqq{} und ruft dazu auf, ihre Forderungen\footnote{\url{https://fridaysforfuture.de/forderungen/} (Version vom 3.11.2019)} umzusetzen.
+
+
+    Wir fordern von allen (Hoch)Schulen, die nötigen Freiräume zu schaffen, um \\
+    Kindern, Jugendlichen und Erwachsenen die Teilnahme an Protesten zu
+    ermöglichen.  Weiter verurteilen wir alle Repressionen gegen die an den
+    Protesten Teilnehmenden. Dies betrifft sowohl die Androhung, als auch die
+    konkrete Anwendung solcher Maßnahmen.
+
+    Als Beispiel für eine verträgliche
+    Regelung möchten wir hier die Einbeziehung der Personensorgeberechtigten
+    bei der Freistellung vom Unterricht zur Teilnahme an Demonstrationen
+    erwähnen, wie sie am Gymnasium Markranstädt praktiziert wird.
+
+    Außerdem rufen wir alle Hochschulangehörigen dazu auf, die Proteste zu
+    unterstützen, zum Beispiel im Rahmen der Public Climate
+    School\footnote{\url{https://studentsforfuture.info/public-climate-school/}}, und
+    sich dafür einzusetzen, Studierenden die oben erwähnten Freiräume zu
+    gewähren.
+
+\vfill
+\begin{flushright}
+	Verabschiedet am 3.11.2019 in Freiburg
+\end{flushright}
+
+\end{document}
