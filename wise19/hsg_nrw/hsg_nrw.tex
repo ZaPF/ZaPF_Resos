@@ -1,0 +1,83 @@
+\documentclass[a4paper]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage{csquotes}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+\usepackage[left=4cm, right=4cm]{geometry} 
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{url}
+\usepackage{tocloft}             % Paket für Table of Contents
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black,    % Farbe der internen Links (u.a. Table of Contents)
+	urlcolor=black,    % Farbe der url-links
+	citecolor=black} % Farbe der Literaturverzeichnis-Links
+
+\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+
+\begin{document}
+
+  \hspace{0.87\textwidth}
+  \begin{minipage}{120pt}
+  	\vspace{-1.8cm}
+  	\includegraphics[width=80pt]{../logo.pdf}
+  	\centering
+  	\small Zusammenkunft aller Physik-Fachschaften
+  \end{minipage}
+  \begin{center}
+    \vspace{4cm}
+    \huge{Unterstützung des offenen Briefs zur Novellierung des Hochschulgesetzes in NRW}\vspace{.25\baselineskip}\\
+  	\normalsize
+  \end{center}
+  \vspace{2cm}
+
+%%%% Text des Antrages zur veröffentlichung %%%%
+
+Die ZaPF schließt sich der im offenen Brief des Bündnisstreffens, bestehend aus
+NRW-Fachschaften, der GEW und dem SDS, geäußerten Kritik an der Novellierung
+des Hochschulgesetzes NRW ohne Einschränkung an und trägt diesen als
+erstzeichnende Organisation mit.
+
+\vfill
+\begin{flushright}
+	Verabschiedet am 3.11.2019 in Freiburg
+\end{flushright}
+
+\newpage
+
+\includegraphics[width=\textwidth]{brief.pdf}
+
+\end{document}
