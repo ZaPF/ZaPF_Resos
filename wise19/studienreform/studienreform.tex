@@ -1,0 +1,85 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+
+\usepackage{fixltx2e}
+\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}                        % Ersatz fuer Computer Modern-Schriften
+\usepackage{hfoldsty}
+
+\usepackage[scaled=0.81]{helvet} 	% Schriftart
+
+\usepackage{url}
+\usepackage{tocloft} 			% Paket für Table of Contents
+% \usepackage[left=5cm, right=5cm]{geometry}
+
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,	% Farbe der internen Links (u.a. Table of Contents)
+  urlcolor=black,	% Farbe der url-links
+  citecolor=black} % Farbe der Literaturverzeichnis-Links
+
+\usepackage{mdwlist} 	% Änderung der Zeilenabstände bei itemize und enumerate
+
+\parindent 0pt 				% Absatzeinrücken verhindern
+\parskip 12pt 				% Absätze durch Lücke trennen
+
+\usepackage{titlesec}	% Abstand nach Überschriften neu definieren
+\titlespacing{\subsection}{0ex}{3ex}{-1ex}
+\titlespacing{\subsubsection}{0ex}{3ex}{-1ex}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+
+\begin{document}
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+  \vspace{-1.8cm}
+  \includegraphics[width=80pt]{../logo.pdf}
+  \centering
+  \small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+\begin{center}
+  \vspace{1cm}
+  \huge{Beschluss zum Studienreform-Forum} \\
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+ Die ZaPF beschließt für das Studienreforms-Forum im Rahmen der DPG Didaktik Frühjahrstagung 2020 in Bonn als Mitorganisator (evtl. gemeinsam mit KFP und jDPG) aufzutreten.  Dazu wird eine Arbeitsgruppe mit einem Mandat zur Planung und Umsetzung der Veranstaltung gegründet. Diese stimmt sich mit dem Ständigen Ausschuss aller Physik-Fachschaften und dem Kommunikations-Gremium ab und besteht aus Amr El Miniawy, Daniela Kern-Michler, Manuel Längle und Stefan Brackertz. Zusätzlich bekommt diese Gruppe das Mandat einen Workshop mit der KFP zur Vorstellung der bisherigen Ergebnisse des Studienreform-Forums, welcher an Pfingsten stattfinden soll, zu planen und durchzuführen.
+
+\vspace{1cm}
+
+\vfill
+\begin{flushright}
+Verabschiedet am 3.11.2019 in Freiburg.
+\end{flushright}
+
+
+
+
+\end{document}
