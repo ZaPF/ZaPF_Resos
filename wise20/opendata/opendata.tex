@@ -1,0 +1,123 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm]{geometry}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{url}
+\usepackage{tocloft}             % Paket für Table of Contents
+
+%\usepackage{xcolor}
+\usepackage{ulem,xspace,xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,    % Farbe der internen Links (u.a. Table of Contents)
+    urlcolor=black,    % Farbe der url-links
+    citecolor=black} % Farbe der Literaturverzeichnis-Links
+
+\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+\usepackage{draftwatermark} % Wasserzeichen ``Entwurf''
+\SetWatermarkText{}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+
+\usepackage{enumitem}
+\setenumerate[1]{label=\thesection.\arabic*.}
+
+\def\zapf{ZaPF}
+
+\newif\ifcomments
+\commentsfalse
+\commentstrue
+
+\begin{document}
+  \hspace{0.87\textwidth}
+  \begin{minipage}{120pt}
+  	\vspace{-1.8cm}
+  	\includegraphics[width=80pt]{../logo.pdf}
+  	\centering
+  	\small Zusammenkunft aller Physik-Fachschaften
+  \end{minipage}
+  \begin{center}
+    \huge{Positionspapier zu FAIR und Open Data im physikalischen Praktikum}\vspace{.25\baselineskip}\\
+  	\normalsize
+  \end{center}
+  \vspace{1cm}
+    %
+    % \begin{center}
+    %     \normalsize
+    % \end{center}
+    % \vspace{1cm}
+
+%%%% Text des Antrags %%%%
+
+Die ZaPF spricht sich dafür aus, dass Studierende im Rahmen der Praktika bereits ab dem Bachelor-Studium lernen, 
+wie Daten nach den FAIR-Prinzipien \footnote{\url{https://www.go-fair.org/fair-principles/}} erhoben, gespeichert und veröffentlicht werden. 
+Diese Kompetenz ist Voraussetzung für datenbasierte Zusammenarbeit, etwa im Kontext der NFDI-Initiative, in der die ZaPF große Chancen sieht \footnote{\url{https://zapfev.de/resolutionen/wise19/nfdi/nfdi.pdf}}. 
+Sie sind unter anderem in den Arbeitsgebieten der Einbindung in die Lehre und Ausbildung der Anträge der NFDI-Konsortien \textit{NFDI4Phys} \footnote{\url{https://www.dfg.de/download/pdf/foerderung/programme/nfdi/absichtserklaerungen_2020/2021_nfdi_4phys.pdf}},\textit{PUNCH4NFDI} \footnote{\url{https://www.dfg.de/download/pdf/foerderung/programme/nfdi/absichtserklaerungen_2020/2020_nfdi_punch4nfdi.pdf}} oder \textit{FAIRMAT} \footnote{\url{https://doi.org/10.5281/zenodo.4074973}}
+und vielen anderen formuliert. \\ 
+
+Studierende sollten nach Möglichkeit schrittweise in die vollständige, nachvollziehbare und korrekte Daten- und Metadatenerfassung eingeführt werden.
+Darüber hinaus sollen Studierende den Umgang mit langfristig verwalteten Datenspeichern, soge-nannten Repositorien, kennenlernen, um dadurch in die langfristige Speicherung von Forschungsdateneingeführt zu werden. 
+Neben offenen Repositorien wie Zenodo \footnote{\url{https://www.zenodo.org}} können dies auch universitätseigene Datenrepositorien wie z.B. \footnote{Beispielsweise gibt es an der Universität Göttingen das Portal GRO.Data: \url{https://data.goettingen-research-online.de/}} sein. 
+Um den Wert offener Datenquellen kennenzulernen, sollen diese Repositorien auch dazu verwendet werden, fremde Daten nachzunutzen. 
+Hierbei sollte insbesondereauf Aspekte wie Lizenzen oder korrekte Datenzitation eingegangen werden.
+In Grund- und Anfänger:innenpraktika ist diese Praxis ein "Grundstein für gutes wissenschaftliches Arbeiten" \footnote{\url{https://zapfev.de/resolutionen/sose17/Praktika/PosPapier_Praktika.pdf}}, 
+wohingegen sie besonders in umfangreicheren Fortgeschrittenenpraktika als Vorbereitung auf "die aktuelle Laborpraxis" und "das korrekte wissenschaftliche Arbeiten" \footnote{\url{https://zapfev.de/resolutionen/sose19/Fortgeschrittenenpraktika/Fortgeschrittenenpraktika.pdf}} hilfreich ist.
+Bisher sind die Daten, die im (Anfänger:innen-)Praktikum erhoben werden, in der Regel weder nachvollziehbar, noch vollständig gespeichert. 
+Somit kann der Lerneffekt des Praktikums in Bezug auf Datenerfassung und -speicherung als eher gering eingeschätzt werden. 
+Dabei bieten die Praktika oft die einzige Möglichkeit, den Umgang mit (Forschungs-)Daten vor Forschungarbeiten im Rahmen des Studiums kennenzulernen.
+Konkreter gesprochen sollen Studierende in den Praktika die Möglichkeit haben, Daten sowohl von ihren Kommiliton:innen, als auch der früheren Kohorten einzusehen und mit auszuwerten, 
+um Messfehler besser einschätzen zu können und die Diskussion von Versuchsergebnissen mit einer größerenSicherheit durchführen zu können. 
+Außerdem sollen Studierende die Möglichkeit erhalten, in einem Semester aufgenommene Daten eines Versuchs zu speichern 
+und diese Daten dann im darauffolgenden Semester gemeinsam mit einem größeren Datensatz auszuwerten. 
+Zusätzlich kann dann zwischen verschiedenen Ausgangsbedingungen und Aufbauten verglichen und der Einfluss verschiedener Parameter untersucht werden.
+Ein wichtiger Teil nachhaltiger Forschung ist, dass Forschungsdaten nicht nur langfristig verfügbar, sondern vor allen Dingen für andere Wissenschaftler:innen verständlich und nutzbar bleiben. 
+In letzter Konsequenz profitieren von einem Praktikum, das nach den FAIR-Prinzipien gestaltet wird, neben den Studierenden auch die Forschungsgruppen. 
+Ein abwechslungreicherer Praktikumsbetrieb motiviert hierbei auch die Studierenden zusätzlich. 
+Schlussendlich ernten die Forschungsgruppen, denen die Studierenden während ihrer Projektphasen angehören und so bereits wissen, wie man mit Forschungsdaten umgeht, die Erfolge dieses Konzepts. \\
+
+Gerade im aufkeimenden "Post-Truth-Zeitalter" kommt Open Science eine kaum zu überschätzende gesellschaftliche Bedeutung zu \footnote{\url{https://doi.org/10.1007/978-981-15-4276-3_2}}. 
+Wissenschaftler:innen von morgen sollten deshalb so früh wie möglich an das Konzept herangeführt werden, um so "Open Science" als "Science just done right" zu verinnerlichen \footnote{\url{https://zapfev.de/resolutionen/wise18/Reso_Open_Science/Resolution_Open_Science.pdf}}.
+
+\vfill
+    \begin{flushright}
+      Verabschiedet am 15.11.2020 \\auf der Online-ZaPF hosted in Garching.
+    \end{flushright}
+\end{document}

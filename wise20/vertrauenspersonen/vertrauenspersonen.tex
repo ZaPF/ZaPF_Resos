@@ -1,0 +1,250 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm]{geometry}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{url}
+\usepackage{tocloft}             % Paket für Table of Contents
+
+%\usepackage{xcolor}
+\usepackage{ulem,xspace,xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,    % Farbe der internen Links (u.a. Table of Contents)
+    urlcolor=black,    % Farbe der url-links
+    citecolor=black} % Farbe der Literaturverzeichnis-Links
+
+\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+\usepackage{draftwatermark} % Wasserzeichen ``Entwurf''
+\SetWatermarkText{}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancybox}  % \shadowbox
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+
+\usepackage{enumitem}
+\setenumerate[1]{label=\thesection.\arabic*.}
+
+\def\zapf{ZaPF}
+
+\newif\ifcomments
+\commentsfalse
+\commentstrue
+
+\newcommand{\vpen}{Vertrauenspersonen~}
+
+\begin{document}
+  \hspace{0.87\textwidth}
+  \begin{minipage}{120pt}
+  	\vspace{-1.8cm}
+  	\includegraphics[width=80pt]{../logo.pdf}
+  	\centering
+  	\small Zusammenkunft aller Physik-Fachschaften
+  \end{minipage}
+  \begin{center}
+    \huge{Positionspapier zu Vorschlägen der ZaPF für sinnvolle Vertrauenspersonen-Teams für Fachschaften}\vspace{.25\baselineskip}\\
+  	\normalsize
+  \end{center}
+  \vspace{1cm}
+
+  \tableofcontents
+
+\section{Überblick: Was sind Vertrauenspersonen}
+Jede von Studierenden für Studierende organisierte Veranstaltung (OPhasen, Erstifahrten, Partys, ...) beinhaltet das Risiko, dass sich eine oder mehrere Personen auf eine Weise verhalten, die für andere unerwünscht, unangenehm oder schlimmeres ist. Gänzlich unabhängig von den Gründen, warum sich jemand wie verhält, ist es nützlich eine Anlaufstelle eingerichtet zu haben, um nicht als Orga oder Einzelperson spontan improvisieren zu müssen. Die ZaPF (Zusammenkunft aller Physik-Fachschaften) hält es für am sinnvollsten,  für diese Anlaufstelle Menschen einzusetzen, die ganz normal an der Veranstaltung teilnehmen, aber darauf vorbereitet sind, bei Problemen angesprochen zu werden: Vertrauenspersonen. 
+Die ZaPF geht nicht davon aus, dass auf jeder Veranstaltung etwas Schlimmes passiert! Wir wissen allerdings auch, dass es für eine Orga extrem unangenehm und schwierig ist, mit solchen Problemen umzugehen, wenn sie entgegen aller Erwartungen auftreten. Daher empfiehlt die ZaPF allen Fachschaften, Vertrauenspersonen einzurichten, da sich das Verhalten der Teilnehmenden nicht vorhersagen lässt. Der beste Einsatz für eine Vertrauensperson ist natürlich, wenn sie nicht gebraucht wird. 
+
+In dieser Handreichung geht es um Vertrauenspersonen für Fachschaftsveranstaltungen. Die Überlegungen der ZaPF beziehen sich vornehmlich auf zeitlich begrenzte Veranstaltungen in Präsenz. Sie lassen sich nur bedingt auf andere Formate, wie interne Vertrauenspersonen für die eigene Organisation, allgemeine Ansprechpersonen der Studierendenschaft oder psychosoziale Beratung übertragen. Insbesondere soll nicht der Eindruck entstehen, dass die hier beschriebenen Vertrauenspersonen in irgendeiner Weise professionell wären. Eine Fachschaft kann, nicht zuletzt wegen ihrer hohen personellen Fluktuation, nur in Ausnahmefällen die nötigen Schulungen und Ressourcen bereitstellen, um professionell zu helfen oder Probleme zu lösen.
+
+Richtlinien für Vertrauenspersonen können die Legitimation unterstützen, als Orientierung für ein einheitliches Vorgehen dienen und Hilfestellung bei komplexen Fragen wie Verschwiegenheit leisten (siehe 2.3).
+Diese Handreichung kann dafür als Grundlage dienen. Eine konkretere, exemplarische Richtlinie möchte die ZaPF aber nicht verfassen, da wir die individuelle Situation vor Ort nicht kennen und konkrete Vorschläge somit kaum möglich sind. 
+Das System der ZaPF ist anders aufgebaut als in dieser Handreichung beschrieben, da die ZaPF sich deutlich von einer Fachschaftsveranstaltung unterscheidet. Bei Interesse am System der ZaPF oder den Diskussionen, die zu dieser Handreichung geführt haben, findet ihr viel Material zu Vertrauenspersonen auf zapf.wiki/Kategorie:Vertrauenspersonen~.
+
+Vertrauenspersonen sind als reine Anlaufstelle gedacht, wenn mal jemand reden will. Dabei spielt es keine Rolle, wie klein das Problem ist, ob Leute einfach nur mal Dampf ablassen wollen, und ob nach einem Gespräch etwas getan wird oder nicht. Auch für Personen, die alleine kommen, kann es wichtig sein zu wissen, dass sie jemanden ansprechen könnten. Es geht also primär darum, Leuten zuzuhören, und nicht darum, von sich aus aktiv einzugreifen.
+
+Mit das Schwierigste für eine Vertrauensperson ist die Passivität. Vertrauenspersonen sollen für die Menschen, die auf sie zu kommen, da sein. Das heißt, die Interaktion richtet sich ganz nach den Wünschen/ Bedürfnissen/ Bedingungen der ansprechenden Person. Damit das klar ist, dürfen die Vertrauenspersonen nicht versehentlich in den Anschein geraten, eine Art Sittenpolizei zu sein. Genauso wie die politischen und religiösen Einstellungen der Vertrauenspersonen völlig anders sein können als die der Teilnehmenden (und Orga-Menschen!), können sie auch ganz andere Vorstellungen haben, was anständig ist oder zu weit geht. Das ist normal und auch völlig in Ordnung so. Da die Vertrauenspersonen für alle Anwesenden da sein sollen, müssen sie ihre Ansichten zurückhalten. Zum Teil wird eine Situation auch erst durch die scheinbar bessere Einschätzungsfähigkeit einer offiziellen Person unangenehm, sobald diese nachfragt oder sich ungefragt einmischt.
+%(Da wir als Fachschaften Veranstaltungen für erwachsene Menschen organisieren, können in jedem Einzelfall die beteiligten Personen selbst besser einschätzen, ob eine Situation gut oder schlecht war, als das eine außenstehende Person könnte.)
+
+Diese Zurückhaltung gilt natürlich nur für die Amtsperson Vertrauensperson, nicht für den Menschen dahinter. Es soll niemandem vorgeschrieben werden, sich aus Geschehnissen, bei denen man auch als Privatperson einschreiten würde, heraus zu halten, allerdings besteht bei Vertrauenspersonen die Gefahr, dass ihre Handlungen als offizielle Handlungen verstanden werden. 
+Ob es besser ist, in einer Situation aktiv zu werden oder nicht, ist situationsabhängig und sollte im Hinblick darauf entschieden werden, ob man auch danach noch als vertrauensvolle Ansprechperson dienen kann. Als Merksatz für dieses Dilemma, mit dem sich jede Vertrauensperson auseinandersetzen muss, kann folgender Satz dienen:
+\begin{center}
+    \shadowbox{Als Vertrauensperson nur Ansprechperson, als Privatperson (besonders) aktiv.}
+\end{center}
+
+Wenn eine Fachschaft für eine Veranstaltung Vertrauenspersonen einsetzt, dann sollten diese auch für die gesamte Veranstaltung zur Verfügung stehen.
+Unsicherheit, ob eine Vertrauensperson im Dienst ist, erhöht die Hemmschwelle und wird in einer problematischen Situation nicht stattfinden. Außerdem kann so der Eindruck entstehen, dass die Vertrauenspersonen, die sich als "nicht zuständig" bezeichnen, jemanden abwimmeln oder ein Problem nicht ernst nehmen.
+
+Wenn die Veranstaltung lang ist und es genügend Vertrauenspersonen gibt,  kann ein Dienstplan erstellt werden, um den Vertrauenspersonen Pausen zu ermöglichen. Sind die Vertrauenspersonen durch Kleidung oder ähnliches gekennzeichnet, sollte diese abgelegt werden; ist das Amt personengebunden, sollte eine Vertrauensperson nicht anwesend aber "außer Dienst" sein, sondern sich an einem anderen Ort aufhalten.
+%Dienstzeiten ermöglichen Vertrauenspersonen die Abwesenheit, da sie sicherstellen, dass immer genügend Ansprechpartner vor Ort sind.
+
+%Das Vertrauen, die Vertrauenspersonen jederzeit ansprechen zu können, kann sich nur einstellen, wenn sich die Ansprechenden auch sicher sein können, dass die Vertrauensperson auch als Vertrauensperson agiert und das Gespräch vertraulich behandelt. 
+
+\section{Aufgaben einer Vertrauensperson}
+
+Vertrauenspersonen haben nur wenige Aufgaben vor oder nach einer Veranstaltung, sondern hauptsächlich währenddessen.
+
+Die Hauptaufgabe der Vertrauenspersonen ist Zuhören. Sie sind die erste Anlaufstelle für alles, über das die Anwesenden (Teilnehmende, Helfende und Orga!) gerade reden möchten oder müssen. Sie sollten stets davon ausgehen, dass es der ansprechenden Person wichtig ist, genau jetzt über etwas zu reden und damit ernst genommen zu werden, egal wie klein das Thema zu sein scheint. 
+Der Fokus dieses Gesprächs liegt auf der ansprechenden Person, weshalb sich die Vertrauensperson weitgehend zurückhalten und (erst einmal) nur zuhören sollte.
+Weitere Handlungen der Vertrauensperson finden nur in Absprache und mit Zustimmung der ansprechenden Person statt. Es kann auch sein, dass keine Handlungen erwünscht sind. 
+
+Viele Menschen, die bereit sind als Vertrauensperson zu arbeiten, haben das starke Bedürfnis anderen Menschen zu helfen. 
+Es kann manchen Menschen daher schwer fallen zu akzeptieren, dass in einigen Fällen keine weiteren Aktionen, einschließlich Ratschläge, erwünscht sind. Aus Sicht der ZaPF ist dies das Hauptproblem, warum man einige Menschen als ungeeignet für das Amt der Vertrauenspersonen hält. Die Befürchtung, dass jemand (wenn auch in guter Absicht) nicht in der Lage ist, unter den Bedingungen der ansprechenden Person zu agieren, ist ein legitimer Grund diese Person nicht als Vertrauensperson einzusetzen!
+
+Vertrauenspersonen sind keine Problemlöser. Wenn die ansprechende Person das wün\-scht, können sie versuchen bei Problemen zu helfen, oder sie an andere Stellen vermitteln. Sie müssen sich aber bewusst sein, dass es Probleme gibt, die sie nicht lösen können oder sollen. Ihre schwere Aufgabe ist es, einfach für eine ansprechende Person da zu sein. 
+
+Wahrscheinlich ist inzwischen aufgefallen, dass in dieser Handreichung keine konkreten Beispiele für Probleme genannt werden, mit denen sich ansprechende Personen an die Vertrauenspersonen wenden könnten. Damit soll verdeutlicht werden, dass eine Vertrauensperson prinzipiell für alles, weswegen sie angesprochen wird, offen ist. Es gibt also keine Themen, die "nicht wichtig genug" für eine Vertrauensperson sind. Zu einigen Bereichen, die nach Meinung der ZaPF (insbesondere in OPhasen) ein besonderes Augenmerk verdienen, zählen Diskriminierung, peer pressure, harrassment und Zwang durch Autoritätspersonen.
+
+Eine wichtige Aufgabe der Vertrauenspersonen ist auch, dass sie ihre eigenen Kompetenzen einschätzen können. Sie sind keine Profis, die auf alles eine Antwort haben müssen. Es kann von ihnen nicht verlangt werden, dass sie mit allen Situationen umgehen können. Schließlich sind sie ganz normale Menschen und dienen nur als erste Anlaufstelle. Das ist auch gut so, denn einen Profi anzusprechen würde eine höhere Hemmschwelle bedeuten und Vertrauenspersonen sollten so niedrigschwellig wie möglich agieren. Das heißt aber auch, dass sie überfordert sein dürfen. Wichtig ist, dass sie (insbesondere dann) klar und offen kommunizieren, wenn ihre Kompetenzen gerade überschritten werden. Wenn möglich soll dann versucht werden die ansprechende Person an eine kompetentere Person oder Institution zu verweisen. Dazu besteht aber keine Pflicht. Selbstverständlich darf eine Vertrauensperson auch erkennen, dass sie von einer Ansprache vollständig überfordert ist, selbst wenn es sich um eine Situation handelt, mit der sie unter anderen Umständen leicht umgehen könnte. Es sollte sowohl der Orga, als auch den Vertrauenspersonen bewusst sein, dass es einen großen Unterschied darstellt, ob man sich eine Situation nur vorstellt oder tatsächlich damit konfrontiert ist. Es ist keine Schande zuzugeben, dass man sich überschätzt hat.
+Sobald eine Vertrauensperson merkt, dass etwas für sie zu viel ist, ist es wichtig das so bald es geht klar zu kommunizieren.
+
+Eine Vertrauensperson hat zudem die Aufgabe, auf ihren Selbstschutz zu achten. Aus dem Amt einer Vertrauensperson erwächst keine Pflicht, sich in Gefahr zu begeben. Dies schließt selbstverständlich psychisch belastende Situationen mit ein. Wir schreiben das hier so deutlich, da viele Vertrauenspersonen dazu neigen sich selbst zu sehr zurückzustellen und wir sie darin bestätigen wollen, auch in ihrem Amt noch (vorrangig) auf sich selbst Acht geben zu dürfen. 
+
+Vertrauenspersonen sollen ganz normal an der Veranstaltung teilnehmen, auch um die Hemmschwelle sie anzusprechen niedrig zu halten. Dabei kann es sich ergeben, dass sie aus verschiedenen Gründen nicht mehr einsatzfähig sind. Das kann durch selbst beeinflussbare Faktoren wie Trunkenheit, körperliche Anstrengung oder Übermüdung passieren, aber auch durch unvorhersehbare Dinge wie Liebeskummer, Migräne usw. Eine Vertrauensperson sollte selbst festlegen, inwieweit sie an Aktionen teilnimmt, die ihre Einsatzfähigkeit verringern können. Beispielsweise kann eine Vertrauensperson entscheiden, keinen Alkohol zu trinken und früh ins Bett zu gehen, um stets wach und ganz denkfähig zu sein, während eine andere es für wichtiger hält "da" zu sein und sich nicht aus Gruppenaktionen herauszuziehen.
+
+Bei kurzen Veranstaltungen (max. 1 Tag) kann an die Vertrauenspersonen die Anforderung gestellt werden, dass sie jederzeit anwesend und klar im Kopf sind. Bei längeren Veranstaltungen ist bspw. ein Rauschverbot nur sinnvoll, wenn es feste Dienstzeiten gibt, zu denen die Vertrauensperson einsatzfähig sein muss. Gibt es keine Dienstzeiten, ist es sinnvoller darauf zu vertrauen, dass die Vertrauenspersonen sich selbst einschätzen können. 
+
+Ein Dienstplan ist insbesondere bei längeren Veranstaltungen empfehlenswert um sicherzustellen, dass immer mindestens eine Vertrauensperson anwesend ist. Sind die Vertrauenspersonen persönlich (d.h. Mensch Meier ist Vertrauensperson und nicht, wer gerade die pinke Warnweste an hat), dann sind sie bei Anwesenheit "im Dienst" und verweisen ggf. an andere Stellen, wenn sie sich einer Situation nicht gewachsen fühlen. "Dienstfrei" bedeutet dann, dass eine Vertrauensperson nicht anwesend ist.
+
+Wie oben bereits geschrieben besteht die Aufgabe einer Vertrauensperson nicht im Überwachen der anwesenden Personen. Vertrauenspersonen können aber auch mit Problemen konfrontiert werden, die sie nicht lösen können. Beispielsweise können (und sollten) sie zwar in einer konkreten Mobbing-Situation intervenieren, das Kernproblem lässt sich aber nicht lösen, da es sich bei Mobbing um einen langfristigen Prozess handelt. Ebenso gehört es nicht zu ihrem Verantwortungsbereich für Menschen, die es selbst nicht mehr schaffen, einen Heimweg zu organisieren. Auch die Beratung der Orga im Vorfeld einer Veranstaltung bspw. im Bezug auf Barrierefreiheit,  übersteigt die Fähigkeiten der Vertrauenspersonen wahrscheinlich.
+
+\subsection{Vertrauenspersonen bekannt und erreichbar machen}
+
+Damit Vertrauenspersonen angesprochen werden können, müssen sie leicht auffindbar sein. Dazu empfiehlt sich ein zweigleisiges System. Einerseits sollten Vertrauenspersonen so markiert sein, dass sie ohne Nachfrage erkennbar sind (besonderes Namensschild, Button, pinkem Bademantel etc.). Andererseits sollten insbesondere an häufig frequentierten Orten (Toilettentüren, Einlass, Theken usw.) Aushänge zu finden sein, die das System und die Markierung erklären und die Vertrauenspersonen samt Kontaktmöglichkeiten vorstellen (Bild, Name, Telefon usw.... ). Diese Informationen soll bei Veranstaltungen mit Webauftritt auch auf der Website zur Verfügung stehen, in jedem Fall ist aber die Erlaubnis aller einzelnen Vertrauenspersonen einzuholen, die Daten zu veröffentlichen. Wenn möglich werden die Vertrauenspersonen am Anfang einer Veranstaltung kurz vorgestellt und Sinn und Funktionsweise des Systems erklärt. (Bei einigen Veranstaltungen, wie z. B. Partys, funktioniert das nur eingeschränkt, da viele Teilnehmende zu Veranstaltungsbeginn noch nicht anwesend sind.)
+
+Die Vertrauenspersonen müssen sich bewusst sein, dass sie durch ihr Verhalten Ansprechbarkeit signalisieren können, oder den Eindruck erwecken, nicht gestört werden zu wollen. Bspw. sollten sie sich nicht als fester Teil einer Gruppe (von Teilnehmenden) darstellen. Sind sie immer mal wo anders anzutreffen und sprechen mit vielen verschiedenen Personen, sorgt das dafür, dass sich ansprechende Personen weniger Gedanken machen (müssen), ob Dritten auffällt, dass sie das Gespräch mit einer Vertrauensperson gesucht haben.
+
+Insbesondere bei längeren Veranstaltungen oder wenn sich die Teilnehmenden in kleinere Gruppen aufteilen, kann es sinnvoll sein als Fachschaft ein oder mehrere "Diensthandys" zu stellen. Diese Telefonnummern können dann auch ohne Sorge herausgegeben werden.
+Das Gleiche gilt für Emailadressen, die sogar auf bestimmte Vertrauenspersonen personalisiert werden können. Emails sind durch die lange Reaktionszeit aber nur bei lang andauernden Veranstaltungen sinnvoll, bzw. wenn die Vertrauenspersonen auch nach der Veranstaltung noch ansprechbar sind.
+
+Um ihrer Hauptaufgabe (zur Verfügung zu stehen) nachkommen zu können, müssen Vertrauenspersonen Zeit haben. Sie sollten also nicht zu anderen, strukturell bindenden Aufgaben herangezogen werden (Thekenschichten etc.).
+
+\subsection{Kommunikation mit Personen, Untereinander, Orga}
+
+Sämtliche Kommunikation der Vertrauensperson sollte zu den Bedingungen der ansprechenden Person stattfinden. Besonders wichtig ist, sich im Gespräch möglichst zurückzunehmen. Wenn es gewünscht ist, kann die Vertrauensperson auch eine schlichtende Rolle einnehmen und ein Gespräch mit einer oder mehreren, von der ansprechenden Person benannten Personen führen, um deren Perspektiven zu erfahren und bspw. ein Missverständnis aufzuklären. Sie kann auch, wenn gewünscht, einen Raum organisieren, in dem sich die ansprechende Person mit anderen Personen aussprechen kann oder ein solches Gespräch moderieren. Wichtig ist, dass die Vertrauensperson nur Möglichkeiten anbietet und nichts durchsetzt. Sie nimmt, wenn es dem Wunsch der ansprechenden Person entspricht, in folgenden Gesrächen bzw. Aktionen eine vermittelnde Position ein. Sie leitet nicht und stellt auf keinen Fall von sich aus jemanden zur Rede, auch wenn das in einer konkreten Situation schwerfallen mag.
+
+Wenn eine Vertrauensperson aus irgendeinem Grund mit Dritten spricht, dann muss sie die ansprechende Person und das konkrete Problem anonymisieren (ausgenommen natürlich, wenn die ansprechende Person das wünscht). Dazu sollten Orga und Vertrauenspersonen sich im Vorfeld Gedanken machen, wie man eine ansprechende Person und ihr Anliegen sinnvoll anonymisieren kann. Oft genügt es nicht, einfach nur den Namen wegzulassen. Auch die Zusammenhänge einer Situation können ausreichend Information bieten, um die Beteiligten zu identifizieren. Im Allgemeinen ist es eine gute Idee, nur so viel zu sagen, wie unbedingt nötig ist.
+An dieser Stelle muss beachtet werden, dass eine ansprechende Person nicht zwingend die Wahrheit sagt. Wenn es in der Aussage der ansprechenden Person eine tatbegehende Person gibt, sollte die Vertrauensperson sie der ansprechende Person gegenüber auf jeden Fall als tatbegehende Person behandeln. Dritten gegenüber darf sie diese tatbegehende Person aber nicht bloßstellen (d.h.z.B. mehr als nötig sagen) und muss bedenken, dass es sich erst einmal nur um eine beschuldigte Person handelt. Vertrauenspersonen lassen sich leider bei bestimmten Anschuldigungen leicht als Werkzeug missbrauchen, um anderen Schaden zuzufügen.
+
+Wenn eine Vertrauensperson ein strukturelles Problem ausmacht, sollte sie es gegenüber der Orga oder Fachschaft ansprechen dürfen, selbstverständlich ohne Einzelfälle zu nennen. Sie muss dabei keinen Lösungsvorschlag präsentieren, da es zunächst wichtiger ist, auf strukturelle Probleme aufmerksam zu werden.
+Wird eine Gruppe an Vertrauenspersonen eingesetzt, sollte es eine Nachbesprechung geben, damit auch strukturelle Probleme auffallen, die sich bei jeder einzelnen Vertrauensperson als Einzelfall darstellen. Diese Nachbesprechung muss dabei wieder anonymisiert stattfinden.
+
+Um Einzelfälle von strukturellen Problemen zu unterscheiden kann es sinnvoll sein im Vorfeld einer Veranstaltung einen Threshold oder ein anderes Merkmal festzulegen. Ja, das ist unglaublich technisch und bedeutet ggf., dass eine bestimmte Menge an Vorkommnissen irgendwelcher Art als normaler Nebeneffekt einer Veranstaltung angesehen wird. Es sollte jedoch zweierlei beachtet werden:
+Einerseits kann es für die Vertrauenspersonen sehr belastend sein, sich mit allem selbst auseinandersetzen zu müssen. Eine in der Gruppe diskutierte und beschlossene Richtlinie kann hier helfende Menschen aus einer moralischen Zwickmühle befreien.
+Andererseits ist es nicht möglich die Teilnehmenden einer Veranstaltung zu kontrollieren und im konkreten Fall tragen erst einmal die beteiligten Personen selbst die Verantwortung für ihr Tun. Eine Fachschaft oder Orga sollte für sich selbst entscheiden (und zwar bevor irgendetwas passiert), wie weit sie Verantwortung für das Verhalten der Teilnehmenden übernehmen wollen.
+
+\subsection{Verschwiegenheitsdinge}
+
+Eine absolute Verschwiegenheit ist nicht sinnvoll, da dies verhindern würde, dass strukturelle Probleme angesprochen werden. In anonymisierter Form sollten die Vertrauenspersonen aber rückmelden können, was bei einer Wiederholung der Veranstaltung beachtet werden muss.
+
+Jede andere Kommunikation sollte zu den Bedingungen der ansprechenden Person stattfinden. Bevor eine Vertrauensperson also eine weitere Person einweiht (bspw. um eine zweite, auf dem konkreten Thema besser bewanderte Vertrauensperson um Rat zu fragen) muss sie die Erlaubnis der ansprechenden Person einholen. Diese Frage sollte aber nicht unüberlegt gestellt werden, sondern an einer Stelle im Gespräch, an der es passt.
+
+Die Grenze der Verschwiegenheit seitens der Vertrauenspersonen ist dann erreicht, wenn sie ihr eigenes Schweigen nicht mehr ertragen können. Wann eine Vertrauensperson ohne Einverständnis der ansprechenden Person Informationen weitergibt oder sich selbst eine Last von der Seele redet, muss aber stets eine Einzelfallentscheidung sein.
+Jede Vertrauensperson sollte sich im Vorfeld eine Struktur schaffen, um Dinge weiterzuentwickeln und zu vermeiden, dass Probleme anderer zu eigenen Problemen gemacht werden. Man kann (und sollte) sich Gesprächspersonen suchen, die zu dem konkreten Fall keinen Bezug haben (z.B. Sorgentelefon, Beichte). Die Vertrauenspersonen sind in letzter Instanz ihrem Gewissen verpflichtet und Opfer- bzw. Beschuldigtenschutz sowie Gewissensverpflichtung lösen jede Schweigepflicht auf.
+
+Auch abseits vom Erarbeiten einer Rückmeldung an die Orga oder der Debatte über strukturelle Dinge, kann ein Austausch unter den Vertrauenspersonen nützlich sein. Vor allem, wenn eine der Vertrauenspersonen der Meinung ist, über besonders krasse Dinge reden zu müssen, oder wenn auf einer Veranstaltung etwas besonders im Blick behalten werden muss. 
+
+\section{Legitimation}
+
+Vertrauenspersonen sind dazu da, für den Fall der Fälle da zu sein, weshalb es ein gutes Zeichen ist, wenn diese auf der gesamten Veranstaltung nicht angesprochen werden. Vertrauenspersonen sind auch für Dinge da, die nicht besonders öffentlich gemacht werden - es schließt sich also von Vornherein aus, dass Vertrauenspersonen nur dort eingerichtet werden sollten, wo bekannt ist, dass Teilnehmer regelmäßig in Nöte geraten.
+Bei den ersten paar Einsätzen kann es sein, dass Vertrauenspersonen als Fremdkörper wahrgenommen oder so interpretiert werden, dass auf einer der vergangenen Veranstaltungen etwas vorgefallen sei. Dies ist aber kein Grund, keine Vertrauenspersonen einzurichten, denn zum einen wird sich schnell normalisieren, dass auf einer Veranstaltung Vertrauenspersonen anzutreffen sind und zum anderen läuft man ohne Vertrauenspersonen Gefahr, irgendwann tatsächlich wegen eines  gearteten Vorfalles Vertrauenspersonen einrichten zu müssen/wollen.
+
+Die ZaPF möchte keine Vorschläge machen, wie viele Vertrauenspersonen es pro Teilnehmer geben sollte. Dies hängt auch maßgeblich davon ab, wie viele Personen bereit sind, als Vertrauensperson zu arbeiten. Zu viele Vertrauenspersonen können dazu führen, dass sie ihren Sinn verfehlen und bei Teilnehmern das Gefühl wecken, sich an einem unsicheren oder gefährlichen Ort aufzuhalten. Was zu viel ist kann dabei nicht allgemein festgelegt werden, sondern sollte im Hinblick auf die erwarteten Teilnehmer eingeschätzt werden.
+
+\subsection{Ernennung / Bestellung}
+
+Theoretisch wäre es am besten, wenn die Vertrauenspersonen durch die Teilnehmer selbst bestimmt werden, s.d. sicher ist, dass alle Teilnehmer wenigstens eine Vertrauensperson haben, der sie vertrauen.
+Dies ist bei den meisten Fachschaftsveranstaltungen allerdings nicht möglich. Entweder sind zu Beginn der Veranstaltung nicht alle Teilnehmer anwesend, oder die Teilnehmner haben noch keine Möglichkeiten gehabt, potentielle Vertrauenspersonen ausreichend kennenzulernen, um einschätzen zu können, ob sie ihnen vertrauen möchten (z.B bei OPhasen). Außerdem ist es legitim als Orga eine Vertrauensinstanz haben zu wollen, mit der sie sinnvoll umgehen können und der sie vertrauen. Daher ist es am sinnvollsten, wenn die Vertrauenspersonen durch die ausrichtende Fachschaft ernannt werden und das den Teilnehmern auch deutlich kommuniziert wird, dass es sich hierbei um ausgewählte Personen handelt und sie diesen voll und ganz vertrauen können.
+
+Wenn sich Vertrauenspersonen selbst um diesen Posten bewerben, besteht die Gefahr, dass sie das nur tun, um sich wichtig zu fühlen oder einen vorteilhaften Titel in ihren Lebenslauf schreiben zu können - oder sogar Schlimmeres. Jemandem ins Gesicht zu sagen, er sei als Vertrauensperson unbrauchbar, sei es weil der Verdacht im Raum steht, er habe sich aus einem der vorgenannten Gründe beworben oder aus irgendeinem anderen Anlass, ist dies mit an Sicherheit grenzender Wahrscheinlichkeit mit einem Konflikt verbunden. Um persönliche Konflikte zu vermeiden, stimmen Menschen oft auch Entscheidungen zu, die sie eigentlich ablehnen. Dieses Verhalten wäre bei der Bestellung von Vertrauenspersonen aber fatal, sollten die Vertrauenspersonen tatsächlich angesprochen werden. Die Aufgabe einer Vertrauensperson ist so sensibel, dass es eine gute Richtlinie ist, eine Person nur einzusetzen, wenn eindeutig klar ist, dass sie geeignet ist.
+
+\begin{center}\shadowbox{Es ist besser, einen Vertrauenspersonen-Posten nicht zu besetzen, als falsch. }\end{center}
+
+Die ZaPF empfiehlt als Ernennungsprozedere folgende Methode, bei der einer ungeeigneten Person möglichst konfliktarm mitgeteilt werden kann, dass sie nicht als Vertrauensperson eingesetzt werden wird:
+Die Orga einer Veranstaltung sollte mögliche Vertrauenspersonen sammeln. Dies kann durch Bewerbung interessierter Studenten geschehen, durch persönliche Bekanntheit, Kontakt über eine befreundete Gruppe usw. Die Orga trifft dann eine Vorauswahl und legt der ausrichtenden Fachschaft nur noch eine Liste prinzipiell brauchbarer Vertrauenspersonen vor, aus denen dann je nachdem, wie viele Vertrauenspersonen eingesetzt werden sollen, die Vertrauenspersonen der Veranstaltungen durch die Fachschaft gewählt werden (wollen Teile der Fachschaft als Vertrauenspersonen dienen, dann sollten sie an der Wahl nicht beteiligt sein und bspw. den Raum verlassen. Mitglieder der Orga sollten nur als Vertrauensperson arbeiten, wenn sie auf der Veranstaltung wirklich ausreichend wenig andere Aufgaben haben und dann entsprechend auch vom Auswahlprozess ausgeschlossen sind).
+Aus diesem Prozess wird nach außen nur kommuniziert, wer als Vertrauensperson eingesetzt wird und nicht aus welchen Gründen und in welcher Stufe des Prozessen jemand nicht gewählt wurde. Auf diese Weise können, um persönliche Konflikte zu vermeiden, alle an der Auswahl beteiligten Personen schweigen, oder die Verantwortung abschieben.
+
+Vergütung für Vertrauenspersonen setzt falsche Anreize (wenn ein Mitglied der Fachschaft in finanzieller Not ist kann sich die Fachschaft sinnvoll anders solidarisch zeigen). Wenn überhaupt, dann kann Vergütung für Teilnahme an Schulungen gezahlt werden.
+Die Vertrauenspersonen sollen niedrigschwellig einfach zum Ansprechen da sein. Daher ist es wichtig, dass sie von Alter und Habitus möglichst Nahe an den übrigen Teilnehmern sind. Für Fachschaftsveranstaltungen empfiehlt es sich daher, auf engagierte Studenten zurückzugreifen.
+Wenn eine Qualitätssicherung gewünscht ist, ist eine Selbstverpflichtung für die Vertrauenspersonen am sinnvollsten, wenn diese unterschrieben werden muss, da sich die Vertrauenspersonen so psychisch an die Selbstverpflichtung binden. Damit werden auch Regeln, Richtlinien und Methoden akzeptiert und die Teilnehmer können sich sicher sein, dass alle Vertrauenspersonen gleich agieren.
+
+Im Allgemeinen ist keine feste Liste mit Anforderungen nötig, weil das benennende Gremium die Person kennt (kennen sollte) und die Person sich dazu bereit erklärt hat, das Amt zu übernehmen. Je nach Veranstaltungen kann es sinnvoll sein, bestimmte Anforderungen zu stellen. Anforderungen an Vorbildung oder nachgewiesene Schulungen sind voraussichtlich nicht hilfreich, da sie den Helferpool zu sehr einschränken und dem Konzept niedrigstschwelliger Ansprechpartner ("ganz normale Leute\grqq ) zuwiederlaufen.
+Die ZaPF empfiehlt, als Vertrauenspersonen Personen verschiedener Geschlechter einzusetzen, da viele Menschen Hemmungen haben, Schwächen vor Vertretern des anderen Geschlechtes zuzugeben.
+
+An dieser Stelle sei nochmals erwähnt, dass die Hauptaufgabe der Vertrauenspersonen ist, zuzuhören und nach den Bedingungen der ansprechenden Person zu agieren. Sie sollen nicht von sich aus, aus guter Absicht heraus, helfen. Diese Zurückhaltung nicht umsetzen zu können ist das Hauptproblem, aus dem engagierte Menschen als Vertrauensperson ungeeignet sein können.
+
+\section{Schulungen / Kooperation mit anderen Einrichtungen}
+
+Verpflichtende Schulungen für Vertrauenspersonen sind, vor allem für einzelne Veranstaltungen, nicht praktikabel. Außerdem ist nicht möglich, alle relevanten Bereiche in wenigen Terminen abzudecken. Durch verpflichtende Schulungen schränkt man einerseits seinen Pool an Helfern auf Personen ein, die zusätzlich zur Veranstaltung noch an mindestens einem weiteren Termin Zeit haben, andererseits kann durch Schulungen ein trügerisches Gefühl der Befähigung entstehen, sodass sich Vertrauenspersonen dazu verpflichtet fühlen, bestimmte Probleme zu lösen, statt ihre eigenen Grenzen anzuerkennen.
+Eine feste Gruppe von Vertrauenspersonen, die ständig weiter fortgebildet werden, würde dem niedrigschwelligen Konzept widersprechen. Zudem kann dies nach kurzer Zeit verhindern, dass neue Personen mitmachen können, da sie nur mit großer Mühe den Wissensvorsprung der anderen aufholen könnten, weshalb sich die Vetrauenspersonen aus der festen Gruppe dazu verpflichtet fühlen, bei allen Veranstaltungen helfen zu müssen. Sobald diese Gruppe ihr Studium beendet, stünde die Fachschaft dann wieder bei Null oder würde Doktoranden/wiss. Mitarbeiter als Vertrauenspersonen einsetzen, was im Sinne des möglichst hierarchiefreien Konzeptes noch schlechter wäre.
+
+Die Vertrauenspersonen sind nicht dazu da, um im Vorfeld von Veranstaltungen andere Helfer/Tutoren zu schulen und sind dafür auch nicht qualifiziert. Sie können aber für bekannte Probleme sensibilisieren. Wichtig ist dabei, dass es sich wirklich um Probleme der eigenen Veranstaltung handelt und nicht um aus dem Internet übernommene Gedanken oder politische Meinungen. Die Vertrauenspersonen sind für alle da und dürfen nicht den Eindruck erwecken, dass es sich um Ideologen handelt. Dieser Anschein kann im Zweifel verhindern, dass die Vertrauenspersonen als neutrale Anlaufstelle und Helfer wahrgenommen werden.
+
+\clearpage
+
+
+\newpage
+
+\appendix
+
+\section{Exemplarischer Hinweistext an \vpen}
+Im Folgenden als Beispiel der Hinweistext, der allen neu gewählten \vpen auf der ZaPF ausgeteilt wird. Er kann natürlich nicht 1:1 auf Fachschaftsveranstaltungen übertragen werden!
+
+\textit{\\
+Vielen Dank für dein Engagement!\\
+Mit dem neuen Amt und der neuen Verantwortung kommen eventuell auch neue Fragen.\\
+Was muss ich tun? Was darf ich? Was darf ich nicht? Und was passiert, wenn ich mit einem Thema nicht umgehen kann?\\
+Zu allererst: Zuhören ist das Wichtigste.\\
+Manche ZaPFika, die dich aufsuchen, wollen einfach nur reden und dass ihnen jemand zuhört. Dafür sind die Vertrauenspersonen unter anderem da.\\
+ZaPFika sehen dich zum Beispiel als Ansprechperson (Ansprechzapfikon) für Konfliktsituationen, private Probleme oder Probleme auf der ZaPF. Versuche ihnen zuzuhören und Situationen gegebenenfalls zu entschärfen. Sei möglichst objektiv.\\
+Generell gilt, dass du über das Gesagte Stillschweigen bewahren sollst. Frag die Betroffenen, ob du mit anderen Vertrauenspersonen über dieses Thema reden darfst. Beachte zu jeder Zeit, dass ihre Anonymität das höchste Gebot ist. Sei dir dabei deiner Grenzen bewusst und wenn du berechtigte Sorgen hast, dass in dieser Situation ZaPF-interne Strukturen nicht ausreichen, dann ziehe externe Hilfe hinzu.\\
+Der nachträgliche Erfahrungsaustausch zwischen den Vertrauenspersonen steckt noch in der Planung und ist aktuell nicht gestattet. Wir sind bestrebt, dies ein wenig zu lockern, um z.B. nach einer ZaPF über strukturelle Probleme reden zu können (oder einfach festzustellen: Wir haben uns alle lieb!).\\
+Solltest du noch Fragen haben, wende dich an die Vertrauenspersonen der Orga oder an eine Vertrauensperson der vorherigen ZaPFen.\\
+Wenn du merkst, dass dir die Tätigkeit als Vertrauensperson über den Kopf wächst, kannst du dir jederzeit eine Auszeit nehmen oder das Amt niederlegen.\\
+}
+
+    \vfill
+    \begin{flushright}
+      Verabschiedet am 12.11.2020 \\auf der Online-ZaPF hosted in Garching.
+    \end{flushright}
+
+\end{document}
+
+
+
+
+
