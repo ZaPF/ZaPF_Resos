@@ -1,0 +1,98 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm]{geometry}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{url}
+\usepackage{tocloft}             % Paket für Table of Contents
+
+%\usepackage{xcolor}
+\usepackage{ulem,xspace,xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,    % Farbe der internen Links (u.a. Table of Contents)
+    urlcolor=black,    % Farbe der url-links
+    citecolor=black} % Farbe der Literaturverzeichnis-Links
+
+\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+\usepackage{draftwatermark} % Wasserzeichen ``Entwurf''
+\SetWatermarkText{}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+
+\usepackage{enumitem}
+\setenumerate[1]{label=\thesection.\arabic*.}
+
+\def\zapf{ZaPF}
+
+\newif\ifcomments
+\commentsfalse
+\commentstrue
+
+\begin{document}
+  \hspace{0.87\textwidth}
+  \begin{minipage}{120pt}
+  	\vspace{-1.8cm}
+  	\includegraphics[width=80pt]{../logo.pdf}
+  	\centering
+  	\small Zusammenkunft aller Physik-Fachschaften
+  \end{minipage}
+  \begin{center}
+    \huge{Selbstverpflichtung zur Fertigstellung einer Broschüre studentischen Engagements}\vspace{.25\baselineskip}\\
+  	\normalsize
+  \end{center}
+  \vspace{1cm}
+    %
+    % \begin{center}
+    %     \normalsize
+    % \end{center}
+    % \vspace{1cm}
+
+%%%% Text des Antrags %%%%
+
+Die ZaPF beauftragt Tobias Löffler damit, den Flyer "Warum Studentisches Engangement Fördern" auszuformulieren. 
+Der StAPF erhält den Auftrag, über die fertige Broschüre als Publikation der ZaPF abzustimmen.
+
+\vfill
+    \begin{flushright}
+      Verabschiedet am 15.11.2020 \\
+      auf der Online-ZaPF hosted in Garching.
+    \end{flushright}
+\end{document}
