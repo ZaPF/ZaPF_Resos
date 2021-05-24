@@ -1,0 +1,175 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{url}
+%\usepackage{tocloft}             % Paket für Table of Contents
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+%\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+% \usepackage{draftwatermark} % Wasserzeichen ``Entwurf''
+% \SetWatermarkText{Antrag}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{blue}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+\initcomment{Philipp}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+\usepackage{geometry}
+\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+
+
+
+\begin{document}
+
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+	\vspace{-1.8cm}
+	\includegraphics[width=80pt]{../logo.pdf}
+	\centering
+	\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \huge{Resolution zur Überarbeitung der MRVO}\vspace{.25\baselineskip}\\
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+%%%% Metadaten %%%%
+
+% \paragraph{Addressierte:} KMK, HRK, Akkreditierungsrat (Gesch"aftsstelle und Mitglieder), systemakkreditierte Hochschulen, Agenturen, PTOs, Physik-Fachschaften 
+
+% \paragraph{Antragstellende:} Philipp (Manitoba/Wuppertal/Alumni), Daniela (Frankfurt/Alumni), Ken (HUB)
+
+%%%% Text des Antrages zur veröffentlichung %%%%
+
+% \section*{Antragstext}
+Mit Blick auf die in 2022 vorgesehene Evaluation des Akkreditierungssystems und der MRVO gem. Art. 15 StAkkStV und §36 MRVO begrüßt die \zapf die regelmäßige kritische Auseinandersetzung mit den o.g. Regelungen unter Einbeziehung studentischer Belange.
+
+In diesem Zusammenhang fordert die \zapf, folgende Punkte in der aktuellen "Uberarbeitungsrunde zu ber"ucksichtigen:
+
+\begin{itemize}
+	\item Qualitätsberichte systemakkreditierter Hochschulen müssen flächendeckend in die Datenbank des AR eingetragen sein. Alle Hochschulen, die die Frist vom 1.4.2021 verstreichen lassen haben, sind aufgefordert dies umgehend nachzuholen, um die Transparenz im Akkreditierungssystem sicherzustellen.
+	
+	\item Die Besetzung von Gremien im Akkreditierungswesen und die Berufung von studentischen Gutachter:innen sollen nach Möglichkeit auf Basis der Vorschläge des studentischen Akkreditierungspools stattfinden. Bei Mitgliedern des studentischen Akkreditierungspools ist sichergestellt, dass diese inhaltlich geschult und von wenigstens einer hochschulübergreifenden Organisation der Studierendenvertretung legitimiert sind. Der studentische Akkrediterungspool ist die einzige Organisation, die diese Kombination aus Schulung und Legitimation gewährleistet.
+	
+	\item Begutachtungen sollen nicht wiederholt von personell nahezu identisch besetzten Gutachter:innengruppen durchgeführt werden. Die personelle Überschneidung von ein bis zwei Gutachter:innen in inhaltlich verwandten Verfahren und Folgeverfahren kann hilfreich sein, allerdings ist bei zu großen Überschneidungen die regelmäßige unabhängige Überprüfung der Studienbedingungen vor Ort beeinträchtigt. Die Richtlinen der HRK zur Benennung der professoralen Gutachter:innen sollen dementsprechend überarbeitet werden.
+	
+	\item Der Stellenwert der \glqq Befähigung zum zivilgesellschaftlichen Engagement\grqq als Studienziel (u.a. London 2007, Rom 2020) ist und bleibt unbestritten. Daher muss diese Thematik in zukünftigen Verfahren und Richtlinien st"arker berücksichtigt werden.
+	
+	\item Die Berücksichtigung der Vielfalt von Studierenden (wie etwa die Belangen von Studierenden mit Behinderung oder Studierenden mit Kind, aber auch Auswirkungen struktureller Diskriminierungen) als Kriterium für die Akkreditierung muss mehr in den Fokus genommen werden. 
+	
+	\item Eine Akkreditierungsfrist von 8 Jahren (§ 26 (1) MRVO) für eine Erstakkreditierung ist zu lang. Für neueingerichtete Studiengänge fordert die ZaPF eine erstmalige Reakkreditierung ein Jahr nach Ablauf der Regelstudienzeit, spätestens nach 5 Jahren.
+	
+	\item Bündelverfahren müssen unter Zustimmungsvorbehalt des Akkreditierungsrats stehen, sofern die gebündelten Verfahren nicht in unmittelbarem inhaltlichem Zusammenhang stehen.
+	
+	\item Die Einrichtung der Beschwerdekommission des AR - auch als Anlaufstelle für problematische interne Verfahren an systemakkreditierten Hochschulen - ist postiv zu bewerten.
+\end{itemize} 
+
+Mit Blick auf die Ausnahmeregelungen aufgrund der Corona-Pandemie zur Vor-Ort-Begehung in Akkreditierungsverfahren fordert die ZaPF:
+
+\begin{itemize}
+	\item dass physische Vor-Ort-Begehugnen weiter das Standardverfahren bleiben, dass eine entsprechende Vorschrift in Art. 3 (2) des Staatsvertrags aufgenommen wird und dass §24 (5) MRVO explizit eine solche Begehung voraussetzend umformuliert wird. Ohne diese sind die logistischen Gegebenheiten vor Ort, wie z.B. die bauliche Barrierefreiheit nicht angemessen prüfbar. 
+	
+	\item dass Online-Begehungen als neuer Standard für Konzeptakkreditierungen etabliert werden. Auf diese Weise kann auch bei neu aufzubauenden Studiengaengen ein angemessener Austausch zwischen der antragstellenden Hochschule und der Gutachtergruppe gewaehrleistet wurden.
+\end{itemize}
+
+Frühere Forderungen und Kritiken an der MRVO bleiben unberührt, sofern sie nicht explizit adressiert wurden.
+\vspace{1cm} 
+
+\vfill
+\begin{flushright}
+	Verabschiedet am 23. Mai 2021 \\
+	auf der Ostsee-ZaPF in Rostock.
+\end{flushright}
+
+\end{document}
+
