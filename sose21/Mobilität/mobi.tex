@@ -1,0 +1,203 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{url}
+%\usepackage{tocloft}             % Paket für Table of Contents
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+%\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+% \usepackage{draftwatermark} % Wasserzeichen ``Entwurf''
+% \SetWatermarkText{Antrag}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{blue}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+\initcomment{Philipp}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+
+
+
+\begin{document}
+
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+	\vspace{-1.8cm}
+	\includegraphics[width=80pt]{../logo.pdf}
+	\centering
+	\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \huge{Positionspapier zu Mobilität und Durchlässigkeit}\vspace{.25\baselineskip}\\
+  \normalsize
+\end{center}
+\vspace{1cm}
+%%%% Metadaten %%%%
+
+% \paragraph{Antragstellende:} Fabs (TU Berlin), Andy (Würzburg)
+
+%%%% Text des Antrages zur veröffentlichung %%%%
+
+% \section*{Antragstext}
+Anerkennung und Anrechnung sind für die konsequente Umsetzung der Bologna-Reform essentiell: Der Zugang zur Hochschulbildung soll sozial geöffnet und die Mobilität der Studierenden gefördert werden. Die Zielerreichung setzt funktionierende Verfahren zur Anrechnung und Anerkennung von Kompetenzen, die außerhalb der immatrikulierenden Hochschule erworben wurden sowie das Vertrauen gegenüber Studierenden und anderen Bildungseinrichtungen, voraus. Dabei haben alle Hochschulen eine gesellschaftliche Verantwortung, individuelle Bildungsbiografien und diverse Lebenswege im Sinne der sozialen Mobilität und des lebenslangen Lernens zu ermöglichen sowie zu unterstützen.
+
+Individuelle Bildungsbiografien und selbstbestimmtes Lernen setzen Durchlässigkeit des Bildungssystems und Freiräume im Studium voraus. Ein Hochschulstudium kann dies durch angemessene Anerkennungs- und Anrechnungspraktiken erhöhen und mit einem flexiblen Curriculum unterstützen. Beispiele hierfür sind offene Wahlbereiche, Mobilitätsfenster oder Studium Generale. Dabei sollte der Fokus der Mobilität nicht nur auf formalisierten Austauschprogrammen liegen, sondern auch auf die individuellen Lebensentscheidungen der Studierenden eingegangen werden.
+
+Dazu müssen transparente Verfahren für Anerkennung und Anrechnung von Leistungen implementiert werden. Diese müssen dabei auch regelmäßig überprüft werden. Im gesamten Prozess - von der Planung über die Umsetzung bis hin zur Evaluation - müssen alle Stakeholder - wie Studierende, Lehrenden und Verwaltung angemessen beteiligt werden.
+
+\section*{Kompetenzorientierung als Grundsatz und Voraussetzung von Anrechnung und Anerkennung}
+Durch eine konsequente Kompetenzorientierung können auf Studiengangs- und Modulebene Fähigkeiten und Fertigkeiten, die außerhalb des Curriculums der immatrikulierenden Hochschule erreicht wurden, im Kontext der Lernziele bewertet werden. In diesem Zusammenhang ist auch die Beschreibung dieser in den Modulhandbüchern und Modulbeschreibungen zu beachten, die als Grundlage für Anrechnung und Anerkennung dienen. Zur Formulierung und Bewertung von Kompetenzen müssen die entsprechenden Qualifikationsrahmen zwingend flächendeckend als Grundlage genutzt werden, um über Hochschulen hinweg Transparenz und Vergleichbarkeit herzustellen. Dies trifft insbesondere auf Anrechnungsprozesse zu, in denen die Überprüfung der außerhochschulisch erreichten Kompetenzen trotz nicht zwangsläufig vorliegender Modul- oder Kursbeschreibungen durchgeführt werden muss.
+
+\section*{Schaffung klarer Verantwortlichkeiten im Prozess der Anrechnung und Anerkennung}
+
+Das dezentrale deutsche Hochschulsystem gibt den Hochschulen die Freiheit, eigene Prozesse, Verantwortlichkeiten und Informationskanäle zu gestalten. Daraus ergeben sich in der Praxis große Unterschiede in Anrechnungs- und Anerkennungsverfahren. Diese Unterschiede und ggf. zusätzliche Nebenbestimmungen der Hochschulen stellen erhebliche Mobilitätshürden dar.
+
+Aus diesen Gründen ist es nötig, Anrechnungs- und Anerkennungsverfahren in den Hochschulen mit Hilfe einheitlicher Grundsätze transparent und konsistent durchzuführen. Die Beteiligten müssen für ein konsistentes Verständnis in den Bereichen Kompetenzorientierung, Qualifikationsziele und den rechtlichen Grundlagen von Anrechnung und Anerkennung geschult werden. Diese Schulungen müssen in der Gestaltung zielgruppenorientiert und von den Inhalten her einheitlich sein. Das ist notwendig, um unverhältnismäßigen – und damit meistens zum Nachteil der Studierenden getroffenen – Entscheidungen vorzubeugen. Fehlendes Wissen oder restriktive Auslegung aus Vorsicht vor negativen Konsequenzen für die Entscheidungstragenden sind Gründe für derartige Entscheidungen. Für Beschwerden über die Prozesse oder Entscheidungen im Zuge eines Anrechnungs- oder Anerkennungsverfahrens müssen Hochschulen geeignete Stellen, z.B. in Form einer Ombuds- oder Clearingstelle schaffen, die mit dem Qualitätsmanagement der Hochschule verzahnt sind.
+
+Grundsätzlich ist im Zweifel – im Sinne der Empfehlung des HRK NEXUS Projekts – für die Studierenden zu entscheiden. Bei erfüllter Dokumentationspflicht der Kompetenzen auf Seiten der Antragstellenden muss die Beweislast bei der Hochschule liegen. Die Lissabon-Konvention muss an allen Hochschulen umgesetzt und angewendet werden.
+
+\section*{Verantwortung des Topmanagements der Hochschulen}
+
+Im Sinne der sozialen Verantwortung für ein durchlässiges Bildungssystem und einem inklusionsorientierten Bildungszugang ist es fundamental, dass Hochschulleitungen Anerkennung und Anrechnung als strategisches Ziel in ihrer Planung berücksichtigen und deren Umsetzung proaktiv unterstützen sowie vorantreiben. Es ist die Aufgabe des Hochschulmanagements, hier als Vorbild voranzugehen und den Themenkomplex der Anrechnung und Anerkennung in den Mittelpunkt von Diskussionen mit allen Stakeholdern bringen. Mit einer Priorisierung der Thematik auf strategischer Ebene kann sowohl ein Bewusstsein für die Chancen von Anrechnung und Anerkennung geschaffen als auch die Mentalität von Studierenden, Hochschullehrenden und nicht-wissenschaftlichen Personal - im Sinne eines Kulturwandels - geändert werden. Das Hochschulmanagement muss Anrechnung und Anerkennung nicht nur als Schlüssel im Sinne von ‘Bildung für alle’ sehen, sondern auch die nötigen personellen und finanziellen Ressourcen für ein möglichst effizientes, transparentes, nachhaltiges und leicht zugängliches System bereitstellen.
+
+\section*{Offener Dialog: Studierende in die Planung, Umsetzung und Evaluierung einbeziehen}
+
+Es müssen unnötige formelle Hürden abgebaut werden, um den Prozess flexibler und niederschwellig zu gestalten. Dabei ist die Zusammenarbeit der verschiedenen Stakeholder notwendig, inklusive Studierendenschaften, Prüfungsämtern und der Rechtsabteilung. Gemeinsam müssen Leitlinien definiert und regelmäßig auf ihre Wirksamkeit hin überprüft werden, die einen schnellen und reibungslosen Prozess für Studierende erlauben.
+
+Da die Anrechnungs- und Anerkennungspraktiken in erster Linie Studierende und ihren Fortschritt in ihrer Bildungsbiografie betreffen, müssen sie von Anfang an in die Planungs-, Umsetzungs- und Evaluierungsprozesse eingebunden werden.
+
+Auch auf der Policy-Ebene muss die studentische Meinung durch Studierendenvertretungen (beispielsweise in Debatten) Gehör finden und Studierende an Projekten im Bereich Anrechnung und Anerkennung beteiligt werden. Denn die Studierendenvertretungen sind als Fachschaften (o.Ä.) häufig eine erste Anlaufstelle für um Rat suchende Studierende. Daher wissen sie um die Probleme und Ängste in den Antragsprozessen.
+
+\section*{Proaktive und flächendeckende Beratung durch geschultes Personal}
+
+Eine proaktive und flächendeckende Beratung für Studierende und Studieninteressierte durch geschultes Personal ist im Anerkennungs- und Anrechnungsprozess unabdingbar. Ziel der Beratung sollte es sein, einen adressiertengerechten und transparenten Prozess zu formen. Dabei ist der einfache Zugang für alle Interessierten zu verlässlichen und aussagekräftigen Informationsmaterialien, Leitfäden und damit verbunden eine allgemeine Verständlichkeit des Prozesses notwendig.
+
+Informationsmaterialien müssen (potentielle) Antragstellende über die Möglichkeiten der Anrechnung und Anerkennung informieren. Durch Positivbeispiele und zusätzliche Datenbanken vergangener Anerkennungsentscheidungen, welche anonymisiert sein müssen im Sinne der DSGVO, wird ein proaktives Vorgehen der Antragsstellenden gefördert. Leitfäden sollten zusätzlich Verfahrensschritte, allgemeine Rechte und Pflichten der Antragstellenden und standardisierte Formulare erläutern.
+
+Dabei ist es unerlässlich, die Lehrenden und die Verwaltung auch in diesem Bereich zu schulen und die Landeshochschulgesetze als Pflichtlektüre zu verankern. Teil der Schulung muss hierbei auch die konsequente Umsetzung der Prozesse und der Transparenz sein. Grundsätzlich ist die Position der Studierenden zu stärken und eine Beweislastumkehr, wie in der Lissabon-Konvention festgeschrieben, in der Prüfung von wesentlichen Unterschieden der Kompetenzen umzusetzen
+
+\section*{Sinnvoller Einsatz von Digitalisierung}
+
+Im Kontext von Anerkennung und Anrechnung werden zu hohe Hoffnungen in die Möglichkeiten gesetzt, die durch Digitalisierung bestehen oder noch zu schaffen sind. Dabei darf nicht aus den Augen verloren werden, dass Digitalisierung in der Anerkennung und Anrechnung häufig nur eine unterstützende, zu den bestehenden Prozessen komplementäre, Funktion übernehmen kann. Unbedingt zu nutzen sind die durch Digitalisierung gegebenen Möglichkeiten um technische und organisatorische Hürden abzubauen. Konkret bedeutetdies, dass Studierenden barrierefrei und niederschwellig der Zugang zu Anrechnungs- und Anerkennungsprozessen, den entsprechenden Richtlinien und Regulationen, Formularen zur Antragstellung sowie zu den Datenbanken vergangener Entscheidungen zu gewähren ist.
+
+Anrechnungs- und Anerkennungsverfahren dürfen nicht durch fehlgeleitete Automatisierung und Technisierung dominiert werden. Im Zentrum der Anerkennung und Anrechnung muss eine transparente, faire, und studierendenorientierte Entscheidung stehen, die sich nach den rechtlichen Rahmenbedingungen und nicht den technischen Umsetzungsmöglichkeiten eines IT-Systems richten. Dies ist insbesondere dann nicht der Fall, wenn Anrechnungs- und Anerkennungsprozesse durch Künstliche Intelligenz (KI) erfolgen oder systematisch unterstützt werden. KI ist gegenüber den Anwendenden intransparent und unterliegt nicht nur den systematischen Vorurteilen und Fehlern der Trainingsdaten, sondern verstärkt diese in vielen Fällen deutlich. Der Einsatz von KI für Anerkennung und Anrechnung ist daher auch aus ethischen Gründen nicht zielführend.
+
+\section{Den \textit{Status quo} überprüfen - Evaluation und Qualitätssicherung}
+
+Um Hürden in der Mobilität identifizieren und adressieren zu können, muss eine Qualitätssicherung der entsprechenden Anrechnungs- und Anerkennungsprozesse auf strategischer Ebene und in den hochschulinternen rechtlichen Grundlagen verankert werden. Hier sind vorhandene interne und externe Qualitätssicherungsmechanismen zu nutzen, um die Wirksamkeit, Transparenz und das Vertrauen aller Stakeholder zu erhöhen und evidenz-basierte Maßnahmen abzuleiten.
+
+Anrechnungs- und Anerkennungsprozesse existieren auch jenseits von formalisierten Mobilitätsfenstern und Austauschprogrammen. Besonders sind auch diejenigen von Hürden betroffen, die sich im Prozess eines Hochschulwechsels oder Quereinstiegs in die Hochschule befinden. Daher ist es unabdingbar, dass eine Evaluation, als zentrales Instrument der Qualitätssicherung, der Anerkennung und Anrechnung nicht nur hochschulintern, sondern auch hochschulübergreifend erfolgt. Ziel ist es den sogenannten Survivorship Bias zu vermeiden. Dieser beschreibt eine statistische Verzerrung, die zustande käme, wenn Evaluationen nur bei Studierenden erfolgen, die erfolgreich Anerkennungs- und Anrechnungsprozesse durchlaufen haben. Durch die fehlenden Daten ist die Durchlässigkeit des Hochschulbildungssystems und die Mobilität andernfalls nicht abschließend bewertbar. Um dem entgegenzuwirken muss zusätzlich zu einer sinnvollen Evaluation auch eine Dokumentation und Erhebung aller Entscheidungen in anonymisierter Form inklusive Begründungen erstellt werden. Diese müssen Teil der internen und externen Qualitätssicherung sein.
+
+\section*{Forderungen}
+
+\begin{itemize}
+    \item Anerkennungs- und Anrechnungverfahren müssen transparent, fair, studierendenorientert und nachvollziehbar sein. Es ist notwendig, diese Verfahren in den Hochschulen einheitlich und bundesweit konsistent zu gestalten.
+    \item Grundsätzlich ist im Zweifel – im Sinne der Empfehlung des HRK NEXUS Projekts – für die Studierenden zu entscheiden. Bei erfüllter Dokumentationspflicht der Kompetenzen auf Seiten der Antragstellenden muss die Beweislast bei der Hochschule liegen. Die Lissabon-Konvention muss an allen Hochschulen umgesetzt und angewendet werden.
+    \item Studierende und Studieninteressierte müssen durch geschultes Personal proaktiv und flächendeckend im Zusammenhang mit Anrechnungs- und Anerkennungsprozessen beraten werden.
+    \item Studierenden muss barrierefrei und niederschwellig der Zugang zu Anrechnungs- und Anerkennungsprozessen, den entsprechenden Richtlinien und Regulationen, Formularen zur Antragstellung sowie zu den Datenbanken vergangener Anerkennungs- und Anrechnungsentscheidungen, welche anonymisiert sein müssen im Sinne der DSGVO, gewährt werden.
+    \item Studiengänge müssen mobilitätsfördernd gestaltet sein. Insbesondere müssen Studiengangs- und Modulbeschreibungen konsequent kompetenzorientiert formuliert werden, um als Basis für Anrechnungs- und Anerkennungsverfahren zu dienen.
+    \item In Anrechnungs- und Anerkennungsverfahren müssen die erworbenen Kompetenzen anhand der passenden Qualifikationsrahmen überprüft werden.
+    \item Das Topmanagement von Hochschulen muss die Durchlässigkeit des Bildungssystems durch Anrechnung und Anerkennung in die Strategieplanung integrieren und proaktiv vorantreiben.
+    \newpage
+    \item Es müssen alle Stakeholder, insbesondere die Studierenden als maßgeblich Betroffene, im Prozess der Planung, Umsetzung genauso wie in der Evaluation angemessen beteiligt werden.
+    \item Anrechnungs- und Anerkennungsverfahren müssen angemessen qualitätsgesichert werden. Interne und externe Qualitätssicherungssysteme müssen für die Überprüfung von Verfahren und deren evidenz-basierter und stetiger Weiterentwicklung genutzt werden.
+    \item Digitalisierung muss bedarfsgerecht und unterstützend erfolgen. Insbesondere der Einsatz von KI in Anrechnungs- und Anerkennungsverfahren ist ungeeignet und daher abzulehnen
+\end{itemize}
+
+\vfill
+\begin{flushright}
+	Verabschiedet am 23. Mai 2021 \\
+	auf der Digital-ZaPF hosted in Rostock.
+\end{flushright}
+
+\end{document}

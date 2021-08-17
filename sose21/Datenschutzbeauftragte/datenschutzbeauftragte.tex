@@ -1,0 +1,151 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{url}
+%\usepackage{tocloft}             % Paket für Table of Contents
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+%\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+% \usepackage{draftwatermark} % Wasserzeichen ``Entwurf''
+% \SetWatermarkText{Antrag}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{blue}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+\initcomment{Niklas}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+
+
+
+\begin{document}
+
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+	\vspace{-1.8cm}
+	\includegraphics[width=80pt]{../logo.pdf}
+	\centering
+	\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \huge{Resolution zur datenschutzrechtlichen Bewertung der Zul"assigkeit von //nichteurop"aischen// Videokonferenzdiensten und cloudbasierten Diensten im universit"aren Lehrbetrieb an Hochschulen}\vspace{.25\baselineskip}\\
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+%%%% Metadaten %%%%
+
+% \paragraph{Addressierte:} Datenschutzbeauftragte von Bund und Ländern
+
+% \paragraph{Antragstellende:} ChrisPi(Heidelberg), Tobi(Düsseldorf), Jörg (Alumni)
+
+%%%% Text des Antrages zur Veröffentlichung %%%%
+
+% \section*{Antragstext}
+Die ZaPF schließt sich dem Inhalt der Resolution der KaWuM \glqq Datenschutzrechtliche Bewertung der Zulässigkeit von //nichteuropäischen// Videokonferenzdiensten und cloudbasierten Diensten im universitären Lehrbetrieb\grqq vollumfänglich an. Dies heißt im Einzelnen: 
+
+Nichteuropäische Videokonferenz- und cloudbasierte Dienste wurden in der Pandemiesituation an fast allen deutschen Hochschulen eingeführt, um digitale Lehre zu ermöglichen. Bereits seit Beginn der aktuellen Pandemie sind Probleme mit nichteuropäischen/ amerikanischen Systemen bekannt; diese wurden, insbesondere in Hinblick auf den zeitkritischen Handlungsdruck, von diversen Stellen geduldet. 
+
+In einer Kurzanalyse hat die Landesbeauftragte für Datenschutz und Informationsfreiheit (LfDI) Berlin bereits gravierende Mängel in den Auftragsdatenverarbeitungsverträgen (ADV) diverser Videokonferenzsystemanbieter aufgezeigt und Zweifel an der Vertrauenswürdigkeit geäußert\footnote{\url{https://www.datenschutz-berlin.de/fileadmin/user_upload/pdf/orientierungshilfen/2020-BlnBDI-Hinweise_Berliner_Verantwortliche_zu_Anbietern_Videokonferenz-Dienste.pdf}}. Diese gelten größtenteils genauso für andere Systeme. Der EuGH hat das \glqq EU-US Privacy Shield\grqq-Abkommen gekippt\footnote{\url{https://eur-lex.europa.eu/legal-content/DE/TXT/?qid=1594929248980&uri=CELEX:62018CJ0311}}, dementsprechend sollten die Datenschutzbeauftragten sämtliche eingesetzte Software mit Hinblick auf Datenschutz (vor allem DSGVO) erneut prüfen und unter dem Vorbehalt, dass in Amerika der FISA (Foreign Intelligence Surveillance Act) meist für diese Angebote gilt. Diese Prüfung hat bisher nicht stattgefunden. Besonders sollte das Augenmerk darauf liegen, dass bei den Studierenden nicht von einer \glqq informierten Zustimmung\grqq ausgegangen werden kann. Schließlich haben Studierende meist nur die Wahl, nicht an Veranstaltungen teilzunehmen und somit nicht weiter zu studieren oder aber der Datenschutzklausel zuzustimmen. Aus diesen Gründen gehen wir davon aus, dass die Nutzung entsprechender Dienste in der Hochschullehre rechtswidrig ist und fordern eine Prüfung und Stellungnahme durch die Datenschutzbeauftragten von Bund und Ländern. 
+
+Die anhaltende Situation hat den Hochschulen hier ausreichend Zeit geboten, datenschutzfreundliche Alternativen zu erproben und für den Produktivbetrieb vorzubereiten. Bisher sind an den meisten Universitäten aber keine Bemühungen erkennbar, sich an geltendes Recht zu halten. 
+
+\vspace{1cm} 
+
+\vfill
+\begin{flushright}
+	Verabschiedet am 23. Mai 2021 \\
+	auf der Digital-ZaPF hosted in Rostock.
+\end{flushright}
+
+\end{document}

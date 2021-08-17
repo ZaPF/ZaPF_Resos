@@ -1,0 +1,175 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{url}
+%\usepackage{tocloft}             % Paket für Table of Contents
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+%\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+% \usepackage{draftwatermark} % Wasserzeichen ``Entwurf''
+% \SetWatermarkText{Antrag}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{blue}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+\initcomment{Philipp}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+
+
+
+\begin{document}
+
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+	\vspace{-1.8cm}
+	\includegraphics[width=80pt]{../logo.pdf}
+	\centering
+	\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \huge{Resolution: Unterstützung des\\ Bündnis 50 Jahre BAföG - \\kein Grund zu feiern}\vspace{.25\baselineskip}\\
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+%%%% Metadaten %%%%
+
+% \paragraph{Addressierte:} jDPG, Physik-Fachschaften 
+
+% \paragraph{Antragstellende:} Peter (Alumnus)
+%%%% Text des Antrages zur veröffentlichung %%%%
+
+% \section*{Antragstext}
+
+Die \zapf schließt sich dem Bündnis „50 Jahre BAföG – kein Grund zu feiern“[1] an und unterstützt dessen Forderungen.\newline 
+Als Teil dieser Unterstützung empfiehlt die ZaPF die aktive Bewerbung der Petition[2].
+
+[1] https://bafoeg50.de/
+
+[2] https://bafoeg50.de/petition/
+
+\newpage
+Begründung:\newline 
+Die \zapf hat mit dem Forderungskatalog bereits klar gemacht, dass sie eine Reform für notwendig erachtet. Das Bündnis legt die Schwerpunkte etwas anders als es die ZaPF getan hat, fordert in unseren Augen aber inhaltlich die richtigen Punkte.\newline 
+Zur Übersicht sind hier die Reformziele des Bündnisses aufgelistet:
+
+
+\begin{itemize}
+    \item Rückkehr zum Vollzuschuss: der Verschuldungszwang ist einer der Hauptgründe, kein BAföG zu beantragen oder erst gar kein Studium aufzunehmen.
+    \item Wiedereinführung des allgemeinen Schüler*innen-BAföGs ab Klasse 10 ohne Sonderbedingungen: Um allen Schüler*innen den Erwerb einer Hochschulzugangsberechtigung grundsätzlich zu ermöglichen, müssen auch alle Schüler*innen grundsätzlich förderfähig werden. Selbstverständlich auch die Mehrheit, die noch bei ihren Eltern wohnt. Denn: Bildungsungleichheiten verschärfen sich bereits in der Schule und im Übergang von der Schule zur Hochschule.
+    \item Anpassung der Fördersätze an die Realität: Der BAföG Höchstsatz liegt weit unter dem tatsächlichen Bedarf. Geldsorgen stehen erfolgreicher Bildung im Weg. Die Sätze müssen deshalb sofort massiv angehoben werden und automatisch alle zwei Jahre angepasst werden.
+    \item Flexibler  realistischer Wohnkostenzuschuss: Mieten sind nicht überall gleich. Wohnpauschalen müssen deshalb dem örtlichen Bedarf entsprechen.
+    \item Klare Perspektive zur familienunabhängigen Förderung: das aktuelle BAföG baut auf einem veralteten Familienbild auf. Wessen Familie die eigene Ausbildung nicht unterstützen will oder kann, obwohl sie es nach BAföG rechtlich müsste, hat keine Chance auf Förderung. Der einzige Weg, der aktuell bleibt: die eigenen Eltern verklagen. Wir plädieren für eine Schul-, Studien- und Ausbildungsfinanzierung, die Betroffene ohne Umwege fördert und ihnen als Individuen zur Selbstständigkeit verhilft.
+    \item Erhöhung der Elternfreibeträge: Durch zu niedrige Elternfreibeträge erreicht das BAföG Menschen aus den unteren und mittleren Mittelstandsschichten nicht, die es dringend nötig hätten. Bis das System familienunabhängig aufgestellt ist, müssen die Elternfreibeträge massiv und relational zu Mittelstandseinkommen erhöht werden, um die Förderquote wieder deutlich anzuheben.
+    \item Unabhängigkeit vom Aufenthaltsstatus: wer in der BRD lernt, muss auch gefördert werden können. BAföG muss deshalb für alle zugänglich sein. Egal, was auf ihrem Pass steht.
+    \item Altersunabhängigkeit: Wer studiert hat wenig Zeit, den eigenen Lebensunterhalt zu verdienen. Egal in welchem Alter. Die Altersgrenze von 30 bzw.35 Jahren muss deshalb fallen. So ermöglichen wir selbstbestimmte Ent-scheidungen über den eigenen Bildungsweg, zu jeder Zeit. Lebenslangeslernen darf keine Floskel bleiben.
+    \item Unabhängigkeit von Regelstudienzeit und Abschaffung der Leistungsnachweise: Bildungsbiografien sind heute sehr unterschiedlich. Viele studieren de facto in Teilzeit. Für selbstbestimmte Bildung müssen diese Einschränkungen weichen.
+    \item Digital-Lernmaterialpauschale: zusätzlich zur Förderung braucht es eine bedarfsgerechte Pauschale für elektronische Geräte, Literatur etc.
+\end{itemize}
+
+Auch abseits des BAföG muss etwas geschehen, damit der eigene Bildungsweg wirklich frei von finanziellen Zwängen gewählt werden kann:
+
+\begin{itemize}
+    \item Gesetzliche Mindestausbildungsvergütung von 80\% der durchschnittlichen tariflichen Ausbildungsvergütung: Ordentliche Vergütung für Arbeit! Die Vergütung muss jährlich automatisch angepasst werden auf Grundlage der Zahlen des Bundesinstituts für Berufsbildung.
+
+    \item Förderbedingungen für Berufsschüler*innen und Meister-BAföG angleichen: Ob jemand studiert oder eine Ausbildung aufnimmt darf keine Geldfrage sein, weder das eine noch das andere darf finanziell schlechter gestellt sein. Die Konditionen der Förderungen müssen deshalb für alle gleich gut sein
+\end{itemize}
+
+\vfill
+\begin{flushright}
+	Verabschiedet am 23. Mai 2021 \\
+	auf der Digital-ZaPF hosted in Rostock.
+\end{flushright}
+
+\end{document}

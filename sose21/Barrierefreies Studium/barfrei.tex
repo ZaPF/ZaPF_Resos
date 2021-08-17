@@ -1,0 +1,247 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{url}
+%\usepackage{tocloft}             % Paket für Table of Contents
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+%\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+% \usepackage{draftwatermark} % Wasserzeichen ``Entwurf''
+% \SetWatermarkText{Antrag}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{blue}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+\initcomment{Niklas}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+
+
+
+\begin{document}
+
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+	\vspace{-1.8cm}
+	\includegraphics[width=80pt]{../logo.pdf}
+	\centering
+	\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \huge{Resolution für ein barrierefreies Studium}\vspace{.25\baselineskip}\\
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+%%%% Metadaten %%%%
+
+% \paragraph{Addressierte:} Hochschulrektorenkonferenz, KMK, Bildungspolitische Sprecher der Parteien der Länder, BMBF, Landesastenkonferenzen
+
+% \paragraph{Antragstellende:} Victoria Schemenz, Anna Summers
+
+%%%% Text des Antrages zur Veröffentlichung %%%%
+
+% \section*{Antragstext}
+%\section{Einleitung - Status Quo}
+\glqq Jede:r hat das Recht auf freie Entfaltung [...]\grqq [Art 2 GG]. Dies beinhaltet auch die Wahl des Bildungsweges unabhängig von körperlichen, geistigen oder seelischen Beeinträchtigungen. Im Kontext der Diversität besteht bei Universitäten und Hochschulen in Deutschland nach wie vor großer Handlungsbedarf, um allen Menschen die Möglichkeit einzuräumen, ein Studium abzuschließen in dem für sie auftretende Nachteile ausgeglichen werden. \\
+Deutschland hat sich mit der Ratifizierung der UN-Behindertenkonvention (UN-BRK) 2009  zudem dazu verpflichtet, die gleichberechtigte Teilhabe von Menschen mit Behinderung und chronischer Krankheit umfassend zu realisieren. Dies gilt auch für den Bereich des Studiums. Neben der UN-BRK  gibt es mittlerweile eine Reihe gesetzlicher Regelungen, die ein gleichberechtigtes Studium aller Menschen ermöglichen sollen. %Bei der Umsetzung dieser Regelungen gibt es jedoch noch starken Handlungsbedarf. Daher ist e
+%Mit der Ratifizierung der UN-Behindertenkonvention (UN-BRK) 2009 hat sich Deutschland zudem dazu verpflichtet, die gleichberechtigte Teilhabe von Menschen mit Behinderung und chronischer Krankheit umfassend zu realisieren. Dies gilt auch für den Bereich des Studiums. Neben der UN-BRK  gibt es mittlerweile eine Reihe gesetzlicher Regelungen, die ein gleichberechtigtes Studium aller Menschen ermöglichen sollen. %Bei der Umsetzung dieser Regelungen gibt es jedoch noch starken Handlungsbedarf. Daher ist e
+Eine konsequente Umsetzung aller gesetzlichen Regelungen ist eine der wichtigsten Aufgaben der Hochschulen in diesem Bereich. Außerdem gibt es eine Vielzahl an Möglichkeiten, ein Studium barriereärmer zu gestalten, die nicht durch Gesetzestexte vorgeschrieben sind.
+
+Während sich das Thema Diversität der Studierendenschaft an Hochschulen in den letzten Jahren zu einem der wichtigsten Themen der Hochschulentwicklung entfaltet hat, bekommt die Gruppe der Studierenden mit Behinderung und chronischer Krankheit weiterhin zu wenig Aufmerksamkeit, obwohl ihr laut Poskowsky et al. [2017, Seite 36] 65\% aller Studierenden angehören. 
+
+Daher fordern wir die Hochschulen auf, ihren Campus und das Studium ihrer Studiengängen barrierearm zu gestalten. 
+
+%\section{Forderungen}
+Folgende Punkte haben dabei in der Umsetzung oberste Priorität:
+\begin{itemize}
+    \item Die Einrichtung einer barrierefreien Informationswebsite für jede Universität/Hochschule, die umfassend über die konkrete Umsetzung der Barrierefreiheit informiert. Auf dieser Website sollen auch die Kontaktdaten des:der Verantwortlichen für Barrierefreiheit der jeweiligen Hochschule zu finden sein. Wichtig ist hierbei, dass diese Seite eine Sammlung aller relevanten Informationen enthält und auf der Website der Hochschule einfach zu finden ist.
+   
+  \item  Die Einrichtung einer Ansprechperson an der Hochschule, die Studierende und Mitarbeiter mit Beeinträchtigungen und chronischer Krankheit berät und Informationen über Fördermöglichkeiten bereitstellen kann. Es muss die Möglichkeit geben, sich anonym an diese Ansprechperson zu wenden.
+  
+  \item Die Universität soll eine unabhängige Stelle einrichten, welche diese auf dem Weg zur barrierefreien Hochschule begleiten soll. Die Aufgabe dieser Einrichtung ist, bei neuen Bauvorhaben und Renovierungen zu beraten sowie Initiativvorschläge zu strukturellen Änderungen des Campus und der hochschulinternen Infrastruktur einzubringen. %Es ist essentiell, dass diese Abteilung frei von Abhängigkeiten, auch finanziellen, agieren kann.
+    
+   \item  Eine inklusive Hochschule muss Studienbedingungen neu denken und flexibilisieren. 
+   \begin{itemize}
+       \item Die Möglichkeit eines Teilzeitstudiums muss in allen Studiengängen angeboten werden. Die Informationen hierzu müssen genauso leicht zugänglich sein wie die für ein Vollzeitstudium.
+       \item  Die Anwesenheitspflicht in Lehrveranstaltungen ist abzuschaffen. 
+       \item  Die Abmeldung von Prüfungen muss bis zum Vortag der Prüfung ohne weitere Hürden wie beispielsweise eine Krankschreibung möglich sein. 
+       \item  Alle Studiendokumente müssen online und barrierefrei zugänglich gemacht werden. Zudem sollen Lesefassungen bereitgestellt werden.
+   \end{itemize}
+\end{itemize}
+
+%\section{Ausführungen zu den Forderungen}
+%\subsection{Aufklärung und Sensibilisierung}
+Die Sensibilisierung von Hochschulangehörigen und insbesondere auch Entscheidungsträger:innen ist von enorm hoher Relevanz für eine inklusive Gesellschaft. Hierfür müssen an den Hochschulen Räume und Projekte geschaffen werden, in denen man sich damit auseinander setzen kann. Dies gilt sowohl in der Lehre als auch in der Forschung.\\
+Wir vertreten dabei den Grundsatz des \glqq Nicht ohne uns über uns.\grqq - Own Voices müssen hierbei also einen zentralen Bestandteil bilden. Solange unsere Gesellschaft, Universitäten und Hochschulen nicht inklusiv sind, müssen regelmäßig Informations- und Sensibilisierungskampagnen angestrengt werden, um den Prozess weiter anzutreiben.
+   
+Wir fordern daher die Einrichtung einer Abteilung, die auf dem Campus sichtbar und leicht erreichbar situiert sein soll. Sie soll sich sowohl um die Kommunikation der  Informationenen über Fördermöglichkeiten und Barrierefreiheit kümmert, als auch Veranstaltungen zur Aufklärung und Sensibilisierung der Hochschulmitglieder organisiert. Wünschenswert wäre eine Themenwoche pro Semester, die für alle Interessierten zugänglich ist unabhängig vom Studienfach. 
+
+Zu einer solchen Sensibilisierung zählt auch, dass die Barrierefreiheit im öffentlichen Auftreten der Hochschule oberste Maxime sein muss. So müssen beispielsweise die für Social Media zuständigen Mitarbeiter:innen in barrierearmer Kommunikation geschult werden. Bei öffentlichen Veranstaltungen der Hochschule müssen gegebenenfalls vorhandene Unterstützungsbedarfe abgefragt und Lösungen dafür gefunden werden.
+
+Hochschulen sollen eine Übersicht von Hilfsangeboten, Präventionsmaßnahmen und den Rechten der Studierenden besonders im Prüfungsfall leicht erreichbar zur Verfügung stellen, z.B. als Handreichung/Flyer, als Webseite oder im Rahmen von Vorträgen während der Erstsemester-Einführungsveranstaltungen, sog. \glqq Ersti-Wochen\grqq, und Informationsveranstaltungen in späteren Semestern. 
+
+Es muss möglich sein, sich diese Informationen anonym einzuholen und auch Beratungsgespräche anonym wahrzunehmen. Der Zugang zu diesen Informationen soll niederschwellig und barrierefrei gestaltet sein. 
+
+Es muss eine Beschwerdestelle eingerichtet werden, bei der Verstöße gegen die Barrierefreiheit oder diskriminierende Vorfälle (auf Wunsch anonym) gemeldet werden können. Diese Beschwerdestelle muss barrierearm erreichbar sein, unter anderem durch eine Art Notruf (sowohl telefonisch als auch online oder per SMS), der Hochschulangehörigen beispielsweise dann zur Verfügung steht, wenn ein Raum aufgrund von Baumaßnahmen nicht barrierefrei zugänglich ist.
+
+%\subsection{Flexible Studienbedingungen}
+
+%\section*{ Barrierefreier Campus}
+\glqq Bauliche Anlagen, die öffentlich zugänglich sind, müssen in den dem allgemeinen Besucherverkehr dienenden Teilen von Menschen mit Behinderungen [...] barrierefrei erreicht und ohne fremde Hilfe zweckentsprechend genutzt werden können. Diese Anforderungen gelten insbesondere für [1.] Einrichtungen der Kultur und des Bildungswesens [...]\grqq [§50 Absatz 2 MBO].\\ 
+
+Diese bauliche Barrierefreiheit ist jedoch an den meisten Hochschulen nicht vorhanden, dies muss dringendst verbessert werden. Hierfür soll von paritätisch besetzten Gremien, unter Berücksichtigung von Mitarbeitenden und Studierenden mit Behinderung und chronischer Krankheit, Konzepte für barrierefreie Campus ausgearbeitet und umgesetzt werden. Dabei ist auf ein nachhaltiges und ausfallsicheres Konzept ohne extreme Umwege  zu achten. \\
+Um den Prozess zu unterstützen, soll die Universität eine unabhängige Stelle einrichten, welche sich nur mit der Umsetzung der Barrierefreiheit befasst. Die Aufgabe dieser Einrichtung ist, bei Neubauten und Renovierungen zu beraten und Initiativvorschläge zu strukturellen Änderungen des Campuses und der hochschulinternen Infrastruktur einzubringen. Es ist essentiell, dass diese Abteilung frei von Abhängigkeiten, auch finanziellen, agieren kann, und sie bereits bei den ersten Planungstreffen von Bauvorhaben hinzugezogen wird.
+
+Insbesondere ist es wichtig, dass Bibliotheken, studentische Arbeitsräume, Labore, die Büros des eigenen Fachbereichs und ähnliches barrierearm zu erreichen und zu nutzen sind. Andernfalls müssen Alternativen gefunden, kleine Umbauten oder die Anschaffungen von Spezialausrüstung (beispielsweise herunterfahrbare Labortische) initiiert werden.
+
+%\section*{Nachteilsausgleiche}
+Der Anspruch auf modifizierte Studien- und Prüfungsbedingungen ist im Hochschulrahmengesetz ausdrücklich verankert. Die Möglichkeit des Nachteilsausgleich muss bekannter und von seinem Stigma befreit werden. 
+
+Der Nachteilsausgleich  muss an die indivuduellen Bedürfnisse angepasst werden. Um einen gerechtfertigten Nachteilsausgleich auszustellen, fordern die Antragsstellenden die Einrichtung einer Stelle, die sich nur um Nachteilsausgleich kümmert, welche in Absprache mit den Prüfungsämtern geeignete Lösungen findet. Letztendlich muss aber diese:r Beauftragte den Prüfungsausschüssen gegenüber weisungsberechtigt sein, da eine ausreichende Weiterbildung der Prüfungsausschüsse, um selbst eine faire Aussage über die Prüfungsfähigkeit oder den Bedarf an Nachteilsausgleichen zu treffen, nicht zu gewährleisten ist.
+
+
+%\section*{ Abschaffung von Anwesenheitspflicht}
+Eine Anwesenheitspflicht kann für Studierende mit einer körperlichen Beeinträchtigung oder einer psychischen Krankheit eine hohe Belastung darstellen.
+Deswegen fordern wir, die Anwesenheitspflicht großflächig abzuschaffen, außer die Lehrinhalte können nur vor Ort vermittelt werden (z.B.: Praktika oder Exkursionen), wie es beispielsweise bereits im Hochschulgesetz Schleswig-Holstein geregelt ist.
+
+Je nach Beeinträchtigung können Modifikationen bei praktischen Studienabschnitten nötig werden. Dabei kann es sich zum Beispiel um Splitten, Verlegung oder den teilweisen Ersatz von Praktika oder Exkursionen durch andere Leistungen handeln. Für Laborarbeiten sind eventuell passende Hilfsmittel, Assistenzen oder eine barrierefreie Ausstattung bereit zu stellen. In begründeten Einzelfällen sollte eine kompensierende Leistung möglich sein.
+
+
+%\section*{ Nutzung von modernen Lehr- und Lernformen}
+Covid-19 hat uns gezeigt, dass Lehre auch digital geht. Diese Erfahrung soll mitgenommen werden und auch in die Zeit nach den Covid-19-Einschränkungen soll weiter an den Möglichkeiten, Lehre online stattfinden zu lassen, gearbeitet werden.
+Beipiele hierfür sind:
+\begin{itemize}
+    \itemsep0pt
+    \item Vorlesungsaufzeichnungen (mit Untertiteln)
+    \item Lernvideos mit Untertiteln
+    \item E-Seminare
+    \item Austausch über Foren
+    \item Lerngruppen auf Uni-Internen Plattformen
+\end{itemize}
+
+Dieses Angebot soll so aufgebaut werden, dass es sowohl als Ergänzung zu Veranstaltungen in der Uni als auch für ein teilweises remote Studium genutzt werden kann.
+
+Inhalte der Module müssen online im geeigneten Format verfügbar sein und barrierefrei zugänglich gemacht werden. 
+Für die Schulung der Lehrenden, wie man Material barrierefrei aufbereiten kann, und für die Beratung derselbigen, welche alternativen Formate für die eigene Veranstaltung sinnvoll sein könnten, muss eine Instanz an der Uni eingerichtet werden. Schulungen für Lehrende sollen verpflichtend gemacht werden.
+
+%\section*{Teilzeitstudium ohne Mehrkosten}
+Das Studium in Teilzeit abzuschließen ist eine Option, die unbedingt eingerichtet werden muss. Dies kommt nicht nur Studierenden mit psychischer oder physischer Einschränkung zu Gute, sondern auch Studierenden, die mit Kind studieren, Verwandte pflegen oder sich selbst finanzieren müssen.
+
+Diese Möglichkeit eines Teilzeitstudiums muss ebenso kommuniziert werden, wie die eines Vollzeitstudiums. Beide Möglichkeiten sind als gleichberechtigt zu behandeln und Studierende sollen keinen Nachteil erfahren egal für welche Option sie sich entschieden haben. So darf auch keine Zweiklassenkultur entstehen.
+
+Die durch ein Teilzeitstudium resultierenden höheren Fachsemesterzahlen dürfen nicht durch Langzeitstudiengebühren gestraft werden.
+
+%\section*{ Keine Zwangsexmatrikulation aufgrund längerer Studienzeiten}
+Auf keinen Fall dürfen Studierenden mit Behinderung und chronischer Krankheit mit Zwangsexmatrikulationen gedroht werden. Jegliche Regelungen, die eine Exmatrikulation vorsehen wenn nicht genügend ECTS Punkte oder nicht bestimmte Prüfungen bestanden sind, sind für Studierenden mit Behinderung und chronischer Krankheit ohne Ausnahme auszusetzen.
+
+%\section*{ Kurzfristige Abmeldungen von Prüfungen ermöglichen}
+Es muss Studierenden ermöglicht werden, kurzfristig und ohne Darlegung von Gründen von Prüfungen zurück zu treten. Ein sinnvoller Zeitpunkt ist 23:59 Uhr des Vortages. 
+Dies gewährt den Studierenden eine einfacheren Umgang mit plötzlich  auftretenden Verschlechterungen des Gesundheitszustands, mehr Freiheit in der Planung und fördert die Selbstbestimmtheit.
+
+%\section{ Abschließende Zusammenfassung}
+Die hier aufgeführten Maßnahmen sorgen in letzter Konsequenz nicht nur für die Möglichkeit der gleichberechtigten Teilnahme am Hochschulleben für Hochschulangehörige mit Behinderungen, chronischen Erkrankungen und psychischen Beeinträchtigungen, sondern erleichtern auch anderen Studierenden das Studium, beispielsweise solchen mit Familienaufgaben.
+
+Zudem fördert eine inklusive Hochschule auch die Wahrnehmung des Themas in der Gesellschaft. Eine inklusive Hochschule ermöglicht die persönliche Auseinandersetzung mit den eigenen Fähigkeiten und fördert die Sensibilität für Diversitätsfragen in allen Dimensionen und entspricht damit dem Lehrauftrag der Hochschulen. 
+
+%\section{Quellen}
+Jonas Poskowsky, Sonja Heißenberg, Sarah Zaussinger, Julia Brenner. 2017. beeinträchtigt studieren –best2Datenerhebung zur Situation Studierender mit Behinderung und chronischer Krankheit 2016/17. Deutsche Studentenwerke. %\url{https://www.studentenwerke.de/de/content/beeintr%C3%A4chtigt-studieren-%E2%80%93-best2}
+\vspace{1cm} 
+
+\vfill
+\begin{flushright}
+	Verabschiedet am 23. Mai 2021 \\
+	auf der Digital-ZaPF hosted in Rostock.
+\end{flushright}
+
+\end{document}

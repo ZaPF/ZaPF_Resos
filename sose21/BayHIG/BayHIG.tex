@@ -1,0 +1,149 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{url}
+%\usepackage{tocloft}             % Paket für Table of Contents
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+%\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+% \usepackage{draftwatermark} % Wasserzeichen ``Entwurf''
+% \SetWatermarkText{Antrag}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{blue}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+\initcomment{Philipp}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+
+
+
+\begin{document}
+
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+	\vspace{-1.8cm}
+	\includegraphics[width=80pt]{../logo.pdf}
+	\centering
+	\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \huge{Resolution zum Entwurf des Bayerischen Hochschulinnovationsgesetzes}\vspace{.25\baselineskip}\\
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+%%%% Metadaten %%%%
+
+% \paragraph{Addressierte:} Hochschulleitungen Bayern, Wissenschaftspolitische Sprecherinnen der Fraktion im Bay. Landtag, Bayerischer Staatsminister für Wissenschaft und Kunst Siebler, Landes Asten Konferenz Bayern, GEW Bayern, ver.di Bayern, NGAWiss (Netzwerk für gute Arbeit in der Wissenschaft), BdWi (Bund demokratischer Wissenschaftlerinnen und Wissenschaftler), Landeskonvent Mittelbau, LaKoF Bayern 
+
+% \paragraph{Antragstellende:} Andy (Würzburg), Max (Würzburg), Jakob (LMU München)
+
+%%%% Text des Antrages zur veröffentlichung %%%%
+
+% \section*{Antragstext}
+Die ZaPF lehnt den vorliegenden Entwurf zum Bayerischen Hochschulinnovationsgesetz\footnote{\url{https://www.stmwk.bayern.de/download/21067_HIG-Gesetz.pdf}} (BayHIG) vom 18.05.2021 entschieden ab. Die Inhalte des Eckpunktepapiers der bayerischen Staatsregierung, die die ZaPF in ihrer Resolution\footnote{\url{https://zapfev.de/resolutionen/wise20/bayhschg/bayhschg.pdf}} vom 15.11.2020 scharf kritisiert hat, wurden zu großen Teilen änderungsfrei in den Entwurf übernommen und unsere Kritik hat somit unverändert Bestand.
+
+Besonders enttäuscht sind wir von der Tatsache, dass trotz expliziter Versicherung des Staatsministers für Wissenschaft und Kunst, keinerlei Studiengebühren einzuführen, mit dem BayHIG die Möglichkeit geschaffen werden soll, Studierende und Studieninteressierte aus Nicht-EU-Staaten finanziell zu belasten. Die vorgesehenen Gebühren für Auswahl und soziale Betreuung sind Studiengebühren durch die Hintertür. Die daraus resultierende Bildungsbarriere sowie die Ungleichbehandlung von Studierenden unterschiedlicher Herkunft verurteilen wir und fordern die Staatsregierung dazu auf, ihr Wort zu halten
+und jegliche Form von Studiengebühren aus dem Gesetz zu streichen.
+
+Darüber hinaus kritisieren wir die ersatzlose Streichung von Artikel 5a BayHSchG, der die Höhe, Zweckbindung und Verteilung der Studienzuschüsse gesetzlich festschreibt, aufs Schärfste. Die Studienzuschüsse leisten einen essentiellen Beitrag zur Qualität der Lehre und den Studienbedingungen an den bayerischen Hochschulen. Ihr Wegfall würde den Studienstandort Bayern nachhaltig schwächen. Die gesetzlich verankerte Zweckbindung stellt sicher, dass die Hochschulen konstant in die Verbesserung von Studium und Lehre investieren. Dabei sorgt der Vergabemechanismus durch paritätisch besetze Kommissionen dafür, dass die Mittel auch tatsächlich effektiv eingesetzt werden. Die Kommissionen dienen darüber hinaus als wichtige Schnittstelle zwischen der Studierendenschaft und den Institutionen der Hochschulen, die unbedingt erhalten werden muss. Wir fordern die Staatsregierung auf, die Studienzuschüsse in ihrer derzeitigen Form unabhängig von der sonstigen Finanzierung der Hochschulen beizubehalten.
+%\vspace{1cm} 
+
+\vfill
+\begin{flushright}
+	Verabschiedet am 23. Mai 2021 \\
+	auf der Digital-ZaPF hosted in Rostock.
+\end{flushright}
+
+\end{document}
