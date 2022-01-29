@@ -1,0 +1,154 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{url}
+%\usepackage{tocloft}             % Paket für Table of Contents
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+%\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+% \usepackage{draftwatermark} % Wasserzeichen ``Entwurf''
+% \SetWatermarkText{Antrag}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{blue}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+\initcomment{Philipp}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+
+
+
+\begin{document}
+
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+	\vspace{-1.8cm}
+	\includegraphics[width=80pt]{../logo.pdf}
+	\centering
+	\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \huge{Resolution zum geplanten Versammlungsgesetz in NRW}\vspace{.25\baselineskip}\\
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+%%%% Metadaten %%%%
+
+% \paragraph{Addressierte:} Landesregierung NRW, die Landtagsfraktionen von CDU, FDP, Grünen, SPD und der Linken NRW
+
+% \paragraph{Antragstellende:} Bernhard & Sebastian (Uni Köln)
+
+%%%% Text des Antrages zur veröffentlichung %%%%
+
+% \section*{Antragstext}
+Die Zusammenkunft aller Physikfachschaften (ZaPF) fordert die Landesregierung NRW auf, den Entwurf zum Versammlungsgesetz zurückzuziehen und eine Verabschiedung nicht weiter zu verfolgen. Das geplante Gesetz schränkt die Versammlungsfreiheit ein und hat weitreichende Folgen für Proteste von Studierenden unter anderem zu hochschulpolitische Themen, da es Menschen einschüchtert und somit hemmt ihre Grundrechte wahrzunehmen. Hochschulen haben die gesellschaftliche Aufgabe, wissenschaftliche Fakten nicht nur in die Öffentlichkeit zu bringen, sondern diese dort auch auf vielfältige Art und Weise, auch durch Protestaktionen, zu vertreten. Durch die geplante Verschärfung des Versammlungsgesetzes wird es deutlich erschwert, dieser Verantwortung nachzukommen. Insbesondere aus den folgenden Gründen lehnen wir den Gesetzentwurf entschieden ab:\\
+\begin{enumerate}
+\item Gegendemonstrationen und Gegenaktionen werden durch das geplante Versammlungsgesetz kriminalisiert. So sieht etwa das \glqq Störungsverbot\grqq vor, dass bereits der Aufruf zu einer \glqq Störung\grqq (wie z.B. die Blockade einer Demonstration) zu Haftstrafen von bis zu 2 Jahren führen kann.\\
+Die Deutungshoheit über die weit gefasste Interpretation, was als Störung zu verstehen ist - d.h. welche Protestformen legal oder illegal sind - liegt nicht mehr beim Gesetzgeber, sondern wird an die Strafverfolgungsbehörden übertragen. Die Protestierenden werden somit Willkür unterworfen.\\ 
+Denkt man an vergangene hochschulpolitische Proteste zurück, so wird die Brisanz deutlich: Aufrufe zu Hörsaalbesetzungen wie etwa beim großen Bildungsstreik 2009, die 68er Studi-Bewegung, Sitzblockaden vor Bildungsministerien oder andere Protestformen, würden so strafbar.  Bei wissenschaftlich gesicherten Erkenntnissen wie z.B. solchen aus der Klimaforschung, die allerdings gesellschaftlich oder politisch kontrovers sind, ist ein Protest unabdingbar. Solche Protestaktionen zu hochschul- oder wissenschaftspolitischen Themen werden allerdings kriminalisiert und gefährdet. Dazu zählt auch bereits die reine Vorbereitung auf Proteste, die z.B. aus wissenschaftlichen und politischem Diskurs an Universitäten entstehen. \newpage
+\item Das neue Versammlungsgesetz räumt der Polizei deutlich mehr Befugnisse ein, was das Anfertigen von Bildmaterial und das Erfassen persönlicher Daten von Versammlungsanmeldung, Ordner*innen und auch von Teilnehmenden angeht. Marginalisierte Studierende, deren berufliche und auch allgemeine Perspektiven leicht bedroht werden können, sind durch den Gesetzesvorschlag insbesondere gefährdet. Hierzu gehören unter anderem Lehramtsstudierende, da für sie z.B. durch Anschuldigungen eine Verbeamtung unmöglich werden könnte. Andererseits betrifft dies auch internationale Studierende. oder Studierende mit Migrationshintergrund\footnote{vergleiche etwa: Bleicher-Rejditsch, I.; Härtel, A.; Bahr, R.; Zalucki, M.; 2014: Erfahrungen Internationaler Studierender und Studierender mit „Migrationshintergrund“ an der Hochschule. \url{https://www.thm.de/site/images/stories/International/ProMi/THM_ProMi-Ergebnisbericht_Studbefrag102014.pdf} \\ Eine sehr fokussierte Zusammenfassung der Problematik findet sich in der Zusammenfassung der Studie (\url{https://www.thm.de/site/images/stories/International/ProMi/ProMi_Zusammenfassung_Ergebnisbericht.pdf}) auf S. 12-13}, die entweder eine Einbürgerung anstreben oder politische Verfolgung in ihrem Heimatland zu befürchten haben. Es ist unerlässlich, dass diese Studierenden weiter auch an hochschulpolitischen Demonstrationen teilnehmen können, damit die Gleichberechtigung zur Teilhabe an demokratischen Prozessen unabhängig der Herkunft erhalten bleibt.
+Zusätzlich dazu stellt die fehlende Anonymität der Versammlungsleitung in der Öffentlichkeit ein großes Problem dar. Dies kann sich nachteilig für diese Studierenden auswirken und erhöht somit die Hürde zu einem solchen Engagement aus Angst vor etwaiger Benachteiligung.
+\item Studierende und Fachschaften sind im hochschulpolitischen Diskurs gegenüber anderen Statusgruppen aufgrund der Machtdynamik oft stark benachteiligt. Daher müssen Studierende oft auf öffentliche Proteste und Protestaktionen zurückgreifen, um essenzielle Freiheiten und Rechte zu erstreiten und zu erstreiken. Durch das Verlängern der Anmeldefristen für Versammlungen wird es unmöglich gemacht, zeitnah auf studierendenunfreundliche Änderungen zu reagieren.
+\item Der Gesetzesentwurf bezieht sich in der Begründung auf die Klimabewegung in NRW. So wird z.B. der Braunkohletagebau Garzweiler II explizit genannt. Das Gesetz zielt somit darauf ab, Protestaktionen, die auf wissenschaftlichen Erkenntnissen beruhen, zu kriminalisieren und massiv zu erschweren. Besonders brisant ist dies, da Proteste auch aus wissenschaftlicher Sicht notwendig sind, z.B. um das Erreichen des 1.5$\,^\circ$C Ziels zu sichern\footnote{vgl. Stephen J. Thackeray et al.: Civil disobedience movements such as School Strike for the Climate are raising public awareness of the climate change emergency. Wiley 2020. \url{https://doi.org/10.1111/gcb.14978}}.
+\end{enumerate}
+
+%\vspace{1cm} 
+
+\vfill
+\begin{flushright}
+	Verabschiedet am 14. November 2021 \\
+	auf der ZaPF in Göttingen.
+\end{flushright}
+
+\end{document}
