@@ -1,0 +1,182 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{url}
+%\usepackage{tocloft}             % Paket für Table of Contents
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+%\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+% \usepackage{draftwatermark} % Wasserzeichen ``Entwurf''
+% \SetWatermarkText{Antrag}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{blue}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+\initcomment{Philipp}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+
+
+
+\begin{document}
+
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+	\vspace{-1.8cm}
+	\includegraphics[width=80pt]{../logo.pdf}
+	\centering
+	\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \huge{Resolution zur Schaffung von Anrechnungsmöglichkeiten für bürgerschaftliches Engagement}\vspace{.25\baselineskip}\\
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+%%%% Metadaten %%%%
+
+% \paragraph{Addressierte:} Landesregierung NRW, die Landtagsfraktionen von CDU, FDP, Grünen, SPD und der Linken NRW
+
+% \paragraph{Antragstellende:} Bernhard & Sebastian (Uni Köln)
+
+%%%% Text des Antrages zur veröffentlichung %%%%
+
+% \section*{Antragstext}
+
+Die Zusammenkunft aller Physik-Fachschaften (ZaPF) fordert die Schaffung von Anrechungsmöglichkeiten für Bürgerschaftliches Engagement\footnote{nach der Interpretation einer Enquete-Kommission des Bundestages: \url{https://dserver.bundestag.de/btd/14/089/1408900.pdf} unter „Eigenschaften des bürgerschaftlichen Engage- ments“ Seite 38}, worunter unter anderem das Engagement in akademischen und studentischen Gremien an den Hochschulen zählt. Insbesondere unterstützt die ZaPF die Einführung von sogenannten „Service-Learning-Modulen“ oder „Containermodulen“ für Bürgerschaftliches Engagement, wie dies schon von der Hochschulrektorenkonferenz vorgestellt wird\footnote{siehe hierzu Tabelle 1 der Handreichung der Hochschulrektorenkonferenz auf Seite 19 \url{https://www.hrk-nexus.de/fileadmin/redaktion/hrk-nexus/07-Downloads/07-02-Publikationen/Handreichung_Anrechnung_15.12.2017_WEB.pdf}} und an einigen Hochschulen\footnote{unvollständige Liste: HU Berlin, TU Dresden, FAU Erlangen-Nürnberg, Uni Göttingen} umgesetzt ist.
+Begründung:
+Folgende Punkte sprechen für solche Anrechnungsmöglichkeiten:
+\begin{enumerate}
+\item Ohne solche Anrechnungsmöglichkeiten gibt es viele Studierende, für die es nicht möglich oder deutlich schwieriger ist, sich bürgerschaftlich zu engagieren. Hierbei sind zum Beispiel folgende Studierendengruppen zu nennen:
+\begin{itemize}
+    \item Studierende mit Kindern oder pflegebedürftigen Verwandten
+    \item Studierende, die auf Nebenjobs finanziell angewiesen sind und neben Job und Studium keine Zeit für Engagement haben
+    \item Studierende, die auf Bafög angewiesen sind und ihr Studium in Regelstudienzeit schaffen müssen.
+\end{itemize}
+    Diese Studierenden sind von der Mitarbeit in beispielsweise Hochschulgremien indirekt ausgeschlossen und in diesen nicht ausreichend repräsentiert.
+\item Durch das Engagement erwerben Studierende verschiedenste Schlüsselkompetenzen. Diese sollten in dafür vorgesehene Bereiche für Schlüsselkompetenzen angerechnet werden können, ähnlich wie das beispielsweise bei Praktika gehandhabt wird. Als ein Beispiel für bürgerschaftliches Engagement sind im Anhang Schlüsselkompetenzen aufgelistet, welche während des Engagements in akademischen und studentischen Gremien erlangt werden können.
+\item Gerade für Hochschulen bietet es den positiven Effekt,dass die Studierenden durch die Anrechnungsmöglichkeit motivierter sind eigene Projekte (Insitutsfeste, Orientierungswochen/Erstsemesterbetreuung, Fachvorträge, Fahrten, etc.) zu organisieren und so das Leben an diesen Hochschulen zu bereichern.
+\item Durch den gestiegenen gesellschaftlichen Druck das Studium in kürzester Zeit abzuschließen, ist es immer schwieriger geworden Studierende für bspw. die Gremienarbeit an den Hochschulen zu gewinnen. Mit einer Anrechnungsmöglichkeit dieses Engagements könnten die entstandenen Nachwuchsprobleme der studentischen Vertretungen in Gremien der Universität gelöst werden.
+\end{enumerate}
+\newpage
+\section*{Anhang}
+Kompetenzerwerb in der studentischen Selbstverwaltung
+Durch die Mitarbeit in Gremien der studentischen und akademischen Selbstverwal- tung werden je nach Tätigkeit und Funktion folgende Qualifikationen erworben:
+
+\subsection*{Sozial- und Methodenkompetenzen}
+Die Studierenden erwerben individuelle Fähigkeiten und Strategien zur Lösung von Problemen. Sie entwickeln persönlichkeitsbezogene Schlüsselkompetenzen, wie z.B. Führungsqualitäten und Durchsetzungsvermögen, Argumentations- und Urteilsvermögen, Team- und Konfliktfähigkeit, Rhetorische Fähigkeiten, interkulturelle und Gender-Kompetenzen sowie Fähigkeiten des Selbstmanagements. Außerdem haben sie in ihren Funktionen die Möglichkeit, Präsentations- und Moderationskompetenzen zu vertiefen.
+
+\subsection*{Organisations- und Managementkompetenzen}
+Die Studierenden kennen grundlegende ökonomische und strukturelle Zusammenhänge in Organisationen und sind mit der Entwicklung eigener Strategien zur Problemlösung in Praxiszusammenhängen vertraut. Zusätzlich erwerben sie in zahlreichen Tätigkeiten umfangreiche rechtliche Kenntnisse und lernen demokratische Strukturen und Vorgänge kennen.
+
+\subsection*{Informations- und Medienkompetenzen}
+Die Studierenden erwerben Fähigkeiten zur kompetenten Handhabung grundlegender, neuer Technologien, zum selbst gesteuerten Lernen und Informieren und verfügen über die Fähigkeit Informationen fundiert zu bewerten. Sie erhalten ein solides Grundverständnis der Funktionsweise der Informations-und Kommunikationstechnologie, Sicherheit im Umgang mit deren Werkzeugen, einen umfassenden Überblick über die neuen Informationsangebote und erlernen effiziente Recherchetechniken. In ausgewählten Tätigkeiten erhalten die Studierenden zudem Einblicke in die Presse und Öffentlichkeitsarbeit.
+
+Der Inhalt wurde aus der 3. Analge der Vorlage Nr. 045/2014 für die Sitzung des akademischen Senats der HU Berlin übernommen und leicht ergänzt (\url{https://www.refrat.de/docs/fako/AS140415_Antrag_Anerkennung_Gremien.pdf})
+
+Beispiele für Modulbeschreibungen
+\begin{enumerate}
+\item Modulbeschreibung mit Begleitseminar - Service Learning Modul(für akad. stud. Gremien): \url{https://zapf.wiki/images/e/e5/Modulbeschreibung_ Gremienarbeit.pdf}
+\item Modulbeschreibung ohne Begleitseminar - Containermodul(für akad. stud. Gremien): \url{https://zapf.wiki/images/b/bb/Praxismodul_Universitaere_ Selbstverwaltung.pdf}
+\item Modulbeschreibung ohne Begleitseminar - Containermodul(für bürgerschaftliches Engagement im Allgemeinen: \url{https://zapf.wiki/images/f/fa/ Praxismodul_Bürgerschaftliches_Engagement.pdf}
+\end{enumerate} 
+
+%\vspace{1cm} 
+
+\vfill
+\begin{flushright}
+	Verabschiedet am 14. November 2021 \\
+	auf der ZaPF in Göttingen.
+\end{flushright}
+
+\end{document}

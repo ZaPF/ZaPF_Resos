@@ -1,0 +1,166 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{url}
+%\usepackage{tocloft}             % Paket für Table of Contents
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+%\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+% \usepackage{draftwatermark} % Wasserzeichen ``Entwurf''
+% \SetWatermarkText{Antrag}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{blue}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+\initcomment{Philipp}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+
+
+
+\begin{document}
+
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+	\vspace{-1.8cm}
+	\includegraphics[width=80pt]{../logo.pdf}
+	\centering
+	\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \huge{Positionspapier zur Debatte über die MRVO beim PVT}\vspace{.25\baselineskip}\\
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+%%%% Metadaten %%%%
+
+% \paragraph{Addressierte:} Landesregierung NRW, die Landtagsfraktionen von CDU, FDP, Grünen, SPD und der Linken NRW
+
+% \paragraph{Antragstellende:} Bernhard & Sebastian (Uni Köln)
+
+%%%% Text des Antrages zur veröffentlichung %%%%
+
+% \section*{Antragstext}
+
+Auf dem nächsten Poolvernetzungstreffen (PVT) des Studentischen Akkreditierungspool im Januar soll eine studentische Stellungnahme zur aktuellen Überarbeitung der Musterrechtsverordnung (MRVO) erarbeitet werden. Wir beziehen uns dabei auf die Empfehlung einer Arbeitsgruppe aus dem Hochschulleitungsumfeld und die Kritik der KaWuM \footnote{\url{https://zapf.wiki/images/2/23/Empfehlung_Eval_MRVO_Arbeitsgruppe_der_statusgruppe_rRektoratundco_Kommentiert-KaWuM.pdf}}.
+
+Wir teilen die Kritik der KaWuM an dieser Empfehlung, insbesondere in folgenden Punkten:
+\begin{itemize}
+\item Externe Studierende (nach Möglichkeit aus dem studentischen Akkreditierungspool) müssen Bestandteil der Gutachter*innengruppe bleiben.
+\item Die Ausgestaltung von hochschulinternen Qualitätsmanagementsystemen darf nicht ohne externe Expertise und Prüfung stattfinden.
+\item Die Regelung zur Mindestgröße von 5 ECTS pro Modul darf nicht ersatzlos gestrichen werden.
+\end{itemize}
+
+Zu den ersten beiden Punkten hat sich die ZaPF bereits eindeutig positioniert\footnote{\url{https://zapfev.de/resolutionen/sose21/mrvo/mrvo.pdf}}.
+Zusätzlich formuliert die ZaPF folgende Kritikpunkte an der Empfehlung, die ergänzend zur Kritik der KaWuM zu sehen sind.
+\begin{itemize}
+\item §4 Absatz 2: Die Streichung der Unterteilung in konsekutive und weiterbildende Studiengänge nimmt dem Gesetzgeber die Möglichkeit, grundsätzliche Unterschie- de zwischen diesen Arten der Ausbildung (z.B. bei den Zulassungsbedingungen) einheitlich festzulegen. Wir lehnen die Streichung deshalb ab.
+\item §15: Auch wenn die Maßnahmen zu Frauenförderung und Geschlechtergerechtigkeit einer Hochschule im Rahmen der Systemakkreditierung allgemein überprüft wur- den, sollte die Umsetzung und konkrete Auswirkungen dieser Maßnahmen auch auf Studiengangsebene im Rahmen interner Akkreditierungsverfahren weiter geprüft werden. Nur so kann sichergestellt werden, dass die Maßnahmen in der gesam- ten Hochschule die gewünschte Wirkung haben. Wir lehnen es deshalb ab, diese Überprüfung auf die Ebene der Systemakkreditierung zu beschränken.
+\end{itemize}
+\vspace{9mm}
+Ergänzend möchten wir folgenden Diskussionsansatz zur Veröffentlichungspflicht von internen Qualitätsberichten systemakkreditierter Hochschulen in das PVT tragen:\\
+Dem Positionspapier des Studentischen Akkreditierungspools, dem sich die ZaPF bereits angeschlossen hat \footnote{\url{https://zapfev.de/resolutionen/wise20/systemakkreditierung/systemakkreditierung.pdf
+}}, steht die Bestrebung vieler systemakkreditierter Hochschulen gegen- über, die Veröffentlichungspflicht vollständig abzuschaffen. Dementsprechend ist in naher Zukunft nicht mit einer flächendeckenden Umsetzung der Regelung zu rechnen und es stellt sich die Frage, wie hier strategisch weiter vorgegangen werden kann.\\
+Die ZaPF identifiziert die im Prozess beteiligten Studierendenvertretungen als zentrale Zielgruppe, die von der konsequenten Veröffentlichung von Prüfberichten und der Dokumentation der Prozesse profitieren würde. Durch die Veröffentlichung ist ein niederschwelliger und verlässlicher Zugang zu diesen Informationen unabhängig von selbstorganisiertem Wissenstransfer inner halb der Studierendenvertretung gewährleistet. Dies ist insbesondere aufgrund der im Verhältnis zur üblichen Studiendauer langen Zeiträume zwischen Prüfungsprozessen von Bedeutung. Die im PVT organisierten Organisationen sollten sich deshalb in besonderem Maße dafür einsetzen, dass die lokale Studierendenvertretung (Fachschaften, ASten u.ä.) Zugang zu diesen Unterlagen erhält, auch wenn eine vollständige Veröffentlichung (noch) nicht erreicht werden konnte.
+
+
+%\vspace{1cm} 
+
+\vfill
+\begin{flushright}
+	Verabschiedet am 14. November 2021 \\
+	auf der ZaPF in Göttingen.
+\end{flushright}
+
+\end{document}
