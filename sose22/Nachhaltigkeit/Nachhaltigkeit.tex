@@ -1,0 +1,215 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{url}
+%\usepackage{tocloft}             % Paket für Table of Contents
+\def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
+\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
+\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-}%
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+%\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+% \usepackage{draftwatermark} % Wasserzeichen ``Entwurf''
+% \SetWatermarkText{Antrag}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{blue}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+\initcomment{Philipp}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+
+
+
+\begin{document}
+
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+	\vspace{-1.8cm}
+	\includegraphics[width=80pt]{../logo.pdf}
+	\centering
+	\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \huge{Resolution zur Nachhaltigkeit}\vspace{.25\baselineskip}\\
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+%%%% Metadaten %%%%
+
+%\paragraph{Adressierte:} : alle Präsidien, Hochschulleitungen und Asten, Präsident der HRK, FFF, Stud4F, Science4F, StuPas, Fachschaften, BuFaTas
+%
+%\paragraph{Antragstellende:} Charlotte (Uni Bayreuth), Fritz (FUB), Marlene (Hamburg), Niklas (Uni Mainz), Sebat (Uni Köln)
+
+%%%% Text des Antrages zur veröffentlichung %%%%
+
+\subsection*{Einleitung}
+Wir sehen lokal und global immer mehr Auswirkungen der Klimakrise. Die Wissenschaft hat seit Jahren einen Konsens dazu, dass die Menschheit die Hauptursache für diese Entwicklung ist. Erwiesen ist auch, dass sich das Zeitfenster für die Abwendung unumkehrbarer Kippunkte mit katastrophaler Auswirkung schließt. Trotzdem wurden in Vergangenheit viel zu wenige Maßnahmen ergriffen. Wir sehen Hochschulen als Bildungs- und Forschungsinstitution in der Pflicht eine Vorreiterrolle einzunehmen. Nachhaltigkeit und damit Klimaschutz muss in jedem Bereich des universitären Lebens mit bedacht werden, um die drastische Kehrtwende zu erreichen, die in den IPCC-Berichten gefordert wird. 
+\smallskip\\
+Unter Nachhaltigkeit verstehen wir \glqq eine Entwicklung, die die Bedürfnisse der Gegenwart befriedigt, ohne zu riskieren, dass künftige Generationen ihre eigenen Bedürfnisse nicht befriedigen können\grqq~(Volker Hauff (Hrsg.): Unsere gemeinsame Zukunft: Der Brundtland-Bericht der Weltkommission für Umwelt und Entwicklung. 1. Auflage. Eggenkamp, Greven 1987, S. 46).
+\smallskip\\
+Um die Hochschule nachhaltig zu gestalten sind strukturelle Veränderungen notwendig, welche die Einhaltung von Klimaplänen wirklich ermöglicht. Dafür fordern wir die Umsetzung des folgenden Konzepts:
+\subsection*{Strukturelles Konzept}
+Jede Hochschule muss eine \textbf{Stabsstelle Nachhaltigkeit} einrichten. Dafür muss die Stelle personell so aufgestellt werden, dass sie genug Ressourcen für das umfangreiche Themengebiet und die auftretenden Aufgaben hat. 
+%\replace{Ä2}{Im Auswahlprozess sollten wenn möglich alle Statusgruppen der Hochschulen mit einbezogen werden}{
+Die Vorsitzenden dieser Stelle, die von allen Statusgruppen zu wählen sind, 
+%}
+%\delete{Ä2}{.Die Vorsitzenden dieser Stelle }
+werden als Vertretung in den Nachhaltigkeitsrat entsandt. 
+\textbf{Aufgaben} der Stabsstelle sind:
+\begin{itemize}
+    \item Einen \textbf{Klimaplan} mit konkreten Fristen zur Erreichung der Klimaneutralität \textbf{erstellen}.
+\item Notwendige \textbf{Maßnahmen} zur Umsetzung \textbf{einleiten}.
+\item Einen \textbf{Nachhaltigkeitsbericht erstellen} und das zugehörige Plenum vorbereiten (siehe Unterkapitel: Nachhaltigkeitsbericht).
+\item Aktiv universitäre \textbf{Entscheidungsprozesse mitgestalten} und den Nachhaltigkeitsrat  mit Stimmrecht in Gremiensitzungen auf Universitätsebene vertreten.
+\item Den \textbf{Nachhaltigkeitsrat} und dessen Plena \textbf{koordinieren}. 
+\item Als \textbf{Bindeglied, Informations- und Ansprechstelle} für die Nachhaltigkeitsbeauftragten der Fakultäten bzw Fachbereiche (siehe folgender Punkt) fungieren. 
+\item \textbf{allgemeine Anlaufstelle} für Nachhaltigkeitsanliegen sein.
+\end{itemize}
+Um einen umfangreichen Einblick, eine dezentrale Überprüfung und die Umsetzung des Klimaplans in den Fakultäten zu gewährleisten, müssen 
+%\add{Ä3}{dezentrale} 
+dezentrale \textbf{Nachhaltigkeitsbeauftragte} angestellt werden. 
+Um dem Zeitaufwand der Stelle gerecht zu werden, fordern wir eine hochschulspezifische Stellenbesetzung und %\replace{Ä3}{
+%mindestens eine halbe Stelle pro Fakultät.
+%}{
+und einen Gesamtumfang von mindestens einer viertel Stelle pro Fachbereich.
+%}
+Die \textbf{Aufgaben} dieser Nachhaltigkeitsbeauftragten sind: 
+\begin{itemize}
+    \item Spezifische \textbf{Probleme} im Bezug zur Nachhaltigkeit in der Fakultät \textbf{ermitteln} und Maßnahmen anstoßen. 
+\item \textbf{Dezentrale Ansprechperson} zum Thema Nachhaltigkeit sein. 
+\item \textbf{Fakultätsübergreifende Angelegenheiten} an die Stabsstelle oder den Nachhaltigkeitsrat \textbf{weiterleiten}.
+\item Koordination und Überprüfung der Umsetzung der Klimaplanmaßnahmen der Stabsstelle.
+\item Bei \textbf{Gremiensitzungen} auf Fakultäts- bzw. Fachbereichsebene \textbf{mit entscheiden}.
+\end{itemize}
+Zusätzlich zu der Schaffung dieser Stellen muss in regelmäßigen Abständen (mindestens 2 Mal pro Semester) ein \textbf{Nachhaltigkeitsrat} als Vernetzungsgremium einberufen werden. Dieser Rat dient zum direkten \textbf{Austausch} und zur \textbf{Koordination} von Maßnahmen des Klimaplans. Außerdem gibt er die Leitlinien für die Stabstelle vor. Der Rat setzt sich zusammen aus:
+\begin{itemize}
+    \item zwei Vertreter:innen der Stabsstelle Nachhaltigkeit, 
+    \item ein:e paritätische Vertretung aller Statusgruppen der Hochschule,
+    \item sowie alle Nachhaltigkeitsbeauftragten der Universität.
+\end{itemize}
+\subsection*{Nachhaltigkeitsbericht}
+Hochschulen veröffentlichen jährlich einen \textbf{Nachhaltigkeitsbericht}. Dieser wird von der Stabsstelle verfasst. Er muss die Ziele für das kommende Jahr in Bezug auf den Klimaplan beinhalten. Um eine Vergleichbarkeit der Maßnahmen und deren Umsetzung der Hochschulen zu ermöglichen muss der Nachhaltigkeitsbericht folgende Punkte beinhalten:
+\begin{itemize}
+    \item \textbf{Haushaltsplan} inklusive Divestment der Universität
+\item  Überblick über den \textbf{Ressourcenverbrauch}:
+    \begin{itemize}
+        \item Strom- und \textbf{Wärmeversorung} inklusive dessen Zusammensetzung und der Aufschlüsselung nach Verbrauchsorten
+        \item Wasserverbrauch
+        \item \textbf{Abfallproduktion} nach Entsorgungsart
+    \end{itemize}
+\item \textbf{Emissionsüberblick} inklusive Aufschlüsselung
+\item \textbf{Bau- und Sanierungsmaßnahmen} inklusive Flächennutzungskonzept und dem Ausbau der erneuerbaren Energieversorgung an der Hochschule
+\item \textbf{Mobilitätskonzept} für den Campus
+\item Überblick über \textbf{Dienstreisen} mit Aufschlüsselung nach Mobilitätsart
+\end{itemize}
+Dieser Bericht muss in einem öffentlichen \textbf{Nachhaltigkeitsplenum} vorgestellt werden, das von der Stabsstelle organisiert und in allen Statusgruppen der Hochschule sowie öffentlich beworben wird. Die Struktur des Plenum ist wie folgt aufgebaut: 
+\begin{enumerate}
+    \item \textbf{Vorstellung} des Berichts mit \textbf{Rechtfertigung} der Hochschule für alle Fristversäumnisse bezüglich des Klimaplans
+    \item \textbf{Diskussionsrunde} mit Einbezug der Besuchenden, in welcher Raum für Fragen und Anregungen geschaffen wird.
+\end{enumerate}
+
+%\newpage
+%\section*{Begründung}
+
+
+\vspace{1cm} 
+
+\vfill
+\begin{flushright}
+	Verabschiedet am 07. Juni 2022 \\
+	auf der ZaPF in Bochum.
+\end{flushright}
+
+\end{document}
