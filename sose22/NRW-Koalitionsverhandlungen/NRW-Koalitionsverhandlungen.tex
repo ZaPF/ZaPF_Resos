@@ -1,0 +1,178 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{url}
+%\usepackage{tocloft}             % Paket für Table of Contents
+\def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
+\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
+\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-}%
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,urlcolor=blue}
+
+
+%\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+% \usepackage{draftwatermark} % Wasserzeichen ``Entwurf''
+% \SetWatermarkText{Antrag}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{blue}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+\initcomment{Philipp}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+
+
+
+\begin{document}
+
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+	\vspace{-1.8cm}
+	\includegraphics[width=80pt]{../logo.pdf}
+	\centering
+	\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \huge{Koalitionsverhandlungen in NRW}\vspace{.25\baselineskip}\\
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+%%%% Metadaten %%%%
+
+%\paragraph{Adressierte:} CDU NRW, Junge Union NRW, RCDS NRW, SPD NRW, Jusos NRW, Juso-Hochschulgruppen NRW, Grüne NRW, Grüne Jugend NRW, Landeskoordination campus:grün NRW, FDP NRW, Junge Liberale NRW, Liberale Hochschulgruppen NRW
+
+
+%\paragraph{Antragstellende:} Stefan, Annemarie, Robert, Vale, Josh (Uni Köln)
+
+%%%% Text des Antrages zur veröffentlichung %%%%
+
+%\section*{Antragstext}
+Angesichts der laufenden Koalitionsverhandlungen in NRW weist die ZaPF auf drei besonders aktuelle Forderungen hin, die im Laufe der nächsten Legislatur dringend realisiert werden müssen:
+\subsection*{Zivilklausel}
+Es ist nicht optional, sondern notwendig, dass die Hochschulen einen Beitrag zu einer gerechten, nachhaltigen, friedlichen und demokratischen Welt leisten. Insbesondere ist die erneute Verankerung dieser Aufgaben im Hochschulgesetz dafür unabdingbar. Nur so ist sicher gestellt, dass die Landesregierungen verbindlich die Verantwortung dafür übernehmen, den Hochschulen die nötigen Rahmenbedingungen zur Verfügung zu stellen. Nur so haben sie die notwendigen Voraussetzungen, um zu Aufklärung über Falschdarstellungen, Kriegsursachen und -profiteure, etc. beizutragen, sowie an – nicht ergriffenen und noch zu entwickelnden – zivilen Möglichkeiten zu forschen. [1, 2]
+\subsection*{Abschaffung des endgültigen Nichtbestehens}
+Das endgültige Nichtbestehen von Prüfungsleistungen ist landesweit abzuschaffen. Sie verschieben den Fokus des Studiums von der Aneignung von Wissen und persönlicher Entwicklung hin zu der Verhinderung der eigenen Exmatrikulation. Studierende durch drohende Zwangsexmatrikulationen unter Druck zu setzen ist unangemessen; ersetzt selbstverantwortliches und selbstbestimmtes durch prüfungsorientiertes Studieren und behindert damit die freie Entfaltung. Die Erfahrung in Studiengängen oder etwa an der Uni Bielefeld, wo es solche Restriktionen nicht gibt, sind durchweg positiv. Die Erfahrungen, die mit dem Aussetzen der Restriktionen während der Corona-Pandemie gesammelt wurden, sollten die letzten Bedenken zerstreut haben. [3]
+\newpage
+\subsection*{Tarifvertrag und Personalvertretung für alle SHKs und WHKs}
+Auch angesichts der aktuellen Preisentwicklung ist es notwendig, dass endlich alle Mitarbeiter*innen von Hochschulen, also auch SHKs und WHKs, einen angemessenen Tarifvertrag bekommen oder in den TV-L aufgenommen werden. Darüber hinaus muss für alle Mitarbeiter*innen der Hochschulen, also auch für SHKs eine vollwertige Personalvertretung im Landespersonalvertretungsgesetz eingerichtet werden.\\
+
+Im Übrigen weisen wir noch einmal auf unsere leider nach wie vor aktuelle Positionierung zum NRW-Versammlungsgesetz hin:
+\newline \href{https://zapfev.de/resolutionen/wise21/Versammlungsgesetz_NRW/VersammlungsgesetzNRW.pdf}{Resolution Versammlungsgesetz NRW}
+\newline \newline
+[1] \href{https://zapfev.de/resolutionen/sose17/gesellschaftlich_verantwortung/PosPapier_gesellschaftliche_verwantwortung.pdf}{Positionspapier Gesellschaftliche Verantwortung} \newline
+[2]  \href{https://zapfev.de/resolutionen/sose19/Unterschriftenkampagne_Zivilklausel/Reso_Unterschriftenkampagne.pdf}{Resolution Zivilklausel NRW} \newline
+[3] \href{https://zapfev.de/resolutionen/wise17/Zwangsexmatrikulation/Zwangsexmatrikulation.pdf}{Resolution Zwangsexmatrikulation} \newline
+
+
+
+
+%[4] \url{https://zapfev.de/resolutionen/sose18/Tarifvertrag/reso.pdf} \newline 
+%[5] \url{https://zapfev.de/resolutionen/sose18/Hochschulgesetze/reso_hsgesetze.pdf}
+
+%Anmerkung:
+%Die Verweise [4] und [5] auf bestehende ZaPF-Beschlüsse sollen nicht mit verschickt werden, weil die Kontexte teils verwirren könnten und jedenfalls für die Adressat*innen keinen Mehrwert darstellen. Sie dienen lediglich der internen Debatte der ZaPF.
+
+
+%\newpage
+%\section*{Begründung}
+
+
+\vspace{1cm} 
+
+\vfill
+\begin{flushright}
+	Verabschiedet am 07. Juni 2022 \\
+	auf der ZaPF in Bochum.
+\end{flushright}
+
+\end{document}
