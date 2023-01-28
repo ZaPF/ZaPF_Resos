@@ -1,0 +1,151 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{url}
+%\usepackage{tocloft}             % Paket für Table of Contents
+\def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
+\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
+\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-}%
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+%\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+% \usepackage{draftwatermark} % Wasserzeichen ``Entwurf''
+% \SetWatermarkText{Antrag}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{blue}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+\initcomment{Philipp}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+
+
+
+\begin{document}
+
+
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+	\vspace{-1.8cm}
+	\includegraphics[width=80pt]{logo.pdf}
+	\centering
+	\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \huge{Resolution zum Deutschlandticket}\vspace{.25\baselineskip}\\
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+%%%% Text des Antrages zur veröffentlichung %%%%
+Die ZaPF fordert die Bundesregierung und die Landesregierungen auf, für Schüler*innen, Auszubildende und Studierende ein von ihnen bezahlbares Bildungsticket in Form eines ermäßigten Deutschlandtickets einzuführen.\\\\
+Wir begrüßen die Vereinheitlichung und Vereinfachung des ÖPNV durch das Deutschlandticket, sehen allerdings für die oben genannten Gruppen die Kosten von \EUR{49} pro Monat weit über dem finanziell tragbaren Rahmen.\\\\
+Gerade für sie besteht aber eine starke Abhängigkeit von der Nutzung des ÖPNV. Die Wohnungssituation erlaubt oft keine hinreichende Nähe zwischen Wohn- und Bildungsort, um die Alltagswege zu Fuß oder mit dem Fahrrad zu bestreiten. Oft pendeln sie sogar über Landes- und Verkehrsverbundsgrenzen hinaus.\\\\
+Das Deutschlandticket erlaubt es ressourcenschonend weit entfernte Heimatorte zu erreichen und Bildungsexkursionen zu unternehmen. Außerdem ermöglicht es soziale Teilhabe und dient der Vernetzung.\\\\
+Damit auch Schüler*innen, Auszubildende und Studierende von den Vorteilen des kürzlich beschlossenen Tickets profitieren können, muss das vorgeschlagene Bildungsticket wesentlich günstiger als \EUR{49} pro Monat sein.\\\\
+Für eine faire Lösung halten wir einen Preis von maximal \EUR{15} pro Monat ($\approx$~\EUR{0,50}~pro~Tag).\\\\
+Auf Schüler*innen, Studierende und Auszubildende mit Kind muss durch Mitnahmeregelungen Rücksicht genommen werden.\\\\
+Für Studierende, deren finanzielle Lage auch den Erwerb des Bildungstickets nicht zulässt, so etwa BAföG-Beziehende, muss es die Möglichkeit für eine Erstattung der Kosten geben.\\\\
+Wir verweisen auch auf die Pressemitteilung des fzs\footnote{Pressemitteilung des fzs vom 01.11.2022: \href{https://www.fzs.de/2022/11/01/nicht-den-anschluss-verpassen-studierende-fordern-bundesweites-29e-bildungsticket-jetzt/}{fzs.de/2022/11/01/nicht-den-anschluss-verpassen-studierende-fordern-bundesweites-29e-bildungsticket-jetzt/}}, dessen inhaltlichen Kern wir unterstützen.\\\\
+Auch andere Gruppen unserer Gesellschaft in finanziell prekären Verhältnissen dürfen nicht vergessen werden. Auch sie müssen sich die Vorteile des Deutschlandtickets leisten können.\\\\
+Langfristiges Ziel muss ein kostenfreier ÖPNV sowie dessen großflächiger Ausbau sein.
+    
+\vspace{1cm} 
+
+\vfill
+\begin{flushright}
+	Verabschiedet am 13. November 2022 \\
+	auf der ZaPF in Hamburg.
+\end{flushright}
+
+\end{document}
