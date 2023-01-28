@@ -1,0 +1,253 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+%\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{url}
+%\usepackage{tocloft}             % Paket für Table of Contents
+\def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
+\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
+\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-}%
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+%\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+% \usepackage{draftwatermark} % Wasserzeichen ``Entwurf''
+% \SetWatermarkText{Antrag}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{blue}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+\initcomment{Philipp}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+
+%\usepackage{draftwatermark}
+%\SetWatermarkText{ENTWURF}
+%\SetWatermarkScale{1}
+
+\begin{document}
+
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+	\vspace{-1.8cm}
+	\includegraphics[width=80pt]{logo.pdf}
+	\centering
+	\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \huge{Verhaltenskodex der ZaPF }\vspace{.25\baselineskip}\\
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+%%%% Metadaten %%%%
+
+%\paragraph{Adressierte:} 
+
+%\paragraph{Antragstellende:} Vorname, Nachname (Uni)
+%%%% Text des Antrages zur veröffentlichung %%%%
+
+%\section*{Antragstext}
+
+\begin{quote}
+	"Die ZaPF ist ein freies Forum von und für Physikstudika. Sie bietet eine
+	sichere Umgebung für Teilnehmika unabhängig ihrer Alter, Geschlechter,
+	sexueller Identitäten oder Orientierungen, physischen Erscheinungen und
+	Befähigungen, Studiengänge, Lebensumstände sowie politischer oder
+	religiöser Überzeugungen. Aus diesem Grund kann diskriminierendes,
+	ausschließendes und grenzüberschreitendes Verhalten in jeglicher Form
+	nicht toleriert werden."
+\end{quote}
+
+Stellungnahme der Zusammenkunft aller Physik-Fachschaften gegen
+  Diskriminierung, Ausschließung und grenzüberschreitendes Verhalten,
+  ``beschlossen''\footnote{Da das Abschlussplenumsprotokoll aus Wien
+    verschwunden ist, kann der Beschluss historisch nicht belegt werden.}
+  in Wien.
+
+\vspace{1cm}
+
+Wir wollen die ZaPF gemeinsam in einem respektvollen Miteinander
+gestalten.
+
+Wir wollen inklusive, diskriminierungsfreie und offene Kommunikation
+miteinander.
+
+Beispielhaft als nicht abgeschlossene Liste:
+
+\begin{itemize}
+%\tightlist
+\item
+  Wir freuen uns über neue Menschen auf der ZaPF und möchten eine
+  Umgebung schaffen, in der wir voneinander lernen können.
+\item
+  Wir schätzen Meinungspluralismus und ermuntern Personen marginalisierter Gruppen, sich aktiv einzubringen.
+\item
+  Wir kommunizieren respektvoll miteinander, auch wenn wir verschiedener
+  Meinung sind.
+\item
+  Wir lassen einander ausreden und hören uns zu.
+\item
+  Wir gehen miteinander empathisch um.
+\item
+  Wir akzeptieren wenn Menschen Fragen nicht beantworten wollen.
+\item
+  Wir haben körperlichen Kontakt nur mit expliziter Zustimmung,
+  Nichtzustimmung wird ohne Begrüngung akzeptiert und nicht hinterfragt.
+\item
+  Wir schaffen Sicherheit und diskutieren in einer entspannten
+  Atmosphäre miteinander.
+\item
+  Wir ermutigen rücksichtsvolles Fragen.
+\item
+  Wir wünschen uns couragiertes Verhalten.
+\item
+  Wir schützen unsere Grenzen und halten uns an die von anderen
+  gesetzten Grenzen. Du selbst bestimmt, was für dich grenzüberschreitend
+  ist.
+\end{itemize}
+
+Die ZaPFika engagieren sich eine Atmosphäre von Sicherheit und
+Gewaltlosigkeit für alle zu schaffen. Dies bedeutet insbesondere, dass:
+
+\begin{itemize}
+%\tightlist
+\item
+  wir keine Form von sexualisierter Gewalt, Belästigung oder
+  Diskriminierung akzeptieren.
+\item
+  wir keine Beleidigungen, Trollen, Degradierungen oder persönliche
+  Angriffe akzeptieren.
+\item
+  wir nicht akzeptieren, wenn Menschen anstelle von Argumenten angegriffen werden.
+\end{itemize}
+
+\hypertarget{umsetzung}{%
+\section*{Umsetzung}\label{umsetzung}}
+
+Das Umsetzen dieses Verhaltenskodexes liegt in der Verantwortung aller
+anwesender Personen; Teilnehmika, Helfika, Orga, etc. Wie in allem
+zwischenmenschlichem Handeln, kommt es jedoch auch auf der ZaPF zu
+Problemen.
+
+Du kannst dich mit Problemen jederzeit an die Vertrauenspersonen wenden.
+Im Konfliktfall mit anderen Menschen oder bei persönlichen Problemen,
+die nur dich betreffen, kannst du ihnen von deinem Problem erzählen.
+Falls du das wünschst, können sie mit anderen Personen vermitteln, für
+dich bei der Tagungsleitung um Hilfe bitten oder andere, z.B. externe,
+Hilfe organisieren.
+
+Du kannst mit so vielen oder so wenigen Vertrauenspersonen sprechen, wie
+du möchtest.
+
+\hypertarget{geltungsbereich}{%
+\section*{Geltungsbereich}\label{geltungsbereich}}
+
+Dieser Verhaltenskodex gilt auf allen unmittelbar mit der ZaPF in
+Verbindung stehenden Veranstaltungen. Im Speziellen gilt er auf allen
+ZaPFen und durch Organe der ZaPF organisierten Veranstaltungen für alle
+anwesenden Personen. Außerdem für alle die ZaPF repräsentierenden
+Personen während Sie ihre Funktion ausüben.
+
+Mit der Anmeldung zu einer entsprechenden Veranstaltung, spätestens
+jedoch mit dem Erscheinen, stimmst du zu, dich an diesen Verhaltenskodex
+zu halten.
+
+
+\vspace{1cm} 
+
+\vfill
+\begin{flushright}
+	Verabschiedet am 13. November 2022 \\
+	auf der ZaPF in Hamburg.
+\end{flushright}
+
+\end{document}
