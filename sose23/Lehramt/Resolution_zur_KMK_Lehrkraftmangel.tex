@@ -1,0 +1,297 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+%\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{url}
+%\usepackage{tocloft}             % Paket für Table of Contents
+\def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
+\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
+\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-}%
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+%\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+% \usepackage{draftwatermark} % Wasserzeichen ``Entwurf''
+% \SetWatermarkText{Antrag}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{blue}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+\initcomment{Philipp}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+
+
+
+\begin{document}
+
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+	\vspace{-1.8cm}
+	\includegraphics[width=80pt]{logo.pdf}
+	\centering
+	\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \huge{Resolution zum Lehrkräftemangel}\vspace{.25\baselineskip}\\
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+%%%% Metadaten %%%%
+
+% \paragraph{Adressierte:} KMK, Bildungs- und Wissenschaftsministerien der Länder und des Bundes, KoaLa, MeTaFa
+
+
+% \paragraph{Antragstellende:} Antonia (Erlangen), Amélie (Kiel), Lena (Ludwigsburg), Simon (Alumnus), Willi (Jena)
+
+% %%%% Text des Antrages zur veröffentlichung %%%%
+
+% \section*{Antragstext}
+
+\section*{Abstract}
+Die im Januar veröffentlichten Empfehlungen der SWK zum Umgang mit dem akuten Lehrkräftemangel\footnote{\href{https://www.kmk.org/fileadmin/Dateien/pdf/KMK/SWK/2023/SWK-2023-Stellungnahme_Lehrkraeftemangel.pdf}{SWK Empfehlungen}} werden von der ZaPF sehr kritisch gesehen, da einige der zentralen Maßnahmen den Lehrkräftemangel bereits mittelfristig zu verschärfen drohen.
+
+Die Vorschläge zur \glqq Erschließung von Beschäftigungsreserven bei qualifizierten Lehrkräften\grqq erhöhen die Belastung von Lehrkräften, welche bereits heute überdurchschnittlich oft unter Burn-out und anderen psychischen Krankheiten leiden. Die dort aufgezählten Maßnahmen machen den Beruf, und damit auch das Studium mit dem Ziel Lehramt, auf vielfältige Weisen unattraktiver. % welchem punkt; QUELLE!
+So wird den (zukünftigen) Lehrkräften z.\,B. durch die Erhöhung der Unterrichtsverpflichtung -- insbesondere in Verbindung mit der ebenfalls kritisch zu sehenden Erhöhung der Klassenfrequenzen -- wenig Zeit zur individuellen Betreuung der Schüler:innen gegeben.
+Dieser Umstand kann sich auch schädlich auf die Lerngruppe auswirken. 
+
+Andere Maßnahmen wie die
+\begin{itemize}
+    \item Weiterqualifizierung von Gymnasiallehrkräften für Stellen mit besonderem Bedarf,
+    \item Erhöhung der Selbstlernzeiten in der Sekundarstufe II bei Bereitstellung von Räumen in der Schule,
+    \item Vergrößerung des Lehrkräftepools durch Quereinsteiger, Menschen mit passenden ausländischen Abschlüssen und dem sinnvollen Einsatz qualifizierter Studierender und der
+    \item Entlastung von Organisations- und Verwaltungsaufgaben
+\end{itemize}
+werden -- unter Voraussetzung -- von der ZaPF als geeignet erachtet. 
+Beispielsweise müssen für die konstruktive Selbstlernzeit zunächst Lehrkräfte fortgebildet, Materialien und Konzepte entwickelt und Schulen ggf. baulich angepasst werden.
+
+Um das Problem des akuten Lehrkräftemangels mittel- und langfristig zu lösen, ist die Erhöhung der Arbeitszeiten für Lehrkräfte keine Lösung und bringt bestenfalls für die nächsten wenigen Jahre
+etwas Entlastung. 
+Zur langfristigen Lösung müssen Beruf und Studium in den besonders vom Lehrkräftemangel betroffenen 
+Bereichen attraktiver werden. Dies könnte durch die Anpassung der Besoldung für alle Lehrämter auf das gleiche Niveau oder die Vergabe von Stipendien für Studierende gewährleistet werden.
+
+Die ZaPF fordert die KMK auf, den Lehrkräftemangel nicht mittel- bis langfristig zu verschärfen, indem schädliche Maßnahmen eingeführt und gute Maßnahmen schlecht umgesetzt werden.
+
+Im Folgenden werden die Maßnahmen der SWK im einzelnen bewertet. Wir beziehen uns bewusst auf die Empfehlungen der SWK, da die bisherige Reaktion der KMK\footnote{\href{https://www.kmk.org/aktuelles/artikelansicht/kmk-verabredet-weitere-massnahmen-als-reaktion-auf-den-lehrkraeftebedarf.html}{KMK verabredet weitere Maßnahmen als Reaktion auf den Lehrkräftebedarf}} nicht unseren Anforderungen entspricht.
+
+
+%Die ZaPF spricht sich hiermit gegen die meisten Vorschläge der \textit{Empfehlungen zum Umgang mit dem akuten Lehrkräftemangel}\footnote{\href{https://www.kmk.org/fileadmin/Dateien/pdf/KMK/SWK/2023/SWK-2023-Stellungnahme_Lehrkraeftemangel.pdf}{SWK Empfehlungen}} der SWK aus. Unserer Erfahrung als Lehramts-Fachschaftler:innen nach ist seit der Veröffentlichung dieser Empfehlung die Stimmung unter den Lehramtsstudierenden deutlich gekippt. 
+%Ein nicht zu vernachlässigender Anteil überlegt aufgrund der Vorschläge, auch nach einem Abschluss nicht als Lehrkraft zu arbeiten oder gar das Studium abzubrechen. Der Grund dafür ist, dass diese Studierenden nicht unter den vorgestellten Bedingungen arbeiten möchten. Es liegt sowohl in unserem als auch im Interesse der KMK, einen Einbruch der Absolvierendenzahlen zu verhindern. 
+
+%Die ZaPF unterstützt die Stellungnahme der GEW\footnote{\href{https://www.gew.de/aktuelles/detailseite/lehrerinnen-und-lehrer-nicht-noch-mehr-belasten}{Lehrerinnen und Lehrer nicht noch mehr belasten! - SWK-Empfehlungen zum Lehrkräftemangel, GEW}} und deren Vorschläge\footnote{\href{https://www.gew.de/15-punkte-gegen-lehrkraeftemangel}{15 Punkte gegen den Lehrkräftemangel, GEW}} um dem Lehrkräftemangel zu begegnen. Die ZaPF verfolgt dementsprechend das gleiche Hauptziel wie die KMK.
+
+%Im Folgenden legt die ZaPF die Gründe, weshalb sie diese Empfehlungen für unpassend empfindet, sowie alternative Lösungsmöglichkeiten dar. Dennoch hat die SWK auch Vorschläge gemacht, die wir unterstützen.
+
+%Aus Gründen der Übersicht wird nur auf die \textit{Zentralen Empfehlungen}\footnote{S.4 \href{https://www.kmk.org/fileadmin/Dateien/pdf/KMK/SWK/2023/SWK-2023-Stellungnahme_Lehrkraeftemangel.pdf}{SWK Empfehlungen}} eingegangen.
+
+%Explizit fordern wir, dass die Kultusministerien die Vorschläge der SWK nicht wie beschrieben umsetzen, da diese eher zu einer erhöhten Belastung der bestehenden Lehrkräfte führen und somit keine nachhaltige Lösung bieten. Somit verschärfen einige Vorschläge eher das Problem, anstatt dieses zu lösen. % statt "dieses zu lösen": anstatt es wie im Ziel formuliert zu lösen. #Amélie
+
+%Allumfassend sieht die ZaPF eine attraktivere Gestaltung
+%der Lehramtsstudiengänge sowie eine sinnvolle Vorausplanung des Lehrkräftebedarfs als langfristige Lösung, um das Problem des akuten Lehrkräftemangels in Zukunft zu vermeiden. 
+
+\section*{Diesen Teil der Empfehlungen begrüßen wir}
+\subsection*{Erschließung von Beschäftigungsreserven bei qualifizierten Lehrkräften mittels}
+\subsubsection*{- erleichterter Anerkennung von im Ausland erworbenen Abschlüssen.}
+Diesen Vorschlag halten wir für kurzfristig umsetzbar und zudem für eine nachhaltige Lösung.
+
+\subsubsection*{- Entlastung der Lehrkräfte von Organisations- und Verwaltungsaufgaben.}
+Dem stimmt die ZaPF explizit zu. MINT-Lehrkräfte sind häufig aufgrund %aufgrund des im Studium erworbenen Wissens 
+ihres Studiums dafür verantwortlich, sich neben ihrer Lehrtätigkeit um die technische Infrastruktur und Labore der Schule zu kümmern. 
+Eine Entlastung in diesem Bereich könnte dementsprechend Kapazitäten in der Lehre schaffen.
+
+Wichtig ist dabei, dass die Entlastung für Lehrkräfte nur dann gelingt, wenn für diese Aufgaben qualifizierte Fachkräfte eingestellt werden.
+
+\subsection*{Ausweitung des Potenzials an qualifizierten Lehrkräften}
+\subsubsection*{- durch die Weiterqualifizierung von Gymnasiallehrkräften für andere Schulformen.}
+Es sollte sichergestellt sein, dass bei Aussicht auf Einsatz an Schulen mit höherem (sonder-) pädagogischen Anspruch durch Weiterqualifizierung ein Standard der Lehrqualität gewährleistet ist.
+Dabei dürfen die Gymnasiallehrkräfte nicht finanziell schlechter gestellt werden als vorher. Generell sehen wir einen Grund für fehlende Nicht-Gymnasiallehrkräfte darin, dass sie in vielen Ländern schlechter bezahlt werden und fordern daher die Anhebung ihres Gehalts an das der Gymnasiallehrkräfte.
+
+\subsubsection*{- durch die Nachqualifizierung in Mangelfächern.}
+Dies hält die ZaPF für eine sinnvolle Vorgehensweise. Dabei ist aber wichtig, dass das bestehende Wissen an den Universitäten und Hochschulen zu dieser Maßnahme genutzt wird. So können die Maßnahmen weiterentwickelt und untereinander ausgetauscht werden.
+Wichtig ist aber auch, dass die Nachqualifizierung für die Universitäten und Hochschulen stemmbar ist und die Wissensvermittlung bei der Nachqualifizierung durch Fachkräfte erfolgt. 
+
+Die SWK\footnote{S. 17, \href{https://www.kmk.org/fileadmin/Dateien/pdf/KMK/SWK/2023/SWK-2023-Stellungnahme_Lehrkraeftemangel.pdf}{Empfehlungen zum Umgang mit dem akuten Lehrkräftemangel}} nennt die Weiterbildung von Informatiklehrkräften in Schleswig-Holstein durch das IQSH und die CAU Kiel als ein gelungenes Beispiel einer solchen Nachqualifizierung. Auch die ZaPF hält dieses Modell für geeignet.
+
+\subsection*{Entlastung und Unterstützung qualifizierter Lehrkräfte durch Studierende und andere, formal nicht (vollständig) qualifizierte Personen.}
+Diese Lösungsidee hält die ZaPF grundsätzlich für hilfreich, jedoch muss die Umsetzung angemessen erfolgen. Wir schlagen deshalb vor, dass diese Aushilfskräfte Tätigkeiten wie z.\,B. Korrekturarbeiten übernehmen. 
+Zum einen wird die Korrektur durch eine neutrale Person objektiver, zum anderen erlernen Studierende das Korrigieren. 
+Ein Nebeneffekt davon ist, dass die Studierenden viele Aufgaben zu Gesicht bekommen und damit einen Lerneffekt im Bereich der Erstellung von Aufgaben haben können.
+Wichtig ist dabei aber, dass diese Hilfskräfte nur unterstützend tätig sind und die Arbeit nicht vollwertig übernehmen sollen. Diese studentische Unterstützung darf selbstverständlich auch nicht zu einer Mehrbelastung der Lehrkräfte führen.
+
+Bei Hilfskräften, die selbstständig unterrichten sollen, ist ein Mindestausbildungsstand zu berücksichtigen; wie von der SWK vorgeschlagen, bieten sich hier der Bachelor in einem Lehramtsstudium oder das sechste Fachsemester in Staatsexamensstudiengängen an.
+
+Man könnte auch Studierende frühzeitig als unterstützende Lehrkräfte in die Schulen bekommen, indem das Lehramtsstudium als duales Studium eingeführt wird. Dieses müsste jedoch für die einzelnen Standorte erst noch entwickelt werden, weshalb diese Option erst langfristig ihre Wirkung zeigen wird.
+
+Ebenfalls als nachhaltigen Lösungsvorschlag bewerten wir die Idee eines Ein-Fach-Lehramts und dies nicht nur kurzfristig. Dafür müssen aber erst noch politische Maßnahmen ergriffen werden, um dies möglich zu machen. Die KMK will dies in \href{https://www.kmk.org/aktuelles/artikelansicht/kmk-verabredet-weitere-massnahmen-als-reaktion-auf-den-lehrkraeftebedarf.html}{Punkt 8}\footnote{\href{https://www.kmk.org/aktuelles/artikelansicht/kmk-verabredet-weitere-massnahmen-als-reaktion-auf-den-lehrkraeftebedarf.html}{KMK verabredet weitere Maßnahmen als Reaktion auf den Lehrkräftebedarf, KMK}} 
+gegebenenfalls nur temporär ermöglichen, die ZaPF sieht hier aber auch langfristiges Potential und plädiert dementsprechend für eine dauerhafte Einführung.
+
+
+\subsection*{Flexibilisierung des Einsatzes von Lehrkräften durch Erhöhung der Selbstlernzeiten von Schüler:innen}
+Selbstlernzeiten sind an sich ein gutes Konzept. Jedoch sind diese erst ab Sekundarstufe 2 von darin geschulten Lehrkräften einzusetzen. Dabei ist zu bedenken, dass Selbstlernzeiten zu Beginn einen erhöhten Organisationsaufwand für die Lehrkräfte bedeuten. Die Schüler:innen müssen selbst auch erst die nötigen metakognitiven Kompetenzen erlernen, sodass das Selbstlernen erfolgreich stattfinden kann.
+
+Auf Schüler:innen, die von Neurodiversität betroffen sind, ist hier besonders Rücksicht zu nehmen. Dies könnte man durch geschultes Betreuungspersonal während den Selbstlernzeiten gewährleisten, die aber selbst nicht unbedingt Lehrkräfte sein müssen.
+
+Für die Selbstlernzeiten muss die räumliche und technische Ausstattung der Schulen auf das Selbstlernen angepasst werden. Dafür sind aber finanzielle Mittel nötig. Ohne diese Ausstattung kann eine sinnvolle Selbstlernzeit in der Schule nicht gewährleistet sein. Eine Selbstlernzeit Zuhause lehnen wir ab.
+
+\subsection*{Vorbeugende Maßnahmen zur Gesundheitsförderung mittels}
+\subsubsection*{- Achtsamkeitstrainings und eMental-Health-Angeboten}
+\subsubsection*{- Coaching- und (Gruppen-)Supervisionsangeboten}
+\subsubsection*{- Kompetenztrainings zur Klassen- und Gesprächsführung}
+\subsubsection*{- niedrigschwelliger, gut zugänglicher Angebote}
+\subsubsection*{- Sensibilisierung und Unterstützung von Schulleitungen}
+\subsubsection*{- Bündelung von Angeboten an einem Ort und Optimierung des Informationsmanagements}
+
+% \begin{itemize}
+%    \item Achtsamkeitstrainings und eMental-Health-Angeboten
+%    \item Coaching- und (Gruppen-)Supervisionsangeboten
+%    \item Kompetenztrainings zur Klassen- und Gesprächsführung
+%    \item niedrigschwelliger, gut zugänglicher Angebote
+%    \item Sensibilisierung und Unterstützung von Schulleitungen
+%    \item Bündelung von Angeboten an einem Ort und Optimierung des Informationsmanagements
+% \end{itemize}
+% #Simon
+
+All diese Punkte begrüßt die ZaPF, da wir es als sehr erfreulich empfinden, dass die mentale Gesundheit von Lehrkräften zum ersten Mal im öffentlichen Diskurs zur Sprache kommt und man sich in der Wissenschaft um Gegenmaßnahmen Gedanken macht.
+Angesichts der hohen Burn-out-Raten bei Lehrkräften sind solche Maßnahmen aber bereits seit Jahren überfällig. \glqq Psychische und psychosomatische Erkrankungen kommen [\dots] bei Lehrkräften häufiger vor als in anderen Berufen, ebenso unspezifische Beschwerden wie Erschöpfung, Müdigkeit, Kopfschmerzen und Angespanntheit.\grqq \footnote{\href{https://www.aerzteblatt.de/archiv/170601/Lehrergesundheit}{Lehrergesundheit}}
+
+Idealerweise sollten die Umstände in den Schulen so weit verbessert werden, dass diese Vorschläge gar nicht erst nötig wären.
+Wir sehen diese Maßnahmen jedoch kritisch, wenn die Verpflichtung zu diesen zur Überlastung der Lehrkräfte führt.
+Wir schlagen vor, die Zeit der Gesundheitsmaßnahmen zumindest teilweise als Arbeitszeit anzurechnen, um eine weitere Belastung zu umgehen.
+
+Die ZaPF fordert, dass die Gesundheitsförderung durch psychologisch ausgebildete Fachkräfte durchgeführt wird.
+
+\subsection*{Bestandsaufnahme, Bewertung und Weiterentwicklung von Modellen des Quer- und Seiteneinstiegs.}
+Aufgrund des akuten Lehrkräftemangels schlägt die ZaPF vor, den Fachwissenschaftsstudierenden im nichtfachlichen Teil Elemente der Lehramtsausbildung wie Didaktikvorlesungen an allen Hochschulen und Universitäten, die Lehramt anbieten, zugänglich und anrechenbar zu machen.
+Damit hätten die Fachwissenschaftsstudierenden die Möglichkeit, die Didaktik kennenzulernen und eine Grundlage für einen eventuellen Quereinstieg zu schaffen.
+
+\section*{Diesen Teil der Empfehlungen kritisieren wir}
+\subsection*{Erschließung von Beschäftigungsreserven bei qualifizierten Lehrkräften mittels}
+\subsubsection*{- Anpassung des Ruhestandseintritts, der Reduktion der Unterrichtsverpflichtung aus Altersgründen und der Teilzeitbeschäftigung an die aktuelle Situation.}
+Wir lehnen es grundsätzlich ab, das Ruhestandseintrittsalter der Lehrkräfte zu erhöhen.
+%anzupassen, indem deren Arbeitszeit in ein höheres Lebensalter verlängert wird.
+Gleiches gilt prinzipiell für die Rückholung von Lehrkräften in Pension und Rentner:innen in die Schule. Im akuten Fall darf es keine finanzielle Nachteile für die Lehrkräfte geben. 
+
+Die geplante Streichung der im Alter abnehmenden Unterrichtsverpflichtungen hält die ZaPF ebenso für nicht förderlich.
+
+Besonders die Teilzeitstreichung sehen wir als schwerwiegendes Problem an, da sie der Familienfreundlichkeit entgegen steht und damit langfristig die Attraktivität des Berufes und somit auch die Anzahl der Studierenden reduziert.
+
+Für die Streichung von Teilzeitmöglichkeiten benennt die SWK die Notwendigkeit zusätzlicher Kitaplätze. Diese sind jedoch bereits knapp. 
+%approve
+
+\subsubsection*{- Erhöhung der Unterrichtsverpflichtung in Anlehnung an das Konzept der Vorgriffsstunden.}
+Viele Lehrkräfte arbeiten aktuell bereits über der Belastungsgrenze. Ausfälle durch Belastungskrankheiten wie z.\,B. Burn-out sind in dieser Berufsgruppe weit verbreitet. Eine Erhöhung der Unterrichtsverpflichtung würde das Risiko weiterhin steigern und so zu einem noch größeren Lehrkräftemangel führen. Dies ist also keine nachhaltige Lösung.%approved
+
+\subsubsection*{- Abordnung von Lehrkräften an Dienststellen mit besonderem Bedarf}
+
+Allgemein lässt sich der besondere Bedarf einiger Institutionen damit erklären, dass wenige Lehrkräfte diese Stellen als attraktiv empfinden.
+Kurzfristig schlagen wir ein Bonussystem vor, welches für Lehrkräfte, die sich an eine Institution mit besonderem Bedarf versetzen lassen, einen schriftlich sichergestellten Bonus vorsieht. Langfristig sollte die Attraktivität der Institutionen gesteigert werden.
+Allerdings scheitern solche Programme oftmals an der finanziellen Lage der jeweiligen Kommunen. Hier sind Investitionen in das Bildungswesen und strukturell schwache Regionen durch den Bund förderlich. %approved 
+
+\subsection*{Flexibilisierung des Einsatzes von Lehrkräften durch}
+\subsubsection*{- Hybridunterricht.}
+Für Hybridunterricht ist die notwendige Technik eine wichtige Voraussetzung zu dessen Erfolg. Diese Ausstattung kann man aber nicht von den Schüler:innen und deren Erziehungsberechtigten verlangen. 
+Zudem müssen sowohl Lehrkräfte sowie deren Schüler:innen darin geschult sein, wie man mit Hybridunterricht umgeht. Dies führt zu einem Mehraufwand, der bei dem akuten Lehrkräftemangel nicht verlangt werden kann. Außerdem leidet die Kommunikation der Schüler:innen unter dem Hybridunterricht, jedoch soll auch die Schule die soziale Entwicklung durch persönlichen Kontakt mit Gleichaltrigen unterstützen.
+Dennoch finden wir es grundsätzlich gut, dass die SWK von sich aus sagt, dass Hybridunterricht erst ab der Sekundarstufe 2 eingesetzt werden soll.\footnote{\href{www.kmk.org/fileadmin/veroeffentlichungen_beschluesse/2022/2022_06_23-Umgang-mit-Covid19-Schuljahr-22-23.pdf}{Größtmögliche Normalität im Schuljahr 2022/2023}} %approved
+
+\subsubsection*{- Anpassung der Klassenfrequenzen.}
+Die Anpassung der Klassenfrequenzen zu niedrigeren Zahlen begrüßen wir. %, jedoch lehnen wir die Erhöhung der Klassenfrequenzen nachdrücklich ab.% 
+Die ZaPF fordert eine Maximalanzahl von 25 Schüler:innen pro Klasse in Fachräumen. Mit höheren Klassenfrequenzen ist ein sicheres Arbeiten in Fachräumen nicht sichergestellt. Eine Maßnahme zur Unterlassung von Experimenten oder Ähnliches wird von der ZaPF nicht als Option oder Legitimation für eine höhere Klassenfrequenz angesehen.
+
+\vspace{1cm} 
+
+\vfill
+\begin{flushright}
+	Verabschiedet am 01. Mai 2023 \\
+	auf der ZaPF in Berlin.
+\end{flushright}
+
+\end{document}

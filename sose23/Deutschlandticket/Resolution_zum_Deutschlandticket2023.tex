@@ -1,0 +1,223 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+\usepackage{svg}
+\usepackage{multirow}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+%\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{url}
+%\usepackage{tocloft}             % Paket für Table of Contents
+\def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
+\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
+\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-}%
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+%\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+% \usepackage{draftwatermark} % Wasserzeichen ``Entwurf''
+% \SetWatermarkText{Antrag}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{21.5cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften, 
+Konferenz aller werkstofftechnischen und materialwissenschaftlichen Studiengänge und Konferenz der Informatikfachschaften}
+%\rfoot{www.zapfev.de\\stapf@zapf.in\\kawum-matwerk.de\\geschaeftsleitung@kawum-matwerk.de\\seite kif\\mail kif}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{blue}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+\initcomment{Philipp}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+
+\usepackage{siunitx}
+
+\begin{document}
+
+\begin{table}[]
+    \centering
+    \addtolength{\leftskip}{-3.2cm}
+    \addtolength{\rightskip}{-3cm}
+    \vspace{-2cm}
+    \begin{tabular}{ccc}
+         \includegraphics[width=165pt]{../Logo_KaWuM.png} & \includesvg[width=160pt]{../logo_KIF.svg} &  \includegraphics[width=75pt]{../logo.pdf}\\
+         Konferenz aller werkstofftechnischen & Konferenz der Informatikfachschaften & Zusammenkunft aller\\
+         und materialwissenschaftlichen Studiengänge & & Physik-Fachschaften \\
+    \end{tabular}
+    \label{tab:logos}
+\end{table}
+
+% \hspace{0.87\textwidth}
+% \begin{minipage}{120pt}
+% 	\vspace{-1.8cm}
+% 	\includegraphics[width=80pt]{../logo.pdf}
+% 	\centering
+% 	\small Zusammenkunft aller Physik-Fachschaften
+% \end{minipage}
+
+% \hspace{-0.2\textwidth}
+% \begin{minipage}{200pt}
+% 	\vspace{-4.2cm}
+% 	\includegraphics[width=190pt]{../Logo_KaWuM.png}
+% 	\centering
+% 	\small Konferenz aller werkstofftechnischen und
+%         materialwissenschaftlichen Studiengänge
+% \end{minipage}
+
+% \hspace{0.39\textwidth}
+% \begin{minipage}{170pt}
+% 	\vspace{-4.2cm}
+% 	%\includegraphics[width=80pt]{../logo_KIF.svg}
+%     \includesvg[width=160pt]{../logo_KIF.svg}
+% 	\centering
+% 	\small Konferenz der Informatikfachschaften
+%     \vspace{0.6cm}
+% \end{minipage}
+
+\begin{center}
+  \huge{Resolution zum Deutschlandticket}\vspace{.25\baselineskip}\\
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+%%%% Metadaten %%%%
+
+% \paragraph{Adressierte:} Die Bundesregierung, alle Landesregierungen, alle Verkehrs-, Bil\-dungs- und Sozialministerien, die verkehrs-, bildungs- und sozialpolitischen Sprecher*innen aller Bundestags- und Landtagsfraktionen sowie deren Jugendorganisationen, alle ASten, alle anderen BuFaTas, die MeTaFa, fzs
+
+% \paragraph{Antragstellende:} Kai (JLU Gießen), Frowin (TUM), Leo (JMU Würzburg)
+
+%%%% Text des Antrages zur veröffentlichung %%%%
+
+% \section*{Antragstext}
+%Die ZaPF fordert die Bundesregierung und die Landesregierungen auf, schnell eine einheitliche Lösung für die Semestertickets zu befassen.
+Die ZaPF und die KaWuM forderen die Bundesregierung und die Landesregierungen auf, schnell mit einer einheitlichen Lösung für die Semestertickets für Planungssicherheit und eine Entlastung der Studierenden zu sorgen.
+Bereits im Vorjahr haben wir die Einführung eines bundesweiten Bildungstickets für Schülerinnen und Schüler, Auszubildende und Studierende gefordert.\footnote{Resolution der ZaPF vom 13.11.2022: \href{https://zapfev.de/resolutionen/wise22/Deutschlandticket/Resolution\_zum\_Deutschlandticket.pdf}{zapfev.de/resolutionen/wise22/Deutschlandticket/\\Resolution\_zum\_Deutschlandticket.pdf}} Dem wollen wir hiermit Nachdruck verleihen.\\\\
+%
+Auch weiterhin begrüßen wir den Vorstoß, das öffentliche Verkehrswesen mit einem Deutschlandticket zu vereinheitlichen. Jedoch führt die aktuelle Implementierung zu einer Vielzahl von Problemen -- sowohl für die Verkehrsbetriebe als auch die Studierenden und die in ihrem Namen Semestertickets verhandelnden Instanzen. Der aktuelle föderale Flickenteppich führt in vielen Teilen Deutschlands konträr zur beabsichtigten Wirkung sogar zu einer Verschlechterung der Situation für die Studierenden.\\\\
+%
+Die Regelungen der einzelnen Bundesländer reichen in ihrer Wirkung von Doppelkäufen\footnote{Upgrade-Lösung z.B. in Hessen erst in einigen Monaten verfügbar: \href{https://www.hessenschau.de/wirtschaft/deutschlandticket-upgrade-fuer-studierende-kommt-in-hessen-wohl-erst-zum-wintersemester-v1,deutschlandticket-semester-ticket-upgrade-100.html}{hessenschau.de/wirtschaft/deutschlandticket-upgrade-fuer-studierende-kommt-in-hessen-wohl-erst-zum-wintersemester-v1,deutschlandticket-semester-ticket-upgrade-100.html}} über Rechtsunsicherheiten\footnote{Berichte von AStA-Referenten; diverse durch ASten beauftragte Rechtsgutachten, die auch zu keinem eindeutigen Ergebnis kommen.} bis hin zu einem möglichen Wegfall von Semestertickets\footnote{Eine Entscheidung, die aktuell jeder AStA basierend auf der eigenen Einschätzung der Rechtslage für sich treffen muss.}.\\
+%
+Die Bundesregierung hat eine vorübergehende Upgrade-Lösung für alle angekündigt\footnote{\label{FAQ}FAQ zum Deutschlandticket 29.04.2023: \href{https://www.bundesregierung.de/breg-de/aktuelles/deutschlandticket-2134074}{bundesregierung.de/breg-de/aktuelles/\\deutschlandticket-2134074/}}, die jedoch vielerorts zum 01.05. noch nicht verfügbar ist\footnote{Übergangsregelungen – aber nicht überall, 49-Euro-Ticket für Studierende: \href{https://www.studis-online.de/studienkosten/semesterticket/49-euro-ticket.php}{studis-\\online.de/studienkosten/semesterticket/49-euro-ticket.php}}. Doppelkäufe sind die Folge für viele Studierende, die das neue Ticket nutzen wollen. Aktuell zahlen sie dadurch insgesamt sogar mehr als alle anderen, was ein absurder Zustand ist. Auch besteht derzeit keine Klarheit darüber, an wen Rückerstattungsforderungen zu richten sind, die sich durch von den Verkehrsverbunden verzögert bereitgestellte Upgrade-Lösungen ergeben.\\
+%
+Auf noch mehr Unverständnis trifft bei uns, dass das Deutschlandticket als Jobticket vom Bund und Ländern mit zusätzlichen \SI{5}{\percent} bezuschusst wird\footref{FAQ}, ein mindestens gleich großer Zuschuss aber nicht auch für Studierende Anwendung findet. Das Deutschlandticket sollte vor allem auch eine Entlastungsmaßnahme sein. Doch gerade die Entlastung der Studierenden, deren finanzielle Lage nach drei Krisenjahren prekärer denn je ist, bleibt aktuell beim Deutschlandticket auf der Strecke. Dies finden wir inakzeptabel.\\
+%
+Viele der verhandelnden Instanzen (i.d.R. ASten, Studwerke, ...) werden durch die aktuelle Sachlage in große rechtliche Unsicherheiten gestürzt. Aufgrund der ungeklärten Verhältnismäßigkeit für die teureren unter den gemäß dem Solidarprinzip organisierten Tickets, befürchten sie Klagen und einen Wegfall der Rechtsgrundlage. Versichern wird sie gegen die damit verbundenen Risiken niemand. Die verhandelnden Instanzen stehen vor der Entscheidung, entweder in der Übergangszeit für ihre Studierenden auch weiterhin regionale Semestertickets anzubieten, die im Vergleich zum Deutschlandticket günstiger sind oder einen für sie rechtssicheren Weg einzuschlagen.\\\\
+%
+Deshalb fordern wir die schnelle Umsetzung der von der Bundesregierung proklamierten, bundeseinheitlichen Lösung\footref{FAQ} sowie die Übernahme finanzieller Schäden aller Art, die im Kontext der Übergangszeit anfallen. Also nicht nur die Kompensation der zu viel gezahlten Ticketkosten, sondern auch die eventuell durch Klagen für die Studierendenschaften anfallenden Prozesskosten.\\
+Für einen angemessenen Zeitrahmen halten wir eine schnellstmögliche, einheitliche Übergangslösung -- verbindlich bis spätestens zum Beginn des Wintersemesters 2023/24 -- sowie die Einführung der permanenten Lösung bis spätestens zum Beginn des Sommersemesters 2024 für alle Schülerinnen und Schüler, Auszubildende und Studierende in Deutschland.
+
+
+% \section*{Begründung}
+% Mündliche Begründung. Außerdem:\\\\
+% Im Grunde nennt der Antragstext alle relevanten Probleme, auf die wir zum aktuellen Zeitpunkt dringend hinweisen sollten, woraus sich auch die Motivation und Begründung für unseren Antrag ergibt.\\
+% Diese sind:
+% \begin{itemize}
+%     \item Doppelkäufe durch verzögerte Upgrade-Lösung, dadurch teilweise teurer als \EUR{49} (das was alle anderen insgesamt zahlen)
+%     \item Zuschüsse durch den Bund für Arbeitnehmer, die den Studierenden vorenthalten bleiben
+%     \item Rechtsunsicherheit für die ASten (Semestertickets könnten unverhältnismäßig teuer sein, Klagen wahrscheinlich)
+%     \item Semestertickets könnten wegfallen, falls das einem AStA zu riskant ist
+%     \item ganz allgemein auch bisher keine Entlastung für Studis
+% \end{itemize}
+
+\vspace{1cm} 
+
+\vfill
+\begin{flushright}
+	Verabschiedet am 01. Mai 2023
+	auf der ZaPF in Berlin,\\
+
+    am 07. Mai 2023
+    auf der KaWuM in Aachen,\\
+ 
+    und am  21. Mai 2023
+    auf der 51,0ten KIF in Bremen.
+    
+    www.zapfev.de\\ stapf@zapf.in
+
+    kawum-matwerk.de\\ geschaeftsleitung@kawum-matwerk.de
+
+    wiki.kif.rocks
+ \end{flushright}
+
+\end{document}

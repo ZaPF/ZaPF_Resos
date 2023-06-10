@@ -1,0 +1,168 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+%\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{url}
+%\usepackage{tocloft}             % Paket für Table of Contents
+\def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
+\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
+\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-}%
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+%\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+% \usepackage{draftwatermark} % Wasserzeichen ``Entwurf''
+% \SetWatermarkText{Antrag}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{blue}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+\initcomment{Philipp}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+
+
+
+\begin{document}
+
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+\vspace{-1.8cm}
+\includegraphics[width=80pt]{../logo.pdf}
+\centering
+\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \huge{Umsetzung guter Praxis für das Lehramtsstudium}\vspace{.25\baselineskip}\\
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+%%%% Metadaten %%%%
+
+%\paragraph{Adressierte:} Kultusministerien, Physik-Fachbereiche der Hochschulen in Deutschland und Österreich, Konferenz der Fachbereiche Physik, Physik-Fachschaften Deutschlands und Österreichs
+
+
+%\paragraph{Antragstellende:} Antonia (Erlangen), Willi (Jena), Samuel (Jena), Tim (Göttingen)
+
+%%%% Text des Antrages zur veröffentlichung %%%%
+
+%\section*{Antragstext}
+
+Die ZaPF unterstützt die \textit{Vorschläge guter Praxis}\footnote{S.\,81\,f \href{https://www.dpg-physik.de/veroeffentlichungen/publikationen/studien-der-dpg/das-lehramtsstudium-physik-in-deutschland}{https://www.dpg-physik.de/veroeffentlichungen/publikationen/studien-der-dpg/das-lehramtsstudium-physik-in-deutschland}} aus der Studie der DPG zum Lehramtsstudium Physik in Deutschland und fordert die Fachbereiche auf, insbesondere die Punkte 1 bis 9 umzusetzen.
+
+In Bezug auf Punkt 10 fordern wir die Fachbereiche auf, mit ihren Lehramtsstudierenden in Kontakt zu treten, diese explizit nach deren Bedürfnissen vor Ort zu befragen und auf dieser Basis gegebenenfalls ein Konzept auszuarbeiten. Wir wünschen uns, dass diese Ausarbeitung als Kooperation zwischen Fachwissenschaft, Fachdidaktik und Studierendenvertretung realisiert wird. Als Ausgangspunkt eines solchen Dialoges kann die Idee der \textit{Leitthemen} dienen, die in der Studie der DPG \textit{zur fachlichen und fachdidaktischen Ausbildung für das Lehramt Physik}\footnote{S.\,26\,ff und S.\,58\,ff \href{https://www.dpg-physik.de/veroeffentlichungen/publikationen/studien-der-dpg/pix-studien/studien/lehramtstudie-2014.pdf}{https://www.dpg-physik.de/veroeffentlichungen/publikationen/studien-der-dpg/pix-studien/studien/lehramtstudie-2014.pdf}} aus dem Jahr 2014 vorgestellt wurde. 
+
+
+%\section*{Begründung}
+%In der DPG \textit{Studie zum Lehramtsstudium Physik in Deutschland} werden, basierend auf den Ergebnissen der Studie, zehn \textbf{Vorschläge guter Praxis} zusammengefasst. Diese lauten:
+%\begin{itemize}
+    %\item[1.] Universitäre Räume speziell für die Lehramtsstudent:innen – zum Beispiel in Form von Lernwerkstätten oder auch angegliedert an die Fachdidaktiklehrstühle – können den Erfahrungsaustausch der Lehramtsstudent:innen unterstützen. Durch Unterstützungsangebote wie Tutor:innen in diesen Lernwerkstätten können lehramtsspezifische Probleme (zum Beispiel fehlendes mathematisches Wissen für Student:innen mit einem anderen Zweitfach als Mathematik) adressiert werden.
+    %\item[2.] In der Umfrage wurden – dort wo sie stattfinden – immer wieder positiv die Kooperationen zwischen Fachdidaktik und Fachwissenschaft betont. Hier gibt es zum Beispiel die Möglichkeit der parallelen Bearbeitungen von Inhalten in den Fach- und Fachdidaktikvorlesungen oder es können fachdidaktische Schulungen der Tutor:innen durch die Fachdidaktik angeboten werden.
+    %\item[3.] In den Vorlesungen, die von Lehramtsstudent:innen und Fachstudent:innen gleichzeitig besucht werden, kann es sich lohnen, lehramtsspezifische Tutorate einzuführen. Dadurch können lehramtsspezifische Aufgaben in die Übungsblätter integriert werden. Insbesondere sollten in diesen Vorlesungen die Unterschiede im mathematischen Vorwissen der Fachstudent:innen und Lehramtsstudent:innen mit Zweitfach Mathematik gegenüber anderen Fächerkombinationen berücksichtigt werden. Hier können spezifische Hilfsangebote für Lehramtsstudent:innen mit einem anderen Zweitfach als Mathematik angeboten werden. Diese sind zwar häufig extracurricular und eine zusätzliche Belastung der Student:innen, werden aber dennoch von diesen nachgefragt.
+    %\item[4.] Um in den fortgeschrittenen Theorievorlesungen den gewünschten Schulbezug herzustellen, könnten diese Veranstaltungen lehramtsspezifisch angeboten werden. Dadurch können schulrelevante Themen, wie zum Beispiel die Klimaphysik, die kaum im klassischen Ausbildungskanon auftreten, eingebunden werden und bei üblichen Vorlesungen wie der Quantenmechanik ein stärkerer Bezug zur Schule hergestellt werden. Auch könnten historische, philosophische und begriffliche Aspekte besser thematisiert werden, die für das allgemeine Physikverständnis wichtig sind.
+    %\item[5.] Eine Möglichkeit, den Lehramtsstudent:innen früh mehr Schulbezug zu ermöglichen sind Kooperationen mit Schulen und Schülerlaboren in der Umgebung des Fachbereichs. Diese Kooperationen werden an vielen Standorten mit Fachdidaktiken von diesen gepflegt.
+    %\item[6.] Neben den Erfahrungen, die im schulischen und außerschulischen Bereich von den Lehramtsstudent:innen gemacht werden können, gibt es auch die Möglichkeit, die Lehramtsstudent:innen Lehrerfahrungen am Fachbereich sammeln zu lassen. Einige Fachbereiche bieten Module an, bei denen die Lehramtsstudent:innen ein Tutorat anbieten und gleichzeitig einen fachdidaktischen Kurs mit Bezug auf diese Lehrtätigkeit belegen.
+    %\item[7.] Besonders positiv wurden Demonstrationslabore von den Student:innen hervorgehoben, in denen die Student:innen Versuchsaufbauten aus der Schulpraxis kennenlernen. Viele Standorte scheinen bereits solche Angebote im Studium verankert zu haben. Dort wo das noch nicht der Fall ist, könnte es sich lohnen, solch eine Veranstaltung einzuführen.
+    %\item[8.] Die Lehramtsstudent:innen nehmen immer wieder wahr, dass die Veranstaltungen speziell für das Lehramt von – aus Sicht der Student:innen – schlechteren Lehrpersonen gehalten werden als die Fachvorlesungen. Hier sollte im Fachbereich darauf geachtet werden, dass die Lehrveranstaltungen für Lehramtsstudent:innen keine niedrigere Priorität durch die Dozent:innen erfahren. Es könnte zum Beispiel der Austausch zwischen Fachschaft und Studiendekanat hilfreich sein.
+    %\item[9.] Innerhalb der ersten Semester gibt es auch im Physiklehramt hohe Abbruchquoten und die Student:innen konstatieren immer wieder einen mangelnden Schulbezug und gleichzeitig eine hohe Belastung. Die ersten Semester sind im Physik- und auch Mathematikstudium (das immerhin die Hälfte der Lehramtsstudent:innen im Zweitfach studiert) besonders belastend und so sollten die Studienverlaufspläne insbesondere für den Beginn sorgfältig geplant werden. Auch besondere Unterstützungsangebote in der Studieneingangsphase wie betreutes Rechnen, LaTeX-Kurse und Ähnliches wurden häufig gewünscht.
+    %\item[10.] Der traditionelle fachliche Kanon besonders in der theoretischen Physik aus Klassischer Mechanik, Elektrodynamik, Quantenmechanik, Thermodynamik und Statistischer Physik passt nicht unbedingt zu den Bedürfnissen der Lehramtsstudent:innen. Es könnte daher mehr Mut zu Abweichungen von dieser Tradition geben.
+%\end{itemize}
+
+\vspace{1cm} 
+
+\vfill
+\begin{flushright}
+	Verabschiedet am 01. Mai 2023 \\
+	auf der ZaPF in Berlin.
+\end{flushright}
+
+\end{document}

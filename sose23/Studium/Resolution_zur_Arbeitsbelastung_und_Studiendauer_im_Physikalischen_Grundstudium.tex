@@ -1,0 +1,168 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+%\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{url}
+%\usepackage{tocloft}             % Paket für Table of Contents
+\def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
+\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
+\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-}%
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+%\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+% \usepackage{draftwatermark} % Wasserzeichen ``Entwurf''
+% \SetWatermarkText{Antrag}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{red}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+\initcomment{Philipp}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+
+
+
+\begin{document}
+
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+\vspace{-1.8cm}
+\includegraphics[width=80pt]{../logo.pdf}
+\centering
+\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \huge{Arbeitsbelastung und Studiendauer im physikalischen Grundstudium}\vspace{.25\baselineskip}\\
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+%%%% Metadaten %%%%
+
+%\paragraph{Adressierte:} Kultusministerien, Hochschulen Deutschlands, Österreichs und der Schweiz, Physik-Fachbereiche der Hochschulen in Deutschland, Österreich und der Schweiz, Konferenz der Fachbereiche Physik, MeTaFa
+
+
+%\paragraph{Antragstellende:}  Hannah (Bonn), Jan (Mainz), Samuel (Jena)
+
+%%%% Text des Antrages zur veröffentlichung %%%%
+
+Die ZaPF stellt als Vertretung der Studierenden fest, dass die Arbeitsbelastung im Bachelorstudiengang Physik, physikähnlichen Bachelor-Studiengängen sowie Physik-Lehramtsstudiengängen während der Vorlesungszeit den Umfang einer vollen Beschäftigung überschreitet. Im Laufe eines Semesters sollten Studierende 900h\footnote{Ein Semester setzt sich aus 30 ECTS-Punkten zusammen, die in Deutschland üblicherweise mit einem Zeitaufwand von jeweils 30h gleichzusetzen sind.} für ihr Studium aufwenden. Aufgrund der Verteilung der Arbeitsbelastung im Semester\footnote{Der Schwerpunkt liegt dabei in den Vorlesungszeit, welche 14 bis 15 Wochen dauert.} werden hierbei häufig Wochen mit 60h Arbeitszeit für das Studium oder mehr erreicht. 
+
+Dies führt dazu, dass die Studierenden andere Aspekte des Lebens (z.B. sportlicher Ausgleich, Freizeit und/oder Schlaf) vernachlässigen müssen oder Module verschoben werden müssen. Ersteres führt leicht zu psychischen Belastungen wie Burn-out, Depressionen oder Angstzuständen. Letzteres erhöht die Studiendauer über die Regelstudienzeit hinaus wodurch häufig Probleme in der Studienfinanzierung auftreten können. Die hohe Arbeitsbelastung verhindert in vielen Fällen auch die Ausübung von Nebenjobs, was die Studienfinanzierung weiter erschwert, und die Ausübung familiärer Aufgaben, sodass hierdurch studierende Eltern oder Studierende mit pflegebedürftigen Verwandten benachteiligt werden.
+
+Viele Studierende wünschen sich mehr Zeit, um ihre Studieninhalte aufzuarbeiten und diese dadurch nachhaltig zu verstehen. Stattdessen müssen sie große Teile ihrer Zeit damit verbringen, Pflichtaufgaben zu erfüllen, die sie in ihrem Verständnis und ihren Kompetenzen nicht weiterbringen.\\
+Die ZaPF fordert Universitäten auf, den durchschnittlichen Workload im Laufe des Studiums zu erfassen und zu evaluieren. Zum Beispiel kann dies über Umfragen oder Austausch mit der jeweiligen Studierendenvertretung passieren.
+
+Anhand dieser Evaluation sollen folgende Anforderungen umgesetzt werden:
+\begin{itemize}
+    \item Es soll eine nachvollziehbare und mit dem Umrechnungsschlüssel für Zeit und ECTS übereinstimmende Zuordnung der ECTS zu Modulen vorgenommen und beibehalten werden. Deshalb sollen sich Universitäten zur Umsetzung der Anpassung von Arbeitsaufwand auf ECTS austauschen, um eine ausreichend einheitliche Lösung zu finden. Diese soll mögliche Verwirrung bei der Studienorientierung und potentielle Probleme aufgrund fehlender Vergleichbarkeit bei Universitätswechseln und konsekutiven Masterstudiengängen vermeiden.
+    \item Alle zum erfolgreichen Absolvieren des Studiengangs notwendigen Kompetenzen müssen in angemessenem Umfang im Studiengang enthalten sein. Insbesondere dürfen keine Kompetenzen, wie z.B. der Umgang mit Programmiersprachen, Spezialsoftware oder Textsatzsystemen, in Modulen vorausgesetzt werden, die nicht bis zu diesem Zeitpunkt des Studiums erworben werden können.
+    \item Es sollen Möglichkeiten bestehen, den Workload flexibel im Semester zu verteilen. Eine Möglichkeit dies zu realisieren wäre, einzelne Module (z.B. Praktika) sowohl semesterbegleitend als auch als Blockkurs in der vorlesungsfreien Zeit anzubieten. Dies wäre realisierbar in Präsenz oder digitaler Form. In jedem Fall müssen solche Veranstaltungen planbar sein (am Besten zu Beginn des Semesters) um einen angemessenen Freizeitausgleich zu gewährleisten. Dabei ist sicherzustellen, dass es möglich ist, zufriedenstellende Mengen zusammenhängenden Urlaub in Anspruch zu nehmen.
+    \item Die Arbeitsbelastung im Studium soll auf Vorlesungs- und vorlesungsfreie Zeit so verteilt werden können, dass die Arbeitszeit sich mit einer 40-Stunden Woche bewältigen lässt.
+    \item Feiertage und Wochenenden sollen als freie Zeit respektiert und nicht für zusätzliche Arbeit im Studium eingeplant werden. Der Arbeitsaufwand soll in Wochen mit Feiertagen proportional angepasst werden.
+    \item Standardmäßige Evaluation der Sinnhaftigkeit von Studienleistungen bzw. Prüfungsvorleistungen und deren Menge sollen dazu genutzt werden, effektive Lehr- und Lernmethoden sowie zu den zu erwerbenden Kompetenzen passende Prüfungsformen zu identifizieren und umzusetzen.
+    \item Das Teilzeitstudium soll für alle Studiengänge eine realistische und gleichwertige Studienmöglichkeit darstellen und Studienverlaufspläne sollen dazu erstellt werden. Dies ist notwendig für Personen, die z.B. Teilzeit arbeiten müssen.
+    \item Zusätzlich sollen Barrieren über die Regelstudienzeit hinaus zu studieren gesenkt werden. Dies beinhaltet die Aufhebung der Beschränkung der Studiendauer sowie die Abschaffung von zeitlichen Beschränkungen, wann Module belegt oder bestanden werden müssen.
+\end{itemize}
+
+%\replace{Wir sprechen uns nicht grundsätzlich gegen die Erhöhung der Regelstudienzeit des Bachelors aus (ohne eine analoge Verkürzung der Regelstudienzeit des Masters), erkennen aber, dass die Umsetzung für einzelne Universitäten Probleme schaffen kann. Deshalb sollte dies auf überuniversitärer Ebene diskutiert werden.}{Um die Arbeitsbelastung im Physikstudium zu reduzieren, gibt es viele Möglichkeiten, welche gemeinsam umgesetzt werden können. Neben den oben genannten Forderungen sind wir auch offen für die Idee der Erhöhung der Regelstudienzeit im Bachelor (ohne eine analoge Verkürzung der Regelstudienzeit des Masters), erkennen aber die komplizierte Umsetzbarkeit dieses Vorschlages insbesondere aufgrund EU-rechtlicher Vorgaben an. Ein solcher Vorschlag sollte daher auf über universitärer Ebene diskutiert werden.}
+
+
+\vspace{1cm} 
+
+\vfill
+\begin{flushright}
+	Verabschiedet am 01. Mai 2023 \\
+	auf der ZaPF in Berlin.
+\end{flushright}
+
+\end{document}

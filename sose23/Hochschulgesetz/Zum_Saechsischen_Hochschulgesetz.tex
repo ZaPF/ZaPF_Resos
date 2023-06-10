@@ -1,0 +1,161 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+%\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{url}
+%\usepackage{tocloft}             % Paket für Table of Contents
+\def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
+\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
+\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-}%
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+%\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+% \usepackage{draftwatermark} % Wasserzeichen ``Entwurf''
+% \SetWatermarkText{Antrag}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{red}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+\initcomment{Philipp}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+
+
+
+\begin{document}
+
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+	\vspace{-1.8cm}
+	\includegraphics[width=80pt]{logo.pdf}
+	\centering
+	\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \huge{Ein entwicklungs- statt ab\-si\-che\-rungs\-ori\-en\-tier\-tes Studium ermöglichen!}\vspace{.25\baselineskip}\\
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+%%%% Metadaten %%%%
+
+% \paragraph{Adressierte:} Wissenschaftspolitische Sprecher*innen der Regierungsfraktionen des Sächsischen Landtages, Mitglieder des Wissenschaftsausschusses des Sächsischen Landtages, fzs, KSS, GEW Sachsen, Jusos Sachsen, Grüne Jugend Sachsen, Junge Union Sachsen
+
+
+% \paragraph{Antragstellende:} Stefan (Köln, Studienreformforum)
+
+%%%% Text des Antrages zur veröffentlichung %%%%
+
+% \section*{Antragstext}
+
+Die ZaPF steht hinter den Vorschlägen und Forderungen der Konferenz der Sächsischen Studentenräte \footnote{\url{https://revolution-studium.de/}} zur Novelle des Sächsischen Hochschulfreiheitsgesetzes. Unabhängig davon spricht sich die ZaPF gegen sämtliche Regelungen aus, welche den Fokus des Studiums von der Aneignung von Wissen und persönlicher Entwicklung hin zu der Verhinderung der eigenen Exmatrikulation verschieben. Insbesondere fordern wir, solche Regelungen aufzuheben oder abzuändern, die auf eine Zwangsexmatrikulation hinauslaufen können (z.B. die Begrenzung der Anzahl von Prüfungsversuchen und Höchststudiendauern). Bei diesem Anliegen sind den Sächsischen Hochschulen – im Gegensatz zu den Hochschulen in anderen Bundesländern – enge gesetzliche Grenzen gesetzt. Während in NRW ein gesetzliches Verbot von endgültigem Nichtbestehen während der letzten Landtagswahlen diskutiert wurde und sich im Programm mehrerer Parteien fand, schreibt das Sächsische Hochschulfreiheitsgesetz umgekehrt den Hochschulen vor, Studierende zwangsweise zu exmatrikulieren, die zu oft durch eine Prüfung gefallen sind, einen Wiederholungsversuch nicht innerhalb bestimmter Fristen antreten oder die Regelstudienzeit zu sehr überschreiten.
+Diese Zwangsexmatrikulationen sind ein unverhältnismäßiger Eingriff in die grundgesetzlich verbriefte Berufsfreiheit, da Studierende, die eine Prüfung „endgültig nicht bestanden“ haben, auch an anderen Hochschulen keine inhaltlich ähnlichen Studiengänge mehr studieren können – lebenslänglich. Dass die Hochschulen keine anderen Regeln festlegen dürfen, ist ein zumindest fragwürdiger Eingriff in die Wissenschaftsfreiheit.
+Studierende durch drohende Zwangsexmatrikulationen unter Druck zu setzen ist in unseren Augen unangemessen; es ersetzt selbstverantwortliches und selbstbestimmtes durch prüfungsorientiertes Studieren und behindert damit die freie Entfaltung.
+Zudem stellt es eine Erleichterung für alle Beteiligten dar, wenn Dozierende nicht vor der Entscheidung stehen, Studierende z.B. in ihrem letzten Prüfungsversuch ggf. entweder trotz fraglicher Leistungen bestehen zu lassen oder ihnen für den Rest des Lebens Chancen zu nehmen.
+Ein erzwungenes Studienende ist nicht als Akt der Fürsorge zu verstehen. Stattdessen gilt es, wenn Studierende wiederholt durch Prüfungen fallen, die zu Grunde liegenden Probleme beispielsweise im Rahmen von Beratungen zu analysieren und kooperativ zu lösen. Auch ermöglicht dies, Probleme, die nicht in der Schuld der Studierenden liegen, zu erkennen, und ist eine Voraussetzung, um systematische, über den Einzelfall hinausgehende Lösungen zu entwickeln.
+
+
+
+% \section*{Begründung}
+% In der Sächsischen Regierung gibt es im Rahmen der derzeit laufenden Hoch\-schul\-gesetz-Novelle einen Konflikt in dieser Sache, mithin auch Entwicklungsmöglichkeiten, zumal das derzeitige Sächsische Hochschulgesetz in dieser Frage bundesweit negativ hervorsticht. Deshalb ist das Ziel dieser Reso, dass die ZaPF hier mit ihrem Beschluss aus Siegen in die Debatte eingreift.
+% Der Reso-Entwurf entspricht bis auf wenige Ergänzungen zur Einordnung in die Sächsische Situation sowie einer juristischen Analyse aus dem Vortrag von Bastian Simon (Justiziar der Uni Bielefeld), die er im Rahmen der ZaPF in Bochum vorgetragen hat, dem bestehenden Beschluss: https://zapf.wiki/Datei:Zwangsexmatrikulation.pdf
+
+
+\vspace{1cm} 
+
+\vfill
+\begin{flushright}
+	Verabschiedet am 01. Mai 2023 \\
+	auf der ZaPF in Berlin.
+\end{flushright}
+
+\end{document}

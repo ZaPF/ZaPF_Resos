@@ -1,0 +1,221 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+%\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{url}
+%\usepackage{tocloft}             % Paket für Table of Contents
+\def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
+\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
+\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-}%
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+%\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+% \usepackage{draftwatermark} % Wasserzeichen ``Entwurf''
+% \SetWatermarkText{Antrag}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{red}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+\initcomment{Philipp}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+
+
+
+\begin{document}
+
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+	\vspace{-1.8cm}
+\includegraphics[width=80pt]{../logo.pdf}
+	\centering
+	\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \huge{Positionspapier zu \textit{Englisch im Physikstudium}}\vspace{.25\baselineskip}\\
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+%%%% Metadaten %%%%
+
+%\paragraph{Adressierte:} xyx
+
+
+%\paragraph{Antragstellende:} Samuel (KomGrem), Jan (KomGrem)
+
+%%%% Text des Antrages zur veröffentlichung %%%%
+
+%\section*{Antragstext}
+
+\section*{Einleitung}
+Ziel dieses Positionspapiers ist es, die Meinung der ZaPF zur Vermittlung von Studieninhalten auf Englisch und zu Modulen mit der englischen Sprache als Inhalt festzuhalten.\\
+Zur Übersichtlichkeit werden die Ansichten der ZaPF in Stichpunkten gesammelt.
+
+\subsection*{Sprachanforderungen an Physikstudiengänge}
+\begin{itemize}
+    \item Voraussetzungen für die Studienaufnahme: Für alle praktischen Belange reicht im Bachelor das Abitur, im Master können weitere Voraussetzungen sinnvoll sein. Das Sprachniveau B2 ist ausreichend für ein englischsprachiges Studium.
+    \item Voraussetzungen für den Abschluss: Diese werden für unnötig erachtet.
+    \item Bachelorstudiengang: Dieser sollte auf Deutsch angeboten werden, um zu verhindern, dass Studierende ausgeschlossen werden, die im Abitur kein oder unzureichendes Englisch hatten. Ein zusätzlicher englischsprachiger Bachelorstudiengang kann angeboten werden.
+    \item  Masterstudiengang: Ein englischsprachiger Masterstudiengang wird positiv gesehen, da dieser die Forschungsanbindung erleichtert. Die Entscheidung über die Sprache oder das Angebot von Studiengängen in beiden Sprachen sollte den Universitäten überlassen werden.
+\end{itemize}
+
+\subsection*{Englisch in Lehrveranstaltungen}
+\begin{itemize}
+    \item Vorlesungen
+    \begin{itemize}
+        \item Bachelor \& Master: Pflichtmodule sollten in der Sprache des Studiengangs angeboten werden. Wahlmodule können auch eine andere Sprache haben.
+    \end{itemize}
+    \item Seminare
+    \begin{itemize}
+        \item Bachelor \& Master: Die Veranstaltungssprache sollte grundsätzlich die Sprache des Studiengangs sein. Sollte es mehrere Seminare zur Auswahl geben, können diese auf unterschiedlichen Sprachen gehalten werden. Optional sollte z.B. die Vorstellung englischer Paper auch in einem Seminar auf Deutsch erlaubt sein.
+    \end{itemize}
+    \item Übungen
+    \begin{itemize}
+        \item Bachelor: Das Angebot von englischsprachigen Übungen sollte optional sein.
+        \item Master: In einem englischsprachigen Studiengang können englischsprachige Übungen verpflichtend sein. Ansonsten sollte das Angebot von englischsprachigen Übungen optional sein.
+    \end{itemize}
+    \item Übungszettel
+    \begin{itemize}
+        \item Bachelor: Übungszettel im deutschsprachigen Bachelor sollen immer auf Deutsch angeboten werden. Englische Übersetzungen können optional angeboten werden, dabei soll darauf geachtet werden, dass sich der Schwierigkeitsgrad nicht ändert. Insbesondere in englischsprachigen Übungen sollte aber auch auf Englisch abgegeben werden können.
+        \item Master: Die Übungszettelsprache sollte die Sprache des Moduls sein.
+    \end{itemize}
+    \item Klausuren
+    \begin{itemize}
+        \item Die Aufgabenstellung muss in der für die Lehrveranstaltung festgelegten Sprache angeboten werden. Nach Absprache mit den Studierenden können zusätzlich weitere Sprachen angeboten werden.
+        \item Die Sprache der Lösung kann nach Absprache von der Sprache der Aufgabenstellung abweichen.
+    \end{itemize}
+    \item Mündliche Prüfungen
+    \begin{itemize}
+        \item Die Prüfungssprache sollte im Allgemeinen die Sprache des Moduls sein und es muss ein Anrecht auf eine Prüfung in dieser Sprache bestehen. 
+        \item Sollten sich abweichend davon die Prüfenden und zu Prüfenden auf eine andere Sprache einigen, kann die Prüfung auch in dieser durchgeführt werden.
+    \end{itemize}
+\end{itemize}
+
+\subsection*{Englisch in Abschlussarbeiten}
+\begin{itemize}
+    \item Bachelor und Master
+    \begin{itemize}
+        \item Optional: In einem deutschsprachigen Studiengang
+        \item Verpflichtend: Ausschließlich in einem englischsprachigen Studiengang
+    \end{itemize}
+    
+\end{itemize}
+
+\subsection*{Englischkurse für Physikstudierende}
+\begin{itemize}
+    \item Optionale Englischkurse
+    \begin{itemize}
+        \item Allgemeines Englisch: Solche Kurse sind hilfreich. Diese sollten bewertet oder unbewertet anrechenbar sein. Wenn der konsekutive Master englischsprachig ist, sollten die Kurse für diesen qualifizieren.
+        \item Wissenschaftliches Englisch: Es sollte mindestens ein optionales Modul zum wissenschaftlichen Kommunizieren auf Englisch (mündlich und schriftlich) geben.
+    \end{itemize}
+    \item Verpflichtende Kurse
+    \begin{itemize}
+        \item Verpflichtende Englischkurse für allgemeines und wissenschaftliches Englisch werden abgelehnt.
+    \end{itemize}
+\end{itemize}
+
+\subsection*{Englisch im Lehramtsstudium}
+\begin{itemize}
+    \item Ein englischsprachiges Lehramtsstudium ist nicht sinnvoll. Die ZaPF empfiehlt für das Lehramtsstudium die gleichen Anforderungen wie für das Bachelorstudium.
+    \item Weiterführende Englischkenntnisse erfüllen dann die Zusatzqualifikation für bilingualen Unterricht.
+\end{itemize}
+
+\vspace{1cm} 
+
+\vfill
+\begin{flushright}
+	Verabschiedet am 30. April 2023 \\
+	auf der ZaPF in Berlin.
+\end{flushright}
+
+\end{document}
