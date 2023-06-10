@@ -1,0 +1,193 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+%\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{url}
+%\usepackage{tocloft}             % Paket für Table of Contents
+\def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
+\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
+\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-}%
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+%\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+% \usepackage{draftwatermark} % Wasserzeichen ``Entwurf''
+% \SetWatermarkText{Antrag}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{blue}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+\initcomment{Philipp}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+
+
+
+\begin{document}
+
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+\vspace{-1.8cm}
+\includegraphics[width=80pt]{../logo.pdf}
+\centering
+\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \huge{Studium und Lehre in der Corona-Pandemie -- was wir daraus mitnehmen sollten}\vspace{.25\baselineskip}\\
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+%%%% Metadaten %%%%
+
+%\paragraph{Adressierte:} Kultusministerien, Hochschulen Deutschlands, Österreichs und der Schweiz, Physik-Fachbereiche der Hochschulen in Deutschland, Österreich und der Schweiz, Konferenz der Fachbereiche Physik
+
+
+%\paragraph{Antragstellende:} Felicia (Göttingen), Lara (Rostock), Nik (TUM), Samuel (Jena), Jan (Mainz)
+
+%%%% Text des Antrages zur veröffentlichung %%%%
+
+%\section*{Antragstext}
+
+%Einleitung
+%entleehrt
+Hochschulen haben während der Pandemie viele Veränderungen in Studium und Lehre durchzogen. Aus diesen Erfahrungen können nun wertvolle Lehren gezogen werden. Während die ZaPF die Rückkehr zur Präsenzlehre eindeutig begrüßt, fordert sie, dass einige Aspekte aus der Online- und Hybridlehre beibehalten und ausgebaut werden, um die Lehre in einer digitalisierten Welt zu verbessern. Die Organisation des Studiums wurde in der Pandemie-Zeit für Studierende und Lehrende vereinfacht. Diese positiven Entwicklungen sollten ebenfalls erhalten bleiben und erweitert werden. Insbesondere führt die Umsetzung der folgenden Forderungen zu einem gleichberechtigteren Studium für viele behinderte, neurodivergente oder sonstig benachteiligte Studierende.
+
+%\textbf{Dazu hat die ZaPF die folgenden Forderungen.}
+
+\subsection*{Die Weiterführung des Online- und Hybridangebots}
+
+%Das Hauptaugenmerk der Lehre sollte weiterhin auf Präsenz liegen, dennoch sollen hybride und digitale Angebote weiterhin bestehen bleiben, um das Studium insgesamt flexibler und auf verschiedene Lerntypen angepasst zu gestalten.\\
+Bisher bedeutete eine längere, unverschuldete Abwesenheit für Studierende, dass sie nicht mehr problemlos an der Lehre teilnehmen können und dadurch viel Stoff 
+verpassen, welcher nur mit großem Aufwand nachgeholt werden konnte. Durch ein angemessenes Online- und Hybridangebot wird dies deutlich vereinfacht.\\Zudem ist die übliche Arbeitsweise vieler Studierender bereits auf digitale Ergänzungen in der Lehre ausgelegt. Diese Möglichkeiten sollten nicht durch mangelnde Digitalisierung an der Hochschule unterbunden werden. \\
+
+\textbf{Deshalb fordert die ZaPF:}
+
+\begin{itemize}
+\item Präsenz-Vorlesungen sollen flächendeckend aufgezeichnet und den Studierenden zur Verfügung gestellt werden. Alternativ kann eine gleichwertige digitale Version der Vorlesung zugänglich gemacht werden.
+Dies erleichtert Studierenden das Nacharbeiten des Stoffs und macht das Studium flexibler und auf verschiedene Lerntypen angepasst. 
+\item Zusätzlich zu den Tutorien bzw. Übungen in Präsenz sollen dergleichen auch online angeboten werden. So können unverschuldet verhinderte Studierende kurzfristig trotzdem an den Übungen teilnehmen.
+\item Die Möglichkeit zur digitalen Abgabe von Übungsaufgaben soll immer gegeben sein. Dies ist für viele Studierende deutlich unkomplizierter als das Abgeben in Papierform und hätte zusätzlich einen umweltschonenden Effekt.
+\end{itemize}
+
+\subsection*{Organisatorische Erleichterungen}
+Organisatorische Erleichterungen in der Lehre helfen sowohl Studierenden als auch Dozierenden, ihren Studien- und Arbeitsalltag stressfreier und psychisch gesünder zu gestalten.\\
+
+\textbf{Deshalb fordert die ZaPF:}
+\begin{itemize}
+\item Das Lehren und Lernen soll über eine zentrale Lern- und Lehrplattform der Hochschule erfolgen.
+\item Die Hochschule soll mindestens einen gut funktionierenden Streaming- und Meetingdienst für alle Mitglieder der Universität kostenfrei zur Verfügung stellen. Dies vereinfacht die barrierearme Kommunikation unter Studierenden sowie zwischen Dozierenden und Studierenden, z.B. durch das Angebot einer Online-Sprechstunde. 
+\item Die für Lehren und Lernen benötigte Technik soll in den Räumen der Hochschule kostenlos und frei verfügbar bereitgestellt werden. Finanziell schwache Studierende dürfen durch mangelnde Technikausstattung nicht von den Lehrangeboten ausgeschlossen werden.
+\item Die für die Lehre benötigte Infrastruktur wie PC-Pools, Kameras, Software etc. sowie entsprechende Schulungen und Unterstützung für die Benutzenden sollen von der Hochschule bereitgestellt und instand gehalten werden.
+\item Die Prüfungsan- bzw. -abmeldung soll bis kurz vor der Prüfung möglich sein. Dadurch können Studierende kurzfristig entscheiden, ob sie die Prüfung antreten oder nicht. Dies verringert den Aufwand bei Krankheit sowie den psychischen Druck zum Antreten einer Prüfung. 
+%lehrende profitieren von geringerer Durchfallquote .
+\end{itemize}
+
+\subsection*{Erweiterung des Curriculums}
+Die Pandemie hat aufgezeigt, welche vielfältigen Wege zur Vernetzung es in der Lehre gibt.
+
+\textbf{Deshalb fordert die ZaPF:}
+\begin{itemize}
+    \item Daran soll angeknüpft und dieser Austausch vorangetrieben werden. Dafür sollen die Möglichkeiten, digital angebotene Module von anderen Hochschulen zu besuchen und sich anrechnen zu lassen, ausgebaut werden. 
+\end{itemize}
+
+\subsection*{Finanzierung}
+Die ZaPF fordert die Länder auf, die oben genannten Punkte finanziell zu unterstützen, um die Qualität der Lehre zu verbessern und zu sichern. Ohne diese Unterstützung der Hochschulen wird die weitere Umsetzung der Digitalisierung nahezu unmöglich.
+
+\vspace{1cm} 
+
+\vfill
+\begin{flushright}
+	Verabschiedet am 30. April 2023 \\
+	auf der ZaPF in Berlin.
+\end{flushright}
+
+\end{document}
