@@ -1,0 +1,196 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+%\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{url}
+%\usepackage{tocloft}             % Paket für Table of Contents
+\def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
+\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
+\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-}%
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+%\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+% \usepackage{draftwatermark} % Wasserzeichen ``Entwurf''
+% \SetWatermarkText{Antrag}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{blue}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+\initcomment{Philipp}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+
+
+
+\begin{document}
+
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+\vspace{-1.8cm}
+\includegraphics[width=80pt]{../logo.pdf}
+\centering
+	\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \huge{Nachhaltigkeit in der Hochschullehre in der Physik}\vspace{.25\baselineskip}\\
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+%%%% Metadaten %%%%
+
+%\paragraph{Adressierte:} KFP, jDPG, DPG, Physik Fachbereiche, ÖPG, ÖPG young minds, SPS, YPF, ÖH-Bundesvertretung
+
+
+%\paragraph{Antragstellende:} Katrin (TUM), Nik (TUM), Philipp (Alumni), Fritz (FUB)
+
+
+%%%% Text des Antrages zur veröffentlichung %%%%
+
+% \section*{Antragstext}
+
+Nachhaltigkeit ist die zentrale gesellschaftliche Herausforderung der Gegenwart und Zukunft. Als aktive Mitglieder einer demokratischen Gesellschaft sollten Physik-Studierende fundiertes Wissen zu den physikalischen Grundlagen der Klimakrise vermittelt bekommen, was bisher häufig zu kurz kommt. Sie sollten Methoden zum Umgang mit der Klimakrise kennen und beurteilen können, um für den gesellschaftlichen Diskurs und lösungsorientiertes Handeln optimal vorbereitet zu sein. 
+
+\subsection*{Einbettung in Pflichtmodule}
+Nachhaltigkeit sollte deshalb in bestehenden Pflichtmodulen explizit thematisiert werden, indem fachlich nahe Aspekte aufgegriffen werden. Deshalb fordert die ZaPF, dass klimabezogene Inhalte in den Modulhandbüchern themenverwandter Lehrveranstaltungen ergänzt werden und die Veranstaltungen entsprechend angepasst werden.
+
+Exemplarisch hierfür wären die physikalischen Wirkungsweisen von Treibhausgasen in der Atmosphäre und deren Zusammenhang mit der Erderwärmung in den Vorlesungen zur Atomphysik einzubinden. Weitere Beispiele wären ein Exkurs zum Strahlungshaushalt der Erde bei der Besprechung von Schwarzkörperstrahlung, oder die Betrachtung von den Wirkungsgraden und Umwandlungsverlusten bei Energieumwandlungen in der Thermodynamik und die Auswirkungen auf die Energieerzeugung und Speicherung. 
+
+Anhand der vorgenannten Beispiele wird deutlich, dass es eine Vielzahl an Möglichkeiten gibt, das Thema der Klimakrise in die Lehre im Physikstudium zu integrieren. Deshalb ruft die ZaPF die Fachbereiche auf, ihre individuellen Möglichkeiten zu analysieren und nachhaltige Inhalte fest in verschiedenen Lehrveranstaltungen zu verankern. 
+% Zudem wäre es ein Leichtes dies umzusetzen, da nur geringe Änderungen im Modulhandbuch nötig wären.
+
+%    Atomphysik (Schwigungszustände)
+%    Thermodynamik (Entropie, Energieflüsse, -haushalt, Wolken (Atmosphäre etc.), Eisschmelze -> globales Zusammenspiel), (Bestrahlungshaushalt der Erde)
+%    in Statistischer Physik nochmal aufgreifen, weil dann mehr Grundlagen da sind
+%    Beispiele nennen, dafür wie es konkret in die VLen einfließen kann
+%    Einführung in die Informatik (Daten)
+%    Ins Modulhandbuch
+
+\subsection*{Schaffen zus"atzlicher Wahlmodule}
+Eine noch tiefgreifendere Auseinandersetzung mit Themen der Nachhaltigkeit sollte durch das Ergänzen geeigneter Wahlmodule in vorhandene Wahlpflichtbereiche in das Physikstudium geschehen. Auf diesem Weg ist die Änderung als reine Aktualisierung des Modulhandbuchs und damit ohne "Anderung der Pr"ufungsordnung m"oglich.
+
+Dies könnte beispielsweise ein Modul zur Umweltphysik sein, in dem Atmosph"arenphysik, geophysikalische Prozesse und erneuerbare Energien thematisiert werden. Vorlesungen zu physikalischen Grundlagen der Umstellung auf eine vollständig erneuerbare Energieversorgung können ein weiterer wichtiger Baustein sein. Diese umfasst neben Technologien zur Energieerzeugung auch die Speicherung und den Transport von Energie.
+
+Durch die aktuelle Energiekrise wird die mangelnde Resilienz des europ"aischen Energienetzes deutlich. Konkreter Handlungsbedarf wird an vielen Stellen sichtbar. Hier k"onnen die Kompetenzen der Physik im Umgang mit komplexen Systemen bei der notwendigen Umstellung der Energienetzwerke oder der Analyse von Schwachstellen unterst"utzen.
+
+Nur durch fundiertes Faktenwissen kombiniert mit ad"aquaten Kommunikationsf"ahigkeiten ist ein zielf"uhrender gesellschaftlicher Diskurs auf Augenh"ohe m"oglich. Daher ist es wichtig, dass Physikstudierende die Zusammenhänge erfassen und erklären können, sowie einschlägige Kennzahlen verstehen und interpretieren k"onnen.
+
+\subsection*{Nachhaltigkeit und Data Literacy}
+
+%    Praktikum (Solarzellen Innenwiderstand, Strahlung x Oberflächen, Wetterballon, Arbeiten mit SIS Daten)
+%        schwierig, weil andere Punkte wichtiger
+%        cool, weil selber machen bleibt besser hängen
+%        Wetterdaten sind cool, um Umgang mit großen Datenmenden zu lernen
+%    Programmieren
+
+Die Forschung zur Nachhaltigkeit und der Klimakrise findet in weiten Teilen datengetrieben statt. Im Rahmen der von der \zapf geforderten Digitalisierung des Physikstudiums\footnote{\texttt{\url{https://zenodo.org/record/5519029}}, abgerufen am 12.11.2022}\footnote{J. Bode and P. Jaeger, \texttt{\url{https://zenodo.org/record/5168524}}, 2021, abgerufen am 12.11.2022} bietet es sich an, auch die Nachhaltigkeit entsprechend zu ber"ucksichtigen. Dies bietet sich vor allem in Experimenten im Grund- und Fortgeschrittenenpraktika sowie in Modulen zum wissenschaftlichen Programmieren oder Data Science an. 
+
+Im Praktikum k"onnten etwa bei den g"angigen Experimenten zu Eigenschaften von Spannungsquellen anstatt der "ublichen Batterien auch nachhaltige Alternativen wie Solarzellen oder Brennstoffzellen verwendet werden. Bei Experimenten zur Thermodynamik w"are weiterhin eine st"arkere Auseinandersetzung mit Absorptions- und Emissionseigenschaften von Oberfl"achen abh"angig von deren Beschaffenheit denkbar. In Fortgeschrittenenpraktika sollten die Gegebenheiten vor Ort optimal genutzt werden und auch lokale Wettermessstationen oder Demonstrationsanlagen etwa f"ur Windkraft oder Photovoltaik in Experimenten integriert werden.% t Absorn Experimenten integriert werden.
+
+Ebenso bietet es sich an, in Modulen zur Datenauswertung "offentlich zug"angliche Daten etwa zur Klimahistorie, klimaspezifische GIS\footnote{Geoinformationssystem}- oder Copernicus\footnote{Copernicus, \texttt{\url{https://www.copernicus.eu/en}}, abgerufen am 12.11.2022}-Daten zu nutzen und in "Ubungsaufgaben oder Praktikumsteilen zu analysieren. Neben den Aspekten von Nachhaltigkeit und Data Literacy w"urde so eine in der Wissenschaft sowie in vielen weiteren Berufsfeldern relevante Methodik und Technologie in die Universit"at geholt, was die Berufsaussichten der Alumni verbessert und die Attraktivit"at des Fachbereichs f"ur Kooperationen und Austausch mit der Industrie fördert.
+
+%Außerdem eignet sich die Erhebung und Analyse von klimaspezifischen Daten, wie z.B. in der Einführung in die Programmierung oder in Praktikumsversuchen, um Zusammenhänge selbst zu erarbeiten.
+Bindet man in diesen interaktiven Lehrveranstaltungen Themen wie Nachhaltigkeit oder Klimakrise ein, so ergibt sich in den studierendenzentrierten Lernformaten die M"oglichkeit Zusammenhänge selbst zu erarbeiten und damit ein tieferes und individuelleres Verst"andnis der Sachverhalte zu gewinnen. Gleichzeitig werden moderne Technologien ins Studium eingebracht und die Datenkompetenzen der Studierenden gef"ordert.
+
+
+%\section*{Begründung}
+%Selbsterklärend.
+
+% \vspace{1cm} 
+
+\vfill
+\begin{flushright}
+	Verabschiedet am 30. April 2023 \\
+	auf der ZaPF in Berlin.
+\end{flushright}
+
+\end{document}
