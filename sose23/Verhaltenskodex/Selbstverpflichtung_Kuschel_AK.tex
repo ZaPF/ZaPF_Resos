@@ -1,0 +1,166 @@
+documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+%\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{url}
+%\usepackage{tocloft}             % Paket für Table of Contents
+\def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
+\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
+\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-}%
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+%\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+% \usepackage{draftwatermark} % Wasserzeichen ``Entwurf''
+% \SetWatermarkText{Antrag}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{blue}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+\initcomment{Philipp}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+
+
+
+\begin{document}
+
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+\vspace{-1.8cm}
+\includegraphics[width=80pt]{../logo.pdf}
+\centering
+\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \huge{Selbstverpflichtung Kuschel AK}\vspace{.25\baselineskip}\\
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+%%%% Metadaten %%%%
+
+%\paragraph{Adressierte:} xyx
+
+
+%\paragraph{Antragstellende:} Antonia (Erlangen), Leon (Erlangen), Jack (Konstanz), Chris (Marburg), Leon (FUB)
+
+
+%%%% Text des Antrages zur veröffentlichung %%%%
+
+%\section{Antragstext}
+Die ZaPF möge folgende Selbstverpflichtung beschließen:
+
+Es soll ein aus der Ferne sichtbares Kennzeichen angeboten werden, welches darstellt, in welchem Maße Kuscheln und Köperkontakt erwünscht sind.
+
+Dies kann durch farbliche Kennzeichnung, beispielsweise durch Aufkleber auf den Tagungsausweisen, geschehen. Die genaue Umsetzung liegt im Ermessen der durchführenden Fachschaft. Bei der Farbgebung soll Rücksicht aus Farbfehlsichtigkeiten, insbesondere Rot-Grün und Blau-Gelb, genommen werden. Zweckmäßig wären die Farben Grün, Violett und Orange. Nach Ermessen der Orga können optional zusätzlich auch noch Muster verwendet werden.
+Die Farbkennzeichnung soll Folgendes darstellen:
+\begin{itemize}
+   \item Farbe 1, (Grün, z.\,B. ein Rechteck): Wenn ich nonverbal Konsens zeige, darfst du mich kuscheln. 
+   \item Farbe 2, (Violett, z.\,B. zwei Kreise): Bitte frag mich.
+   \item Farbe 3, (Orange, z.\,B. drei Dreiecke): Ich kuschle lieber mit Kuscheltieren, und gefragt zu werden ist mir eher unangenehm. 
+\end{itemize}
+Bei der Farb- und Formwahl soll explizit auf historische Kontexte geachtet werden, wie zum Beispiel die Kennzeichnung von Häftlingen in Konzentrationslagern.
+
+Es soll auch möglich sein, seinen Aufkleber während der ZaPF zu verändern. Die Aufkleber sind nicht bindend; es sollte stets auf die Situation und den \enquote{Code of Conduct} geachtet werden.
+
+
+%\section{Begründung}
+%Es ist in den letzten ZaPFen aufgefallen, dass es Probleme im Bereich der Kuschel-Knigge und der Intimsphäre gibt. Dabei geht es insbesondere um das gegenseitige Einverständnis beim Kuscheln und wie dieses deutlich gemacht wird. Um unangenehme Situationen zu vermeiden, wird hier ein Farbcode vorgeschlagen, welcher die Möglichkeit bietet, einerseits den Personen, welche weniger gerne mit anderen ZaPFika kuscheln, dies deutlich zu machen, ohne andauernd danach gefragt zu werden. Auf der anderen Seite gibt es den kuschelfreudigen ZaPFika mehr Sicherheit, wie das Gegenüber grob einzuschätzen ist. Es ist dabei zu betonen, dass die Farbkennzeichnung eines Zapfikons nicht bindend ist, und es IMMER die Möglichkeit gibt, das Kuschelangebot abzulehnen. Es wird erhofft, dass durch diese Selbstverpflichtung wieder mehr Aufmerksamkeit auf den \enquote{Code of Conduct} gelenkt wird und die Kuschelstimmung wieder entspannter und harmonischer für alle wird (ob kuschelfreudig oder nicht).
+\vspace{1cm} 
+
+\vfill
+\begin{flushright}
+Verabschiedet am 01. Mai 2023 \\
+auf der ZaPF in Berlin.
+\end{flushright}
+
+\end{document}
