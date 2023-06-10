@@ -1,0 +1,172 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+%\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{url}
+%\usepackage{tocloft}             % Paket für Table of Contents
+\def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
+\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
+\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-}%
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+%\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+% \usepackage{draftwatermark} % Wasserzeichen ``Entwurf''
+% \SetWatermarkText{Antrag}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{red}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+\initcomment{Philipp}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+
+
+
+\begin{document}
+
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+\vspace{-1.8cm}
+\includegraphics[width=80pt]{../logo.pdf}
+\centering
+\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \huge{Nachteilsausgleich}\vspace{.25\baselineskip}\\
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+%%%% Metadaten %%%%
+
+%\paragraph{Adressierte:} Kultusministerien, Hochschulen Deutschlands, Österreichs und der Schweiz, Physik-Fachbereiche der Hochschulen in Deutschland, Österreich und der Schweiz, Konferenz der Fachbereiche Physik
+
+
+%\paragraph{Antragstellende:} Felicia (Göttingen), Jan (Mainz), Momo (Paderborn)
+
+%%%% Text des Antrages zur veröffentlichung %%%%
+\glqq Die Vertragsstaaten stellen sicher, dass Menschen mit Behinderungen ohne Diskriminierung und gleichberechtigt mit anderen Zugang zu allgemeiner Hochschulbildung [...] haben.\grqq -- dazu haben sich Deutschland, Österreich und die Schweiz in der UN-Behindertenrechtskonvention verpflichtet. Dieser Verpflichtung kommen die Hochschulen nicht angemessen nach - das muss sich ändern.\\
+
+Informationen zu barrierearmen Studienmöglichkeiten sind oft schwer zu erhalten, da diese nicht in der standardmäßigen Vorstellung und Bewerbung der Studiengänge eingebaut sind.\\ \newline
+Aus diesen Gründen fordert die ZaPF, Barrieren und damit die Notwendigkeit von Nachteilsausgleichen zu reduzieren. Einige Ideen und Forderungen hierzu wurden bereits in der Resolution \url{https://zapfev.de/resolutionen/sose21/Barrierefreies_Studium/barfrei.pdf} aufgelistet. Im Einklang damit und darüber hinaus fordert die ZaPF:
+\begin{itemize}
+    \item Eine kurzfristige Absage von Prüfungsterminen muss möglich sein, um beispielsweise auf plötzliche Verschlechterungen der gesundheitlichen Lage reagieren zu können. Insbesondere für Studierende mit Behinderungen, Einschränkungen durch Neurodiversität oder Vorerkrankungen kann der spontane Zugang zu einer ärztlichen Beratung stark eingeschränkt sein.
+    \item Nachteile sollen nach Möglichkeit auch außerhalb eines Nachteilsausgleichs systematisch minimiert werden, zum Beispiel durch die Verwendung legastheniefreundlicher Schriftarten. Denn auch der Aufwand, der durch die Antragsstellung entsteht, kreiert Barrieren.
+    \item Auf Basis gestellter Anträge auf Nachteilsausgleich sollen Barrieren identifiziert und reduziert werden.
+    \item Im Rahmen des Abbaus von Barrieren sollen neben körperlichen explizit auch psychische Barrieren betrachtet werden.
+    \item Alle Statusgruppen sind über das Thema Barrieren und Barrierearmut zu sensibilisieren.
+\end{itemize}
+
+Ein häufig verwendeter Weg, einige existierende Barrieren auszugleichen und somit Zugang zum Lehrangebot von Universitäten zu gewährleisten, ist der Nachteilsausgleich. Hochschulen müssen deshalb angemessene Regelungen zur Beantragung und Umsetzung von Nachteilsausgleichen (zu Prüfungs(vor)leistungen sowie zu Studienveranstaltungen) schaffen und umsetzen.\\
+Bisher ist der Nachteilsausgleich aufgrund komplexer und nicht standardisierter Anträge aufwändig für Studierende, Lehrende und Universitäten. Darüber hinaus führt ein Nachteilsausgleich oft zu Unsicherheiten, da die Form des Nachteilsausgleichs und damit die Studierbarkeit eines Studienganges für betroffene Studierende meist erst nach Antragstellung abschätzbar ist. 
+Explizit in Bezug auf Nachteilsausgleiche fordert die ZaPF:
+\begin{itemize}
+    \item Die Flexibilität der Ausgleichsmöglichkeiten muss erhalten bleiben und es darf nicht nur eine feste Liste möglicher Nachteilsausgleiche geben, um in der Lage zu sein, auf individuelle Nachteile von Studierenden individuell einzugehen. Hierbei ist über die Vielzahl von Möglichkeiten für Nachteilsausgleiche zu informieren, damit Suchende schnell eine passende Ausgleichsmöglichkeit finden können.
+    \item Ein bedarfsgerechtes, barrierefreies und anonymes Informationsangebot durch vom Fachbereich und der Hochschulverwaltung unabhängige und qualifizierte Beratungsstellen muss zur Verfügung gestellt und darüber in der breiten Studierendenschaft aufgeklärt werden. Diese Beratungsstellen müssen weisungsbefugt sein gegenüber den Stellen, welche den Nachteilsausgleich gewähren.
+    \item Nachteilsausgleiche müssen auch Nachteile ausgleichen, welche die Teilnahme am Studium (also z.B. an Vorlesungen) und nicht die Prüfungssituation selbst betreffen.
+    \item Ein Nachteilsausgleich muss auch bei temporären Erkrankungen wie z.B. in Form von Vorlesungsmitschriften bei einem gebrochenen Arm möglich sein.
+    \item Die Universitäten sollen auch einen Ausgleich von wirtschaftlicher und sozialer Benachteiligung unterstützen. Dies kann beispielsweise durch die Bereitstellung notwendiger Technik für sozial benachteiligte Studierende geschehen.
+    \item Die Universitäten sollen Vorlagen für häufige Anträge bereitstellen, um den Schreibprozess zu beschleunigen und Verständlichkeit für Antragsbearbeitende ohne Rücksprache zu gewährleisten.
+    \item Beim Nachteilsausgleich muss der Schutz sensibler Daten gewährleistet sein. Beispielsweise ist dies durch ein Auslassen einer Symptompflicht auf Attesten erreichbar und Anträge dürfen nur an ihre Adressat*innen weitergegeben werden.
+    \item Es soll ein Austausch von Betroffenen ermöglicht werden, damit diese sich besser informieren können.
+\end{itemize}
+Im Allgemeinen ist eine Entstigmatisierung von Behinderungen, psychischen Erkrankungen, Neurodivergenz und weiteren Einschränkungen sowie von Nachteilsausgleichen anzustreben. 
+
+\vspace{1cm} 
+
+\vfill
+\begin{flushright}
+	Verabschiedet am 01. Mai 2023 \\
+	auf der ZaPF in Berlin.
+\end{flushright}
+
+\end{document}
