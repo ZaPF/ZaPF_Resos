@@ -45,12 +45,11 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhead{} % clear all header fields
-\cfoot{}
-\lfoot{Zusammenkunft aller Physik-Fachschaften, 
-Konferenz aller werkstofftechnischen und materialwissenschaftlichen Studiengänge und Konferenz der Informatikfachschaften}
+%\cfoot{}
+%\lfoot{}
 %\rfoot{www.zapfev.de\\stapf@zapf.in\\kawum-matwerk.de\\geschaeftsleitung@kawum-matwerk.de\\seite kif\\mail kif}
 \renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0.1pt}
+\renewcommand{\footrulewidth}{0pt}
 \newcommand{\gen}{*innen}
 \addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
 
@@ -115,15 +114,28 @@ Konferenz aller werkstofftechnischen und materialwissenschaftlichen Studiengäng
 
 \begin{document}
 
-\begin{table}[]
+\begin{table}[htb]
     \centering
     \addtolength{\leftskip}{-3.2cm}
     \addtolength{\rightskip}{-3cm}
     \vspace{-2cm}
     \begin{tabular}{ccc}
-         \includegraphics[width=165pt]{../Logo_KaWuM.png} & \includesvg[width=160pt]{../logo_KIF.svg} &  \includegraphics[width=75pt]{../logo.pdf}\\
-         Konferenz aller werkstofftechnischen & Konferenz der Informatikfachschaften & Zusammenkunft aller\\
+         \multicolumn{1}{l}{\includegraphics[width=165pt]{../Logo_KaWuM.png}} & \includesvg[width=160pt]{../logo_KIF.svg} &  \includegraphics[width=75pt]{../logo.pdf}\\
+         \multicolumn{1}{l}{Konferenz aller Werkstofftechnischen} & Konferenz der Informatikfachschaften & Zusammenkunft aller\\
          und materialwissenschaftlichen Studiengänge & & Physik-Fachschaften \\
+    \end{tabular}
+    \label{tab:logos1}
+\end{table} 
+
+\begin{table}[htb]
+    \centering
+    \addtolength{\leftskip}{-3.2cm}
+    \addtolength{\rightskip}{-3cm}
+    \vspace{-0.3cm}
+    \begin{tabular}{cc}
+         \multicolumn{1}{l}{\includegraphics[width=165pt]{../Logo_PsyFaKo.png}} & \includegraphics[width=70pt]{../sethlogo.png}\\
+         \multicolumn{1}{l}{Psychologie-Fachschaften-Konferenz} & Studierendenrat Evangelische Theologie \\
+         & \\
     \end{tabular}
     \label{tab:logos}
 \end{table}
@@ -171,7 +183,7 @@ Konferenz aller werkstofftechnischen und materialwissenschaftlichen Studiengäng
 
 % \section*{Antragstext}
 %Die ZaPF fordert die Bundesregierung und die Landesregierungen auf, schnell eine einheitliche Lösung für die Semestertickets zu befassen.
-Die ZaPF, die KaWuM und die KIF fordern die Bundesregierung und die Landesregierungen auf, schnell mit einer einheitlichen Lösung für die Semestertickets für Planungssicherheit und eine Entlastung der Studierenden zu sorgen.
+Die ZaPF, die KaWuM, die KIF, die PsyFaKo und der SETh fordern die Bundesregierung und die Landesregierungen auf, schnell mit einer einheitlichen Lösung für die Semestertickets für Planungssicherheit und eine Entlastung der Studierenden zu sorgen.
 Bereits im Vorjahr haben wir die Einführung eines bundesweiten Bildungstickets für Schülerinnen und Schüler, Auszubildende und Studierende gefordert.\footnote{Resolution der ZaPF vom 13.11.2022: \href{https://zapfev.de/resolutionen/wise22/Deutschlandticket/Resolution\_zum\_Deutschlandticket.pdf}{zapfev.de/resolutionen/wise22/Deutschlandticket/\\Resolution\_zum\_Deutschlandticket.pdf}} Dem wollen wir hiermit Nachdruck verleihen.\\\\
 %
 Auch weiterhin begrüßen wir den Vorstoß, das öffentliche Verkehrswesen mit einem Deutschlandticket zu vereinheitlichen. Jedoch führt die aktuelle Implementierung zu einer Vielzahl von Problemen -- sowohl für die Verkehrsbetriebe als auch die Studierenden und die in ihrem Namen Semestertickets verhandelnden Instanzen. Der aktuelle föderale Flickenteppich führt in vielen Teilen Deutschlands konträr zur beabsichtigten Wirkung sogar zu einer Verschlechterung der Situation für die Studierenden.\\\\
@@ -210,14 +222,25 @@ Für einen angemessenen Zeitrahmen halten wir eine schnellstmögliche, einheitli
     am 07. Mai 2023
     auf der KaWuM in Aachen,\\
  
-    und am  21. Mai 2023
-    auf der 51,0ten KIF in Bremen.
+    am  21. Mai 2023
+    auf der 51,0ten KIF in Bremen,\\
+
+    am 25. Juni 2023
+    auf der PsyFaKo in Hildesheim.\\
     
+    und am  01. August 2023
+    von der SETh. \\
+
+    \vspace{0.2cm}
     www.zapfev.de\\ stapf@zapf.in
 
     kawum-matwerk.de\\ geschaeftsleitung@kawum-matwerk.de
-
-    wiki.kif.rocks
+ 
+    wiki.kif.rocks\\ 
+    \vspace{0.2cm}
+    konrat@psyfako.org\\
+    \vspace{0.2cm}
+    webmaster@interseth.de\\
  \end{flushright}
 
 \end{document}
