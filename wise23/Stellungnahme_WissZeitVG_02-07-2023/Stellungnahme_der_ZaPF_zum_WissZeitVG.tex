@@ -1,0 +1,221 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+%\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{url}
+%\usepackage{tocloft}             % Paket für Table of Contents
+\def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
+\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
+\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-}%
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+%\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+% \usepackage{draftwatermark} % Wasserzeichen ``Entwurf''
+% \SetWatermarkText{Antrag}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    {\color{blue} {#1}}~{\color{blue} \sout{#2}}}
+\newcommand{\delete}[1]{
+    {\color{red} \sout{#1}}}
+\newcommand{\add}[1]{
+    \color{blue}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{teal} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+\begin{document}
+
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+\vspace{-1.8cm}
+\includegraphics[width=80pt]{logo.pdf}
+\centering
+	\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \huge{Stellungnahme der ZaPF zum Entwurf zur Reform des Wissenschaftszeitvertragsgesetzes}\vspace{.25\baselineskip}\\
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+% \section{Stefans Merkliste}
+% \begin{itemize}
+%     \item Im DGB-Text wird Pooling von Drittmitteln gefordert und vor diesem Hintergrund die Beibehaltung der Grundsystematik des WissZeitVG, dass Drittmittelbefristung anders gehandhabt wird als andere, kritisiert. Hauptkritik ist, dass auch der neue Entwurf erklärtermaßen diese Grundsystematik beibehalten soll. Dies ist auch die Linie der alten Reso.
+%     \item In öffentlicher Debatte bisher zu wenig beachtet: Problem der Kontinuität und der Abhängigkeitsstrukture -> aktuelle Skandale; hier spielt auch Pooling bzw. Departmentstruktur eine Rolle
+%     \item Verbesserung der sozialen Lage der Studis
+%     \item Verbesserung der sozialen Lage der Mitarbeiter*innen
+%     \item Kein staatliches Lohndumping: Auch bei geht-so-ok-Stundenlöhnen führt Unsicherheit dazu, dass Leute schlechte unbefristete Verträge annehmen.
+%     \item Verbesserung der Studiensituationen
+%     \item GEW fordert, dass die Kategorie WHK abgeschafft wird und alle mit Master als WiMiw beschäftigt werden. Wir fordern, dass die Kategorie SHK abgeschafft wird und alle behandelt werden wir WHKs. (\href{https://zapfev.de/resolutionen/sose16/WissZeitVG/WissZeitVG.pdf}{16er Reso}) Wie bekommen wir das zusammen?
+%     \item In der alten Reso (noch aktuell?) wird gefordert, dass Befristungen bei Studierenden (anders als bei Promovierenden) nicht begrenzt werden sollen: \href{https://zapfev.de/resolutionen/wise15/WissZeitVG/Stellungnahme_WiSe15_WissZeitVG.pdf}{15er Reso} \comment{Philipp: Soweit ich das verstanden habe, wäre das dann nicht mit EU-Recht vereinbar, sollten wir also vllt raus lassen}
+%     Das entspricht nicht der Gewerkschaftsposition, aber das Problem, dass Leute, die länger studieren oder z.B. erst an der Uni arbeiten, dann studieren oder den Studiengang wechseln, beschissene Voraussetzungen haben, wird da auch adressiert.
+    
+% \end{itemize}
+
+% \clearpage
+% \section{Entwurf Stefan \repl{}{und Philipp} Version 0}
+
+% [Gemeinsamer Textblock (adaptiert]
+% Als ZaPF unterstützen wir das gemeinsame Statement zahlreicher Interessenvertretungen mit klaren Forderungen für eine WissZeitVG-Novelle (\href{https://www.dgb.de/-/TVP}{\url{https://www.dgb.de/-/TVP}})
+% [/Gemeinsamer Textblock]
+
+% Die prekären Arbeitsverhältnisse an den Hochschulen sind nicht nur für die Betroffenen unerträglich und führen dazu, dass qualifiziertes Personal in erheblichem Umfang den Hochschulen den Rücken kehrt, sie sind auch dysfunktional: Mangelnde Kontinuität macht die Arbeitsabläufe an den Hochschulen unproduktiv. Teure Forschungsinfrastruktur droht brachzuliegen, weil das dazu gehörende Fachwissen ständig verloren geht. Lehrende, die ständig unter dem Druck stehen, dass ihre Stelle potenziell nicht verlängert wird und die einen erheblichen Teil ihrer Arbeitszeit für die Beantragung von Drittmitteln verwenden müssen, haben kaum \repl{Muße}{Freiraum}, die Lehre weiterzuentwickeln. \delete{Dies wirkt umso schwerer, als Lehrende typischerweise keine systematische hochschuldidaktische Ausbildung haben und gute Lehre lediglich an Hand ihrer eigenen Erfahrungen entwickeln können, die sie aber erstmal machen müssen.}
+
+% Im Gegensatz zum \repl{ersten Entwurf}{Eckpunktepapier (??)} führt der \repl{neue Entwurf}{Referentenentwurf} des WissZeitVG nicht mehr zu Verschlechterungen für die Lage des wissenschaftlichen Personals. Der für eine tatsächliche Verbesserung notwendige Paradigmenwechsel bleibt jedoch trotz einiger Detailverbesserungen aus:
+
+% Dass Kolleg*innen aus Drittmitteln finanziert werden, darf nicht länger ein Befristungsgrund sein. In Zeiten, in denen Drittmittel einen erheblichen und wachsenden Teil der Hochschulfinanzierung ausmachen, ist es möglich und notwendig, dass durch Pooling von Drittmitteln und vorausschauende Personalentwicklung auch aus Drittmitteln Dauerstellen geschaffen werden. Drittmittelfinanzierung, zumal größtenteils staatlich, darf nicht weiter als Begründung dafür herangezogen werden, Kolleg*innen soziale Rechte wie [Beispiele hier einfügen], die jenseits der Hochschschulen überall gelten, vorzuenthalten. Zudem ist es notwendig, systematisch staatliche Drittmittel durch eine Erhöhung der Grundfinanzierung der Hochschulen zu ersetzen.
+
+% \repl{}{Die ZaPF begrüßt die Öffnung des WissZeitVG \green{für die Tarifparteien (Formulierung ??)}. Der neu gefasste \S 1 Abs. 1 bietet insbesondere die Möglichkeit, stärker auf soziale Härten und persönliche Umstände der betroffenen Personen einzugehen. Hier sollte zusätzlich die Möglichkeit geschaffen werden, nicht nur die Befristungsdauer eines einzelnen Arbeitsverhältnisses, sondern auch in gleichem Maße der maximal zulässigen Befristungsdauer, anzupassen.}
+
+% \repl{}{Die Änderung des \S 2 hat nach Einschätzung der ZaPF wenig bis keine praktische Auswirkung, da eine Anschlusszusage nach Abs. 1a an eine Zielvereinbarung geknüpft wird. Das zugrunde liegende Problem -- fehlende unbefristete Stellen im akademischen Mittelbau -- wird von den vorgeschlagenen Änderungen nicht adressiert. Stattdessen werden Daueraufgaben in der Lehre, Forschung und Verwaltung weiterhin von Personal mit befristeten Verträgen wahrgenommen.}
+
+% \repl{}{Die Änderung des \S 6 wird von der ZaPF grundsätzlich positiv bewertet. Die Verlängerung der maximalen Befristungsdauer auf acht Jahre trägt der durchschnittlichen tatsächlichen Studiendauer Rechnung, die im MINT-Bereich oft deutlich höher als die Regelstudienzeit ist. Die ZaPF kritisiert jedoch, dass Studierende, die, etwa wegen familiärer oder Pflegeaufgaben, in Teilzeit studieren, hier nicht berücksichtigt werden. Für diese Personengruppe wäre es wünschenswert, die maximale Befristungsdauer nicht absolut festzulegen, sondern z.B. auf 150\% der jeweils anzuwendenden Regelstudienzeit. Weiterhin wäre eine Klarstellung, dass hier nur Befristungen nach WissZeitVG, nicht aber nach TzBfG, gemeint sind, wünschenswert. Hier könnte eine analoge Formulierung zu \S 1 Abs. 2 gewählt werden. \comment{Philipp: Wahrscheinlich möchte niemand von uns, dass es nicht mehr möglich ist, SHK für Kurzzeit-Aufgaben wie z.B. die DPG Frühjahrstagung anzustellen. Dies sollte jedoch die Ausnahme und nicht die Regel sein. Bin da für bessere Formulierungen offen.}}
+
+% % \vfill
+% % \begin{flushright}
+% % 	Verabschiedet am 30. April 2023 \\
+% % 	auf der ZaPF in Berlin.
+% % \end{flushright}
+
+% \section{ZaPF-Resos}
+% \href{https://zapfev.de/resolutionen/sose23/Studentischer_Tarifvertrag/Studentischer_Tarifvertrag.pdf}{Studentischer Tarifvertrag, jetzt unterstützen!, SoSe23}\\
+% \href{https://zapfev.de/resolutionen/sose23/Studentischer_Tarifvertrag/Resolution_zum_TV_Studentischer_Hilfskraefte_MeTaFa.pdf}{MeTaFa Resolution zu Tarifvertrag für studentische Beschäftigte, SoSe23}\\
+% \href{https://zapfev.de/resolutionen/wise22/WissZeitVG/Resolution_zur_Novellierung_des_WissZeitVG.pdf}{Resolution zur Novellierung des WissZeitVG, WiSe22}\\
+% \href{https://zapfev.de/resolutionen/sose22/WissZeitVG/WissZeitVG.pdf}{Gleichstellung von durch Drittmittel
+% finanzierten Stellen mit Qualifizierungsstellen, SoSe22}\\
+% \href{https://zapfev.de/resolutionen/sose17/mittelbau/mittelbau.pdf}{Resolution zur Schaffung permanenter
+% Stellen im wissenschaftlichen Mittelbau, SoSe17}\\
+% \href{https://zapfev.de/resolutionen/sose16/WissZeitVG/WissZeitVG.pdf}{Positionspapier: Resolution zu Studentischen Beschäftigungsverhältnissen nach dem WissZeitVG, SoSe16}\\
+% \href{https://zapfev.de/resolutionen/wise15/WissZeitVG/Stellungnahme_WiSe15_WissZeitVG.pdf}{Stellungnahme: Novelle des Wissenschaftszeitvertragsgesetzes, WiSe15}
+
+% Das, wo wir uns überlegen müssen, ob wir es gut finden:\\
+% \href{https://mittelbau.net/wp-content/uploads/2022/11/2022_11_10_Gemeinsames-Statement.pdf}{Positionspaier verschiedener Gewerkschaften, Beschäftigten- und Studierendenvertretungen} und \href{https://www.dgb.de/-/TVP}{dem hier.} Nicht identisch, aber in den Forderungen gleich. Textlich verschieden.
+
+
+% \section{Textentwurf Vicky+Andy}
+
+Die Zusammenkunft aller Physikfachschaften (ZaPF) stellt
+% erfreut
+fest, dass der vorliegende Referentenentwurf für das Wissenschaftszeitvertragsgesetz (WissZeitVG) im Gegensatz zum Eckpunktepapier vom 13. März 2023 \footnote{\href{https://www.bmbf.de/SharedDocs/Downloads/de/2023/230317-wisszeitvg.pdf?__blob=publicationFile&v=1}{https://www.bmbf.de/SharedDocs/Downloads/de/2023/230317-wisszeitvg.pdf?\_\_blob= publicationFile\&v=1}} nicht mehr dazu führt, dass sich die prekäre Lage des wissenschaftlichen Personals weiter verschlechtert. Der für eine tatsächliche Lösung notwendige Paradigmenwechsel bleibt jedoch trotz einiger Detailverbesserungen aus.
+
+Der künstlich hervorgerufene regelmäßige Generationswechsel auf wissenschaftlichen Stellen unterhalb der Professur ist aus Sicht der ZaPF nicht notwendig, um ein Umfeld für exzellente Forschung und Lehre 
+% des Wissenschaftsstandorts Deutschland 
+zu schaffen. 
+Im Ergebnis wirkt sich der ständige Personalwechsel sogar zwangsläufig negativ auf die Kontinuität von Lehre und langfristigen Forschungsvorhaben aus \footnote{\href{https://zapfev.de/resolutionen/sose17/mittelbau/mittelbau.pdf}{https://zapfev.de/resolutionen/sose17/mittelbau/mittelbau.pdf}}.
+
+Die ZaPF vertritt die Ansicht, dass in Anlehnung an den europäischen Rechtsrahmen die Promotion die höchste erreichbare wissenschaftliche Qualifikation darstellen soll. Wissenschaftler*innen, die eine Promotion erworben haben, sind hinreichend qualifiziert um eigenverantwortlich hochwertige Forschung und Lehre durchzuführen. In diesem Zusammenhang  fordern wir weiterhin wie in unserer Resolution vom  13. November 2022 \footnote{\label{footnote1}\href{https://zapfev.de/resolutionen/wise22/WissZeitVG/Resolution_zur_Novellierung_des_WissZeitVG.pdf}{https://zapfev.de/resolutionen/wise22/WissZeitVG/Resolution\_zur\_Novellierung\_des\_ WissZeitVG.pdf}}, den Begriff der Qualifikation beziehungsweise des Qualifikationsziels in diesem Sinne legal zu definieren.
+
+Nach der Promotion sollte der Regelfall also eine unbefristete Stelle sein, die dazu beiträgt, die Erfüllung von Daueraufgaben in Lehre und Forschung zu gewährleisten. 
+Deshalb fordern wir, dass qualifizierungsbefristete Stellen  nur bis zum Erreichen des Qualifikationsziels Promotion möglich sein sollen.
+Eine berufliche Weiterentwicklung mit der Übernahme von Leitungs- und Managementfunktionen hin zu einer Professur  kann dann in Rahmen von Berufungsverfahren an exzellente Lehr- und Forschungsleistungen gekoppelt werden.  Damit werden die Rahmenbedingungen in der Wissenschaft an den normalen Arbeitsmarkt angepasst.\\
+Durch die größeren finanziellen Möglichkeiten der Privatwirtschaft, unterschiedlichen beruflichen Vorstellungen sowie persönliche und familiäre Entwicklungen ist damit zu rechnen, dass weiterhin im großen Umfang Austausch in den Dauerstellen für wissenschaftliche Aufgaben stattfinden wird. Darüberhinaus sind Schwankungen bei den Karrieremöglichkeiten immer zugunsten der Aufhebung prekärer Arbeitsverhältnisse in Kauf zu nehmen.
+                
+Für den Karriereabschnitt der Promotion erkennt die ZaPF die Notwendigkeit einer Qualifizierungsbefristung an. Die Zeit der Promotion ist derzeit jedoch oftmals von Kettenbefristungen geprägt, deren Vertragslaufzeiten nicht im Verhältnis zur Dauer einer Promotion stehen. Der Vorschlag einer Vertragsdauer von 3 Jahren ist damit als erfreulicher Fortschritt zu sehen. Allerdings liegt dieser Vorschlag deutlich unter der aktuellen durchschnittlichen Promotionsdauer in Deutschland von 5,7 Jahren \footnote{Beiträge zur Hochschulforschung, Heft 1, 24. Jahrgang, 2002}
+\footnote{Bundesbericht Wissenschaftlicher Nachwuchs 2021}, die zudem stark disziplinabhängig ist. 
+Wir fordern daher weiterhin \footref{footnote1}
+%\footnote{\href{https://zapfev.de/resolutionen/wise22/WissZeitVG/Resolution_zur_Novellierung_des_WissZeitVG.pdf}{https://zapfev.de/resolutionen/wise22/WissZeitVG/Resolution\_zur\_Novellierung\_des\_ WissZeitVG.pdf}} 
+diesem Umstand durch eine der zwei Möglichkeiten Rechnung zu tragen:
+\begin{itemize}
+    \item Zum einen kann durch eine Zweckbefristung die Vertragslaufzeit an das Erreichen des Qualifikationsziels Promotion gekoppelt werden.
+    \item Alternativ könnte zu Beginn der Promotion eine Mindestvertragslaufzeit von vier Jahren festgeschrieben werden mit der Möglichkeit der Verlängerung um zunächst zwei Jahre.
+\end{itemize}
+
+Die Änderung des \S 6 wird von der ZaPF grundsätzlich positiv bewertet. Die Festlegung der Mindestvertragslaufzeit auf ein Jahr schafft ein grundlegendes Maß an Planungssicherheit für Studierende, die oftmals auf eine Beschäftigung während des Studiums angewiesen sind. Die Verlängerung der maximalen Befristungsdauer auf acht Jahre trägt zudem der durchschnittlichen tatsächlichen Studiendauer Rechnung, die im MINT-Bereich oft deutlich höher als die Regelstudienzeit ist. Die ZaPF kritisiert jedoch, dass die Änderung die Situation von Studierenden nicht berücksichtigt, die, etwa wegen familiärer oder Pflegeaufgaben, in Teilzeit studieren 
+oder bereits anderweitig an einer Hochschule beschäftigt waren.
+Für diese Personengruppe wäre es wünschenswert, die maximale Befristungsdauer nicht absolut festzulegen.
+%, sondern z.B. auf 150\% der jeweils anzuwendenden Regelstudienzeit. 
+Weiterhin wäre eine Klarstellung, dass hier nur Befristungen nach WissZeitVG, nicht aber nach TzBfG, gemeint sind, wünschenswert. Hier könnte eine analoge Formulierung zu \S 1 Abs. 2 gewählt werden.
+
+Weiterhin begrüßt die ZaPF die Öffnung des WissZeitVG für die Festlegung abweichender Regelungen durch Tarifverträge.  Der neu gefasste \S 1 Abs. 1 bietet insbesondere die Möglichkeit, stärker auf soziale Härten und persönliche Umstände der betroffenen Personen einzugehen. Wo diese weiterhin nötig ist, soll jedoch auch die  maximal zulässigen Befristungsdauer durch tarifliche Vereinbarungen möglich sein.
+
+Als Zusammenkunft aller Physikfachschaften unterstützen wir zudem das gemeinsame Statement mit klaren Forderungen für eine WissZeitVG-Novelle \footnote{\href{https://www.dgb.de/-/TVP}{https://www.dgb.de/-/TVP}}.
+
+
+ 
+
+
+
+
+% \clearpage
+% Seite BMBF:\\
+% Das BMBF hat am 6.6.2023 den Referentenentwurf zur Reform des Wissenschaftszeitvertragsgesetzes (WissZeitVG) vorgestellt und am 14.6.2023 die Verbände- und Länderbeteiligung eingeleitet. Die wesentlichen Inhalte der Reform im Überblick. (\url{https://www.bmbf.de/bmbf/shareddocs/kurzmeldungen/de/2023/03/230317-wisszeitvg.html})
+
+
+
+
+
+
+% alt:
+
+% Mit seinem Referentenentwurf  hat das Bundesministerium für Bildung und Forschung die Interessen der Arbeitgeberseite aufgenommen und zugleich die fundierten, wissenschaftsorientierten Argumente der Wissenschaftler:innen als abhängig Beschäftigten ignoriert. Die  Hochschulen und Forschungseinrichtungen sollen auf Basis des Sonderbefristungsrechts des WissZeitVG die Erlaubnis behalten, Arbeitskräfte nach Belieben zu befristen, ohne ihnen verlässliche Karriereperspektiven zu eröffnen. Wenige positive Ansätze wie z. B. Mindestvertragslaufzeiten für Promovierende und studentische Beschäftigte greifen zu kurz, weil sie hinter den Anforderungen zurückbleiben.% und als Soll-Bestimmung ausgestaltet sind. 
+% Als Zusammenkunft aller Physikfachschaften (ZaPF) weisen wir darauf hin, dass der Referentenentwurf die grundlegenden Probleme der Arbeitsbedingungen in der Wissenschaft nicht adressiert. Es bleibt nicht nur für die übergroße Mehrheit der Wissenschaftler*innen die Unsicherheit bis ins fünfte Lebensjahrzehnt erhalten. Der Referentenentwurf zementiert darüber hinaus auch einen Status Quo, in dem es zu einem regelmäßigen Verlust von Wissen und erworbenen Kompetenzen kommt. Dies schadet dem Bildungs- und Wissenschaftsystem Deutschland insgesamt.\\   
+
+\end{document}
