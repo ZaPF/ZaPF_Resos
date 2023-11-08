@@ -1,0 +1,166 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+%\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{url}
+%\usepackage{tocloft}             % Paket für Table of Contents
+\def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
+\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
+\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-}%
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+\usepackage[scale=0.8,colorspec=.8]{draftwatermark} % Wasserzeichen ``Entwurf''
+\SetWatermarkText{Nur zur\\Dokumentation}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{blue}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+\initcomment{Philipp}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+
+
+
+\begin{document}
+
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+	\vspace{-1.8cm}
+	\includegraphics[width=80pt]{../logos/logo.pdf}
+	\centering
+	\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \huge{Resolution: TVStud und \#Hochschulaktionstag}\vspace{.25\baselineskip}\\
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+%%%% Metadaten %%%%
+
+%\paragraph{Adressierte:} Alle Physik-Fachschaften in Deutschland, alle ASten in Deutschland, LAKs, Personalräte/SHKRäte an den Unis mit Physik-Bezug
+
+
+%\paragraph{Antragstellende:} xxx
+
+%%%% Text des Antrages zur veröffentlichung %%%%
+
+%\section*{Antragstext}
+
+Die bundesweite Initiative TVStud organisiert sich seit über zwei Jahren mit dem Ziel, einen Tarifvertrag für studentische Beschäftigte zu erstreiten, und ist nun Bestandteil der laufenden Verhandlungen im Rahmen der Tarifrunden der Länder.\footnote{\url{https://tvstud.de/}} Die ZaPF hat sich bereits den Forderungen der MeTaFa zu studentischen Tarifvertägen angeschlossen\footnote{\url{https://www.fzs.de/buendnisse-zusammenarbeit-und-mitgliedschaften/meta-tagung-\%20der-fachschaften-metafa/forderung-tarifvertrag-fuer-studentische-beschaeftigte-\%20tvstud-2/}} und zur Unterstützung lokaler TVStud Initiativen aufgerufen.\footnote{\url{https://zapfev.de/resolutionen/sose23/Studentischer_Tarifvertrag/Studentischer_Tarifvertrag.pdf}}
+%  ALT (for reference): Die ZaPF und die KIF haben sich bereits den Forderungen der MeTaFa zu studentischen Tarifvertägen angeschlossen\footnote{\url{https://www.fzs.de/buendnisse-zusammenarbeit-und-mitgliedschaften/meta-tagung-\%20der-fachschaften-metafa/forderung-tarifvertrag-fuer-studentische-beschaeftigte-\%20tvstud-2/}} und zur Unterstützung lokaler TVStud Initiativen aufgerufen.\footnote{\url{https://zapfev.de/resolutionen/sose23/Studentischer_Tarifvertrag/Studentischer_Tarifvertrag.pdf}}
+
+Aktuell ruft TVStud gemeinsam mit einem Bündnis aus Gewerkschaften, Initiativen, Studierendenvertretungen und hochschulpolitischen Organisationen zu einem bundesweiten \#Hochschulaktionstag\footnote{\url{https://hochschulaktionstag.de/}} für bessere Arbeits- und Studienbedingungen an Hochschulen und Forschungseinrichtungen auf.
+
+Die ZaPF unterstützt den bundesweiten \#Hochschulaktionstag am 20.11.2023 für bessere Arbeits- und Studienbedingungen an Hochschulen und Forschungseinrichtungen. 
+
+Die ZaPF fordert die Adressierten auf,
+\begin{itemize}
+    \item die lokalen Bündnisse beim \#Hochschulaktionstag zu unterstützen, insbesondere durch Teilen von Informationen mit Beschäftigten und Studierenden.
+    \item mit Beschäftigten, insbesondere den studentischen, an der eigenen Hochschule in Kontakt zu treten und sich über deren Situation und Probleme auszutauschen.
+\end{itemize}
+
+Schluss mit prekärer Wissenschaft –- Heraus zum \#Hochschulaktionstag!
+
+%\section*{Begründung}
+%yyyy
+
+%\vspace{1cm} 
+%
+\vfill
+\begin{flushright}
+	Verabschiedet am 31. Oktober 2023 \\
+	auf der ZaPF in Düsseldorf.\\
+\end{flushright}
+
+\end{document}
