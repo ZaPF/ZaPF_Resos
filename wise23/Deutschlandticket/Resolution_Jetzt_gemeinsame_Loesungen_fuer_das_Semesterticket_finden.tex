@@ -1,0 +1,184 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+%\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{url}
+%\usepackage{tocloft}             % Paket für Table of Contents
+\def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
+\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
+\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-}%
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+%\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+%\usepackage[scale=0.8,colorspec=0.9]{draftwatermark} % Wasserzeichen ``Entwurf''
+%\SetWatermarkText{Vorbehaltlich\\redaktioneller\\Änderungen}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{blue}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+\initcomment{Philipp}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+
+
+
+\begin{document}
+
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+	\vspace{-1.8cm}
+	\includegraphics[width=80pt]{../logos/logo.pdf}
+	\centering
+	\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \huge{Resolution: Jetzt gemeinsame Lösungen für das Semesterticket finden}\vspace{.25\baselineskip}\\
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+%%%% Metadaten %%%%
+
+%\paragraph{Adressierte:} alle deutschen ASten, alle deutschen Fachschaften, alle Landesastenkonferenzen, fzs
+
+
+%\paragraph{Antragstellende:} xxx
+
+%%%% Text des Antrages zur veröffentlichung %%%%
+
+%\section*{Antragstext}
+
+Seit der Einführung des Deutschlandtickets sind viele Studierendenvertretungen mit der drohenden Abschaffung des Semestertickets an der eigenen Uni konfrontiert. Das Deutschlandticket steht selbst auf unsicherem Fundament und wird im nächsten Jahr in aller Voraussicht teurer -- sogar seine Abschaffung steht im Raum\footnote{\url{https://www1.wdr.de/nachrichten/landespolitik/semesterticket-deutschlandticket-100.html}}. Im schlimmsten Falle würde dies den Wegfall eines grundlegenden Pfeilers der öffentlichen Daseinsvorsorge für Studierende bedeuten. Gleichzeitig wäre dies eine massive Einschränkung des allgemeinen Rechts auf Bildung.
+
+Studierendenvertretungen in Form von ASten, sowie Fachschaften stehen vor der Frage, wie sie mit dieser Krise umgehen. An den meisten Universitäten fehlt ein organisierter Widerstand gegen die oben genannten Probleme. Viele Studierende wissen noch nicht einmal von der prekären Lage, in der sich ihr Ticket und damit ihre Anbindung an die Uni befindet. Außerdem ist die zwischenuniversitäre Kommunikation u.a. in Form von LAKs zu diesem Thema dürftig, viele ASten führen Einzelkämpfe um ihr Ticket. Doch gerade diese Zusammenarbeit ist essentiell wichtig, um, wie z.B. in Baden-Württemberg, ein landesweites Bildungsticket einzuführen.
+
+Die studentischen Vertretungen dürfen nicht in Untätigkeit verfallen. Es braucht konkrete Schritte, um eine breite Mobilisierung der Studierendenschaft zu erwirken.
+
+Hierfür sieht die ZaPF Handlungsbedarf in folgenden Punkten:
+
+\begin{center}
+    \textbf{Kommuniziert!}
+\end{center}
+
+Die ZaPF fordert die adressierten ASten und Fachschaften dazu auf, miteinander in Kontakt zu treten und sich über die aktuelle Lage zum Semesterticket an der Uni, sowie über Lösungen des Problems auszutauschen. Dies muss sowohl hochschulintern als auch hochschulübergreifend passieren. Ein Wegfall der bezahlbaren studentischen Mobilität ist nicht hinzunehmen und kann nur über breiten, landesweit bzw. bundesweit angelegten Widerstand nachhaltig verhindert werden.
+
+\clearpage
+\begin{center}
+    \textbf{Informiert und organisiert!}
+\end{center}
+
+Studierende können sich nur für Belange einsetzen, über die sie überhaupt Bescheid wissen. Zu wenig wurde bisher an unseren Universitäten über die Sachlage zum Semesterticket aufgeklärt und damit den Studierenden bislang keine Basis für Diskussionen und Aktionen geliefert. Daher fordert die ZaPF die adressierten ASten und Fachschaften dazu auf, die Studierendenschaft umfangreich über die aktuelle Lage und die drohenden Konsequenzen zu informieren.
+
+Um dies zu ermöglichen, kann beispielsweise eine studentische Vollversammlung einberufen werden. Das Gründen eines Bündnisses aus Fachschaften, AStA und Hochschulgruppen, wie es die \glqq Semesterticket bleibt!\grqq{}-Bündnisse in Frankfurt am Main\footnote{\url{https://www.instagram.com/semesterticketbleibt}} und Düsseldorf\footnote{\url{https://www.instagram.com/semesterticketbleibt\_ddorf}} vorgemacht haben, erleichtert sowohl die Organisation einer Vollversammlung, als auch das Planen weiterer Aktionen. Zudem muss Informationsmaterial in Form von Plakaten, Flugblättern und Beiträgen in Veröffentlichungen von Hochschulorganen unter den Studierenden verbreitet werden.
+
+\begin{center}
+    \textbf{\#Hochschulaktionstag}
+\end{center}
+
+Zusätzlich weist die ZaPF auf den \#Hochschulaktionstag für bessere Arbeits- und Studienbedingungen an Hochschulen und Forschungseinrichtungen\footnote{\url{https://hochschulaktionstag.de}} am 20.11.2023 hin, welcher von einem Bündnis aus Studierendenvertretungen, hochschulpolitischen Organisationen, Initiativen und Gewerkschaften organisiert wird. Die ZaPF unterstützt diesen bereits\footnote{\url{https://zapfev.de/resolutionen/wise23/Studentischer\_Tarifvertrag/Resolution\_TVStud\_und\_Hochschulaktionstag.pdf}} und fordert die ASten und Fachschaften dazu auf, die Themen Semesterticket und studentische Mobilität auf dem \#Hochschulaktionstag einzubringen und zu vertreten.
+
+Gleichzeitig darf der \#Hochschulaktionstag nur der Auftakt sein. Auch danach müssen die Studierendenvertretungen das Problem weiter behandeln und sich für das Semesterticket einsetzen. Dafür gilt es in den darauffolgenden Monaten weiter in den Austausch zu gehen und Möglichkeiten zu finden, das Solidarmodell des Semestertickets zu erhalten. Dazu gehören auch die Mobilisierung zu studentischen Versammlungen und Demonstrationen.
+
+Nur gemeinsam können wir Studierenden effektiv den drohenden Wegfall unserer Mobilität verhindern. Bildung muss für alle erreichbar bleiben!
+
+%\section*{Begründung}
+%yyyy
+
+%\vspace{1cm} 
+%
+\vfill
+\begin{flushright}
+	Verabschiedet am 31. Oktober 2023 \\
+	auf der ZaPF in Düsseldorf.
+\end{flushright}
+
+\end{document}
