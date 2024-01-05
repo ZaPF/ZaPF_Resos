@@ -1,0 +1,161 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+%\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{url}
+%\usepackage{tocloft}             % Paket für Table of Contents
+\def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
+\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
+\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-}%
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+% %\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+% \usepackage[scale=0.8,colorspec=0.9]{draftwatermark} % Wasserzeichen ``Entwurf''
+% \SetWatermarkText{Vorbehaltlich\\redaktioneller\\Änderungen}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{blue}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+\initcomment{Philipp}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+
+
+
+\begin{document}
+
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+	\vspace{-1.8cm}
+	\includegraphics[width=80pt]{../logos/logo.pdf}
+	\centering
+	\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \huge{Resolution zur Situation internationaler Studierender}\vspace{.25\baselineskip}\\
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+%%%% Metadaten %%%%
+
+%\paragraph{Adressierte:} BMBF, BMI, Auswärtiges Amt, Universitäten mit englischsprachigen Physik-Master
+
+
+%\paragraph{Antragstellende:} xxx
+
+%%%% Text des Antrages zur veröffentlichung %%%%
+
+%\section*{Antragstext}
+
+Die ZaPF freut sich über die Vielzahl an englischsprachigen Studiengängen und das  große Interesse von Studierenden insbesondere aus Nicht-EU-Ländern, für eben jene nach Deutschland zu kommen. Sie schätzt den kulturellen Austausch und heißt eine diversere Studierendenschaft willkommen. Besorgt stellt die ZaPF nun aber fest, dass diesen internationalen Studierenden bereits auf dem Weg in die Bundesrepublik übermäßige strukturelle Hürden in den Weg gestellt werden.
+
+Eine solche Hürde stellt die Visumspolitik des Bundesministeriums des Innern und für Heimat sowie die Umsetzung dieser durch das Auswärtige Amt dar. Mittlerweile erreichen die Fachschaften jeweils zu Semesterbeginn zahlreiche Mails von Studierenden, die teils Monate verspätet erst ihr Präsenzstudium an einer deutschen Hochschule aufnehmen können, da ihr Visum verspätet erteilt wird – die Grundvoraussetzung für ihre Einreise nach Deutschland. Dies wirkt sich disruptiv sowohl auf das Lernen an sich, als auch auf das Knüpfen von Kontakten mit den Kommiliton*innen aus. Gerade letzteres ist integraler, aber leider oft missachteter Bestandteil des Studiums, der insbesondere in der Physik essentiell für einen erfolgreichen Studienabschluss ist.
+
+Folglich fordern wir eine Anpassung des Vergabeprozesses seitens des Auswärtigen Amtes bzw. der ausstellenden Konsulate, um ein rechtzeitiges Eintreffen der immatrikulierten Studierenden an ihrem Studienort zu gewährleisten.
+
+Eine weiteres Problem, das bis zum Abschluss des Studiums bestehen bleibt, ist das Sperrkonto. Für Studierende ohne bereits vorhandenen Wohlstand sind über 11.000€, die nicht abrufbar sind, sehr schwer aufzubringen. Das aktuell festgeschriebene Vorhalten dieses Betrags noch nach mehreren Semestern resultiert häufig in Existenzängsten, wenn diese Reserven im Falle einer Notsituation einmal angebrochen werden müssen (Verzögerung der Nebenjobsuche, Wegfallen des Nebenjobs, etc.). Ein Wiederauffüllen des Sperrkontos ist dann nur noch mit erheblicher Mehrarbeit in Nebenbeschäftigungen zu stemmen. Daraus entsteht eine zusätzliche und unnötige Belastung für internationale Studierende.\newpage
+
+Wir fordern daher, die erforderliche Sperrkontosumme für eine breitere Zugänglichkeit zu reduzieren und die Vorhaltezeit drastisch zu kürzen. Insbesondere ist damit gemeint, dass die Sperrkontobedingung für eine Verlängerung des Aufenthaltstitels gestrichen wird. Damit soll gewährleistet werden, dass internationale Studierende mittels des Sperrkontos Notsituationen überbrücken können, ohne anschließend Gefahr zu laufen, ihr Studium in der Bundesrepublik Deutschland abbrechen zu müssen.
+
+%\section*{Begründung}
+%yyyy
+
+%\vspace{1cm} 
+%
+\vfill
+\begin{flushright}
+	Verabschiedet am 31. Oktober 2023 \\
+	auf der ZaPF in Düsseldorf.
+\end{flushright}
+
+\end{document}
