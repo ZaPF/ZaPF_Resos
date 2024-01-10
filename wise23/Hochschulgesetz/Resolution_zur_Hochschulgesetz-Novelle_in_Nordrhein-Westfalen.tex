@@ -1,0 +1,235 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+%\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{url}
+%\usepackage{tocloft}             % Paket für Table of Contents
+\def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
+\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
+\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-}%
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+%\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+% \usepackage[scale=0.8,colorspec=0.9]{draftwatermark} % Wasserzeichen ``Entwurf''
+% \SetWatermarkText{Vorbehaltlich\\redaktioneller\\Änderungen}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{blue}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+\initcomment{Philipp}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+
+
+
+\begin{document}
+
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+	\vspace{-1.8cm}
+	\includegraphics[width=80pt]{../logos/logo.pdf}
+	\centering
+	\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \huge{Resolution zur kommenden Hochschulgesetz-Novelle in Nordrhein-Westfalen}\vspace{.25\baselineskip}\\
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+%%%% Metadaten %%%%
+
+%\paragraph{Adressierte:} Das Parlament des Landes Nordrhein-Westfalen, Wissenschaftsausschuss des Landtages NRW, Ministerium für Kultur und Wissenschaft des Landes Nordrhein-Westfalen
+
+%\paragraph{Antragstellende:} xxx
+
+%%%% Text des Antrages zur veröffentlichung %%%%
+
+%\section*{Antragstext}
+
+Die ZaPF fordert das Ministerium für Kultur und Wissenschaft des Landes Nordrhein-Westfalen auf, bei der Hochschulgesetz-Novellierung besonders studentische Perspektiven zu berücksichtigen und die Studierenden in die weitere Entwicklung mit einzubeziehen. Besonders in Zeiten von Krisen, Inflation und verbreiteter studentischer Armut, in denen Hochschulen sich zudem der Herausforderung des Fachkräftemangels stellen sollen, bedarf es konsequenter Ansätze, die diese Probleme auch adressieren:
+
+\begin{itemize}
+    \item Hochschuldemokratie muss ausgebaut werden.
+    \item Nachhaltigkeit und Frieden in Forschung und Lehre müssen wieder gesetzliche Aufgabe der Hochschulen werden.
+    \item Das Hochschulgesetz muss auf ein sozial gerechteres Studium abzielen.
+    \item Durch Leistungsdruck verursachte psychische Probleme\footnote{Exemplarische Studien: \url{https://www.tk.de/presse/themen/praevention/gesundheitsstudien/tk-gesundheitsreport-2023-2149758} und \url{https://gesunde.uni-koeln.de/sgm/content/befragung/index_ger.html}} müssen gemäß der Ergebnisse aktueller Forschung systematisch reduziert werden.
+\end{itemize}
+
+\subsection*{Hochschuldemokratie}
+Wir fordern erstens zusätzlich zu der bereits geplanten Viertelparität im Senat eine Viertelparität in allen Gremien der Hochschule, in denen Studierende bislang unterrepräsentiert sind. Studierende sind die zahlenmäßig größte Statusgruppe an der Universität, haben aber im Vergleich zu Professor*innen ein sehr geringes Mitspracherecht. Alle Gruppen an der Universität müssen gleichberechtigt vertreten sein, alles andere ist undemokratisch.
+
+Wir fordern zweitens, dass Rektorate an die Beschlüsse der Senate sowie Dekanate an die Beschlüsse der Fakultäts-/Fachbereichsräte gebunden sind. Es soll den Rektoraten beziehungsweise Dekanaten nicht möglich sein, Beschlüsse von Senaten beziehungsweise Fakultäts-/Fachbereichsräten zu umgehen oder diese sogar komplett zu ignorieren. Ansonsten ist die Viertelparität keine wirkliche demokratische Gleichberechtigung.
+
+Wir fordern drittens eine Reform des Hochschulrates. Dieser muss grundsätzlich öffentlich tagen; sowohl die Studierenden- als auch die Arbeitnehmer*innen müssen proportional repräsentiert sein. Der Hochschulrat ist ein undurchsichtiges Gremium, welches viel Macht über die gesamte Hochschule ausübt und z.B. das Rektorat mitwählt. Viele wichtige Entscheidungen, insbesondere z.B. der Beschluss des Hochschulhaushaltes, erfordert die Zustimmung des Hochschulrates. In diesem sind oft Großunternehmen als Arbeitgeber vertreten, eine studentische Vertretung gibt es hier jedoch nicht und auch nur selten eine Arbeitnehmer*innen-Vertretung. Dies ist fundamental undemokratisch!
+
+\subsection*{Gesellschaftliche Verantwortung}
+Wir bekräftigen die Forderungen der ZaPF, dass die Hochschulen gewappnet sein müssen, sich kritisch mit aktuellen Krisen und gesellschaftlichen Verhältnissen auseinanderzusetzen. Dies ist nur möglich, wenn sie frei von Partikularinteressen sind. Wir fordern die Landesregierung deswegen dazu auf, die gesetzliche Zivilklausel, die Aufgabe der Hochschulen zu Frieden, Demokratie und Nachhaltigkeit in der Welt beizutragen, wieder einzuführen\footnote{Resolution der ZaPF zu Hochschulgesetzen: \url{https://zapfev.de/resolutionen/sose18/Hochschulgesetze/reso\_hsgesetze.pdf}}. Zudem fordern wir, dass das Thema Nachhaltigkeit in der Lehre verankert wird\footnote{Resolution der ZaPF zur Nachhaltigkeit in der Hochschullehre: \url{https://zapfev.de/resolutionen/sose23/Nachhaltigkeit/Resolution\_zur\_Nachhaltigkeit\_in\_der\_Hochschullehre.pdf}} und nur freie Open-Source-Software aus öffentlichen Geldern finanziert werden darf\footnote{Resolution der ZaPF: \url{https://zapfev.de/resolutionen/wise21/FOSS/FOSS.pdf}}.
+
+\subsection*{Internationalisierung}
+
+Wir fordern, dass kostenlose Deutschkurse im Hochschulgesetz verankert werden und an Hochschulen in ausreichender Menge angeboten werden\footnote{Resolution der ZaPF zu Deutschkursen für internationale Studierende: \url{https://zapfev.de/resolutionen/wise23/International/Resolution\_zu\_Deutschkursen\_fuer\_internationale\_Studierende.pdf}}. Internationalisierung heißen wir sehr willkommen, jedoch sind Probleme für internationale Studierende hier die Regel und müssen angegangen werden. Momentan verursacht der Status quo für viele internationale Studierende, besonders für die aus dem globalen Süden, ein sehr entfremdetes Studium;  permanente Probleme mit Visa und permanente finanzielle Sorgen in einer fremden Kultur verursachen große Einsamkeit und Frust\footnote{Resolution der ZaPF zur Situation internationaler Studierender: \url{https://zapfev.de/resolutionen/wise23/International/Resolution_zur_Situation_internationaler_Studierender.pdf}}.
+
+\subsection*{Bessere Studien- und Arbeitsbedingungen}
+Der geplante Ausbau des 0. Semesters\footnote{Im 0. Semester werden bisher informell angebotene Veranstaltungen zur Unterstützung des Studieneinstiegs auf einen Umfang von 30 CPs ausgebaut und als ein 0. Semester akkreditiert. Die individuelle Regelstudienzeit und der damit einher gehende BAföG-Anspruch von Studierenden, die diese Veranstaltungen belegen, wird um ein Semester verlängert.} wird von der ZaPF als guter Ansatz für eine Verbesserung des Studieneingangs erkannt. Dies muss jedoch unbedingt auch BAföG-relevant sein und den Anforderungen, einen flexibleren Einstieg ohne größeren Aufwand zu ermöglichen, genügen. Beispielregelungen hierfür existieren bereits an der Westfälischen Hochschule.
+
+Die ZaPF fordert eine vollwertige, gesetzlich verankerte Personalvertretung für studentische Beschäftigte im Gesetz\footnote{Resolution der ZaPF zu Hochschulgesetzen: \url{https://zapfev.de/resolutionen/sose18/Hochschulgesetze/reso\_hsgesetze.pdf}}: Es muss dringend Verbesserungen für studentische Hilfskräfte geben. In der jetzigen Situation wird Machtmissbrauch nicht viel in den Weg gestellt, da die Beschäftigungsgruppe keine Interessenvertretung mit realer Macht und Ressourcen hat.
+
+\subsection*{Stress im Studium}
+Wir fordern, dass das endgültige Nicht-Bestehen von Prüfungen komplett abgeschafft wird\footnote{Resolution der ZaPF zu Zwangsexmatrikulationen: \url{https://zapfev.de/resolutionen/wise17/Zwangsexmatrikulation/Zwangsexmatrikulation.pdf}}. Alle Statistiken zu psychischer Gesundheit weisen auf eine katastrophale Situation unter Studierenden hin. Dies liegt erstens an der finanziellen Lage und zweitens am Stress des Studiums. Ersteres kann nicht alleine durch das Hochschulgesetz gelöst werde und bedarf weiterer Initiativen der Landesregierung. Zweiteres jedoch kann und muss durch die verbindliche Einführung bereits erfolgreich getesteter Modelle wie das Bielefelder\footnote{Bielefelder Studienmodell: \url{https://www.uni-bielefeld.de/studium/studieninteressierte/was-studieren/studienmodell/}} angegangen werden.
+
+\subsection*{Weiterbildung}
+
+Die ZaPF fordert, dass der geplante Ausbau von Weiterbildungsstudiengängen gesellschaftlich verantwortungsvoll angegangen wird. Weiterbildungsstudiengänge dürfen keine von Unternehmen oder Einzelpersonen gezahlten Gebühren verlangen und müssen eine Durchmischung mit der allgemeinen Studierendenschaft vorsehen. Hierfür muss es auch ausreichend Personal, mit angemessenen Arbeitsbedingungen, geben.
+
+Wir begrüßen das Vorhaben, die Hochschulen für Studierende attraktiver zu machen und als Ort des lebenslangen Lernens aufzubauen. Auch mehr Möglichkeiten für Weiterbildung an Hochschulen für Personen ohne Abitur sind gute Ziele für eine diversere und offenere Studierendenschaft. Weiterbildungsstudiengänge sind allerdings momentan mit kostendeckenden Gebühren versehen. Studiengebühren führen immer zu einem Verlust an Chancengerechtigkeit.
+
+Anhand von aktuellen Beispielen erkennt man, dass Weiterbildungsstudiengänge unter den aktuellen Bedingungen kaum am Allgemeinwohl orientiert sind, sondern vor allem auf die Anforderungen von Arbeitgebern zugeschnitten werden, die gleichzeitig einen immer höheren Anteil an der Hochschulfinanzierung ausmachen werden. Dies wird den Hochschulen nicht mehr die Möglichkeit geben, unabhängig von der Interessen der Unternehmen, die sie finanzieren, zu handeln. Zudem ist schon jetzt an einigen Hochschulen zu beobachten, dass diese Studiengänge separiert von den klassischen Studiengängen angeboten werden. Für einen wirklichen Mehrwert bedarf es aber an Durchmischung dieser mit den sonst an der Hochschule vorhandenen Studiengängen, denn nur so kann es zu einem offenen, belebten Diskurs kommen.
+
+%\section*{Begründung}
+%yyyy
+
+%\vspace{1cm} 
+%
+\vfill
+\begin{flushright}
+	Verabschiedet am 31. Oktober 2023 \\
+	auf der ZaPF in Düsseldorf.
+\end{flushright}
+
+\end{document}
+
+Titel:
+Resolution zur kommenden Hochschulgesetz Novelle in Nordrhein-Westfalen
+
+Adressierte:
+Das Parlament des Landes Nordrhein-Westfalen, Wissenschaftsausschuss des Landtages NRW, Ministerium für Kultur und Wissenschaft des Landes Nordrhein-Westfalen
+
+Text:
+Die ZaPF fordert das Ministerium für Kultur und Wissenschaft des Landes Nordrhein- Westfalen auf, bei der Hochschulgesetz-Novellierung besonders studentische Perspektiven zu berücksichtigen und die Studierenden in die weitere Entwicklung mit einzubeziehen. Besonders in Zeiten von Krisen, Inflation und verbreiteter studentischer Armut, in denen Hochschulen sich zudem der Herausforderung des Fachkräftemangels stellen sollen, bedarf es konsequenter Ansätze, die diese Probleme auch adressieren:
+
+\begin{itemize}
+    \item Hochschuldemokratie muss ausgebaut werden.
+    \item Nachhaltigkeit und Frieden in Forschung und Lehre müssen wieder gesetzliche Aufgabe der Hochschulen werden.
+    \item Das Hochschulgesetz muss auf ein sozial gerechteres Studium abzielen.
+    \item Durch Leistungsdruck verursachte psychische Probleme\footnote{Exemplarische Studien: \url{https://www.tk.de/presse/themen/praevention/gesundheitsstudien/tk-gesundheitsreport-2023-2149758} und \url{https://gesunde.uni-koeln.de/sgm/content/befragung/index_ger.html}} müssen gemäß der Ergebnisse aktueller Forschung systematisch reduziert werden.
+\end{itemize}
+
+\subsection*{Hochschuldemokratie}
+Wir fordern erstens zusätzlich zu der bereits geplanten Viertelparität im Senat eine Viertelparität in allen Gremien der Hochschule, in denen Studierende bislang unterrepräsentiert sind. Studierende sind die zahlenmäßig größte Statusgruppe an der Universität, haben aber im Vergleich zu Professor*innen ein sehr geringes Mitspracherecht. Alle Gruppen an der Universität müssen gleichberechtigt vertreten sein, alles andere ist undemokratisch.
+
+Wir fordern zweitens, dass Rektorate an die Beschlüsse der Senate sowie Dekanate an die Beschlüsse der Fakultäts-/Fachbereichsräte gebunden sind. Es soll den Rektoraten beziehungsweise Dekanaten nicht möglich sein, Beschlüsse von Senaten beziehungsweise Fakultäts-/Fachbereichsräten zu umgehen oder diese sogar komplett zu ignorieren. Ansonsten ist die Viertelparität keine wirkliche demokratische Gleichberechtigung.
+
+Wir fordern drittens eine Reform des Hochschulrates. Dieser muss grundsätzlich öffentlich tagen; sowohl die Studierenden- als auch die Arbeitnehmer*innen müssen proportional repräsentiert sein. Der Hochschulrat ist ein undurchsichtiges Gremium, welches viel Macht über die gesamte Hochschule ausübt und z.B. das Rektorat mitwählt. Viele wichtige Entscheidungen, insbesondere z.B. der Beschluss des Hochschulhaushaltes, erfordert die Zustimmung des Hochschulrates. In diesem sind oft Großunternehmen als Arbeitgeber vertreten, eine studentische Vertretung gibt es hier jedoch nicht und auch nur selten eine Arbeitnehmer*innen-Vertretung. Dies ist fundamental undemokratisch!
+
+\subsection*{Gesellschaftliche Verantwortung}
+Wir bekräftigen die Forderungen der ZaPF, dass die Hochschulen gewappnet sein müssen, sich kritisch mit aktuellen Krisen und gesellschaftlichen Verhältnissen auseinanderzusetzen. Dies ist nur möglich, wenn sie frei von Partikularinteressen sind. Wir fordern die Landesregierung deswegen dazu auf, die gesetzliche Zivilklausel, die Aufgabe der Hochschulen zu Frieden, Demokratie und Nachhaltigkeit in der Welt beizutragen, wieder einzuführen\footnote{Resolution der ZaPF zu Hochschulgesetzen: \url{https://zapfev.de/resolutionen/sose18/Hochschulgesetze/reso\_hsgesetze.pdf}}. Zudem fordern wir, dass das Thema Nachhaltigkeit in der Lehre verankert wird\footnote{Resolution der ZaPF zur Nachhaltigkeit in der Hochschullehre: \url{https://zapfev.de/resolutionen/sose23/Nachhaltigkeit/Resolution\_zur\_Nachhaltigkeit\_in\_der\_Hochschullehre.pdf}} und nur freie Open-Source-Software aus öffentlichen Geldern finanziert werden darf\footnote{Resolution der ZaPF: \url{https://zapfev.de/resolutionen/wise21/FOSS/FOSS.pdf}}.
+
+\subsection*{Internationalisierung}
+
+Wir fordern, dass kostenlose Deutschkurse im Hochschulgesetz verankert werden und an Hochschulen in ausreichender Menge angeboten werden\footnote{WOLLEN DIE ANTRAGSTELLENDEN HIER DIE DEUTSCHKURSRESO VERLINKEN? WENN JA: Resolution der ZaPF zu Deutschkursen für internationale Studierende: \url{LINK HIER EINFUEGEN]}}. Internationalisierung heißen wir sehr willkommen, jedoch sind Probleme für internationale Studierende hier die Regel und müssen angegangen werden. Momentan verursacht der Status quo für viele internationale Studierende, besonders für die aus dem globalen Süden, ein sehr entfremdetes Studium;  permanente Probleme mit Visa und permanente finanzielle Sorgen in einer fremden Kultur verursachen große Einsamkeit und Frust\footnote{Resolution der ZaPF zu Visa für internationale Studierende: \url{LINK HIER EINFUEGEN]}}.
+
+\subsection*{Bessere Studien- und Arbeitsbedingungen}
+Der geplante Ausbau des 0. Semesters\footnote{Im 0. Semester werden bisher informell angebotene Veranstaltung zur Unterstützung des Studieneinstiegs auf einen Umfang von 30 CPs ausgebaut und als ein 0. Semester akkreditiert. Die individuelle Regelstudienzeit und der damit einher gehende BAföG-Anspruch von Studierenden, die diese Veranstaltungen belegen, wird um ein Semester verlängert.} wird von der ZaPF als guter Ansatz für eine Verbesserung des Studieneingangs erkannt. Dies muss jedoch unbedingt auch BAföG-relevant sein und den Anforderungen, einen flexibleren Einstieg ohne größeren Aufwand zu ermöglichen, gerecht werden. Beispielregelungen hierfür existieren bereits an der Westfälischen Hochschule\footnote{HIER SOLLTE MAN NOCH EINEN LINK HINZUFUEGEN}.
+
+Die ZaPF fordert eine vollwertige, gesetzlich verankerte Personalvertretung für studentische Beschäftigte im Gesetz\footnote{Resolution der ZaPF zu Hochschulgesetzen: \url{https://zapfev.de/resolutionen/sose18/Hochschulgesetze/reso\_hsgesetze.pdf}}: Es muss dringend Verbesserungen für studentische Hilfskräfte geben. In der jetzigen Situation wird Machtmissbrauch nicht viel in den Weg gestellt, da die Beschäftigungsgruppe keine Interessenvertretung mit realer Macht und Ressourcen hat.
+
+\subsection*{Stress im Studium}
+Wir fordern, dass das endgültige Nicht-Bestehen von Prüfungen komplett abgeschafft wird\footnote{Resolution der ZaPF zu Zwangsexmatrikulationen: \url{https://zapfev.de/resolutionen/wise17/Zwangsexmatrikulation/Zwangsexmatrikulation.pdf}}. Alle Statistiken zu psychischer Gesundheit weisen auf eine katastrophale Situation unter Studierenden hin. Dies liegt erstens an der finanziellen Lage und zweitens am Stress des Studiums. Ersteres kann nicht alleine durch das Hochschulgesetz gelöst werde und bedarf weiterer Initiativen der Landesregierung. Zweiteres jedoch kann und muss durch die verbindliche Einführung bereits erfolgreich getesteter Modelle wie das Bielefelder\footnote{Bielefelder Studienmodell: \url{https://www.uni-bielefeld.de/studium/studieninteressierte/was-studieren/studienmodell/}} angegangen werden.
+
+\subsection*{Weiterbildung}
+
+Die ZaPF fordert, dass der geplante Ausbau von Weiterbildungsstudiengängen gesellschaftlich verantwortungsvoll angegangen wird. Weiterbildungsstudiengänge dürfen keine von Unternehmen oder Einzelpersonen gezahlten Gebühren verlangen und müssen eine Durchmischung mit der allgemeinen Studierendenschaft vorsehen. Hierfür muss es auch ausreichend Personal, mit angemessenen Arbeitsbedingungen, geben.
+
+Wir begrüßen das Vorhaben, die Hochschulen für Studierende attraktiver zu machen und als Ort des lebenslangen Lernens aufzubauen. Auch mehr Möglichkeiten für Weiterbildung an Hochschulen für Personen ohne Abitur sind gute Ziele für eine diversere und offenere Studierendenschaft. Weiterbildungsstudiengänge sind allerdings momentan mit kostendeckenden Gebühren versehen. Studiengebühren führen immer zu einem Verlust an Chancengerechtigkeit.
+
+Anhand von aktuellen Beispielen erkennt man, dass Weiterbildungsstudiengänge unter den aktuellen Bedingungen kaum am Allgemeinwohl orientiert sind, sondern vor allem auf die Anforderungen von Arbeitgebern zugeschnitten werden, die gleichzeitig einen immer höheren Anteil an der Hochschulfinanzierung ausmachen werden. Dies wird den Hochschulen nicht mehr die Möglichkeit geben, unabhängig von der Interessen der Unternehmen, die sie finanzieren, zu handeln. Zudem ist schon jetzt an einigen Hochschulen zu beobachten, dass diese Studiengänge separiert von den klassischen Studiengängen angeboten werden. Für einen wirklichen Mehrwert bedarf es aber an Durchmischung dieser mit den sonst an der Hochschule vorhandenen Studiengängen, denn nur so kann es zu einem offenen, belebten Diskurs kommen.
