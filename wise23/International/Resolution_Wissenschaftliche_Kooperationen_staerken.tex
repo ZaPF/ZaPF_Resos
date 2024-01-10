@@ -1,0 +1,164 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+%\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{url}
+%\usepackage{tocloft}             % Paket für Table of Contents
+\def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
+\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
+\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-}%
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+%\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+% \usepackage[scale=0.8,colorspec=0.9]{draftwatermark} % Wasserzeichen ``Entwurf''
+% \SetWatermarkText{Vorbehaltlich\\redaktioneller\\Änderungen}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{blue}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+\initcomment{Philipp}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+
+
+
+\begin{document}
+
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+	\vspace{-1.8cm}
+	\includegraphics[width=80pt]{../logos/logo.pdf}
+	\centering
+	\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \huge{Resolution: Wissenschaftliche Kooperationen stärken}\vspace{.25\baselineskip}\\
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+%%%% Metadaten %%%%
+
+%\paragraph{Adressierte:} FSen in Dt., ASten, GEW Bund, fzs, Hochschulleitungen, Leitungen von IST, Max Planck, Fraunhofer, Leibniz, FWF, FFG, DFG, ERC, DPG, SPG, ESA, DESY, CERN, Wissenschafts- bzw. Kultusministerien von Bund und Ländern, alle Parteien des deutschen Bundestages und Helmholtz Gemeinschaft
+
+
+%\paragraph{Antragstellende:} xxx
+
+%%%% Text des Antrages zur veröffentlichung %%%%
+
+%\section*{Antragstext}
+
+Die ZaPF widerspricht der aktuellen Positionierung von Bundeswissenschaftsministerin Bettina Stark-Watzinger\footnote{Bettina Stark-Watzinger: \glqq Wir müssen unsere Forschung besser vor China schützen\grqq (21.8.2023), faz \url{https://www.faz.net/aktuell/politik/inland/stark-watzinger-wir- muessen-unsere-forschung-vor-china-schuetzen-19116350.html}} zur Unterordung der Wissenschaft unter die aktuelle Außenpolitik der Bundesregierung. Diese droht mit empfindlichen Einschränkungen von Wissenschaftsfreiheit und wissenschaftlichen Kooperationen einherzugehen.
+
+Die ZaPF sieht im wissenschaftlichen Austausch einen Weg, das gegenseitige Verständnis und eine Friedenskultur zu stärken. In gemeinsamen Forschungsprojekten, auf Konferenzen, bei Auslandssemestern etc. können Erfahrungen persönlich ausgetauscht, Propaganda wissenschaftlich-kritisch hinterfragt und Wege zur Überwindung von Isolation und Passivität ergründet werden. Besonders in Zeiten von Kriegen und internationalen Spannungen sind zivile Kooperationen ein unverzichtbares Gegengewicht zur gegenseitigen Dämonisierung; sie bilden Vertrauen sowie einen Startpunkt zu Völkerverständigung und dauerhaftem Frieden. \glqq Die Rolle von Hochschulen ist es nicht, militärische und politische Konflikte auszutragen\grqq{}, indem sie für eine Seite Partei ergreifen, \glqq sondern Forschung und Lehre im Sinne einer stabileren, sozialeren und nachhaltigeren Welt zu betreiben –- das bringt uns allen echte Sicherheit. Pazifismus ist kein ideologischer Irrglaube.\grqq{}\footnote{Jan Wörner, Geraldine Rauch: \glqq Sollten deutsche Hochschulen zu militärischen Zwecken forschen dürfen?\grqq In: Forschung \& Lehre \url{https://www.forschung-und- lehre.de/forschung/sollten-deutsche-hochschulen-auch-zu-militaerischen-zwecken-forschen-duerfen-5093}}
+
+Wissenschaft beruht auf der Macht des Arguments statt auf dem Recht des Stärkeren; sie kann und muss daher einen Beitrag zu einer Friedensperspektive entwickeln. Darüber hinaus muss die Menschheit globale Probleme, wie den Klimawandel oder Pandemien, gemeinsam angehen. Letztlich kann es sich die Welt weder im wissenschaftlichen noch im politischen Kontext leisten, auf Kooperation, insbesondere zwischen globalen Großmächten, zu verzichten, um die weltweiten Herausforderungen, wie sie von der UN in den Sustainable Development Goals (SDGs)\footnote{\url{https://sdgs.un.org/goals}} gefasst sind, zu bewältigen.\newpage
+
+Anstatt weiter Brücken der Verständigung einzureißen, die für eine zukünftige Aussöhnung und für die Lösung der globalen Probleme unverzichtbar sind, fordern wir alle wissenschaftlichen Einrichtungen, insbesondere Hochschulen dazu auf,
+\begin{itemize}
+    \item die Grenzen zwischen ziviler und militärischer Wissenschaft nicht aufzuweichen und weiterhin auf ihnen zu bestehen,
+    \item zivile persönliche und projektbezogene Kooperation mit Wissenschaftler*innen gerade auch dann zu fördern, wenn es politische Spannungen gibt und
+    \item Kooperationen, die auf die Realisierung der UN Sustainability Development Goals abzielen, als \glqq Diplomatie von unten\grqq auf- bzw. auszubauen.
+\end{itemize}
+
+%\section*{Begründung}
+%yyyy
+
+%\vspace{1cm} 
+%
+\vfill
+\begin{flushright}
+	Verabschiedet am 31. Oktober 2023 \\
+	auf der ZaPF in Düsseldorf.
+\end{flushright}
+
+\end{document}
