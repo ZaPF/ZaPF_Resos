@@ -1,0 +1,185 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+%\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{url}
+%\usepackage{tocloft}             % Paket für Table of Contents
+\def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
+\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
+\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-}%
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+%\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+% \usepackage[scale=0.8,colorspec=0.9]{draftwatermark} % Wasserzeichen ``Entwurf''
+% \SetWatermarkText{Vorbehaltlich\\redaktioneller\\Änderungen}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{blue}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+\initcomment{Philipp}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+
+
+
+\begin{document}
+
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+	\vspace{-1.8cm}
+	\includegraphics[width=80pt]{../logos/logo.pdf}
+	\centering
+	\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \huge{Resolution zu gendergerechter Sprache}\vspace{.25\baselineskip}\\
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+%%%% Metadaten %%%%
+
+%\paragraph{Adressierte:} Alle Landtagsfraktionen der anderen Bundesländer (außer AFD), Alle Fraktionen des bayrischen Landtags (außer AFD), BMBF
+
+%Zur Info an: BLLV (bayrischer Lehrer- und Lehrerinnen-Verband), GEW, Metafa, Bufata Chemie
+
+
+%\paragraph{Antragstellende:} xxx
+
+%%%% Text des Antrages zur veröffentlichung %%%%
+
+%\section*{Antragstext}
+
+Die ZaPF kritisiert die neuesten Einschränkungen der gendergerechten Sprache im
+bayerischen Landesgesetz sowie ähnliche Ansätze in anderen Bundesländern aufs
+Schärfste. Wir sehen dies als Teil einer problematischen Entwicklung in Deutschland
+und werten es als einen aufgezwungenen Eingriff in die Sprache. Wir
+verweisen hierbei auch auf das
+Kurzgutachten der Antidiskriminierungsstelle des Bundes\footnote{\url{https://www.antidiskriminierungsstelle.de/SharedDocs/aktuelles/DE/2024/20240513_gutachten_genderverbote.html}} und die Positionierung
+der BuFaTa Chemie\footnote{\url{https://bufata-chemie.org/stellungnahme-der-bufatachemie-zum-genderverbot-in-bayern/}}.
+
+Die Sensibilisierung junger Menschen für eine vielfältige Gesellschaft wird von uns
+als unerlässlich erachtet und deswegen ist eine Sprache, die alle Geschlechter mit
+einbezieht, sehr wichtig. Daher sprechen wir uns für eine gendergerechte Sprache aus,
+die alle Menschen inkludiert. Die Berücksichtigung von Menschen mit Sprachbarrieren,
+Lernschwierigkeiten und Behinderungen ist dabei essenziell. Verbote halten wir jedoch
+für den vollkommen falschen Weg.
+
+Zum 01.04.2024 wurde in Bayern eine Regelung zur gendergerechten Sprache erlassen,
+die mehrgeschlechtliche Schreibweisen durch Wortbinnenzeichen als unzulässig
+deklariert. Davon sind neben den Behörden auch die staatlichen Schulen und
+Hochschulen betroffen. Diese populistische Maßnahme ist nicht nur ein Eingriff in die
+Wahl der eigenen Sprache, sondern mit ihr wird aktiv der Sichtbarkeit der Vielfalt
+von Geschlechtern entgegengewirkt. Die Rücksicht auf seheingeschränkte und -behinderte Menschen bezüglich der Nutzung von Wortbinnenzeichen begrüßen wir, um eine
+uneingeschränkte Teilhabe an der Gesellschaft zu ermöglichen. Eine Einbeziehung
+zulasten anderer Minderheiten und ein damit verbundenen Ausspielen dieser
+gegeneinander ist jedoch keinesfalls anzustreben. Oberstes Ziel sollte eine
+Beteiligung aller Minderheiten sein und eine gemeinsame Bemühung um Barrierefreiheit.
+
+Wir wehren uns gegen jede Form der Diskriminierung, insbesondere auch der von trans*,
+inter* und nichtbinären Personen. Verbote, die diese Gruppen unsichtbar machen
+möchten, kritisieren wir daher klar und deutlich. Anordnungen, die zurück zu einer
+binären Gesellschaft führen, sind zudem ein Nährboden für rechte und rechtsextreme
+Tendenzen und als solche in einer wehrhaften Demokratie nicht tolerierbar.
+
+%\section*{Begründung}
+%yyyy
+
+%\vspace{1cm} 
+%
+\vfill
+\begin{flushright}
+	Verabschiedet am 21. Mai 2024 \\
+	auf der ZaPF in Kiel.
+\end{flushright}
+
+\end{document}

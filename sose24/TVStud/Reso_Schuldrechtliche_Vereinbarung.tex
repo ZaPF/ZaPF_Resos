@@ -1,0 +1,163 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+%\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{url}
+%\usepackage{tocloft}             % Paket für Table of Contents
+\def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
+\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
+\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-}%
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+%\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+% \usepackage[scale=0.8,colorspec=0.9]{draftwatermark} % Wasserzeichen ``Entwurf''
+% \SetWatermarkText{Vorbehaltlich\\redaktioneller\\Änderungen}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{blue}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+\initcomment{Philipp}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+
+
+
+\begin{document}
+
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+	\vspace{-1.8cm}
+	\includegraphics[width=80pt]{../logos/logo.pdf}
+	\centering
+	\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \huge{Resolution zur Umsetzung der schuldrechtlichen Vereinbarung}\vspace{.25\baselineskip}\\
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+%%%% Metadaten %%%%
+
+%\paragraph{Adressierte:} alle ASten deutscher Hochschulen, Physik-Fachschaften
+
+
+%\paragraph{Antragstellende:} xxx
+
+%%%% Text des Antrages zur veröffentlichung %%%%
+
+%\section*{Antragstext}
+
+Die ZaPF bittet darum, die folgende Resolution an die anderen Fachschaften der Hochschule weiterzuleiten:
+
+Durch den Arbeitskampf der studentischen Beschäftigten in der letzten Tarifrunde der Länder und der Hessischen Tarifrunde wurde eine schuldrechtliche Vereinbarung erstritten! Auch wenn dies ein Schritt in die richtige Richtung ist, ist die konkrete Umsetzung dieser zugunsten der studentisch Beschäftigten deutlich schwerer im Vergleich zu dem gewünschten Tarifvertrag. Daher sieht die ZaPF folgende Möglichkeiten, die Umsetzung der schuldrechtlichen Vereinbarungen zu unterstützen, und fordert die ASten und Fachschaften auf, diese zu nutzen:
+
+1. Die Fachschaften und ASten sollen sich über die Ergebnisse der Tarifrunde informieren und diese Informationen an ihre Studierenden durch beispielsweise eine gemeinsame Veranstaltung mit TVStud-Aktiven weitergeben. Hierzu gibt es beispielsweise die Tarifinfos der TVStud-Bewegung über das Verhandlungsergebnis aus Hessen\footnote{\url{https://tvstud.de/2024/03/29/tarifinfo-hessen-zur-tarifeinigung/}} und der TdL (alle anderen Bundesländer)\footnote{\url{https://tvstud.de/2023/12/12/tvstud-tarifinfo-5-zum-abschluss-der-tarifrunde/}}, sowie das FAQ\footnote{\url{https://tvstud.de/faq-zum-verhandlungsergebnis/}}, welches viele Fragen zu den schuldrechtlichen Vereinbarungen beantwortet.
+
+2. Die Fachschaften und ASten sollen auf Verstöße gegen die schuldrechtlichen Vereinbarungen achten. Besonders ist dabei auf Vertragslaufzeiten, die kürzer als ein Jahr sind, und nicht angepasste Stundenentgelder zu achten. Solche Verstöße sollten dann bei TVStud über das Beschwerdeformular\footnote{\url{https://tvstud.de/beschwerde/}} gemeldet werden. Durch das deutschlandweite Sammeln dieser Verstöße wird es erst möglich, gemeinsam mit den Gewerkschaften gegen diese vorzugehen. Bei Verstößen sollte zudem auch mit den studentische Personalvertretungen (sofern diese existieren) zusammengearbeitet werden.
+
+3. Fachschaften sollen sich in den konkreten Gestaltungsprozess der schuldrechtlichen Vereinbarungen an der Universität und besonderes im eigenen Fachbereich einbringen oder diesen sogar anstoßen. Dabei ist es zu empfehlen, sich mit der lokalen/regionalen TVStud-Initative zu vernetzen. Es ist insbesondere darauf zu achten, dass die erkämpften Verbesserungen für Studierende, welche es sich wegen der Prekarität der Stellen bisher nicht leisten konnten, diesen Tätigkeiten nachzugehen, nicht hintenan gestellt werden.
+  
+Zudem hat die ZaPF zu den Themenkomplexen der Umsetzung der Mindestvertragslaufzeiten\footnote{\url{https://zapfev.de/resolutionen/sose24/TVStud/Reso_Mindestvertragslaufzeit.pdf}} und der Bekämpfung von Tarifflucht\footnote{\url{https://zapfev.de/resolutionen/sose24/TVStud/Reso_Tarifflucht_Stud.pdf}} Resolutionen an die Hochschulleitungen und Wissenschaftsministerien verschickt.
+
+%\section*{Begründung}
+%yyyy
+
+%\vspace{1cm} 
+%
+\vfill
+\begin{flushright}
+	Verabschiedet am 21. Mai 2024 \\
+	auf der ZaPF in Kiel.
+\end{flushright}
+
+\end{document}

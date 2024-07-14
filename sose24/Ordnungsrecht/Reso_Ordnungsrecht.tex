@@ -1,0 +1,169 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+%\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{url}
+%\usepackage{tocloft}             % Paket für Table of Contents
+\def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
+\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
+\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-}%
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+%\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+% \usepackage[scale=0.8,colorspec=0.9]{draftwatermark} % Wasserzeichen ``Entwurf''
+% \SetWatermarkText{Vorbehaltlich\\redaktioneller\\Änderungen}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{blue}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+\initcomment{Philipp}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+
+
+
+\begin{document}
+
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+	\vspace{-1.8cm}
+	\includegraphics[width=80pt]{../logos/logo.pdf}
+	\centering
+	\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \huge{Resolution gegen Ordnungsrecht}\vspace{.25\baselineskip}\\
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+%%%% Metadaten %%%%
+
+%\paragraph{Adressierte:} Wissenschafts- und bildungsministerien: Bundes- und alle Landes-, freier zusammenschluss aller student*innenschaften e.V., Abgeordnetenhaus Fraktionen Berlins, Berliner Hochschulleitungen
+
+
+%\paragraph{Antragstellende:} xxx
+
+%%%% Text des Antrages zur veröffentlichung %%%%
+
+%\section*{Antragstext}
+
+Die ZaPF lehnt den Gesetzesentwurf\footnote{\url{https://www.parlament-berlin.de/ados/19/IIIPlen/vorgang/d19-1572.pdf}} zu einer erneuten Einführung des Ordnungsrechts für Studierende in Berlin ab:
+
+In dem vom Senat Berlins vorgelegten Gesetzesentwurf werden verschiedene Ordnungsmaßnahmen vorgesehen, als schärfste davon die Zwangsexmatrikulation, welche einen besonders schweren Eingriff in die Berufsfreiheit und die weitere Lebensgestaltung der betroffenen Studierenden darstellt. Durch diese Regelungen wird es möglich, Sanktionen bereits umzusetzen, bevor der Sachverhalt durch ein juristisches Verfahren geklärt wurde. Hierdurch wird den Betroffenen die Chance einer gerichtlichen Verteidigung erheblich erschwert, was ein wichtiges Grundrecht unserer demokratischen Verfassung ist. Gleichzeitig wird das Doppelbestrafungsverbot umgangen, indem eine Paralleljustiz an der Hochschule eingerichtet wird: Zur weiteren Gefahrenprävention reicht das bestehende Hausrecht, das auch in den jüngsten Fällen angewendet wurde; somit hat alles, was darüber hinaus geht, nicht das Wesen einer Gefahrenabwehr, sondern einer Strafe.
+
+Historisch bildete das universitäre Ordnungsrecht die Grundlage für das Einschränken studentischen politischen Protests und mit seiner Hilfe wurde aktiv versucht, die Politisierung der Studierendenschaft zu verhindern.\footnote{\url{https://www.gew-berlin.de/aktuelles/detailseite/renaissance-einer-schlechten-idee} \label{note2}} Durch eine Wiedereinführung des Ordnungsrechts verlöre die Universität somit ihren Charakter als Ort der offenen gesellschaftlichen Auseinandersetzung.
+
+In Zeiten verschärfter gesellschaftlicher Meinungskämpfe, die ihren Ausdruck u.a. in Besetzungen hochschulischer Räume wie bei den Klimaprotesten oder Aktionen zur Verbesserung von Studienbedingungen finden, untergräbt eine Wiedereinführung des Ordnungsrechts die demokratische Protestkultur. Dies gilt umso mehr für nicht-EU-Bürger*innen, die im Diskurs an den Hochschulen unterrepräsentiert sind und mit der Exmatrikulation in der Regel auch ihr Visum verlieren.
+
+Der Angriff eines Studenten auf einen jüdischen Studenten in Berlin, der die jüngste Debatte um die Wiedereinführung ausgelöst hat, ist in mehrererlei Hinsicht ein Beispiel dafür, dass das Ordnungsrecht die Probleme, die es zu lösen vorgibt, nicht löst: Der Angriff erfolgte außerhalb des Universitätsgeländes und eine Wiederholung kann durch eine Zwangsexmatrikulation nicht verhindert werden. Nicht nur das, wenn der Gesetzesentwurf damals schon in Kraft gewesen wäre, wäre es fraglich, ob eine Exmatrikulation zum jetzigen Zeitpunkt überhaupt schon passiert wäre.\footref{note2} Zudem kann bereits jetzt durch normales Hausrecht verhindert werden, dass sich die Beteiligten in der Uni mit den damit verbundenen emotionalen Belastungen begegnen.
+
+Stattdessen sollte die Suche nach Ursachen für den Ausbruch von Gewalt an den Hochschulen in den Fokus genommen werden. Hierzu müssen Diskursräume geöffnet werden, um der Polarisierung und Feindbildkonstruktion entgegenzuwirken. Gesellschaftlich zugespitzte und emotional geladene Debatten müssen wissenschaftlich fundiert und im offenen Dialog entschärft werden. Wir teilen in diesem Sinne den Lösungsansatz des fzs:
+
+\glqq Hochschulen müssen sich auch endlich der politischen Debatte an Hochschulen annehmen und aufhören diese weg zu ignorieren, oder die Verantwortung an die Studierendenschaft abzugeben. Hochschulen müssen Mediation und Räume bieten, um auch politische Debatten auf dem Campus zu führen, ohne Diskriminierung zu befeuern, zu informieren und aufzuklären statt zu verurteilen oder alleinzulassen.\grqq\footnote{\url{https://www.fzs.de/2024/05/13/positionierung-zum-ordnungsrecht-an-hochschulen-2/}}
+
+Nicht zuletzt sind die im Gesetzesentwurf beschriebenen Ansätze Einschüchterungsmaßnahmen, die nicht nur die Studierenden treffen, gegen die sie verhängt werden, sondern die (politische) Kultur an den Hochschulen. Nicht nur bietet eine Neueinführung des Ordnungsrechts Missbrauchsmöglichkeiten, beispielsweise kritische Meinungen durch das Verhängen von Sanktionen zu unterdrücken, sondern es besteht auch die Gefahr eines \glqq Chilling Effects\grqq, wenn Studierende aus Angst vor ordnungsrechtlichen Maßnahmen von politischer Betätigung absehen.
+
+Während in Berlin über eine Wiedereinführung des Ordnungsrechts diskutiert wird, besteht in vielen anderen Bundesländern wie Nordrhein-Westfalen, Niedersachsen oder Brandenburg ein ähnliches Ordnungsrecht seit Jahrzehnten fort. Aus den oben genannten Gründen fordert die ZaPF darüber hinaus auch alle anderen Bundesländer dazu auf, vergleichbare Regelungen abzuschaffen.
+
+%\section*{Begründung}
+%yyyy
+
+%\vspace{1cm} 
+%
+\vfill
+\begin{flushright}
+	Verabschiedet am 21. Mai 2024 \\
+	auf der ZaPF in Kiel.
+\end{flushright}
+
+\end{document}

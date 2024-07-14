@@ -1,0 +1,168 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+%\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{url}
+%\usepackage{tocloft}             % Paket für Table of Contents
+\def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
+\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
+\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-}%
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+%\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+% \usepackage[scale=0.8,colors\\redaktioneller\\Änderungen}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{blue}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+\initcomment{Philipp}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+
+
+
+\begin{document}
+
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+	\vspace{-1.8cm}
+	\includegraphics[width=80pt]{../logos/logo.pdf}
+	\centering
+	\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \huge{Tarifflucht verhindern, Arbeitsbedingungen studentischer Beschäftigter entprekarisieren}\vspace{.25\baselineskip}\\
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+%%%% Metadaten %%%%
+
+%\paragraph{Adressierte:} Hochschulleitungen, Wissenschaftsministerien der Länder, Bundesarbeitsministerium, GEW, ver.di, TVStud, MeTaFa, fzs
+
+
+%\paragraph{Antragstellende:} xxx
+
+%%%% Text des Antrages zur veröffentlichung %%%%
+
+%\section*{Antragstext}
+
+Die Arbeitsverhältnisse studentischer Beschäftigter sind prekär. 
+
+Insbesondere angesichts steigender Lebenshaltungskosten können sich immer mehr Studierende nicht mehr leisten, ihr Studium durch ein Arbeitsverhältnis mit ihrer Universität zu finanzieren. Dies trifft vor allem diejenigen, die bereits durch ihre finanzielle Lage benachteiligt sind. Dabei stechen zwei Arten von Problemen heraus: Tarifflucht und prekäre Arbeitsbedingungen studentischer Hilfskräfte. Die ZaPF fordert die Hochschulleitungen auf, positiven Beispielen an Universitäten zu folgen und die Situation studentischer Beschäftigter deutlich zu verbessern.
+
+\paragraph{Tarifflucht durch Hilfskräfte} \mbox{}\\
+Die Hochschulen in Deutschland betreiben in massiver Weise Tarifflucht, indem sie Studierende als Hilfskräfte beschäftigen, obwohl die von ihnen ausgeführten Tätigkeiten eigentlich eine Tarifbeschäftigung im Rahmen des TV-L erfordern. Gemäß § 6 WissZeitVG dürfen studentische Hilfskräfte nur wissenschaftliche und künstlerische Hilfstätigkeiten ausführen. Jedoch werden Studierende an vielen Universitäten und Hochschulen in Deutschland regelmäßig als günstige Alternative zu Beschäftigten nach TV-L in Verwaltung und Technik eingesetzt. 
+
+Dabei ist die Rechtslage eindeutig: Die höchstrichterliche Rechtsprechung des Bundesarbeitsgerichtes hat wissenschaftliche Hilfstätigkeiten im Sinne des WissZeitVG eindeutig als solche definiert, die unmittelbar in Lehre und Forschung erfolgen (BAG, Urteil vom 30. Juni 2021, Aktenzeichen 7 AZR 245/20). Auch lediglich wissenschaftsunterstützende Tätigkeiten berechtigen nicht zu einem Beschäftigungsverhältnis auf der Grundlage des WissZeitVG (ibid). Jedoch ist es die flächendeckende Praxis an deutschen Hochschulen, eben solche Beschäftigungsverhältnisse abzuschließen und Studierende als billige Arbeitskräfte für nichtwissenschaftliche Tätigkeiten zu betrachten. Dadurch begehen die Hochschulen bewusst Rechtsbruch und untergraben die Rechtsstaatlichkeit Deutschlands.
+
+Allerdings ist an einigen Hochschulstandorten auch eine positive Entwicklung zu beobachten. Beispielsweise werden an der TU Chemnitz und an mehreren Berliner Universitäten nichtwissenschaftlich arbeitende Studierende rechtskonform nach TV-L eingruppiert. Die ZaPF begrüßt diesen Schritt und ruft die Hochschulleitungen zur Nachahmung auf! Im Falle der sächsischen Hochschulen kam die Aufforderung dazu sogar vonseiten des Sächsischen Staatsministeriums für Wissenschaft, Kultur und Tourismus (SMWK)\footnote{\label{note1}\url{Rundschreiben des Rektors der TU Chemnitz 05/2024 vom 30.01.2024}}. Dabei verwundert es, dass von den sächsischen Hochschulen, abgesehen von der TU Chemnitz, keine derart konsequente Reaktion zu vernehmen war.
+
+\paragraph{Bezahlung und Arbeitsbedingungen von Hilfskräften} \mbox{}\\
+Rechtskonform beschäftigten studentischen Hilfskräften, die mit wissenschaftlichen oder künstlerischen Hilfstätigkeiten betraut sind, müssen ebenfalls attraktive Beschäftigungsverhältnisse angeboten werden. Für eine Entprekarisierung und Verbesserung der Arbeitsbedingungen von Hilfsktäften setzt sich die Initiative für einen Tarifvertrag für studentische Beschäftigte (TVStud) ein. Die ZaPF schließt sich den Forderungen der bundesweiten TVStud-Initiative\footnote{\url{https://tvstud.de/die-forderungen/}}\footnote{\url{https://zapfev.de/resolutionen/sose23/Studentischer_Tarifvertrag/Resolution_zum_TV_Studentischer_Hilfskraefte_MeTaFa.pdf}} an.
+
+Bei den Forderungen werden die Bezahlung und die Arbeitsbedingungen der studentischen Hilfskräfte als zentrale Probleme adressiert. Studentische Hilfskräfte erhalten oft Löhne, die weit unter denen liegen, die für tariflich Beschäftigte vorgesehen sind, oder die für die Deckung der Lebenshaltungskosten erforderlich sind, bzw. die Studierenden in der freien Wirtschaft geboten werden. Darüber hinaus fehlen häufig faire Regelungen zu Arbeitszeiten, Pausen, Krankheit und Urlaub, was zu Überlastung und unzumutbaren Arbeitsbedingungen führt.
+
+Um die Situation zu verbessern, ist es dringend erforderlich, dass Hochschulen studentischen Beschäftigten faire Verträge anbieten, die den geltenden Tarifverträgen entsprechen oder diese ggf. übertreffen. Insbesondere fordert die ZaPF, die schuldrechtliche Vereinbarung im Rahmen der letzten Tarifeinigung konsequent umzusetzen. Die Mindestvertragslaufzeit von 12 Monaten darf nur in absoluten Ausnahmefällen unterschritten werden\footnote{\url{https://zapfev.de/resolutionen/sose24/TVStud/Reso_Mindestvertragslaufzeit.pdf}}. Weiterhin muss der Vergütungsrahmen der Richtlinie der Tarifgemeinschaft deutscher Länder vom 28. Februar 2024 so weit nach oben wie möglich ausgereizt werden, wie es zum Beispiel bereits an der TU Chemnitz geschieht\footref{note1}. 
+
+%\section*{Begründung}
+%yyyy
+
+%\vspace{1cm} 
+%
+\vfill
+\begin{flushright}
+	Verabschiedet am 20. Mai 2024 \\
+	auf der ZaPF in Kiel.
+\end{flushright}
+
+\end{document}

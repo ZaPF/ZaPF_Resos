@@ -1,0 +1,157 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+%\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{url}
+%\usepackage{tocloft}             % Paket für Table of Contents
+\def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
+\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
+\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-}%
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+%\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+% \usepackage[scale=0.8,colorspec=0.9]{draftwatermark} % Wasserzeichen ``Entwurf''
+% \SetWatermarkText{Vorbehaltlich\\redaktioneller\\Änderungen}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{blue}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+\initcomment{Philipp}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+
+
+
+\begin{document}
+
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+	\vspace{-1.8cm}
+	\includegraphics[width=80pt]{../logos/logo.pdf}
+	\centering
+	\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \huge{Resolution: Versöhnungsprozess angehen durch Forschungskooperation im Nahost-Konflikt}\vspace{.25\baselineskip}\\
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+%%%% Metadaten %%%%
+
+%\paragraph{Adressierte:} BMBF, DFG, Landesforschungsministerien, alle deutschen Unis, Österreichische Äquivalente hinzufügen +BMBWF (ÖSterreich) +FWF +FFG +alle österreichischen Unis (schreibt bitte Manu von der Uni Wien an) [aus Pad]
+
+
+%\paragraph{Antragstellende:} xxx
+
+%%%% Text des Antrages zur veröffentlichung %%%%
+
+%\section*{Antragstext}
+
+Der Nahe Osten ist seit über 70 Jahren eine sehr konfliktreiche Region, in der es regelmäßig zu Kriegen und Gewaltausbrüchen kommt. Dies hat seit dem Terrorangriff der Hamas eine neue Qualität an Brutalität gewonnen, sowohl am 07.10. als auch in der Kriegsführung im Gaza-Streifen. Die dortige humanitäre Krise ist erschreckend und als Studierendenvertretung schauen wir mit besonderer Besorgnis auf die weitgehende Zerstörung der Bildungseinrichtungen, darunter aller im Gaza-Streifen befindlicher Universitäten.\footnote{\url{https://www.ohchr.org/en/press-releases/2024/04/un-experts-deeply-concerned-over-scholasticide-gaza}}\footnote{\url{https://www.forschung-und-lehre.de/lehre/palaestinensische-universitaeten-ziel-der-zerstoerung-6217}}
+  
+Zudem verschärfen sich die Spannungen zwischen dem Iran und Israel und die Gefahr eines Flächenbrands steigt, wodurch die Zivilbevölkerung der gesamten Region bedroht ist. Es gibt insgesamt wenige Friedensansätze und aktuell kaum Perspektive auf Versöhnung. 
+  
+Wir bekräftigen unsere 2023 verabschiedete Resolution zu Wissenschaftskooperationen, in der wir \glqq im wissenschaftlichen Austausch einen Weg [sehen], das gegenseitige Verständnis und eine Friedenskultur zu stärken.\grqq\footnote{\url{https://zapfev.de/resolutionen/wise23/International/Resolution_Wissenschaftliche_Kooperationen_staerken.pdf}} Im Zuge der aktuellen Lage fordern wir dazu auf, diese Resolution umzusetzten und \textbf{zivile Wissenschaftskooperationen zu allen Konfliktparteien einzugehen} bzw. \textbf{auszubauen}, falls schon vorhanden. Kooperationen müssen allerdings auch dementsprechend interpretiert und \textbf{explizit friedensorientiert konzipiert werden.} Eine \textbf{internationale Studierendenschaft}, mit vielen Studierenden, die Bezüge in den Nahen Osten haben, kann hierbei eine große Chance sein und \textbf{sollte bei Völkerverständigungsansätzen mit einbezogen werden.} Eine Hochschule als Raum des lebendigen und respektvollen Diskurses, in dem auch einander entgegengesetzte Positionen aufeinander prallen, sehen wir als große Chance gegen jegliche Form des Rassismus und Antisemitismus. Um einer Friedensperspektive gerecht zu werden, müssen alle \textbf{Kooperationen in die Region ausschließlich zivil sein.} Um das Grundrecht auf Bildung zu ermöglichen, müssen sie \textbf{perspektivisch den Wiederaufbau der Bildungseinrichtungen und des Bildungswesens im Gazastreifen aktiv unterstützen.}
+
+%\section*{Begründung}
+%yyyy
+
+%\vspace{1cm} 
+%
+\vfill
+\begin{flushright}
+	Verabschiedet am 21. Mai 2024 \\
+	auf der ZaPF in Kiel.
+\end{flushright}
+
+\end{document}

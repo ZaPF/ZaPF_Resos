@@ -1,0 +1,164 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+%\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{url}
+%\usepackage{tocloft}             % Paket für Table of Contents
+\def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
+\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
+\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-}%
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+%\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+% \usepackage[scale=0.8,colorspec=0.9]{draftwatermark} % Wasserzeichen ``Entwurf''
+% \SetWatermarkText{Vorbehaltlich\\redaktioneller\\Änderungen}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{blue}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+\initcomment{Philipp}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+
+
+
+\begin{document}
+
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+	\vspace{-1.8cm}
+	\includegraphics[width=80pt]{../logos/logo.pdf}
+	\centering
+	\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \huge{Resolution zum vergünstigten Deutschlandticket}\vspace{.25\baselineskip}\\
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+%%%% Metadaten %%%%
+
+%\paragraph{Adressierte:} Verkehrs- und Bildungsministerium des Bundes und der Länder, alle regionalen Verkehrsverbünde Deutschlands, Koordinierungsrat Deutschlandticket[falls wir eine Adresse finden], alle ASten, Landes-ASten-Konferenzen, die Bundesregierung, alle Landesregierungen und alle Bundes- und Landtagsfraktionen, die MeFaTa, fzs
+
+
+%\paragraph{Antragstellende:} xxx
+
+%%%% Text des Antrages zur veröffentlichung %%%%
+
+%\section*{Antragstext}
+
+Aktuell stellen viele Universitäten ihr Semesterticket auf das solidarische Deutschlandticket um oder haben dies bereits getan. Während die ZaPF die Lösung eines solidarischen Deutschlandtickets grundsätzlich und gerade auch in seiner relativ simplen Umsetzung gutheißt, muss sie dennoch auf einige verbleibende und dennoch gravierende Probleme in diesem Kontext hinweisen.
+
+Die ZaPF kritisiert vehement, dass das vergünstigte Deutschlandticket aktuell als reines Digitalticket angeboten wird. Studierende, die kein Smartphone besitzen, werden so von der Nutzung des solidarischen Deutschlandtickets ausgeschlossen. Darüber hinaus sieht die ZaPF keinen rationalen Grund, die als Ticket verwendeten QR- Codes nicht auch in ausgedruckter Form zuzulassen. Die im QR-Code für die Ticketkontrolle gespeicherten Daten sind exakt dieselben, egal ob dieser in einer App, als Bilddatei oder in beliebiger Ausführung als physische Kopie zum Scannen vorgezeigt wird.
+Physische Kopien wie z. B. simple Ausdrucke der QR-Codes zuzulassen, würde Unabhängigkeit vom Besitz und vom Mitführen eines Smartphones schaffen, sowie gleichzeitig die eigene Mobilität vor Ausfall, Verlust, unzureichender Internetverbindung sowie leerem Akku des selbigen schützen.
+Auch könnten die Studierenden so aus individuellen Abwägungen den Datenschutz betreffend vollständig von der Nutzung sogenannter \glqq Wallet-Apps\grqq diverser Drittanbieter zur Hinterlegung der Tickets absehen.
+
+Im Unterschied zur aktuellen Semesterticketlösung gibt es beim regulären Deutschlandticket die Möglichkeit, kostenlos eine Chipkarte zu beantragen und für die Zeit von maximal einem Monat übergangsweise auch ein Ticket in Papierform zu nutzen\footnote{\url{https://www.bundesregierung.de/breg-de/aktuelles/deutschlandticket-2134074}}. Entsprechende Möglichkeiten scheint es bisher nur an einigen wenigen Hochschulorten und nicht verpflichtend überall auch beim solidarischen Deutschlandticket zu geben.
+
+Die ZaPF fordert deshalb Politik und Verkehrsbetriebe dazu auf, gemeinsam eine kostenlose und unbürokratische Möglichkeit für Studierende zu schaffen, das solidarische Deutschlandticket auf Wunsch auch ohne Smartphone nutzen zu können. Als geeignete Lösungen sehen wir die offizielle Anerkennung der ausgedruckten QR-Codes als gültiges Ticket oder die verbindliche Möglichkeit des kostenlosen Erwerbs einer Chipkarte beim jeweiligen zuständigen Verkehrsbetrieb.
+Die ZaPF fordert zudem, dass diese Möglichkeiten nach ihrer Implementierung deutlich an alle Studierenden kommuniziert werden.
+
+Außerdem übt die ZaPF scharfe Kritik an dem Umstand, dass einige studentische Statusgruppen derzeit vom vergünstigten Deutschlandticket ausgeschlossen sind. So ist es nicht hinnehmbar, dass Promovierende in Berlin und Brandenburg aktuell entgegen der Beschlusslage der Verkehrsministerkonferenz vom solidarischen Deutschlandticket ausgeschlossen sind\footnote{\url{https://www.openpetition.de/petition/online/gegen-den-ausschluss-von-promovierenden-vom-deutschlandsemesterticket-3}}. Hierdurch ist ihre Mobilität und somit auch die Erreichbarkeit der Hochschule stark eingeschränkt. Die ZaPF fordert daher, dass das vergünstigte Deutschlandticket in allen Bundesländern umgehend auch für Promovierende angeboten wird.
+
+%\section*{Begründung}
+%yyyy
+
+%\vspace{1cm} 
+%
+\vfill
+\begin{flushright}
+	Verabschiedet am 21. Mai 2024 \\
+	auf der ZaPF in Kiel.
+\end{flushright}
+
+\end{document}
