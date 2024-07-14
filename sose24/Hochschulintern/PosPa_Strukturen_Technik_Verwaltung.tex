@@ -1,0 +1,200 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+%\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{url}
+%\usepackage{tocloft}             % Paket für Table of Contents
+\def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
+\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
+\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-}%
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+%\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+% \usepackage[scale=0.8,colorspec=0.9]{draftwatermark} % Wasserzeichen ``Entwurf''
+% \SetWatermarkText{Vorbehaltlich\\redaktioneller\\Änderungen}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{blue}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+\initcomment{Philipp}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+
+
+
+\begin{document}
+
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+	\vspace{-1.8cm}
+	\includegraphics[width=80pt]{../logos/logo.pdf}
+	\centering
+	\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \huge{Positionspapier: \glqq Nachhaltige Strukturen in Technik und Verwaltung schaffen\grqq}\vspace{.25\baselineskip}\\
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+%%%% Metadaten %%%%
+
+%\paragraph{Adressierte:} xyx
+
+
+%\paragraph{Antragstellende:} xxx
+
+%%%% Text des Antrages zur veröffentlichung %%%%
+
+%\section*{Antragstext}
+
+Die ZaPF lehnt Outsourcing an Hochschulen ab.
+
+\vspace{-5mm}\section*{Was ist Outsourcing?} \vspace{-5mm}
+Unter Outsourcing versteht man, dass die Verwaltungen Aufgaben an externe Firmen auslagern. An den Hochschulen zeigt sich das häufig beim Reinigungsdienst, Sicherheitsdienst, Hausmeister*innendienst oder auch bei zentralen Werkstätten und Handwerksbetrieben. Hier geht es insbesondere um Daueraufgaben.
+
+\vspace{-5mm}\section*{Wo liegt das Problem?} \vspace{-5mm}
+Outsourcing führt zu unnötig schlechten Arbeitsbedingungen der Kolleg*innen. Es ist schwierig eine voll umfängliche Kostenrechnung durchzuführen\footnote{\url{https://www.sciencedirect.com/science/article/pii/S2212567115009338}}, jedoch gibt es Belege, dass es oft nicht zu Kosteneinsparungen kommt\footnote{\url{http://www.asu.asn.au/news/categories/localgovt/140925-report-shows-outsourcing-costs-communities}}.
+
+\vspace{-5mm}\paragraph{Tarifumgehung} \mbox{}\\
+Auf diese Art werden teilweise die Tarifverträge im öffentlichen Dienst der Länder umgangen und Lohndumping Vorschub geleistet.
+
+\vspace{-5mm}\paragraph{Keine Mitsprache} \mbox{}\\
+Die davon betroffenen Kolleg*innen sind als Angestellte externer Firmen nicht mehr Teil der Hochschule und werden nicht in die universitäre Mitbestimmung einbezogen, sie können auch nicht mehr vom universitären Personalrat vertreten werden.
+
+\vspace{-5mm}\paragraph{Ausschreibungsverfahren} \mbox{}\\
+Ausschreibungsverfahren führen – wenn sie stattfinden wie sie gedacht sind – notgedrungen zu ständigem Anbieterwechsel. Dies führt dazu, dass die beauftragten Firmen Gründe für betriebsbedingte Kündigungen haben. So können auch Kolleg*innen, die bereits seit Jahrzehnten zuverlässig in der Hochschule arbeiten, kurzfristig entlassen werden, obwohl ihre Stellen weit im Voraus planbar sind. Daueraufgaben brauchen Dauerstellen!
+
+\vspace{-5mm}\paragraph{Entfremdung} \mbox{}\\
+Die Beschäftigten verlieren durch den fehlenden Kontakt zu den vorhandenen Hochschulstrukturen zunehmend den Bezug zu ihrer Arbeit und agieren formal. Die Abläufe an der Uni werden so immer unpersönlicher, formalistischer und sind mit zunehmendem bürokratischen Aufwand belastet.
+
+\vspace{-5mm}\paragraph{Aufwand durch Anbieterwechsel} \mbox{}\\
+Die regelmäßigen Anbieterwechsel sind zudem mit erheblichem finanziellen und zeitlichen Aufwand für Einarbeitung und Übergangszeiten verbunden und für alle Beteiligten aufreibend.
+
+\vspace{-5mm}\paragraph{Beseitigung von Problemen} \mbox{}\\
+Geht etwas schief, kann das Problem nicht direkt beseitigt werden, sondern es bleibt zunächst alles liegen, bis schlimmstenfalls vor Gericht geklärt ist, wer die Verantwortung dafür trägt.
+
+\vspace{-5mm}\paragraph{Externe Benotung} \mbox{}\\
+Zum Teil werden die Beschäftigten von einer weiteren externen Firma beobachtet und benotet. Das führt zu extremer Belastung, denn bei schlechter Benotung drohen Gehaltskürzungen.
+
+\vspace{-5mm}\section*{Was kann man dagegen tun?} \vspace{-5mm}
+Die Lage der Beschäftigten ist prekär und betrifft alle Statusgruppen der Hochschule, da der allgemeine Hochschulbetrieb dadurch beeinträchtigt ist. Die ZaPF befürwortet es, wenn sich Fachschaften
+
+\begin{itemize}
+    \item mit der Problematik des Outsourcings an der eigenen Hochschule auseinandersetzen und die Studierenden darüber aufklären.
+    \item aktiv in den akademischen Gremien gegen Outsourcing einsetzen. Dabei ist der Kontakt zu den zuständigen Gewerkschaften und Personalräten hilfreich.
+    \item mit den betroffenen outgesourcten Beschäftigten öffentlich solidarisieren. Im Idealfall kann so eine Weiterbeschäftigung mit Direktanstellung an der Hochschule angeboten werden.
+\end{itemize}
+
+\vspace{-5mm}\paragraph{Weiterführende Positionierungen}
+\begin{itemize}
+    \item \glqq Solidarität mit Reinigungskräften – Outsourcing zurückfahren!\grqq von der Fachschaft Physik der Universität zu Köln\footnote{\url{https://fs-physik.uni-koeln.de/solidaritaet-mit-reinigungskraeften-outsourcing-zurueckfahren/}}
+    \item \glqq Mit welchen Tricks die Universitätsleitung der Freien Universität Berlin versucht, Beschäftigten und ihren Vertretungen Leiharbeit und Ausgliederungen schmackhaft zu machen!\grqq vom Vorstand der ver.di Betreibsgruppe der FU Berlin\footnote{\url{https://www.verdi-fu.de/wordpress/2022/01/27/erst-misswirtschaft-dann-outsourcing/}}
+\end{itemize}
+
+%\section*{Begründung}
+%Fallbeispiele gibt es an der Universität zu Köln, hier wurde 2023 die schon länger an eine externe Firma vergebene Gebäudereinigung der Physik neu ausgeschrieben. Da eine andere Firma den Zuschlag bekommen hat, wurde schon lange beschäftigten Kolleg*innen gekündigt, die Fachschaft Physik hat Forderungen dazu erfolgreich in die Fachgruppe eingebracht, siehe \url{https://fs-physik.uni-koeln.de/solidaritaet-mit-reinigungskraeften-outsourcing-zurueckfahren/}
+% An der Freien Universität Berlin gibt es schon länger den Versuch, das Personal des Botanischen Gartens in eine Betriebsgesellschaft, deren Alleingesellschafter die Universität selbst ist, auszugliedern. Damit wären alle neu Angestellten nicht mehr vom Personalrat vertreten und nicht mehr nach dem TV-L bezahlt worden. Durch Streiks und Proteste, u.a. auch von Studierenden, wurde das entsprechde Personal wieder eingegliedert, das Tochterunternehmen der FU "Betriebsgesellschaft Botanischer Garten und Botanisches Museum“ existiert zwar noch, aber ohne Personal :).
+% https://taz.de/Ungerechte-Bezahlung-in-Berlin/!5241372/
+% https://www.tagesspiegel.de/berlin/arbeitskampf-im-botanischen-garten-3710725.html
+% https://www.verdi-fu.de/wordpress/2019/03/04/sparen-auf-dem-ruecken-der-saisonkraefte-im-botanischen-garten-gehts-noch/
+% https://astafu.de/sites/default/files/2021-05/Resolutionen der StudVV 07.04. und 28.04.2021 DE und EN.pdf, S.11
+
+%\vspace{1cm} 
+%
+\vfill
+\begin{flushright}
+	Verabschiedet am 20. Mai 2024 \\
+	auf der ZaPF in Kiel.
+\end{flushright}
+
+\end{document}
