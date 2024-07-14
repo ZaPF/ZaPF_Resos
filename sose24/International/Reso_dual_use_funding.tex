@@ -1,0 +1,172 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+%\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{url}
+%\usepackage{tocloft}             % Paket für Table of Contents
+\def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
+\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
+\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-}%
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+%\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+% \usepackage[scale=0.8,colorspec=0.9]{draftwatermark} % Wasserzeichen ``Entwurf''
+% \SetWatermarkText{Vorbehaltlich\\redaktioneller\\Änderungen}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{blue}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+\initcomment{Philipp}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+
+
+
+\begin{document}
+
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+	\vspace{-1.8cm}
+	\includegraphics[width=80pt]{../logos/logo.pdf}
+	\centering
+	\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \huge{Resolution: No to dual-use orientation of research funding}\vspace{.25\baselineskip}\\
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+%%%% Metadaten %%%%
+
+%\paragraph{Adressierte:} Europarlamentarier\*innen, Europäische Kommission, Europäische Hochschulverbünde wie EUniWell, Von der Leyen, ESU, Fraktionen des deutschen Bundestages, fzs, ASten im deutschsprachigen Raum, GEW, HRK
+
+
+%\paragraph{Antragstellende:} xxx
+
+%%%% Text des Antrages zur veröffentlichung %%%%
+
+%\section*{Antragstext}
+
+The ``Joint Communication on the European Economic Security Strategy''\footnote{\url{https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:52023JC0020}} outlines an EU strategy for a situation of bloc confrontation and growing political and military rivalry. The recent white paper of the European Commission on Dual Use research funding\footnote{\href{https://research-and-innovation.ec.europa.eu/system/files/2024-01/ec_rtd_white-paper-dual-use-potential.pdf}{On options for enhancing support for research and development involving technologies with dual-use potential}} derives from this a reorientation of EU civilian research funding, which is specifically about offering incentives for explicit dual-use research. The goal is to fill the technological gaps that make the European militaries vulnerable in case of an economic war.
+
+As emphasized by the German Rectors' Conference\footnote{\url{https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/14060-RD-on-dual-use-technologies-options-for-support/F3464775_en}} and others, the focus on dual use threatens to disrupt already endangered international cooperation. Furthermore, this encourages the tendency to divert funds for urgently needed civilian research to the military, as has already happened recently when Horizon Europe did not receive 2.1 billion euros.
+Conversely, military research does not structurally benefit the civilian sector because its results are not public. For example, there are only plans to focus the civilian research funding program Horizon Europe on dual use, but not the military research fund (EDF).
+
+More importantly, by becoming more dependent on military-oriented funding, universities are jeopardizing their ability to intervene critically in the societal debate on war and peace. Research into technologies for destruction and killing is normalized and the civilian and peaceful orientation, as established in more than 70 German universities to date, is being structurally undermined.
+
+Above all, however, universities are becoming part of an economic and military arms race that has considerable potential for escalation (over 12,000 nuclear warheads are stored worldwide) and, in principle, is devouring ever greater  societal resources that are all the more urgently needed for the social and sustainable development of the EU in line with the UN Sustainable Development Goals (SDGs).
+
+The plans outlined in the white paper disregard the fact that global problems can only be solved cooperatively and that the EU is well placed to initiate a break in the arms race. It is of central importance that science contributes to de-escalation and disarmament and is not instrumentalized by geopolitical power struggles.
+
+We, therefore, call on the EU to continue to consistently focus the Horizon Europe research funding program on civilian science in cooperation with rival power blocs and the realization of the SDGs instead of dual use.
+
+%\section*{Begründung}
+% Die ZaPF hat sich mehrfach für zivile Wissenschaften bzw. Zivilklauseln ausgesprochen, z.B. [4] und dafür, dass wissenschaftliche Kooperationen auf die Realisierung der SDGs zielen anstatt nach der je aktuellen Geopolitik ausgerichtet zu werden [5]. Sie hat sich außerdem der Global Peace Dividend Initiative angeschlossen [6], einer Initiative von Nobelpreisträger\*innen vor allem aus Physik und Medizin, die für einen wissenschaftlich fundierten Ausweg aus der internationalen Aufrüstungsspirale eintrat. Auch wenn die Initiative in der damaligen Form nicht mehr existiert, sondern von einem Nachfolgeprogramm abgelöst wurde, waren die Ideen und Positionen, die in diesen ZaPF-Beschlüssen zur Geltung kommen, Maßstab für die Debatte im AK "Zivilklausel und Geopolitik". Das EU White paper ist ziemlich genau den von der ZaPF beschlossenen Zielen entgegen gerichtet. Zudem gibt es die Schwierigkeit, dass die Initiative für dieses EU white paper anscheinend aus Deutschland kommt, sich bisher unseres wissens nach aber kein deutsche Studierendenvertretung bisher dazu verhalten hat - ganz im Gegensatz zu Studierendenvertretungen aus dem Rest der EU und GB.
+
+%Vor dem Hintergrund wurde im AK der Resoentwurf erarbeitet, der sich an den Kernargumenten der bestehenden Beschlüsse sowie der darin referenzierten ehemaligen Global Peace Dividend Initiative orientiert.
+
+%[4] https://zapf.wiki/images/0/0a/Verantwortung_SoSe17.pdf
+
+%[5] https://zapfev.de/resolutionen/wise23/International/Resolution_Wissenschaftliche_Kooperationen_staerken.pdf
+
+%[6] https://zapfev.de/resolutionen/wise22/Global_Peace_Dividend/Resolution_zur_Unterstuetzung_der_Global_Peace_Dividend_Initiative.pdf
+
+%\vspace{1cm} 
+%
+\vfill
+\begin{flushright}
+	Passed on May 21, 2024 \\
+	at the ZaPF in Kiel.
+\end{flushright}
+
+\end{document}
