@@ -1,0 +1,175 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+%\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{url}
+%\usepackage{tocloft}             % Paket für Table of Contents
+\def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
+\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
+\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-}%
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+%\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+% \usepackage[scale=0.8,colorspec=0.9]{draftwatermark} % Wasserzeichen ``Entwurf''
+% \SetWatermarkText{Vorbehaltlich\\redaktioneller\\Änderungen}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{blue}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+\initcomment{Philipp}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+
+
+
+\begin{document}
+
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+	\vspace{-1.8cm}
+	\includegraphics[width=80pt]{../logos/logo.pdf}
+	\centering
+	\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \huge{Positionspapier: Mehr Leben an der Uni}\vspace{.25\baselineskip}\\
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+%%%% Metadaten %%%%
+
+%\paragraph{Adressierte:} xyx
+
+
+%\paragraph{Antragstellende:} xxx
+
+%%%% Text des Antrages zur veröffentlichung %%%%
+
+%\section*{Antragstext}
+
+In den vergangen Jahren ist ein erheblicher Rückgang von studentischem Leben an den deutschen Universitäten und Hochschulen zu beobachten. Studentisches Leben an Universitäten und Hochschulen darf nicht ausschließlich aus Lernen bestehen, sondern muss auch Möglichkeiten für Begegnung und soziale Vernetzung bieten. Räume dafür fehlen jedoch oft und sind im Rahmen Covid-19-bedingter Präsenzaussetzungen weiter verloren gegangen.
+In der Vergangenheit haben erfolgreiche studentische Projekte wie Cafes, Lernräume und studentisch organisierte Seminare gezeigt, dass Studierende Lösungen für studentische Bedürfnisse schaffen können, wenn ihnen die Möglichkeiten geboten werden.
+Solche studentisch organisierten Veranstaltungen brauchen Räume an Universitäten und Hochschulen!
+Als ZaPF positionieren wir uns für die Ermöglichung und Erhaltung der studentischen Selbstverwaltung bei Aufenthalts- und Lernräumen\footnote{\url{https://zapfev.de/resolutionen/wise19/lernraume/Lernräume.pdf}} sowie Veranstaltungen der Fachschaften.
+Studentische Projekte und Studierende sollen nachteilsfrei Räume für größere studentische Veranstaltungen erhalten, z.B. durch unkomplizierte Reservierungen. Hochschulen und Universitäten sollen keine \glqq Lernfabriken\grqq sein. Denn selbstständiges Denken entsteht durch Austausch, dies gilt es zu fördern. Vereinsamung von Studierenden führt durch leidende mentale Gesundheit zu schlechterer Studien- und Lebensqualität\footnote{\url{https://www.gew.de/index.php?eID=dumpFile&t=f&f=121089&token=87e22231a855187bb77adc6976386c8fcceb742d&sdownload=&n=Hochschule-in-krisenhaften-Zeiten.pdf} (s. S. 54-60)}.
+
+\begin{itemize}
+    \item Extrakurrikulare Veranstaltungen führen dazu, dass Studierende nach Pflichtveranstaltungen in der Universität bleiben. Hier treffen Studierende in einem offenen Rahmen aufeinander und tauschen sich aus. Wir fordern daher, dass Hochschulen studentischen Begegnungsräumen/Veranstaltungen nicht mit Restriktionen oder Bürokratie, sondern mit Unterstützung entgegenkommen. Das erhöht die Motivation der Studierendenvertretungen und begünstigt es für Dozierende, weitere Veranstaltungen anzubieten. Auch studentische Initiativen außerhalb der gewählten Vertretungen erhalten so die Möglichkeit, Veranstaltungen durchzuführen.
+
+    \item Um des Weiteren die mentale Gesundheit sowie den sozialen Austausch der Studierenden zu fördern, sind auch vielfältige sportliche Angebote von Nöten. Daher fordern wir, eben diese kostenlos auszubauen und aktiv zu bewerben, um den Studierenden die Teilhabe an diesen Angeboten zu ermöglichen.
+
+    \item Mensen sind ein wichtiger Bestandteil des Alltagslebens der Studierenden und sollen auch dementsprechend erweitert werden. Dies soll durch längere Öffnungszeiten und einem größeren Angebot verwirklicht werden. Zudem sollte den Studierenden durch kostengünstige Snackautomaten und Wasserspender der Studierendenwerke Zugang zu Verpflegung auf dem Unigelände gewährt werden, auch wenn die Mensen schon geschlossen haben.
+
+    \item Es muss studentisch verwaltete Lern- und Aufenthaltsräume sowie zugängliche Außenbereiche geben, welche nicht von Lehrveranstaltungen verdrängt werden dürfen. Diese sollen sich in unmittelbarer Nähe der Vorlesungs- und Seminarräumlichkeiten befinden. Beispiele für Aufenthaltsräume wären studentisch-selbstverwaltete Cafes, Selbstversorgerküchen oder Ruheräume. Zweck dieser Räumlichkeiten ist die Förderung der sozialen Interaktion und Austausch unter Studierenden.
+
+    \item Gerade bei Neubauten und Generalsanierungen von Gebäuden sollten diese so gestaltet werden, dass sie nicht ausschließlich als zwecksmäßiger Arbeitsbereich aufgefasst werden, sondern auch Räumlichkeiten in einem hohen Maßstab zur Sozialisierung und Interaktion zwischen Studierenden besitzen. Dazu fordern wir eine ständige studentische Vertretung in Bau-Gremien der Hochschulen.
+
+    \item Uneingeschränkter Zugang zu solchen Räumen an den Hochschulen muss ermöglicht werden. Vor allem frühes Abschließen oder spätes Aufschließen der Gebäude von Universitäten und Hochschulen verdrängt Studierende aus den Gebäuden und somit aus sozialen Räumen. Gelöst werden kann dies durch Schlüsselchips, wodurch Studierende den Zugang zu den Hochschulgebäuden bekommen. Des Weiteren soll der Aufenthalt den Studierenden auch rund um die Uhr gewährt bleiben. Studentische Projekte müssen außerdem nachteilsfreien Zugang zur Raumverwaltung haben, wodurch Veranstaltungen selbst mit kurzer Planung ermöglicht werden.
+\end{itemize}
+
+Sichtbar belebte Orte an Hochschulen schaffen eine Atmosphäre, in der sich Studierende wohler und dadurch auch sicherer fühlen. Besonders im Physikstudium sind soziale Strukturen aufgrund der geforderten Zusammenarbeit für mentale Gesundheit und Studienerfolg essenziell.
+In der Vergangenheit haben erfolgreiche studentische Projekte wie Cafes, Lernräume und studentisch organisierte Seminare gezeigt, dass Studierende Lösungen für studentische Bedürfnisse schaffen können, wenn ihnen die Möglichkeiten geboten werden.
+
+%\section*{Begründung}
+%yyyy
+
+%\vspace{1cm} 
+%
+\vfill
+\begin{flushright}
+	Verabschiedet am 21. Mai 2024 \\
+	auf der ZaPF in Kiel.
+\end{flushright}
+
+\end{document}
+<<
