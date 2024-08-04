@@ -1,0 +1,214 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+%\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{url}
+%\usepackage{tocloft}             % Paket für Table of Contents
+\def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
+\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
+\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-}%
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+%\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+% \usepackage[scale=0.8,colorspec=0.9]{draftwatermark} % Wasserzeichen ``Entwurf''
+% \SetWatermarkText{Vorbehaltlich\\redaktioneller\\Änderungen}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{blue}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+\initcomment{Philipp}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+
+\usepackage{endnotes}
+\let\footnote=\endnote
+\renewcommand{\notesname}{Referenzen}
+
+\begin{document}
+
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+	\vspace{-1.8cm}
+	\includegraphics[width=80pt]{../logos/logo.pdf}
+	\centering
+	\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \huge{Resolution zur DPG-Stellungnahme zum Lehramtsstudium}\vspace{.25\baselineskip}\\
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+%%%% Metadaten %%%%
+
+%\paragraph{Adressierte:} Ministerien, die für Schul- und Lehrkäftebildung zuständig sind (z.B. Kultus-, Bildungs- und Wissenschaftsministerien), Physik-Fachbereiche der Hochschulen in Deutschland an denen Physik auf Lehramt studiert werden kann, Konferenz der Fachbereiche Physik, Deutsche Physikalische Gesellschaft, Physik-Fachschaften Deutschlands
+
+
+%\paragraph{Antragstellende:} xxx
+
+%%%% Text des Antrages zur veröffentlichung %%%%
+
+%\section*{Antragstext}
+
+Die ZaPF unterstützt die \textit{Stellungnahme der Deutschen Physikalischen Gesellschaft zur Situation des Physik-Lehramtsstudiums}\footnote{\href{https://www.dpg-physik.de/veroeffentlichungen/publikationen/stellungnahmen-der-dpg/bildung-wissenschaftlicher-nachwuchs/dpg-stellungnahme-lehramtsstudium}{https://www.dpg-physik.de/veroeffentlichungen/publikationen/stellungnahmen-der-dpg/bildung-wissenschaftlicher-nachwuchs/dpg-stellungnahme-lehramtsstudium}} und fordert die Fachbereiche und die Ministerien, die für die Schulen und Lehrkräfteausbildung zuständig sind auf, diese Forderungen im Rahmen einer Überarbeitung der Physik-Lehramtsstudiengänge bis zur nächsten Reakkreditierung umzusetzen.\\
+\\
+Dabei möchten wir zu den folgenden Thesen noch ergänzen:\\
+
+\textbf{Zu These 2: Lehrer:innen müssen ein Lehramtsstudium absolvieren!}
+    
+Die Lehramtsausbildung bildet die Grundlage für eine qualifizierte und nachhaltige pädagogische Arbeit in den Schulen. Sie vermittelt nicht nur fachliche Kenntnisse, sondern auch didaktische und pädagogische Fähigkeiten, die für die erfolgreiche Vermittlung von Wissen und die Betreuung von Schüler*innen unerlässlich sind. Ein strukturiertes Studium, ergänzt durch Praxiserfahrungen im Referendariat, stellt sicher, dass zukünftige Lehrkräfte umfassend auf ihre Aufgaben vorbereitet sind.
+    
+Allerdings stehen viele Schulsysteme vor dem Problem eines akuten Lehrkräftemangels. Um kurzfristig die Lücke zu füllen, wird zunehmend auf Quer- und Seiteneinsteigende gesetzt. Diese bringen oft wertvolle Erfahrungen aus anderen Berufsbereichen mit, was eine Bereicherung darstellen kann. Dennoch zeigt sich, dass Quer- und Seiteneinsteigende häufig nicht dieselbe pädagogische und didaktische Qualität beim Unterrichten aufweisen wie regulär ausgebildete Lehrkräfte.\footnote{\textit{S. Heinicke et al.}, Das "perfekte" Lehramtsstudium, Physik Journal \textbf{22}(12), S. 43 (2023)}\footnote{\textit{F. Korneck, L. Oettinghaus und J. Lamprecht}, Physiklehrkräfte: Gewinnung -- Professionalisierung -- Kompetenzen, Naturwissenschaftlicher Unterricht und Lehrerbildung im Umbruch \textbf{41}, S. 4 (2021)} Sie haben zwar fachliche Expertise, jedoch fehlt ihnen oft die spezifische pädagogische Ausbildung und Erfahrung im Umgang mit Kindern und Jugendlichen.
+
+Langfristig sollte daher das Ziel sein, mehr Menschen für den Lehrberuf zu gewinnen und die Lehramtsausbildung attraktiver zu gestalten. Dies könnte durch bessere Arbeitsbedingungen, eine angemessene Bezahlung und die Möglichkeit der beruflichen Weiterentwicklung erreicht werden. Bis dahin bleibt der Quer- und Seiteneinstieg eine notwendige, jedoch nur vorübergehende Lösung, um dem Lehrkräftemangel zu begegnen. 
+
+Der akute Lehrkräftemangel in Deutschland erfordert innovative und nachhaltige Lösungen, um die Qualität der Bildung zu sichern und den Bedarf an qualifizierten Lehrkräften langfristig zu decken. Insbesondere im Fach Physik zeigt sich die Notwendigkeit neuer Ansätze in der Lehrkräftebildung. Alternative Modelle von Lehramtsstudiengängen können hierbei eine entscheidende Rolle spielen.\footnote{\url{https://zapfev.de/resolutionen/sose23/Lehramt/Resolution_zur_KMK_Lehrkraftmangel.pdf}}\footnote{\textit{KMK}, Maßnahmen zur Gewinnung zusätzlicher Lehrkräfte und zur strukturellen Ergänzung der Lehrkräftebildung (Beschluss der Kultusministerkonferenz vom 14.03.2024), \url{https://www.kmk.org/fileadmin/pdf/PresseUndAktuelles/2024/2024_03_14-Lehrkraeftebildung.pdf}}
+
+\begin{itemize}
+    \item \textit{Ein-Fach-Lehrkräfte als langfristige Lösung:} Ein vielversprechendes Modell ist die Qualifizierung zu Ein-Fach-Lehrkräften. Diese Maßnahme, die bereits von der Kultusministerkonferenz (KMK) aufgegriffen wurde, bietet die Möglichkeit, Lehrkräfte gezielt für ein einziges Fach auszubilden. Dies könnte besonders in Mangelfächern wie Physik eine effektive Lösung darstellen. Die Ein-Fach-Qualifizierung erlaubt es, den Fokus intensiv auf ein Fach zu legen und somit die fachliche und didaktische Expertise zu vertiefen.
+
+    \item \textit{Duales Lehramtsstudium:} Ein weiteres Modell ist das duale Lehramtsstudium. Dieses kombiniert theoretische und praktische Ausbildungselemente von Anfang an und integriert sie kontinuierlich. Studierende sind dabei frühzeitig in Schulen eingebunden und sammeln wertvolle Praxiserfahrung, die durch universitäre Lehre ergänzt wird. Solche Programme fördern nicht nur die Praxisnähe der Ausbildung, sondern auch eine stärkere Bindung der Studierenden an den Lehrerberuf.
+
+    \item \textit{Quereinstiegs-Masterstudium} Das Quereinstiegs-Masterstudium (Q-Master) stellt eine zusätzliche Möglichkeit dar, qualifizierte Fachkräfte aus anderen Berufsbereichen für den Lehrberuf zu gewinnen. Dieser Studiengang ist speziell für Absolvent*innen konzipiert, die bereits einen nicht-lehramtsbezogenen Hochschulabschluss besitzen und sich später für eine Lehrtätigkeit entscheiden. Durch klare Zugangsvoraussetzungen und einen wissenschaftsbasierten Aufbau gewährleistet der Q-Master eine qualitativ hochwertige Lehrkräftebildung.  
+\end{itemize}
+
+Die genannten Modelle bieten eine vielversprechende Perspektive, um dem Lehrkräftemangel langfristig entgegenzuwirken. Sie sind nicht nur kurzfristige Lösungen, sondern tragen zur strukturellen Ergänzung der Lehrkräftebildung bei und schaffen neue Wege in den Lehrberuf. Dabei wird ein besonderer Wert auf die wissenschaftliche Fundierung und die Verbindung von Theorie und Praxis gelegt, wie es auch in den Gutachten der Ständigen Wissenschaftlichen Kommission und des Wissenschaftsrats empfohlen wird.
+    
+Die Einführung und Weiterentwicklung alternativer Modelle in der Lehramtsausbildung, insbesondere in der Physik, kann langfristig zur Sicherung der Bildungsqualität beitragen. Ein-Fach-Lehrkräfte, duale Lehramtsstudiengänge und Quereinstiegs-Masterstudiengänge bieten neue und nachhaltige Wege, um den Bedarf an qualifizierten Lehrkräften zu decken und den Lehrerberuf attraktiver zu gestalten. Es bedarf jedoch einer engen Zusammenarbeit zwischen Hochschulen, Schulen und Bildungspolitik, um diese Modelle erfolgreich umzusetzen und ihre Potenziale voll auszuschöpfen. 
+Studiengänge, die für Lehramtsstudierende sind, sollten auch auf deren Bedürfnisse angepasst sein.\\
+
+\newpage   
+\textbf{Zu These 5: Das Lehramtsstudium muss konsequent auf den künftigen Lehrerberuf vorbereiten!}
+
+Aktuell gibt es an vielen Universitäten lehramtsspezifische Vorlesungen, die auf den ersten Blick speziell auf die Bedürfnisse von Lehramtsstudierenden zugeschnitten scheinen. Doch die bloße Bezeichnung als \glqq lehramtsspezifisch\grqq garantiert nicht automatisch, dass diese Vorlesungen tatsächlich den besonderen Anforderungen und Bedürfnissen dieser Zielgruppe gerecht werden, besonders wenn man bedenkt, dass 97\% der Lehramtsstudierenden angeben, später in Schulen arbeiten zu wollen.\footnote{\href{https://www.dpg-physik.de/veroeffentlichungen/publikationen/stellungnahmen-der-dpg/bildung-wissenschaftlicher-nachwuchs/dpg-stellungnahme-lehramtsstudium}{https://www.dpg-physik.de/veroeffentlichungen/publikationen/stellungnahmen-der-dpg/bildung-wissenschaftlicher-nachwuchs/dpg-stellungnahme-lehramtsstudium}}
+
+Fachvorlesungen, die explizit für Lehramtsstudierende konzipiert sind, sollten in Kooperation mit der Fachdidaktik erarbeitet werden und sich entsprechend den Bedürfnissen der Lehramtsstudierenden von allgemeinen Fachvorlesungen unterscheiden. Sie sollen didaktische und pädagogische Inhalte integrieren, praxisnahe Methoden vermitteln und auf die Herausforderungen des Schulalltags vorbereiten. Nur so kann sichergestellt werden, dass angehende Lehrkräfte nicht nur fachlich, sondern auch methodisch und pädagogisch bestens gerüstet in den Beruf starten. Eine reine Umbenennung von Kursen ohne Anpassung der Inhalte reicht nicht aus, um den speziellen Bedürfnissen der Lehramtsstudierenden gerecht zu werden.
+
+Die Einbindung physikalischer Teilbereiche wie Biophysik, Klimaphysik und Astrophysik im Lehramtsstudium sollte verstetigt werden, da sie ein großes Interesse bei Schüler*innen wecken. Diese Themen sollten nicht nur als Wahlfächer angeboten werden, sondern fest im Curriculum verankert sein.
+
+Zusätzlich sind Themen wie Wissenschaftskommunikation, -philosophie und -geschichte von großer Bedeutung. Sie könnten in bestehende Programme integriert werden, um angehende Lehrkräfte umfassend auszubilden. Diese Bereiche fördern ein tieferes Verständnis der Physik und ihrer gesellschaftlichen Relevanz, wodurch die zukünftigen Lehrkräfte befähigt werden, den Unterricht noch interessanter und relevanter zu gestalten.
+
+Durch die Verstetigung dieser Inhalte im Curriculum kann das Lehramtsstudium noch besser auf die Bedürfnisse der Schüler*innen eingehen und das Interesse an Naturwissenschaften nachhaltig fördern.\\
+
+\textbf{Zu These 6: Die Vielfalt der Zweitfächer muss anerkannt werden! \& zu These 7: Mathematische Methoden müssen innerhalb des Lehramtsstudiums Physik gelehrt werden!}
+    
+Physiklehramtsstudierende\footnote{sowie Studierende verwandter Modelle wie Bachelor of Arts}, die kein Zweitfach Mathematik belegen, sollten dennoch unter den gleichen Rahmenbedingungen studieren können, wie ihre Kommiliton*innen mit Mathematik als Zweitfach. Dies ist besonders wichtig in den Bereichen der theoretischen Physik und in Veranstaltungen, in denen mathematische Methoden gelehrt werden.
+
+In diesen Kursen muss darauf geachtet werden, dass die Inhalte so vermittelt werden, dass ihnen auch Studierende ohne tiefgehende mathematische Vorkenntnisse folgen können. Dabei darf kein zusätzlicher Mehraufwand für die Studierenden ohne Mathematik entstehen, indem keine Inhalte vorausgesetzt werden, die nicht Teil der Module dieses Studiums sind. Unterstützende Maßnahmen wie zusätzliche Tutorien oder Brückenkurse sollten so gestaltet sein, dass sie in den regulären Studienverlauf integriert sind und keine extra Belastung darstellen. Nur so kann gewährleistet werden, dass alle Physiklehramtsstudierenden gleichwertige Chancen haben, ihr Studium erfolgreich abzuschließen und bestens auf den Lehrberuf vorbereitet zu sein.\\
+
+\textbf{Zu These 8: Integrative Ansätze fördern!}
+
+Das Referendariat bildet als zweite Phase der Lehrkräfteausbildung den größten Teil der praktischen Ausbildung. Diese könnte jedoch viel besser auf das Lehramtsstudium angepasst werden, indem mehrere Maßnahmen ergriffen werden, um eine kohärente und praxisorientierte Ausbildung sicherzustellen. Dies könnte wie folgt umgesetzt werden:
+\begin{itemize}
+    \item \textit{Praxisnahe Seminare und Workshops:} Bereits im Studium sollten mehr praxisorientierte Veranstaltungen stattfinden, in denen Studierende konkrete Unterrichtssituationen simulieren und analysieren können.
+    \item \textit{Team-Teaching:} Gemeinsames Unterrichten von Studierenden und erfahrenen Lehrkräften, um von deren Erfahrung zu profitieren und praxisnahes Feedback zu erhalten.
+    \item \textit{Integrierte Praxisphasen:} Integration längerer Praxisphasen im Studium, die eng mit fachphysikalischen, fachdidaktischen und didaktischen Inhalten verzahnt sind und durch Universitäten und Schulen gemeinsam organisiert werden.
+    \item \textit{Praxisnetzwerke zur Verbesserung der Kommunikation zwischen Universitäten und Schulen:} Aufbau von Netzwerken, die Studierende, Seminarlehrkräfte, Lehrkräfte und Hochschuldozierende (Fachwissenschaft, Fachdidaktik und Erziehungwissenschaft) zusammenbringen, um kontinuierlich über Anforderungen und Herausforderungen des Schulalltags zu sprechen.
+    \item \textit{Strukturierte Feedbackprozesse:} Systematische Feedbackprozesse sowohl im Studium als auch im Referendariat, um eine kontinuierliche Weiterentwicklung der Lehrkompetenzen zu gewährleisten.
+    \item \textit{E-Learning-Angebote:} Entwicklung von E-Learning-Modulen, die praxisrelevante Themen wie Classroom-Management, Differenzierung und Inklusion behandeln und ergänzend zum Referendariat genutzt werden können um die Gestaltung des Unterrichts zu optimieren.
+\end{itemize}
+Durch diese Maßnahmen kann eine engere Verbindung zwischen den Inhalten des Lehramtsstudiums und deren Anwendung im Referendariat geschaffen werden, wodurch die Vorbereitung auf den Lehrberuf deutlich verbessert werden würde. 
+
+\theendnotes
+
+%\section*{Begründung}
+%yyyy
+
+%\vspace{1cm} 
+%
+\vfill
+\begin{flushright}
+	Verabschiedet am 20. Mai 2024 \\
+	auf der ZaPF in Kiel.
+\end{flushright}
+
+\end{document}
