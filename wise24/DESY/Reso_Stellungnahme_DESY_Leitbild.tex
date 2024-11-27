@@ -1,0 +1,182 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+%\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{url}
+%\usepackage{tocloft}             % Paket für Table of Contents
+\def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
+\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
+\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-}%
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+%\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+%\usepackage[scale=0.8,colorspec=0.9]{draftwatermark} % Wasserzeichen ``Entwurf''
+%\SetWatermarkText{Vorbehaltlich\\redaktioneller\\Änderungen}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{blue}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+\initcomment{Philipp}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+
+
+
+\begin{document}
+
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+	\vspace{-1.8cm}
+	\includegraphics[width=80pt]{../logos/logo.pdf}
+	\centering
+	\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \huge{Stellungnahme der ZaPF zur möglichen Änderung des DESY-Leitbildes}\vspace{.25\baselineskip}\\
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+%%%% Metadaten %%%%
+
+%\paragraph{Adressierte:} xyx
+
+
+%\paragraph{Antragstellende:} xxx
+
+%%%% Text des Antrages zur veröffentlichung %%%%
+
+%\section*{Antragstext}
+
+Die Zusammenkunft aller Physik-Fachschaften (ZaPF) sieht die mögliche Anpassung des Leitbildes des Deutschen Elektronen-Synchrotron (DESY) kritisch.
+
+Die diskutierte Änderung würde Forschung ermöglichen, die nicht ausschließlich zivilen Zwecken dient. Die ZaPF hat sich bisher immer für den Erhalt und die Schaffung von Zivilklauseln eingesetzt und lehnt diesen und weitere Versuche, die Trennung von militärischer und ziviler Forschung aufzuheben, ab.
+
+\section*{Unsere Bedenken}
+
+Als eines der größten Forschungszentren Deutschlands hat das DESY eine
+richtungsweisende Funktion für die gesamte deutsche Forschungslandschaft. Die
+diskutierten Änderungen hätten direkte Auswirkungen auf Physikstudierende:
+\begin{itemize}
+    \item Viele Studierende sind als wissenschaftliche Hilfskräfte am DESY beschäftigt und wären durch die diskutierte Änderung unfreiwillig an nicht ziviler Forschung beteiligt.
+    %\item Auch abseits von Anstellungsverhältnissen sind zahlreiche Studierende im Rahmen ihrer Abschlussarbeiten am DESY involviert und damit ebenfalls potentiell an nicht ziviler Forschung beteiligt.
+    \item Auch abseits von Anstellungsverhältnissen sind zahlreiche Studierende im Rahmen ihrer Abschlussarbeiten am DESY involviert und damit ebenfalls potentiell an nicht ziviler Forschung beteiligt.
+    \item Besonders für Studierende ohne deutsche Staatsbürgerschaft könnte eine solche Neuausrichtung erhebliche Risiken für ihre Karriereplanung bedeuten.
+\end{itemize}
+
+Dieser Vorstoß steht dabei im Kontext einer Reihe von Angriffen auf Zivilklauseln: Sowohl die Bundesregierung als auch das Bundesministerium für Bildung und Forschung fordern, die Trennung von ziviler und militärischer Forschung zu hinterfragen und im Gegensatz sogar potentiell finanzielle Anreize zur Verbindung zu schaffen.\footnote{\url{https://www.bmbf.de/bmbf/shareddocs/kurzmeldungen/de/2024/03/240311-positionspapier-forschungssicherheit.html}} In Bayern wurden zuletzt Zivilklauseln für Hochschulen ganz verboten.\footnote{\url{https://www.verkuendung-bayern.de/files/gvbl/2024/14/gvbl-2024-14.pdf\#page=13}} 
+
+Wie die ZaPF in der Vergangenheit bereits gefordert hat, ist es notwendig, dass die Hochschulen, aber auch (außeruniversitäre) Forschungseinrichtungen einen Beitrag zu einer gerechten, nachhaltigen, friedlichen und demokratischen Welt leisten.
+
+\section*{Unsere Forderung}
+\begin{itemize}
+    \item Erhalt der Selbstverpflichtung zu ziviler Forschung
+    \item Mehr Transparenz im Entscheidungsprozess
+    \item Einen proaktiven Dialog mit der Studierendenschaft
+    \item Frühzeitige Einbindung studentischer Perspektiven bei grundlegenden
+strategischen Entscheidungen
+\end{itemize}
+
+Eine Entscheidung von solcher Tragweite für die Zukunft der deutschen Forschungslandschaft sollte transparent und mit umfassender Beteiligung aller Betroffenen (Studierende wie Mitarbeitende) gefällt werden. Die ZaPF fordert entsprechend unserer bisherigen Resolutionen, dass sich das DESY an die Zivilklausel hält.
+
+%\section*{Begründung}
+%yyyy
+
+%\vspace{1cm} 
+%
+\vfill
+\begin{flushright}
+	Verabschiedet am 02. November 2024 \\
+	auf der ZaPF in Mainz.
+\end{flushright}
+
+\end{document}
