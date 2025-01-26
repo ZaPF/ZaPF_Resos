@@ -1,0 +1,164 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+%\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{url}
+%\usepackage{tocloft}             % Paket für Table of Contents
+\def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
+\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
+\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-}%
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+%\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+% \usepackage[scale=0.8,colorspec=0.9]{draftwatermark} % Wasserzeichen ``Entwurf''
+% \SetWatermarkText{Vorbehaltlich\\redaktioneller\\Änderungen}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{blue}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+\initcomment{Philipp}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+
+
+
+\begin{document}
+
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+	\vspace{-1.8cm}
+	\includegraphics[width=80pt]{../logos/logo.pdf}
+	\centering
+	\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \huge{Resolution zum D-Ticket JugendBW}\vspace{.25\baselineskip}\\
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+%%%% Metadaten %%%%
+
+%\paragraph{Adressierte:} xyx
+% Adressat*innen:
+% Landesregierung BW,
+% Verkehrsministerium BW,
+% Verkehrspolitische Sprecher im Landtag BW,
+% Städtetag Baden-Württemberg,
+% Im Landtag BW vertretene Fraktionen
+% Zur info: LAK BaWü  %Aus Mail, nicht aus Beschlussfassung
+
+%\paragraph{Antragstellende:} xxx
+
+%%%% Text des Antrages zur veröffentlichung %%%%
+
+%\section*{Antragstext}
+Die ZaPF begrüßt die Existenz des vergünstigten, deutschlandweit gültigen D-Ticket JugendBW für Studierende. In Ergänzung zu der Resolution zur Preiserhöhung des deutschlandweiten Semestertickets\footnote{\url{https://zapfev.de/resolutionen/wise24/Deutschlandticket/Reso_Deutschlandticket.pdf}} äußert sich die ZaPF besorgt über die jüngste Preiserhöhung des Deutschlandtickets auf 58\,€. Leider wirkt sich diese Preiserhöhung auch auf das D-Ticket JugendBW aus. Die Erhöhung wird in Baden-Württemberg vollständig an die Nutzer*innen inklusive Studierender weitergegeben. Dies bedeutet einen Anstieg von 30,42\,€ auf 39,42\,€ pro Monat\footnote{\url{https://vm.baden-wuerttemberg.de/de/mobilitaet-verkehr/oepnv/verkehrsverbuende-tarife/alles-zum-d-ticket-jugendbw}}\footnote{\url{https://www.baden-wuerttemberg.de/de/service/presse/pressemitteilung/pid/preisanpassung-beim-d-ticket-jugendbw-vorbereitet-1}}. Das entspricht einer Preissteigerung von rund 30\% gegenüber dem bisherigen Preis von 30,42\,€, welche deutlich über der Inflationsrate liegt und die prozentuale Erhöhung des BAföG-Satzes übersteigt. Dies ist insbesondere für finanziell schlechter aufgestellte Studierende, die von dem Ticket abhängig sind, nicht zumutbar. Daher fordert die ZaPF den Preisanstieg abzufedern und die Mobilität der Studierenden weiterhin zu gewährleisten. Dazu gehören insbesondere auch stabile Preise, die eine langfristige finanzielle Planbarkeit für Studierende ermöglichen.
+
+Die ZaPF lehnt jegliche Erhöhung der Semesterticketpreise ab, vor allem, wenn diese höher als in anderen Bundesländern ausfällt.
+
+Des Weiteren kritisiert die ZaPF, dass Studierende, die über 27\,Jahre alt sind, in Baden-Württemberg von der Möglichkeit des Erwerbs eines D-Ticket JugendBW ausgenommen sind. Gerade nach der jüngsten Preiserhöhung für das Deutschlandticket ist die finanzielle Belastung für diese Studierenden viel zu groß geworden. Wir fordern daher die Abschaffung der willkürlichen Altersgrenze für das D-Ticket JugendBW, um auch Studierenden über 27 eine bezahlbare Nutzung des ÖPNV zu ermöglichen.
+
+Abschließend ist die anfängliche Mindestvertragslaufzeit des D-Ticket JugendBW von einem Jahr zu kritisieren. Die ZaPF fordert bei dem D-Ticket JugendBW wie bei dem normalen Deutlschlandticket eine von Vertragsbeginn an monatliche Kündigung zu ermöglichen.
+
+%\section*{Begründung}
+%yyyy
+
+%\vspace{1cm} 
+%
+\vfill
+\begin{flushright}
+	Verabschiedet am 02. November 2024 \\
+	auf der ZaPF in Mainz.
+\end{flushright}
+
+\end{document}

@@ -1,0 +1,187 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+%\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{url}
+%\usepackage{tocloft}             % Paket für Table of Contents
+\def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
+\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
+\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-}%
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+%\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+% \usepackage[scale=0.8,colorspec=0.9]{draftwatermark} % Wasserzeichen ``Entwurf''
+% \SetWatermarkText{Vorbehaltlich\\redaktioneller\\Änderungen}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{blue}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+\initcomment{Philipp}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+
+
+
+\begin{document}
+
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+	\vspace{-1.8cm}
+	\includegraphics[width=80pt]{../logos/logo.pdf}
+	\centering
+	\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \huge{Positionspapier der ZaPF zum Entwurf zur Reform des Wissenschaftszeitvertragsgesetzes}\vspace{.25\baselineskip}\\
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+%%%% Metadaten %%%%
+
+%\paragraph{Adressierte:} xyx
+
+
+%\paragraph{Antragstellende:} xxx
+
+%%%% Text des Antrages zur veröffentlichung %%%%
+
+%\section*{Antragstext}
+Die Zusammenkunft aller Physikfachschaften (ZaPF) stellt fest, dass der vorliegende Gesetzentwurf für die Novelle des Wissenschaftszeitvertragsgesetzes (WissZeitVG) nur Detailverbesserungen anbietet.
+Der für eine tatsächliche Lösung notwendige Paradigmenwechsel bleibt jedoch aus.
+
+Der künstlich hervorgerufene regelmäßige Generationswechsel auf wissenschaftlichen Stellen unterhalb der Professur ist aus Sicht der ZaPF nicht notwendig, um ein Umfeld für exzellente Forschung und Lehre zu schaffen. Im Ergebnis wirkt sich der ständige Personalwechsel sogar zwangsläufig negativ auf die Kontinuität von Lehre und langfristigen Forschungsvorhaben und Innovation aus \footnote{\url{https://zapfev.de/resolutionen/sose17/mittelbau/mittelbau.pdf}}. Dies liegt nicht zuletzt an der erhöhten psychischen und sozialen Belastung durch die Planungsunsicherheit der eigenen Lebensführung.
+
+Die Änderung des §6 wird von der ZaPF grundsätzlich positiv bewertet. Die Festlegung der Mindestvertragslaufzeit auf ein Jahr schafft ein grundlegendes Maß an Planungssicherheit für Studierende, die oftmals auf eine Beschäftigung während des Studiums angewiesen sind. Analog zu \footref{note2} fordert die ZaPF eine Mindestvertragslauftezeit von zwei Jahren. Die Verlängerung der maximalen Befristungsdauer auf acht Jahre trägt zudem der durchschnittlichen tatsächlichen Studiendauer Rechnung, die im MINT-Bereich oft deutlich höher als die Regelstudienzeit ist. Die ZaPF kritisiert jedoch, dass die Änderung die Situation von Studierenden nicht berücksichtigt, die, etwa wegen familiärer oder Pflegeaufgaben, in Teilzeit studieren oder bereits anderweitig an einer Hochschule beschäftigt waren. Insbesondere für diese Personengruppe wäre es wünschenswert, die maximale Befristungsdauer nicht absolut festzulegen. Weiterhin wäre eine Klarstellung, dass hier nur Befristungen nach WissZeitVG, nicht aber nach TzBfG, gemeint sind, wünschenswert. Hier könnte eine analoge Formulierung zu §1 Abs. 2 gewählt werden. 
+
+Die ZaPF vertritt die Ansicht, dass in Anlehnung an den europäischen Rechtsrahmen die Promotion die höchste erreichbare wissenschaftliche Qualifikation darstellen soll. Wissenschaftler*innen, die eine Promotion erworben haben, sind hinreichend qualifiziert um eigenverantwortlich hochwertige Forschung und Lehre durchzuführen. In diesem Zusammenhang fordern wir weiterhin wie in unserer Resolution vom 13.\,November 2022 \footnote{\url{https://zapfev.de/resolutionen/wise22/WissZeitVG/Resolution\_zur\_Novellierung\_des\_WissZeitVG.pdf} \label{note2}}, den Begriff der Qualifikation beziehungsweise des Qualifikationsziels in diesem Sinne legal zu definieren.
+
+
+% \newpage
+
+
+Die Zeit der Promotion ist derzeit oftmals von Kettenbefristungen geprägt, deren Vertragslaufzeiten nicht im Verhältnis zur Dauer einer Promotion stehen. Der Vorschlag einer Mindestvertragsdauer von 3\,Jahren ist damit als Fortschritt zu sehen. Jedoch sollten Mindestvertragslaufzeiten eine Muss-Regelung sein. Der aktuelle Vorschlag liegt zudem deutlich unter der aktuellen durchschnittlichen Promotionsdauer in Deutschland von 5,7\,Jahren \footnote{Beiträge zur Hochschulforschung, Heft 1, 24.\,Jahrgang, 2002} \footnote{Bundesbericht Wissenschaftlicher Nachwuchs 2021}, die zudem stark disziplinabhängig ist. Wir fordern daher weiterhin diesem Umstand durch eine der zwei Möglichkeiten Rechnung zu tragen:
+\begin{itemize}
+    \item Zum einen kann durch eine Zweckbefristung die Vertragslaufzeit an das
+Erreichen des Qualifikationsziels Promotion gekoppelt werden.
+    \item Alternativ könnte zu Beginn der Promotion eine Mindestvertragslaufzeit
+von vier Jahren festgeschrieben werden mit der Möglichkeit der Verlängerung um
+zunächst zwei Jahre.
+\end{itemize}
+Da die Befristung zur Promotion aufgrund der Qualifizierung erfolgt, muss diese auch im Rahmen der regulären Arbeitszeit, also grundsätzlich auf Vollzeitstellen, erfolgen. Dies ist gerade auch mit Blick auf die Arbeitszeiterfassung und den Versicherungsschutz notwendig.
+
+Nach der Promotion sollte der Regelfall eine unbefristete Stelle sein, die dazu beiträgt, die Erfüllung von Daueraufgaben in Lehre und Forschung zu gewährleisten. Deshalb fordern wir, dass qualifizierungsbefristete Stellen nur bis zum Erreichen des Qualifikationsziels Promotion möglich sein sollen. Eine berufliche Weiterentwicklung mit der Übernahme von Leitungs- und Managementfunktionen hin zu einer Professur kann dann in Rahmen von Berufungsverfahren an exzellente Lehr- und Forschungsleistungen gekoppelt werden. Damit werden die Rahmenbedingungen in der Wissenschaft an den normalen Arbeitsmarkt angepasst. Durch die größeren finanziellen Möglichkeiten der Privatwirtschaft, unterschiedlichen beruflichen Vorstellungen sowie persönliche und familiäre Entwicklungen ist damit zu rechnen, dass weiterhin im großen Umfang Austausch in den Dauerstellen für wissenschaftliche Aufgaben stattfinden wird. Darüberhinaus sind Schwankungen bei der beruflichen Entwicklung immer zugunsten der Aufhebung prekärer Arbeitsverhältnisse in Kauf zu nehmen.
+
+Grundsätzlich ist nicht einzusehen, weshalb wissenschaftlich Mitarbeitende das unternehmerische Risiko der Hochschulen tragen. Deshalb müssen Dauerstellen auch für die Bearbeitung von Projekten die Regel werden. Hierfür ist die Möglichkeit des Drittmittel-Poolings rechtlich zu verankern.
+
+Der vorgesehene Vorrang der Qualifizierungs- vor der Drittmittelbefristung ist in Bezug auf die Vorteile des §2 Absatz 5 zu begrüßen. Jedoch ergibt sich das Problem, dass die Kopplung der Vertragslaufzeiten an die Laufzeit der Projektmittel verloren geht. Das ist insofern problematisch, da die meisten Projektlaufzeiten über den vorgesehenen Mindestvertragslaufzeiten von drei bzw. zwei Jahren liegen. Hier wäre es sinnvoller, die Regelungen des §2 Absatz 5 auf die Befristung nach §3 auszudehnen.
+
+Die vorgeschlagene 4+2-Regelung wird die Situation im PostDoc-Bereich aus unserer Sicht verschlechtern, weil sie de facto den Status quo verkürzen werden. Der Flaschenhals zu den begrenzten unbefristeten Stellen im akademischen Kontext bleibt gleich. Wenn, dann muss unmittelbar nach der Promotion bei einer weiteren Befristung direkt die Anschlusszusage erfolgen oder gleich unbefristet eingestellt werden und nicht vier Jahre später. Die Zielvereinbarung zur Entfristung muss umsetzbar sein. Bspw. ist eine Habilitation in zwei Jahren nicht erreichbar. Deswegen erwarten wir von dem Gesetzgeber klare Regelungen.
+
+Auch ist eine Habilitation i.d.R. nicht das eigentliche Ziel, sondern nur Mittel zum Zweck, nämlich dem Verbleib in der Wissenschaft in Form einer Professur. Hier erwarten wir uns sinnvolle Alternativen durch unbefristete Stellen in der Wissenschaft.
+
+Weiterhin begrüßt die ZaPF die Öffnung des WissZeitVG für die Festlegung abweichender Regelungen durch Tarifverträge. Der neu gefasste §1 Abs.\,1 bietet insbesondere die Möglichkeit, stärker auf soziale Härten und persönliche Umstände der betroffenen Personen einzugehen. Wo diese weiterhin nötig ist, soll jedoch auch die maximal zulässigen Befristungsdauer durch tarifliche Vereinbarungen möglich sein. Die ZaPF fordert zudem, dass die sogenannte Tarifsperre in § 1 Abs.\,1 Satz 2 WissZeitVG entfällt. Zudem soll auch für studentische Beschäftigte ein Tarifvertrag angestrebt werden.
+
+Eine Evaluation in 2030 kommt zu spät. Wir plädieren für eine begleitende wissenschaftliche Forschung und einen Abschluss der Evaluation spätestens 4 Jahre nach Inkraftreten der Novelle. Als Zusammenkunft aller Physikfachschaften unterstützen wir zudem das gemeinsame Statement mit klaren Forderungen für eine WissZeitVG-Novelle \footnote{\url{https://www.dgb.de/-/TVP}}.
+
+%\section*{Begründung}
+%yyyy
+
+%\vspace{1cm} 
+%
+\vfill
+\begin{flushright}
+	Verabschiedet am 02. November 2024 \\
+	auf der ZaPF in Mainz.
+\end{flushright}
+
+\end{document}
