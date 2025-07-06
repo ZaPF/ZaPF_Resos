@@ -1,0 +1,191 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+%\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{url}
+%\usepackage{tocloft}             % Paket für Table of Contents
+\def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
+\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
+\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-}%
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+%\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+%\usepackage[scale=0.8,colorspec=0.9]{draftwatermark} % Wasserzeichen ``Entwurf''
+%\SetWatermarkText{Vorbehaltlich\\redaktioneller\\Änderungen}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{blue}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+%###############
+\initcomment{Philipp}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+\begin{document}
+
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+	\vspace{-1.8cm}
+	\includegraphics[width=80pt]{../logos/logo.pdf}
+	\centering
+	\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \huge{Positionspapier zum \glqq Umfang von Bachelorarbeiten im Physikstudium\grqq{}}
+  \vspace{.25\baselineskip}
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+%%%% Metadaten %%%%
+
+%\paragraph{Adressierte:} xyx
+
+
+%\paragraph{Antragstellende:} xxx
+
+%%%% Text des Antrages zur veröffentlichung %%%%
+
+
+%\section*{Antragstext}
+Die Bachelorarbeit stellt für Studierende einen zentralen Bestandteil des Bachelorstudiums dar. Sie dient insbesondere dazu, die Fähigkeit zum wissenschaftlichen Arbeiten zu erlernen und anzuwenden. In diesem Positionspapier nimmt die ZaPF Stellung zu Rahmenbedingungen und zeitlichem Umfang der Bachelorarbeit, um akademischen Anspruch mit realistischen Arbeitsbelastungen in Einklang bringen.\\
+
+\textbf{1. Ziel einer Bachelorarbeit}\\
+Das primäre Ziel einer Bachelorarbeit ist das Erlernen wissenschaftlichen Arbeitens. Daher sollen Methodik, Herangehensweise und deren Dokumentation, sowie Reflexion im Vordergrund stehen. Eine Arbeit muss auch dann positiv bewertet werden können, wenn die ursprünglichen Forschungsziele nicht erreicht wurden. Vielmehr ist die kritische Auseinandersetzung mit dem eigenen Vorgehen und eventuellen Schwierigkeiten ein essenzieller Bestandteil wissenschaftlichen Arbeitens. \\
+
+\textbf{2. Zeitlicher Umfang und Bearbeitungszeit}\\
+Die Bearbeitungszeit der Bachelorarbeit soll sich klar an den mit ihr verbundenen Leistungspunkten (ECTS) orientieren. Hierbei ist die Stundenanzahl entscheidender, als die Länge des Bearbeitungszeitraums.
+Der zeitliche Umfang, in dem die Bearbeitungszeit geleistet wird, sollte sich auf sechs Monate - also ein Semester - belaufen. Dies ermöglicht es, weitere Module in diesem Semester mit flexibler zeitlicher Einteilung abzuschließen.\\
+
+\textbf{3. Verlängerung des Bearbeitungszeitraums}\\
+Eine Verlängerung des Bearbeitungszeitraums muss möglich sein, um eventuelle Beeinträchtigungen ausgleichen zu können.\\ Folgende Regelungen sind dafür notwendig:
+\begin{itemize}
+\item \textbf{Krankheit:} Bei krankheitsbedingter Verhinderung muss eine unbegrenzte Verlängerung für die Dauer der Krankheit möglich sein.
+\item \textbf{Persönliche Umstände:} Bei persönlichen Umständen (Pflege von Angehörigen, Kinderbetreuung, Beeinträchtigungen, Studienfinanzierung etc.) sollte die Gesamtarbeitszeit in Stunden eingehalten, aber über einen längeren Zeitraum verteilt werden können.
+\item \textbf{Strukturelle und technische Gründe:} Verlängerungen aufgrund von Faktoren außerhalb des Einflussbereichs der Studierenden (defekte oder fehlende Geräte, vorübergehende Abwesenheit der Betreuungsperson, fehlende Verfügbarkeit von Ressourcen etc.) sollten im Umfang von 25\,\% der ursprünglichen Bearbeitungszeit
+gewährt werden.
+\end{itemize}
+
+\textbf{4. Voraussetzungen für die Anmeldung}\\
+Die formalen Voraussetzungen für die Anmeldung einer Bachelorarbeit dürfen 120\,ECTS nicht überschreiten. Dies entspricht zwei Dritteln des Studiums und ermöglicht eine flexible Studienplanung, während die Studierenden zeitgleich fachliche Grundlagen für das Erstellen einer Bachelorarbeit besitzen. \\
+
+\textbf{5. Keine Zwangsanmeldung}\\
+Eine Zwangsanmeldung zur Bachelorarbeit lehnt die ZaPF entschieden ab. Studierende müssen selbst entscheiden können, wann sie sich in der Lage sehen, eine Abschlussarbeit anzufertigen. Eine verpflichtende Anmeldung nach einer bestimmten Studiendauer oder bei Erreichen einer bestimmten Anzahl an Leistungspunkten führt zu erheblichen Belastungen, insbesondere bei Studierenden mit erschwerten Studienbedingungen. \\
+
+\textbf{6. Vorarbeit und Themenfindung}\\
+Vor der offiziellen Anmeldung sollte keine inhaltliche Arbeit an der Bachelorarbeit geleistet werden. Eine allgemeine Einarbeitung in das Themengebiet (Literaturrecherche, Erlernen grundlegender Methoden) sollte vor der Anmeldung jedoch möglich sein, um eine fundierte Themenfindung sicherzustellen.\\
+
+\textbf{7. Rückgabe des Themas}\\
+Studierende müssen die Freiheit haben, ein Thema nach intensiverer Auseinandersetzung als ungeeignet zu erkennen. Daher muss die folgenlose Rückgabe eines gewählten Themas ohne Angabe von Gründen möglich sein. Eine Frist von vier Wochen nach der Anmeldung ist hierfür geeignet.\\
+
+\textbf{8. Voraussetzungen für die Abgabe}\\
+Die Abgabe sollte spätestens mit dem Ende der festgelegten Bearbeitungszeit erfolgen und nicht an das Erreichen bestimmter wissenschaftlicher Ergebnisse geknüpft sein.
+Eine Bachelorarbeit muss auch dann abgeschlossen werden können, wenn die ursprüngliche Forschungsfrage nicht positiv beantwortet werden konnte oder unerwartete Hindernisse auftraten, da das Ziel der Bachelorarbeit im Erwerb und der Anwendung wissenschaftlicher Methodiken liegt. 
+
+%\section*{Begründung}
+
+%Die Regelungen zum Umfang von Bachelorarbeiten sind je nach Uni extrem verschieden. Auf der KFP wurde das KomGrem gefragt, was die Meinung von Studierenden zu dem Thema ist. Aus dieser Diskussion ist der vorliegende Entwurf für ein Positionspapier entstanden.
+
+
+
+
+%\section*{Begründung}
+
+
+\vspace{1cm} 
+%
+\vfill
+\begin{flushright}
+	Verabschiedet am 04. Mai 2025 \\
+	auf der ZaPF in Erlangen.
+\end{flushright}
+
+\end{document}

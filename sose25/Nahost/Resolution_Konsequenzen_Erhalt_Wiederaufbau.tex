@@ -1,0 +1,188 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+%\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{url}
+%\usepackage{tocloft}             % Paket für Table of Contents
+\def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
+\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
+\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-}%
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+%\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+%\usepackage[scale=0.8,colorspec=0.9]{draftwatermark} % Wasserzeichen ``Entwurf''
+%\SetWatermarkText{Vorbehaltlich\\redaktioneller\\Änderungen}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{blue}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+%###############
+\initcomment{Philipp}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+\begin{document}
+
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+	\vspace{-1.8cm}
+	\includegraphics[width=80pt]{../logos/logo.pdf}
+	\centering
+	\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \huge{Resolution: Konsequenzen ziehen für den Erhalt und Wiederaufbau der palästinensischen Wissenschaft und Kultur}
+  \vspace{.25\baselineskip}
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+%%%% Metadaten %%%%
+
+%\paragraph{Adressierte:} Auswärtiges Amt, BMBF, Fraktionen des Bundestags außer AfD, fzs, GEW, ver.di, Asten und Hochschulleitungen aller deutschen Hochschulen,DPG
+
+
+%\paragraph{Antragstellende:} xxx
+
+%%%% Text des Antrages zur veröffentlichung %%%%
+
+
+%\section*{Antragstext}
+Im Mai 2024 hat sich die ZaPF dafür ausgesprochen, \glqq zivile Wissenschaftskooperationen zu allen Konfliktparteien [des Nahostkonflikts] einzugehen\grqq{}, welche \glqq perspektivisch den Wiederaufbau der Bildungseinrichtungen und des Bildungswesens im Gazastreifen aktiv unterstützen\grqq{}.\footnote{\label{note1}\url{https://zapfev.de/resolutionen/sose24/International/Reso_Wisskoop_Nahost.pdf}}
+
+Nun dauert der Krieg schon länger als anderthalb Jahre und die UN warnt seit einem Jahr vor einem Scholastizid in Gaza. Dabei handelt es sich um eine systematische Zerstörung des Bildungssystems, die auch das gezielte Töten seiner Mitglieder beinhaltet.
+
+Kultureinrichtungen wie Büchereien und Gedenkstätten sind ebenfalls von starker Zerstörung betroffen.\footnote{\label{note2}\url{https://www.ohchr.org/en/press-releases/2024/04/un-experts-deeply-concerned-over-scholasticide-gaza}} Zu den zahlreichen getöteten Wissenschaftler*innen gehört unter anderem der ehemalige Rektor der Islamic University und renommierte Physiker Sufyan Tayeh.\footnote{\label{note3}\url{https://www.ictp.it/news/2023/12/memoriam}}
+
+Der Konflikt hat sich mittlerweile massiv ausgeweitet, wobei auch die israelische Besatzung des Westjordanlands intensiviert wurde. Dort wurden verstärkt israelische Checkpoints eingerichtet, die die Mobilität der ansässigen Palästinenser*innen erheblich einschränken und ihnen somit bereits die Anreise zu Schulen und Universitäten erschweren oder gänzlich verbieten.\footnote{\label{note4}\url{https://taz.de/Studieren-im-Westjordanland/!6019506/}} Eine Teilhabe am Bildungssystem wird ihnen dadurch effektiv unmöglich gemacht.
+
+Im israelischen Parlament ist die Diskussion nun bis hin zu Forderungen zur vollständigen Annexion des Westjordanlandes
+eskaliert.\footnote{\label{note5}\url{https://www.bbc.co.uk/news/articles/cvgx3zjvjg3o.amp}} Auch im Libanon führt die Israelische Armee seit Oktober 2024 Bombenangriffe durch, welche bei einigen libanesischen Universitäten zu einem Aussetzen des regulären Betriebs über Monate führte.\footnote{\label{note6}\url{https://www.aub.edu.lb/emergency/Documents/message-to-students-oct-4.pdf}}
+
+\newpage 
+Der Konflikt hatte zudem zur Folge, dass 30 Prozent der israelischen Studierenden zwischenzeitlich als Reservist*innen von ihrem Studium abgehalten wurden.\footnote{\label{note7}\url{https://www.timesofisrael.com/released-idf-reservists-head-back-to-school-but-not-everything-is-a-matter-of-course}}
+
+Hiermit erhält der Großteil einer gesamten Generation in den betroffenen Ländern - Millionen von Menschen - keinen oder nur einen unzureichenden Zugang zu Bildung. Außerdem geht durch die starke Zerstörung ein großer Teil der Kultur verloren.\footnote{\label{note8}\url{https://staff.najah.edu/media/published_research/2025/02/05/Heritage_of_Gaza_-_Copy.pdf}}\footnote{\label{note9}\url{https://carnegieendowment.org/sada/2024/02/vanishing-ink-palestinian-culture-under-threat-in-gaza?lang=en}}
+
+Diese Entwicklungen werden jahrzehntelange verheerende Folgen haben. Einerseits schwindet in den zerstörten Gebieten die Hoffnung auf ein besseres Leben, welche Bildung generell, aber in einer verarmten Gesellschaft umso mehr verspricht.
+Andererseits geht mit der eingeschränkten Teilhabe an Bildung auch deren emanzipatorisches Potential verloren, da sie die Möglichkeit bietet, durch Aufklärung und Begegnung Feindbilder zu überwinden und auf Perspektiven des Friedens hinzuarbeiten.
+
+Dementsprechend erachtet die ZaPF einen sofortigen Waffenstillstand in Gaza und im Libanon, sowie ein Ende der Besatzung des Westjordanlands, inklusive der Rückgabe bereits besiedelter und de-facto annektierter Gebiete, für notwendig, um weitere Verluste im Bildungssystem und in der Kultur zu verhindern und langfristige Friedensbestrebungen im Nahen Osten zu ermöglichen. Zur Umsetzung eines Waffenstillstands sollte von jeglichen weiteren Waffenlieferungen nach Israel abgesehen werden.
+
+Weiterhin bekräftigt die ZaPF ihre letzte Resolution zum Nahostkonflikt\footref{note1} und unterstreicht die Relevanz von Wissenschaftskooperationen als Maßnahme der Völkerverständigung. Als direkte Handlungsoption empfiehlt sie eine Teilnahme an der Initiative der Universität Bir Zait, die u.a. Studierende aus Gaza an andere Universitäten weltweit vermittelt, damit sie ihr Studium dort fortführen können.\footnote{\label{note10}\url{https://www.birzeit.edu/en/rebuilding-hope}}
+
+Die Initiative kann am einfachsten unterstützt werden, indem den Studierenden aus Gaza digitale Studienunterlagen bereitgestellt werden und ein Zugang zu Onlineveranstaltungen ermöglicht wird. Hierfür sollten sich die Bundesregierung und
+alle wissenschaftlichen Einrichtungen einsetzen.
+
+%Quellen:\\
+%[1]\url{https://zapfev.de/resolutionen/sose24/International/Reso_Wisskoop_Nahost.pdf}\\
+%[2]:\url{https://www.ohchr.org/en/press-releases/2024/04/un-experts-deeply-concerned-over-scholasticide-gaza}\\
+%[3]:\url{https://www.ictp.it/news/2023/12/memoriam}\\
+%[4]:\url{https://taz.de/Studieren-im-Westjordanland/!6019506/}\\
+%[5]:\url{https://www.bbc.co.uk/news/articles/cvgx3zjvjg3o.amp}\\
+%[6]:\url{https://www.aub.edu.lb/emergency/Documents/message-to-students-oct-4.pdf}\\
+%[7]:\url{https://www.timesofisrael.com/released-idf-reservists-head-back-to-school-but-not-everything-is-a-matter-of-course/}\\
+%[8]:\url{https://staff.najah.edu/media/published_research/2025/02/05/Heritage_of_Gaza_-_Copy.pdf}\\
+%[9]:\url{https://carnegieendowment.org/sada/2024/02/vanishing-ink-palestinian-culture-under-threat-in-gaza?lang=en}\\
+%[10]:\url{https://www.birzeit.edu/en/rebuilding-hope}\\
+
+%\section*{Begründung}
+
+
+\vspace{1cm} 
+%
+\vfill
+\begin{flushright}
+	Verabschiedet am 04. Mai 2025 \\
+	auf der ZaPF in Erlangen.
+\end{flushright}
+
+\end{document}

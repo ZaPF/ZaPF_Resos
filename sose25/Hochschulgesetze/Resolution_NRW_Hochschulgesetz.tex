@@ -1,0 +1,219 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+%\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{url}
+%\usepackage{tocloft}             % Paket für Table of Contents
+\def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
+\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
+\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-}%
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+%\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+%\usepackage[scale=0.8,colorspec=0.9]{draftwatermark} % Wasserzeichen ``Entwurf''
+%\SetWatermarkText{Vorbehaltlich\\redaktioneller\\Änderungen}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{blue}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+%###############
+\initcomment{Philipp}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+
+
+
+\begin{document}
+
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+	\vspace{-1.8cm}
+	\includegraphics[width=80pt]{../logos/logo.pdf}
+	\centering
+	\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \huge{NRW-Hochschulgesetz: Internationalismus,
+Allgemeinwohl und Entwicklung statt Geopolitik,
+Arbeitgeberorientierung und Restriktionen!}\vspace{.25\baselineskip}\\
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+%%%% Metadaten %%%%
+
+%\paragraph{Adressierte:} xyz
+
+%\paragraph{Antragstellende:} xxx
+
+%%%% Text des Antrages zur veröffentlichung %%%%
+
+%\section*{Antragstext}
+
+Bereits vor rund einem Jahr hat die ZaPF zu den Eckpunkten zur Novellierung des NRW-Hochschulgesetzes Stellung genommen. Ein Teil dieser nach wie vor weitgehend aktuellen Stellungnahme, insbesondere die Punkte zur reformierten
+Studieneingangsphase, wurde im aktuellen Referentenentwurf aufgegriffen. Viele andere Punkte wurden allerdings ignoriert oder nur unzureichend berücksichtigt. Es herrscht weiterer Nachbesserungsbedarf.
+Unabhängig davon werden mit dem Referentenentwurf jedoch zwei weitere Vorhaben deutlich, die in den bisherigen Eckpunkten nicht deutlich wurden, und die von der ZaPF aufs Schärfste kritisiert werden: Die \glqq Zeitenwenden\grqq-kompatible Uminterpretation von Zivilklauseln, sowie eine Verschärfung des Ordnungsrechts, welche in Kombination mit dem neuen Sicherungs- und Redlichkeitsrecht ein abwegiges Regime aus Angst und Denunziant*innentum provoziert. \\
+
+\textbf{Zivilklausel}\\
+Der Gesetzesentwurf gibt in § 3 Abs. 7 den Hochschulen optional die Möglichkeit, eine Zivilklausel zu regeln. Allerdings ist die Aufgabe, zu Frieden, Demokratie und Nachhaltigkeit beizutragen, kein optionaler Luxus, sondern existenziell und muss daher für alle gelten. Zudem stellt eine feste, gesetzliche Verankerung auch sicher, dass für diese Aufgaben ausreichend Ressourcen vorgesehen werden (müssen).
+Vor allem aber ist die Begründung dieses Abschnittes problematisch. Die Begründung ist bei Gesetzen nicht nur in deren Entstehung relevant, sondern ebenso für deren Auslegung. Konkret ist die Begründung dieser Gesetzespassage indirekt auch für die Interpretation der zahlreichen Zivilklauseln relevant, die jetzt schon an NRW-Hochschulen bestehen.
+In der Gesetzesbegründung heißt es: 
+
+\glqq Das Bekenntnis zu einer friedlichen, demokratischen und nachhaltigen Gesellschaft steht dabei ausdrücklich nicht im Widerspruch zu Forschungsaktivitäten im militärischen Bereich, insbesondere zum Schutz der Verteidigungsfähigkeit der Bundesrepublik und ihrer Bündnispartner.\grqq{} 
+
+Dies ist in zweierlei Hinsicht falsch:
+\begin{itemize}
+    \item Der \glqq Schutz der Verteidigungsfähigkeit der Bundesrepublik und ihrer Bündnispartner\grqq{} als Zielbestimmung von Wissenschaft ist ein verfehlter Maßstab: Wissenschaft ist ihrem Charakter nach gerade nicht national, sondern international. Sie auf die berechtigten oder unberechtigten (Selbstverteidigungs-)Interessen eines Staates fokussieren zu wollen, ist damit inkompatibel und sabotiert strukturell internationale Zusammenarbeit. Insbesondere bei einer Verflechtung von ziviler und militärischer Forschung (dual use) und der damit verbundenen Geheimhaltung und Exportbeschränkungen führt dies potenziell dazu, dass ganze Forschungsfelder von der internationalen Entwicklung abgeschottet und schließlich abgehängt werden. Deshalb können nur internationale Maßstäbe, wie etwa die SDGs der UNO, als Maßstab zur Zielbestimmung von Wissenschaft heran gezogen werden.
+    \item Anders, als die zitierte Passage suggeriert, ist Krieg nicht Frieden. Das Grundgesetz stellt die Vorbereitung eines Angriffskriegs unter Strafe (Artikel 26 (1) GG). Dass mit der Gesetzesbegründung militärische Forschung allgemein, also auch dann, wenn sie der Vorbereitung eines Angriffskriegs dient, legitimiert wird, steht somit im Widerspruch zum Grundgesetz. Der positive Bezug auf die Selbstverteidigung der Bündnispartner der Bundesrepublik ist geschichtsvergessen: Gerade auch die Bündnispartner der Bundesrepublik haben immer wieder mit Verweis auf Frieden und Selbstverteidigung eklatant gegen das Verbot von Angriffskriegen verstoßen, wie etwa die USA beim Irak-Krieg 2003.
+\end{itemize}
+
+Weiter heißt es in der Gesetzesbegründung:
+\glqq Eingriffe in die vorbehaltlos gewährleistete Freiheit von Wissenschaft, Forschung und Lehre Einzelner aus Artikel 5 Absatz 3 des Grundgesetzes sind damit nicht verbunden und könnten auf hochschulische Zivilklauseln auch nicht gestützt werden.\grqq{} 
+
+Damit ist explizit ausgeschlossen, dass Hochschulen kriegstreiberischer oder menschenfeindlicher Lehre oder Forschung entgegentreten, was die Tür für Green- und Peacewashing öffnet. Zudem steht die Wissenschaftsfreiheit des Grundgesetzes gemäß etablierter Rechtsauffassung nicht im Widerspruch zu verbindlichen Zivilklauseln\footnote{\label{note1}\url{https://dserver.bundestag.de/btd/16/137/1613773.pdf} (Bundesregierung 2009)}.
+
+\textbf{Ordnungs-, Redlichtkeits- und Sicherheitsrecht}\\
+Den vorgelegten Entwurf einer Änderung am Ordnungsrecht, sowie der Ausweitung zu einem Redlichkeit- und Sicherheitsrecht lehnt die ZaPF vollständig ab und spricht sich darüber hinaus für eine komplette Streichung des bestehenden Ordnungsrechts aus. Die ZaPF hält Exmatrikulation/Rauswurf als Bestrafungsmittel, egal welcher Statusgruppe, für grundsätzlich falsch. Mit dieser Strategie bearbeitet man keine Probleme, sondern schiebt sie lediglich ab. Wir sagen: Bildung für Alle! 
+
+Grundlegende, rechtsstaatliche Maßstäbe müssen vorbehaltlos gewahrt werden: \glqq Tatsächlicher Anschein\grqq{} und \glqq pflichtgemäßes Ermessen\grqq{} reichen niemals aus. Die ZaPF hält die z.T. stattfindende Beweislastumkehr für abwegig. Es darf nicht um Strafen gehen, sondern nur um die Abwehr von akuten Gefährdungen von Personen (oder sonstige Schutzmittel). Alles, was darüber hinaus geht, ist anderweitig aufzuarbeiten.
+Machtmissbrauch ist ein strukturelles Problem an Hochschulen, welches die ZaPF sehr ernst nimmt. Machtverhältnisse machen die Hochschulen anfällig für Machtmissbrauch.
+Deshalb muss der Fokus auf den Abbau von Machtstrukturen gerichtet werden. Analog sind die Rahmenbedingungen, die Anreize für den Wissenschaftsbetrug schaffen, abzubauen.
+
+Konkret:
+\begin{itemize}
+\item Grundbeginn-, statt Drittmittel- und Exzellenzfinanzierung,
+\item Verbindliche Festangestelltenquoten, die auch Drittmittel mit einbeziehen,
+\item Vergabe von Mitteln an Institute und Departments mit Gremienstruktur, statt ad personam,
+\item Anstellungen nicht bei Professuren, sondern bei Instituten oder Departments mit Gremienstruktur,
+\item Leitungsstrukturen nur als Doppelspitze.\\
+\end{itemize}
+
+\textbf{Vollwertige Personalvertretung für alle!}\\
+Dass SHK-Räte künftig wieder verpflichtend sein sollen, ist fraglos eine Verbesserung. Allerdings: Im Vergleich zu Personalräten haben sie sehr eingeschränkte
+Rechte. Statt dieser \glqq Personalräte-light\grqq{} fordern wir eine vollwertige Personalvertretung für alle an den Hochschulen Beschäftigte, insbesondere auch studentisch Beschäftigte!\\
+
+\textbf{Abschaffung der Prüfungsversuchsrestriktionen!}\\
+Um ein entwicklungs-, statt sicherheitsorientiertes Studium zu fördern, den Prüfungsstress zu reduzieren und die Mental Health-Lage zu verbessern, sprechen wir uns für die vollständige Abschaffung des \glqq endgültigen Nichtbestehens\grqq{} von Prüfungsleistungen und der damit einhergehenden Exmatrikulationen aus:
+Dass irgendetwas \glqq endgültig\grqq{} wäre, verneint, dass sich Menschen ein Leben lang weiterentwickeln. Vor allem aber verschieben Prüfungsversuchsrestriktionen und Pflichtanmeldungen zu Prüfungen den Fokus des Studiums von der Aneignung von Wissen und persönlicher Entwicklung hin zu der Verhinderung der eigenen Exmatrikulation.
+Zudem stellt es eine Erleichterung für alle Beteiligten dar, wenn Dozierende nicht vor der Entscheidung stehen, Studierende z.B. in ihrem letzten Prüfungsversuch ggf. entweder trotz fraglicher Leistungen bestehen zu lassen oder ihnen für den Rest des Lebens Chancen zu nehmen.
+Ein erzwungenes Studieren ist nicht als Akt der Fürsorge zu verstehen. Stattdessen gilt es, wenn Studierende wiederholt durch Prüfungen fallen, die zu Grunde liegenden Probleme beispielsweise im Rahmen von Beratungen zu analysieren und kooperativ zu lösen. Auch ermöglicht dies, Probleme, die nicht in der Schuld der Studierenden liegen, zu erkennen, und ist eine Voraussetzung, um systematische, über den Einzelfall hinausgehende Lösungen zu entwickeln.
+Nirgendwo, wo das endgültige Nichtbestehen abgeschafft wurde, gibt es systematisch negative Erfahrungen damit. An der Uni Bielefeld gibt es zudem eine systematische Evaluation der bereits seit vielen Jahren flächendeckenden Abschaffung dieser Restriktion, die überaus positiv ist.\\
+
+\textbf{Digitalisierung der Hochschule}\\
+Der Referentenentwurf gibt in § 8a Abs. 2 der Landesregierung die Befugnis in Absprache mit, jedoch ohne Beschluss des Landtages die Möglichkeit, Einführung und Umfang von Online-Lehrangeboten an jeglicher Hochschule zu regeln. Dass hierdurch ganze Studierendenschaften, ohne jegliche Mitsprachegelegenheit, zu Versuchskaninchen der Landesregierung werden, wird als Nebeneffekt hingenommen. Die ZaPF kritisiert dies aufs Schärfste.
+
+Weiterhin forciert § 8a Abs. 3 den flächendeckenden Einsatz von Learning Analytics und Künstlicher Intelligenz, trainiert auf den Daten der Studierenden. Die als Vorteil angeführte, erhöhte Teilnahme der Widerspruchslösung gegenüber der Einwilligungslösung zur Verarbeitung der Daten, kann sich nur aus einer Täuschung oder Unaufmerksamkeit der individuellen Studierenden speisen. Daher lehnt die ZaPF die Widerspruchslösung entschieden ab.\\
+
+\textbf{Studieneingangsphase}\\
+Die geplanten Regelungen geben den Hochschulen gute Möglichkeiten, einen weicheren Studieneinstieg zu entwickeln und die Möglichkeit, unter Wahrung von Qualitätsstandards, auch zu experimentieren. Besonders ist positiv hervorzuheben, dass ein Ausbau der Studieneingangsphase
+verbindlich zu einer BAföG-Verlängerung führen soll. Ebenfalls ist positiv, dass solch eine Studieneingangsphase auch für den Master-Einstieg, etwa von internationalen Studierenden, vorgesehen ist.\\
+
+\textbf{Hochschuldemokratie}\\
+Die halbwegs verbindliche Wiedereinführung der Parität in den Senaten ist sehr zu begrüßen, die für die Senate vorgesehene Regelung sollte aber für alle Gremien gelten. Darüber hinaus müssen Vorsitz von Senaten und Fakultätsräten, sowie ihrer Kommissionen systematisch von Rektoraten und Dekanaten getrennt werden.
+Wenn nun Arbeitgeber*innen einen Sitz im Hochschulrat erhalten können, muss darauf geachtet werden, diese mit Gewerkschaftsvertreter*innen auszubalancieren. Weiter wären auch verpflichtende studentische Mitglieder im Hochschulrat wünschenswert.
+Um eine zu starke Machtkonzentration zu verhindern und den Gremien eine aktivere Rolle zukommen zu lassen, sollte als Prinzip für alle Strukturen aller Hochschulen festgelegt werden, dass Gremienbeschlüsse für die Leitungen der Institutionen immer
+bindend sind. Rektorate müssen z.B. bei allen Fragen an die Beschlüsse der Senate gebunden sein, Dekanate an die Beschlüsse der Fakultätsräte, die Leitung eines Rechenzentrums an das entsprechende Entscheidungsgremium.
+Es ist zu begrüßen, dass künftig nicht-öffentliche Hochschulen die gleichen
+Qualitäts- und Demokratiestandards einhalten sollen, wie alle anderen Hochschulen auch. Weiterhin tragen die Änderungen beim Hochschulrat der Kritik zu einseitiger Besetzung Rechnung, lösen aber das Problem nicht, dass die Hochschulräte nur beratend sein sollten. \\ 
+
+%\section*{Begründung}
+%yyyy
+
+%\vspace{1cm} 
+%
+\vfill
+\begin{flushright}
+	Verabschiedet am 04. Mai 2025 
+	auf der ZaPF in Erlangen.
+\end{flushright}
+
+\end{document}

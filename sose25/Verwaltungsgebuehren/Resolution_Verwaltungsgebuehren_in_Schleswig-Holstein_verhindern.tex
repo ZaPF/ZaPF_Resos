@@ -1,0 +1,176 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+%\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{url}
+%\usepackage{tocloft}             % Paket für Table of Contents
+\def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
+\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
+\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-}%
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+%\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+%\usepackage[scale=0.8,colorspec=0.9]{draftwatermark} % Wasserzeichen ``Entwurf''
+%\SetWatermarkText{Vorbehaltlich\\redaktioneller\\Änderungen}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{blue}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+%###############
+\initcomment{Philipp}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+\usepackage{siunitx}
+
+
+\begin{document}
+\hspace{0.55\textwidth}
+\begin{minipage}{120pt}
+	\vspace{-1.8cm}
+	\includegraphics[width=110pt]{../logos/Logo_KaWuM.png}
+	\centering
+	\small Konferenz aller werkstofftechnischen und materialwissenschaftlichen Studiengänge
+\end{minipage}%
+\begin{minipage}{120pt}
+	\vspace{-1.8cm}
+	\includegraphics[width=80pt]{../logos/logo.pdf}
+	\centering
+	\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \huge{Resolution Verwaltungsgebühren in Schleswig-Holstein
+verhindern}\vspace{.25\baselineskip}\\
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+%%%% Metadaten %%%%
+
+%\paragraph{Adressierte:} Bildungsministerium Schleswig-Holstein, Hochschulpräsidien in SH, Bildungspolitische Sprecher*innen, ASten SH, FZS, alle Bundesfachschftentagungen
+
+
+%\paragraph{Antragstellende:} xxx
+
+%%%% Text des Antrages zur veröffentlichung %%%%
+
+%\section*{Antragstext}
+Die ZaPF stellt sich gegen die geplante Einführung von Verwaltungsgebühren in Schleswig-Holstein\footnote{\url{https://www.schleswig-holstein.de/DE/landesregierung/ministerien-behoerden/III/_startseite/Artikel_2025/Januar_2025/20250117_verwaltungskosten##:~:text=An\%20den\%20staatlichen\%20Hochschulen\%20soll,Euro\%20pro\%20Monat\%20eingef\%C3\%BChrt\%20werden.}}. Ohnehin steigt bis zum Sommersemester 2026 der Semesterbeitrag um 42,40\,€ an. Dies allein ist schon eine große finanzielle Belastung für die Studierendenschaft.
+
+Etwa ein Drittel der Studierenden ist bereits jetzt akut armutsgefährdet, sogar knapp 80 Prozent, wenn man nur diejenigen betrachtet, die nicht bei ihren Eltern wohnen\footnote{Der Paritätische 2024, Eigene Darstellung auf Basis einer Sonderauswertung (Daten: EU-SILC 2023, Statistischen Bundesamt (Ergebnisse))}. Die Einführung einer Verwaltungsgebühr führt somit dazu, dass einer noch größeren Zahl an Studierenden der Hochschulzugang verwehrt bleibt. Hinzu kommt, dass im aktuellen Gesetzesentwurf keine Härtefallregelungen vorhanden sind. Aufgrund der geplanten Gebühren wird das Studium in Schleswig-Holstein unattraktiver. Die Studierendenzahlen werden weiter zurückgehen.
+
+Bildung ist kein Privileg, sondern ein Menschenrecht und \glqq der Hochschulunterricht [muss] auf jede
+geeignete Weise, insbesondere durch allmähliche Einführung der Unentgeltlichkeit\grqq{} allen zugänglich
+gemacht werden (UN-Sozialpakt\footnote{\url{https://www.institut-fuer-menschenrechte.de/fileadmin/Redaktion/PDF/DB_Menschenrechtsschutz/ICESCR/ICESCR_Pakt.pdf}}). Daher ist über die Beibehaltung der Gebührenfreiheit hinaus der Ausbau der Hochschulfinanzierung notwendig. Die ZaPF lehnt es ab, die Hochschulen auf Kosten anderer sozialer Bereiche zu finanzieren, sowie diese gegeneinander auszuspielen.
+
+Wir stellen uns grundsätzlich gegen Verwaltungsgebühren in allen Bundesländern und an allen Standorten. Studierende sollten nicht die zunehmend schlechte Grundfinanzierung der Hochschulen ausgleichen müssen.
+
+Wir fordern Sie auf, sich mit den Studierenden in Schleswig-Holstein zu solidarisieren und keine Verwaltungsgebühren zu erheben. Wir fordern, dass die Haushaltslücken im Land Schleswig-Holstein nicht auf den Rücken der Studierendenschaft ausgebadet werden.
+
+%[1] Der Paritätische 2024, Eigene Darstellung auf Basis einer Sonderauswertung (Daten: EU-SILC 2023, Statistischen Bundesamt (Ergebnisse)) \\
+%[2] \url{https://www.schleswig-holstein.de/DE/landesregierung/ministerien-behoerden/III/_startseite/Artikel_2025/Januar_2025/20250117_verwaltungskosten#:~:text=An%20den%20staatlichen%20Hochschulen%20soll,Euro%20pro%20Monat%20eingef%C3%BChrt%20werden.} \\ %ToDo: wird im Text nie referenziert...
+%[3]\url{https://www.institut-fuer-menschenrechte.de/fileadmin/Redaktion/PDF/DB_Menschenrechtsschutz/ICESCR/ICESCR_Pakt.pdf}
+
+
+%\section*{Begründung}
+%yyyy
+
+%\vspace{1cm} 
+%
+\vfill
+\begin{flushright}
+	Verabschiedet am 04. Mai 2025 
+	auf der ZaPF in Erlangen \\
+	und am 11. Mai 2025
+	auf der KaWuM in Saarbrücken.
+\end{flushright}
+
+\end{document}
