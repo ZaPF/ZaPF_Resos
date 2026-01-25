@@ -1,0 +1,198 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+%\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{url}
+%\usepackage{tocloft}             % Paket für Table of Contents
+\def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
+\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
+\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-}%
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+%\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+%\usepackage[scale=0.8,colorspec=0.9]{draftwatermark} % Wasserzeichen ``Entwurf''
+%\SetWatermarkText{Vorbehaltlich\\redaktioneller\\Änderungen}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{blue}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+\initcomment{Philipp}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+
+
+
+\begin{document}
+
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+	\vspace{-1.8cm}
+	\includegraphics[width=80pt]{../logos/logo.pdf}
+	\centering
+	\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \huge{Resolution zur Finanzierung von Hochschulen und Studierenden}\vspace{.25\baselineskip}\\
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+%%%% Metadaten %%%%
+
+%\paragraph{Adressierte:} alle ASten, Fachschaften, Hochschulleitungen Deutschlands, KFP, fzs, andere BuFaTas, alle Landesastenkonferenzen, alle Bildungs- und Finanzministerien, sowie bildungspolitische Sprecher*innen der Fraktionen in Bundes- und Landtagen
+% alle ASten, Physik- und physiknahe Fachschaften, Hochschulleitungen Deutschlands, KFP, fzs,
+% alle Bildungs- & Finanzministerien, sowie bildungspolitische Sprecher\*innen der Fraktionen in Bundes- & Landtagen
+
+%\paragraph{Antragstellende:} Momo (UHH), Mio (UHH), Charlie (HHU) xxx
+
+%%%% Text des Antrages zur veröffentlichung %%%%
+
+%\section*{Antragstext}
+
+Am 18. März 2025 wurde vom Bundestag eine Grundgesetzänderung beschlossen, die ein 500 Milliarden Euro schweres Sondervermögen für Infrastruktur ermöglicht und Verteidigungsausgaben ab einer gewissen Höhe von der Schuldenbremse ausnimmt [1]. Statt der dringend notwendigen Ausfinanzierung von Bildung, Kultur und Sozialem wird in diesen Bereichen großflächig gekürzt.
+
+In Berlin sollen beispielsweise 250 Millionen Euro [2] und in NRW etwa 255 Millionen Euro dauerhaft eingespart werden. Ebenso wird in NRW geplant, 240 Millionen Euro aus den Rücklagen zu entnehmen [3]. In Schleswig-Holstein werden Kürzungen durch die Einführung von Verwaltungsgebühren auf die Studierenden abgewälzt [4] und in Hessen wird knapp eine halbe Milliarde aus den Baurücklagen der Universitäten zum Ausgleich des Haushaltsdefizits herangezogen [5]. Gleichzeitig spricht der Hamburger Finanzsenator von einem Sanierungsstau im Hochschulbau in Höhe von 140 Milliarden Euro [6].
+
+Gerade in Zeiten steigender Kosten dürfen wir keine Kürzungen hinnehmen. Vielmehr muss der Zugang zu weiterführender Bildung durch ein existenzsicherndes BAföG für alle sichergestellt werden.
+
+Wenn wir eine exzellente und soziale Bildungsinfrastruktur wollen, müssen wir entsprechend in diese investieren. Dabei sollten wir nicht vor Schulden zurückschrecken: Denn eine Investition in die Bildung ist eine Investition in die Zukunft unserer Gesellschaft.
+
+Dafür muss Geld da sein!
+
+Die Antwort auf eine Zeit zunehmender Krisen darf nicht eine Kürzung in Hochschulbildung sein. Breit verfügbare und hochwertige Bildung ist essentiell für die Lösung heutiger und zukünftiger Probleme und kann nur durch eine ausreichende Finanzierung aller Fachbereiche sichergestellt werden.
+
+Die ZaPF fordert entsprechend von den Landesregierungen, dass das inflationsbereinigte Budget aller öffentlichen Hochschulen erhöht wird, wenigstens aber erhalten bleibt. Sie bekräftigt darüber hinaus erneut ihre Forderung nach einem elternunabhängigen, existenzsichernden BAföG [7], um den Zugang zu weiterführender Bildung für alle langfristig zu sichern. Außerdem fordern wir den Bund dazu auf, die Länder dabei finanziell zu unterstützen.
+
+Damit schließen wir uns insbesondere auch der Resolution gegen die Kürzungen im Hochschulbetrieb der 92. KoMa und der 53,0 KIF an [8].
+
+Quellen:
+
+% [1] \url{https://www.bundestag.de/dokumente/textarchiv/2025/kw12-de-sondersitzung-1056916}\newline
+% [2] \url{https://www.forschung-und-lehre.de/politik/weniger-geld-fuer-berliner-hochschulen-6773}\newline
+% [3] \url{https://rp-online.de/nrw/landespolitik/nrw-will-womoeglich-hunderte-millionen-euro-bei-hochschulen-abgreifen_aid-125092025}\newline
+% [4] \url{https://ndr.de/nachrichten/schleswig-holstein/Studierende-in-SH-sollen-60-Euro-mehr-pro-Semester-zahlen,studierende182.html}\newline
+% [5] \url{https://www.gew-hessen.de/bildungsbereich/hochschule-und-forschung/details/beherzter-griff-in-die-ruecklagen}\newline
+% [6] \url{https://www.spiegel.de/panorama/bildung/hochschulen-noetige-sanierungen-wuerden-140-milliarden-euro-kosten-a-79feaffd-2ac9-417c-97aa-d82366cd1242}\newline
+% [7] \url{https://zapfev.de/resolutionen/wise18/Reso_BAf%C3%B6G/BAf%C3%B6G.pdf}\newline
+% [8] \url{https://wiki.kif.rocks/wiki/KIF530:Resolutionen/K%C3%BCrzungen_in_Berlin}
+[1] Deutscher Bundestag. \glqq Mehrheit für Reform der Schuldenbremse: 512 Abgeordnete stimmen mit Ja. \grqq  \url{https://www.bundestag.de/dokumente/textarchiv/2025/kw12-de-sondersitzung-1056916} (abgerufen: 01.November 2025)
+
+[2] Forschung \& Lehre. \glqq Weniger Geld für Berliner Hochschulen. \grqq \url{https://rp-online.de/nrw/landespolitik/nrw-will-womoeglich-hunderte-millionen-euro-bei-hochschulen-abgreifen_aid-125092025} (abgerufen: 01.November 2025)
+
+[3] Rheinische Post. \glqq Das Land NRW will den Universitäten ans Geld. \grqq \url{https://www.forschung-und-lehre.de/politik/weniger-geld-fuer-berliner-hochschulen-6773} (abgerufen: 01.November 2025)
+
+[4] NDR. \glqq Studierende in SH sollen 60 Euro mehr pro Semester zahlen. \grqq \url{https://ndr.de/nachrichten/schleswig-holstein/Studierende-in-SH-sollen-60-Euro-mehr-pro-Semester-zahlen,studierende182.html} (abgerufen: 01.November 2025)
+
+[5] Gewerkschaft Erziehung und Wissenschaft. \glqq Beherzter Griff in die Rücklagen. \grqq \url{https://www.gew-hessen.de/bildungsbereich/hochschule-und-forschung/details/beherzter-griff-in-die-ruecklagen}(abgerufen: 01.November 2025)
+
+[6] Spiegel. \glqq Unisanierungen kosten 140 Milliarden Euro. \grqq\url{https://www.spiegel.de/panorama/bildung/hochschulen-noetige-sanierungen-wuerden-140-milliarden-euro-kosten-a-79feaffd-2ac9-417c-97aa-d82366cd1242} (abgerufen: 01.November 2025)
+
+[7] Zusammenkunft aller Physikfachschaften (ZaPF). \glqq Zusammenkunft aller
+Physik-Fachschaften
+Resolution der Zusammenkunft aller
+Physik-Fachschaften
+Zum BAföG. \grqq \url{https://zapfev.de/resolutionen/wise18/Reso_BAf%C3%B6G/BAf%C3%B6G.pdf} (abgerufen: 01.November 2025)
+
+[8] Konferenz deutschsprachiger Informatikfachschaften (KIF). \glqq Kürzungen in Berlin. \grqq \url{https://wiki.kif.rocks/wiki/KIF530:Resolutionen/K%C3%BCrzungen_in_Berlin}
+
+%\section*{Begründung}
+%yyyy
+
+%\vspace{1cm} 
+%
+\vfill
+\begin{flushright}
+	Verabschiedet am 02. November 2025 \\
+	auf der ZaPF in Frankfurt am Main.
+\end{flushright}
+
+\end{document}

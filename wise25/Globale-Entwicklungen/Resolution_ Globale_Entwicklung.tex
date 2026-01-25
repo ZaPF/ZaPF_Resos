@@ -1,0 +1,177 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+%\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{url}
+%\usepackage{tocloft}             % Paket für Table of Contents
+\def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
+\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
+\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-}%
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+%\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+%\usepackage[scale=0.8,colorspec=0.9]{draftwatermark} % Wasserzeichen ``Entwurf''
+%\SetWatermarkText{Vorbehaltlich\\redaktioneller\\Änderungen}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{blue}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+\initcomment{Philipp}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+
+
+
+\begin{document}
+
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+	\vspace{-1.8cm}
+	\includegraphics[width=80pt]{../logos/logo.pdf}
+	\centering
+	\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \huge{Resolution: Globale Entwicklung durch offene Wissenschaft statt Wissenschafts-\glqq Protektionismus\grqq{} und Feindbild-Bildung}\vspace{.25\baselineskip}\\
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+%%%% Metadaten %%%%
+
+%\paragraph{Adressierte:} Wissenschaftsrat (Hauptadressat), Fraktionen des Bundestags (außer AfD), Metafa und BuFaTas, fzs, GEW, ver.di, jDPG und DPG, Presseagenturen (deutschsprachiger Raum): WDR, Spiegel, Zeit, Süddeutsche, Presseverteiler ( https://pads.zapf.in/WiSe25_AdressGlobale#)
+
+
+%\paragraph{Antragstellende:} Edgar Nr.: 010, Leo Nr.: 009, Fritz Nr.: 006, Lucia Nr.: 014, Stefan Nr.:118, Anton Nr.: 119, Philipp Nr.: 115, Abdelkarim Nr.: 055
+
+%%%% Text des Antrages zur veröffentlichung %%%%
+
+%\section*{Antragstext}
+
+In den jüngsten Papieren des Wissensschaftsrats [1] und der BaFa [2] manifestiert sich der Versuch, einen schon seit 2023 von der Bundesregierung vorangetriebenen Paradigmenwechsel in der Wissenschaftslandschaft festzuschreiben. Gegen diesen Versuch, insbesondere die gezielte Förderung der Dual-Use-Forschung, hat sich die ZaPF schon 2024 [3] ausgesprochen. Dabei wird es als erstrebenswert angesehen, die militärische Nutzung ziviler Forschung zu fördern. Sowohl der Wissenschaftsrat als auch die BaFa wollen die Wissenschaft dadurch zum Mittel der nationalen Sicherheit machen und entsprechend regulieren. Dadurch kehrt man sich von den Prinzipien der offenen, internationalen Forschung ab und instrumentalisiert die Forschung für Regierungszwecke.\\
+
+Die ZaPF weist diese Politik grundsätzlich zurück und setzt sich für eine offene, internationale und zivile Forschung ein. Zudem bemerken wir schon jetzt, dass Studierende aus anderen Ländern, wie aus Russland, dem Iran und China, unter Generalverdacht gestellt werden, da man das \glqq Abfließen\grqq{} von Wissen befürchtet. Aus diesem Grund werden sie von Lehrveranstaltungen ausgeschlossen und bekommen keine Verlängerungen von Arbeitsverträgen. Neuanstellungen werden ebenfalls verhindert. Internationale Studierende können dadurch gegebenenfalls keine weiteren Visa erhalten und ihren Aufenthaltsstatus verlieren. \\
+Das ist ein gravierender Eingriff in die Lebensentwürfe der Studierenden. Studierende unter Generalverdacht zu stellen ist diskriminierend, schürt Rassismus und zerstört Lebensentwürfe. 
+
+Zudem verletzen die Sanktionen die Grundrechte auf Bildung und freie Berufswahl. Die Wissenschaft und die Zivilgesellschaft werden hier weitgehend willkürlich zur Durchsetzung geopolitischer Interessen im Namen der nationalen Sicherheit (siehe Dual-Use) instrumentalisiert. Der Anschein, dass durch diese Restriktionen im Wissensaustausch ein Atomkrieg verhindert werden soll, wenn etwa in der Debatte auf den Urenco nuclear technology leak verwiesen wird [vgl. 1, S.29], ist irreführend. Betroffen sind auch rein zivile Kenntnisse, insbesondere wenn diese zu den sogenannten \glqq Kronjuwelen\grqq{} [1, S.69] gezählt werden, und auch Kenntnisse aus Standardvorlesungen, die im Prinzip weltweit verfügbar sind. 
+
+Tatsächlich wird hier ein Wirtschaftskrieg geführt und insbesondere versucht \glqq signifikante Technologie- und/oder Wissenslücken\grqq{} des Globalen Südens aufrecht zu erhalten.\\ Dazu finden zahlreiche ideologische Verdrehungen statt: Wissen kann nicht \glqq abfließen\grqq und dann da fehlen, von wo es kommt, wie etwa im Papier des Wissenschaftsrates behauptet [1];
+vielmehr steigt der Nutzen von Wissen, wenn es geteilt wird. Tatsächlich ist es deshalb langfristig nicht nur im eigenen Interesse, zur Schließung von Technologie- und Wissenslücken anderer beizutragen; vielmehr ist es die Voraussetzung dafür, die drängenden Menschheitsprobleme, die nur global gelöst werden können, gemeinsam anzugehen. \\
+Wissen zu teilen schafft zudem Vertrauen und ist Voraussetzung dafür, dass Menschen sich einander annähern, anstatt sich gegenseitig zu dämonisieren, was nur rechte Kräfte auf allen Seiten stärkt. 
+
+Wir widersprechen der These des Wissenschaftsrates, dass \glqq gerade über lange Zeit gewachsene Kooperationen und persönliche Beziehungen\grqq{} [1] potenziell gefährlich wären, weil diese Vertrauen bilden, Misstrauen aber in dieser Zeit explizit notwendig wäre. Vielmehr hat gerade in angespannten geopolitischen Lagen persönliche Begegnung und Vertrauensbildung gegen das Misstrauen Bedeutung: Städte- und Wissenschaftspartnerschaften waren entscheidender Beitrag zur Entspannung im Kalten Krieg. Daran gilt es anzuknüpfen.
+
+Deswegen fordert die ZaPF, internationale Zusammenarbeit im Bereich der zivilen Forschung zu stärken und nicht einzuschränken. Insbesondere fordern wir, internationale geopolitische Konflikte nicht zulasten internationaler Studierender und Kolleg:innen auszutragen. 
+
+Quellen:\newline
+% [1] \glqq Wissenschaft und Sicherheit in Zeiten weltpolitischer Umbrüche\grqq{}\newline
+% \url{https://www.wissenschaftsrat.de/download/2025/2485-25.pdf?__blob=publicationFile&v=11}\newline
+% [2] \glqq Exportkontrolle und Academia - Handreichung für die Wissenschaft\grqq{}\newline
+% \url{https://www.bafa.de/SharedDocs/Downloads/DE/Aussenwirtschaft/afk_aca_handreichung_wissenschaft.pdf?__blob=publicationFile&v=8}\newline
+% [3] Resolution der ZaPF zu SoSe24: No to dual-use orientation of research funding\newline
+% \url{https://zapfev.de/resolutionen/sose24/International/Reso_dual_use_funding.pdf}
+[1] Wissenschaftsrat (2025): Wissenschaft und Sicherheit in Zeiten weltpolitischer Umbrüche | Positionspapier; Köln. \url{https://doi.org/10.57674/9tr5-kn29} \newline
+[2] Bundesamt für Wirtschaft und Ausfuhrkontrolle (2025): Export-kontrolle und
+Academia | Handreichung für die Wissenschaft; Eschborn. \url{https://www.bafa.de/SharedDocs/Downloads/DE/Aussenwirtschaft/afk_aca_handreichung_wissenschaft.pdf?__blob=publicationFile&v=8} \newline 
+[3] ZaPF (2024): No to dual-use orientation of research funding | Kiel. \url{https://zapfev.de/resolutionen/sose24/International/Reso_dual_use_funding.pdf}
+%\section*{Begründung}
+%yyyy
+
+%\vspace{1cm} 
+%
+\vfill
+\begin{flushright}
+	Verabschiedet am 3. November 2025 \\
+	auf der ZaPF in Frankfurt am Main.
+\end{flushright}
+
+\end{document}
