@@ -1,0 +1,166 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+%\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{url}
+%\usepackage{tocloft}             % Paket für Table of Contents
+\def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
+\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
+\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-}%
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+%\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+%\usepackage[scale=0.8,colorspec=0.9]{draftwatermark} % Wasserzeichen ``Entwurf''
+%\SetWatermarkText{Vorbehaltlich\\redaktioneller\\Änderungen}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{blue}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+\initcomment{Philipp}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+
+
+
+\begin{document}
+
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+	\vspace{-1.8cm}
+	\includegraphics[width=80pt]{../logos/logo.pdf}
+	\centering
+	\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \huge{Vorabversion:  Anschluss zu \glqq Resolution gegen Studiendauerbegrenzung\grqq der 92. KoMa}\vspace{.25\baselineskip}\\
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+%%%% Metadaten %%%%
+
+%\paragraph{Adressierte:} xyx
+
+
+%\paragraph{Antragstellende:} xxx
+
+%%%% Text des Antrages zur veröffentlichung %%%%
+
+%\section*{Antragstext}
+
+Die ZaPF schließt sich der Resolution gegen Studiendauerbegrenzung der 92. KoMa an und unterstützt die dort genannten Forderungen. \url{https://de.komapedia.org/images/6/6d/92_4.pdf} \\ \\
+\textbf{Text der Resolution:}\\\\
+\textbf{Resolution gegen Studiendauerbegrenzung}\\
+Wir, die 92. Konferenz der deutschsprachigen Mathematikfachschaften, fordern, jegliche Form der Behinderung des Langzeitstudierens zu beenden. Dazu zählen insbesondere Studiendauerbegrenzungungen sowie zusätzliche Studiengebühren für ein Langzeit- oder Zweitstudium.\\ Langzeitstudiengebühren gibt es aktuell noch in Niedersachsen, Saarland, Sachsen,Thüringen und Österreich und Zweitstudiengebühren in Rheinland-Pfalz, Baden-Wüttemberg, Sachsen und
+Sachsen Anhalt.\footnote{\url{https://www.studierendenwerke.de/fileadmin/user_upload/Downloads/uebersicht_stud}}\footnote{\url{https://www.landesrecht-bw.de/bsbw/document/jlr-HSchulGebGBWV14P8}}\footnote{\url{https://www.arbeiterkammer.at/beratung/bildung/studium/Studiengebuehren.html}} Studiendauerbegrenzungen gibt es aktuell noch in Bayern\footnote{https://www.arbeiterkammer.at/beratung/bildung/studium/Studiengebuehren.html 3. 
+BayrischesHochschulgesetzArt.84(4)1.} und am KIT \footnote{\url{https://www.gesetze-bayern.de/Content/Document/BayHIG-84 Rahmenordnung für die Studien- und Prüfungsordnungen der Bachelorstudiengänge am KIT §8 Absatz (3) https://www.haa.kit.edu/downloads/Rahmenordnung_fuer_die_Studien_und_Pruefungsordnungen_der_Bachelorstudiengaenge_am_KIT.pdf}}.\\
+Die Gründe für langes Studieren sind vielfältig und werden nicht alle durch die Möglichkeit des Teilzeitstudiums abgedeckt. Beispielhaft dafür sind fehlende finanzielle Absicherung durch zu lange Bearbeitungszeiten von BAFöG-Anträgen oder zu geringes BAFöG, Anwesenheitspflichten in überlappenden Pflichtveranstaltungen, Pflichtpraktika sowie allgemeine Unstudierbarkeit von Studiengängen.\\
+Während Studierende aus priviligiertem Elternhaus sich über ihr gesamtes Studium auf finanzielle Entlastung verlassen und auf ihr Studium konzentrieren können, müssen andere Studierende Privatleben, Studium und Finanzierung gleichzeitig schultern. Eben aus den obigen Begründungen folgt also, dass dieses soziales Ungleichgewicht durch das Behindern des Langzeitstudierens weiter verschärft wird.\\
+Auch ist das Studium für die meisten Studierenden eine Phase, die für die persönliche Entwicklung sehr relevant ist. Diese Entwicklung sollte möglichst selbstbestimmt ablaufen und daher nicht unnötigerweise durch Zeitdruck behindert werden. Zudem ist die beste Art zu studieren sehr individuell und braucht oft Zeit, um gefunden zu werden.\\
+Darüber hinaus wissen die meisten Studierenden zu Beginn ihres Studiums noch nicht genau, wie jeweils einzelne Studiengänge oder auch Studieren insgesamt funktioniert. Folglich basiert die Studiengangswahl
+ zwangsläufig auf begrenzten Information. Mit den aktuellen Regelungen werden aber Wechsel des Studiengangs schnell zu einem Problem.\\
+ Zusätzlich bauen Langzeitstudiengebühren und Begrenzungen der Studiendauer Druck auf und verursachen Stress bei einigen Studierenden. Dies erzwingt den Fokus auf unmittelbar prüfungsrelevante
+ Leistungen und begünstigt so den Verlust des Interesses an dem Fach selbst. Auch werden Studierende entmutigt, wertvolle fakultative Veranstaltungen wie Gastvorlesungen, Summerschools, Ringvorlesungen, Kolloquien, und ähnliche Angebote zu besuchen oder sich extra-curriculär weiterzubilden oder zu engagieren.\\
+ Letztlich stellen Langzeitstudierende keine Mehrbelastung für den Lehrbetrieb der Hochschulen dar, da diese Studierenden selten mehr Kurse belegen, sondern diese nur über einen längeren Zeitraum strecken. Im Gegensatz dazu profitieren Hochschulen oft von der langjährigen Tutorentätigkeit dieser Studierenden.
+
+%\section*{Begründung}
+%yyyy
+
+%\vspace{1cm} 
+%
+\vfill
+\begin{flushright}
+	Verabschiedet am 3. November 2025 \\
+	auf der ZaPF in Frankfurt am Main.
+\end{flushright}
+
+\end{document}
