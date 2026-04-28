@@ -1,0 +1,186 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+%\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{url}
+%\usepackage{tocloft}             % Paket für Table of Contents
+\def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
+\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
+\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-}%
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+%\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+%\usepackage[scale=0.8,colorspec=0.9]{draftwatermark} % Wasserzeichen ``Entwurf''
+%\SetWatermarkText{Vorbehaltlich\\redaktioneller\\Änderungen}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{blue}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+\initcomment{Philipp}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+
+
+
+\begin{document}
+
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+	\vspace{-1.8cm}
+	\includegraphics[width=80pt]{../logos/logo.pdf}
+	\centering
+	\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \huge{Anschluss an Resolution \glqq Anonymisierung von Klausuren\grqq der 93. KoMa}\vspace{.25\baselineskip}\\
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+%%%% Metadaten %%%%
+
+%\paragraph{Adressierte:} 
+%Hochschulrektorenkonferenz (bundesweit) post@hrk.de
+%Kultusministerkonferenz presse@kmk.org oder öffentlichkeitsarbeit:
+%andreas.schmitz@kmk.org und michael.reichmann@kmk.org
+
+
+%\paragraph{Antragstellende:} xxx
+
+%%%% Text des Antrages zur veröffentlichung %%%%
+
+%\section*{Antragstext}
+Um Studierende vor der negativen Beeinflussung ihrer Prüfungsergebnisse durch Verzerrung bei der Bewertung zu schützen und die Vergleichbarkeit von Ergebnissen zu gewährleisten, ist eine korrekte Anonymisierung von Klausuren essentiell. Deshalb schließt sich die ZaPF der Resolution zum Anonymisieren von Klausuren der 93. KoMa an
+und unterstützt die dort genannten Forderungen.
+\vspace{1cm}
+
+\textbf{Resolution Anonymisierung von Klausuren}
+
+Wir, die 93. Konferenz der deutschsprachigen Mathematikfachschaften, fordern die deutschen Hochschulen und Bildungsministerien auf, eine Anonymisierung\footnote{Uns ist bewusst, dass auch Prüfungsnummern und digitale Alternativen nicht anonym sind. Hier handelt es sich um Pseudonymisierung, da die Note zum Schluss der Person zugeordnet wird. Dennoch ist Anonymisierung ein häufig benutzter Begriff zu diesem Thema.} von Klausuren festzuschreiben. Anonymisierung von Prüfungen ist wichtig, um die Prüfungsteilnehmenden vor kognitiver Verzerrung der Korrektor*innen zu schützen. Es geht zum einen um unterbewussten Einfluss auf die Note, zum Beispiel bei FLINTA* Personen\footnote{Frauen, Lesben, intergeschlechtliche, nichtbinäre, transgeschlechtliche und agender Personen} und Studierenden, deren Name einen Migrationshintergrund vermuten lässt. Zum anderen können auch das Verhalten der Personen in den Vorlesungen und die dadurch entstehenden (Vor-)Urteile in die Bewertung einfließen. Schließlich werden Prüfungen teils ebenfalls von Studierenden korrigiert, was eine Einflussnahme auf die Korrektur aufgrund persönlicher Beziehungen zwischen Studierenden durch unzureichende Anonymisierung begünstigt. Selbst wenn sich keine Absicht dahinter verbirgt, lässt sich sozialwissenschaftlich feststellen, dass Merkmale wie Migrationshintergrund, Geschlecht, etc. einen (meist negativen) Einfluss auf die Bewertung von Prüfungsleistungen haben können\footnote{Bias in Grading, 07 Aug 2010, DOI: \url{http://dx.doi.org/10.3200/CTCH.56.3.191-192},Bias in grading: A meta-analysis of experimental research findings, 2016, DOI:\url{https://doi.org/10.1177/0004944116664618},Objective assessment criteria reduce the influence of judgmental bias on grading, 15.April 2024, DOI: \url{https://doi.org/10.3389/feduc.2024.1386016}}. Zum Beispiel wurde an der Uni Bielefeld und an der TU Dresden deshalb die Anonymisierung mittels Matrikelnummer eingeführt\footnote{\url{https://www.uni-bielefeld.de/fakultaeten/rechtswissenschaft/fakultaet/pruefungsamt/anonymisierung/?utm_source=chatgpt.com}}
+Jedoch halten wir Matrikelnummern als Form der Anonymisierung nicht für ausreichend.
+
+Zwar mindern sie das Risiko, durch Vorurteile und Stereotypen die Bewertung zu
+beeinflussen, aber es ist nicht ausgeschlossen, dass Korrektor*innen die
+Matrikelnummern auf anderen Wegen den Studierenden zuordnen können, z. B. wenn sie  ihnen im Extremfall aktiv schaden wollen.
+Außerdem wollen wir Menschen schützen, die – beispielsweise durch ein Amt – in
+Auseinandersetzung mit Prüfenden stehen, und ihnen die Möglichkeit geben, diese
+Auseinandersetzung zu führen, ohne sich um Benachteiligung zu sorgen.
+Wir halten die Einführung von einmaligen Prüfungsnummern für essenziell, wie sie zum
+Beispiel einige Institute an der TU Braunschweig eingeführt haben\footnote{\url{https://www.tu-braunschweig.de/struktur/organe/kommissionen/kfg/anonymisierung-von-pruefungen}}.
+Eine einmalige Prüfungsnummer ist eine randomisierte oder laufende Nummer, die sich
+für die Studierenden regelmäßig ändert, z. B. für jede Klausur oder jedes Semester.
+Eine Anonymisierung kann beispielsweise durch ein ergänzendes Deckblatt\footnote{Hierbei gibt es ein zusätzliches Blatt zur Klausur, auf welchem der Name mit der Prüfungsnummer  erbunden wird. Vor der Korrektur werden das Deckblatt und die Klausur voneinander getrennt, sodass die Klausur nur noch die Prüfungsnummer trägt. Dies soll durch eine Person erfolgen, welche nicht an der Korrektur beteiligt ist. } realisiert
+werden.
+Begrüßenswerte Alternative zur Prüfungsnummer bietet die Digitalisierung, z. B. mit
+Barcodes oder einer digitalen Korrektur:
+Liegen die Prüfungsleistungen digital vor (etwa nach einem Scan), kann das System die
+Identifikationsmerkmale in der Korrekturansicht entfernen.
+Deshalb halten wir die Anonymisierung von Klausuren nicht nur für technisch möglich,
+sondern auch für einen wichtigen Schritt, um eine faire und vorurteilsfreie Bewertung
+aller Studierenden zu gewährleisten.
+Diese Resolution wurde von der 93. Konferenz der deutschsprachigen
+Mathematikfachschaften im Konsens beschlossen.
+
+
+
+%\section*{Begründung}
+%yyyy
+
+%\vspace{1cm} 
+%
+\vfill
+\begin{flushright}
+	Verabschiedet am 3. November 2025 \\
+	auf der ZaPF in Frankfurt am Main.
+\end{flushright}
+
+\end{document}
