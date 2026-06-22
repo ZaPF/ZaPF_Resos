@@ -1,0 +1,183 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+%\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{url}
+%\usepackage{tocloft}             % Paket für Table of Contents
+\def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
+\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
+\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-}%
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+%\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+%\usepackage[scale=0.8,colorspec=0.9]{draftwatermark} % Wasserzeichen ``Entwurf''
+%\SetWatermarkText{Vorbehaltlich\\redaktioneller\\Änderungen}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{blue}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+%###############
+\initcomment{Philipp}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+\begin{document}
+
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+	\vspace{-1.8cm}
+	\includegraphics[width=80pt]{logos/logo.pdf}
+	\centering
+	\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \huge{Stellungnahme zum Referentenentwurf eines Gesetzes zur Modernisierung des Befristungsrechts im Wissenschaftsbereich}
+  \vspace{.25\baselineskip}
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+%%%% Metadaten %%%%
+
+%\paragraph{Adressierte:} 
+ 
+%\paragraph{Antragstellende:} 
+
+%%%% Text des Antrages zur veröffentlichung %%%%
+
+
+%\section*{Antragstext}
+
+% Einleitung
+Die ZaPF beobachtet mit Sorge, dass sich die Lage für wissenschaftliches Personal mit dem vorgeschlagenen Gesetzesentwurf verschlechtert. Besonders zu kritisieren ist die nicht vorhandene Einführung einer Mindestvertragslaufzeit von einem Jahr für studentische Hilfskräfte. Diese war in einem Referentenentwurf von 2023 [1] vorhanden, ist nun aber ersatzlos gestrichen. Forderungen, die wir, sowie auch andere studentische Gremien [2] mit dringender Notwendigkeit stellen, werden somit auch in diesem Gesetzesentwurf weiterhin nicht erfüllt.
+
+% Hauptteil
+Die Erhöhung der Maximalbefristung gemäß §6 ist eine positive Veränderung, die sich den Bedürfnissen der Physikstudierenden annähert. Durch die Änderung kann eine Finanzierung während der gesamten Studiendauer besser gewährleistet werden, da die durchschnittlichen Studiendauern der Bachelor- und Masterstudiengänge im Bereich Physik (Stand 2023) bereits jeweils 7,7 Semester und 5,6 Semester betragen [3]. Dies stellt gerade bei den aktuellen Unsicherheiten im Bezug auf die BAföG-Reform eine große Erleichterung dar. Besonders Teilzeitstudierenden kommt dies sehr entgegen. Jedoch sind langläufige Verträge eher selten und eine Wiederanstellung ist in der Regel nicht garantiert. Deshalb bedauert die ZaPF zutiefst, dass die Forderung nach einer Mindestlaufzeit von einem Jahr keinen Einzug in dem neuen Entwurf erhalten hat, obwohl sie in einem Referentenentwurf von 2023 [1] enthalten ist.
+
+Die ZaPF begrüßt die Änderung in §2 Abs. 1, Mindestvertragslaufzeiten für Promovierende einzuführen. Diese liegen allerdings weit unter der durchschnittlichen Promotionsdauer von 4,25 Jahren [4]. Auch die Verlängerung der Befristungsdauer bei Betreuung pflegebedürftiger Angehöriger ist eine Verbesserung.
+%Andererseits muss der Wegfall der Verlängerung der Befristungsdauer in der Postdoc-Phase, bei einer Promotionszeit von unter sechs Jahren, kritisiert werden. 
+Andererseits ist kritisch zu sehen, dass die Möglichkeit, verbleibende Höchstbefristungsdauer (bei einer Promotionsdauer von weniger als sechs Jahren) auf die Höchstbefristungsdauer der Postdoc-Phase zu übertragen, wegfällt. Effektiv ist dies eine Anregung, die Promotion künstlich zu verlängern, um einer verkürzten Befristungsdauer zu entgehen. Die ZaPF spricht sich gegen Befristungsdauern in der Postdoc-Phase und dadurch auch gegen Kürzungen an bereits bestehenden Fristen aus.
+
+Die ZaPF bedauert, dass sogenannte Viertelverträge, gemäß §2 Abs. 3, auf die Befristungsdauer angerechnet werden sollen. Es ist zu befürchten, dass dies Viertelverträge weiter legitimiert und verbreitet, was einen großen Schaden für die Forschungswelt bedeutet. Gerade bei Promovierenden ist dies eine häufige Methode, um prekäre Arbeitsverhältnisse zu verschleiern und junge Forschende auszubeuten.
+
+Das Ziel des wissenschaftlichen Mittelbaus nach der Promotion sollte sein, die Qualität von Lehre und Forschung zu erhalten und zu verbessern. Hier mahnte die ZaPF bereits 2024 an, dass künstlich hervorgerufene Generationswechsel durch Stellenbefristung vermieden werden sollten [5], da diese sich negativ auf die Kontinuität von Lehre, langfristigem Forschungsvorhaben und Innovation [6] auswirken. Die ZaPF fordert weiterhin unbefristete Stellen im wissenschaftlichen Mittelbau! 
+
+Die ZaPF fordert, in Anlehnung an den europäischen Rechtsrahmen, dass die Promotion die höchste erreichbare, wissenschaftliche Qualifikation darstellen soll. Dies soll die prekäre Lage der Postdocs, die einen großen Teil des wissenschaftlichen Mittelbaus ausmachen, weiter entschärfen. Darauf wurde ebenfalls bereits 2024 hingewiesen [5]. Es ist unerlässlich, im Rahmen des Arbeitsvertrages für eine Promotionsstelle ein Qualifikationsziel zu vereinbaren und legal zu definieren. Wir verweisen auf die Resolution der ZaPF zur Novellierung des WissZeitVG von 2022 [7]. 
+
+Nach §2 Abs. 2 wäre nach Nutzung der Befristungsdauer gemäß Satz 1 eine weitere befristete Anstellung möglich, falls diese überwiegend aus Drittmitteln finanziert wird. Grundsätzlich ist eine Verlängerung der Befristungsdauer zu begrüßen. Die Sorge der ZaPF ist aber eine zu große Abhängigkeit von Drittmitteln und eine damit verschobene Priorität. Die Bemühungen der Forschenden sollte hauptsächlich der Forschungsqualität zugutekommen und nicht dem Sammeln von Finanzierung.
+
+Darüber hinaus fordert die ZaPF seit 2022 [7] die vollständige Aufhebung der Tarifsperre wie in § 1 noch eingeführt. Es ist nicht nachzuvollziehen, warum die Tarifpartner nicht die Möglichkeit haben sollen, einvernehmlich über bessere Arbeitsbedingungen für die Beschäftigten zu entscheiden.
+
+%Abschluss unter Vorbehalt 
+Abschließend kann positiv angemerkt werden, dass eine Evaluation des Gesetzes in Zukunft wissenschaftlich und etwa vier Jahre nach Inkrafttreten erfolgen soll, wie die ZaPF 2024 als regelmäßige Evaluation empfohlen hatte [5]. Der Bundesregierung wird nachdrücklich empfohlen, eine Wissenschaftlichkeit bei der Evaluation von vorhandenen Gesetzen auch auf andere Bereiche auszuweiten.
+
+\newpage
+Referenzen:
+\begin{enumerate}[{[}1{]}]
+    \item Referentenentwurf zum WissZeitVG 2023: \url{https://www.bmftr.bund.de/SharedDocs/Downloads/DE/gesetze/befr_Arbeitsvertraege_Wissenschaft_WissZeit_VG/referentenentwurf/RefEntwurf_WissZeitVG_2023.pdf?__blob=publicationFile&v=4}
+    \item Stellungnahme des fzs vom 29.05.2026: \url{https://www.fzs.de/2026/05/29/wisszeitvg-novelle-bundesregierung-drueckt-sich-vor-echten-reformen/}
+    \item DPG Studierenden Statistik 2023: \url{https://www.dpg-physik.de/veroeffentlichungen/magazine-und-online-angebote/pj/studierendenstatistiken/studierendenstatistik-2023?set_language=en}
+    \item DFG Pressemitteilung vom 31.03.2021:\url{https://www.dfg.de/de/service/presse/pressemitteilungen/2021/pressemitteilung-nr-09}
+    \item Positionspapier der ZaPF zum Entwurf zur Reform des Wissenschaftszeitvertragsgesetzes 2024: \url{https://zapfev.de/resolutionen/wise24/WissZeitVG/PosPa_WissZeitVG.pdf}
+    \item Resolution der ZaPF zur Schaffung permanenter Stellen im wissenschaftlichen Mittelbau 2017: \url{https://zapfev.de/resolutionen/sose17/mittelbau/mittelbau.pdf}
+    \item Resolution der ZaPF zur Novellierung des WissZeitVG 2022: \url{https://zapfev.de/resolutionen/wise22/WissZeitVG/Resolution_zur_Novellierung_des_WissZeitVG.pdf}
+\end{enumerate}
+    
+
+
+\vspace{1cm} 
+%
+\vfill
+\begin{flushright}
+	Verabschiedet am 15.06.2026 \\
+\end{flushright}
+
+\end{document}
