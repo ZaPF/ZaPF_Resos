@@ -1,0 +1,183 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+%\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{url}
+%\usepackage{tocloft}             % Paket für Table of Contents
+\def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
+\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
+\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-}%
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+%\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+%\usepackage[scale=0.8,colorspec=0.9]{draftwatermark} % Wasserzeichen ``Entwurf''
+%\SetWatermarkText{Vorbehaltlich\\redaktioneller\\Änderungen}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{blue}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+%###############
+\initcomment{Philipp}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+\begin{document}
+
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+	\vspace{-1.8cm}
+	\includegraphics[width=80pt]{logos/logo.pdf}
+	\centering
+	\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \huge{Resolution: Kuba Solidarität}
+  \vspace{.25\baselineskip}
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+%%%% Metadaten %%%%
+
+%\paragraph{Adressierte:}  FZS, Fachschaften, Presse, ÖH
+ 
+%\paragraph{Antragstellende:} Rasmus Nr.: 148 , Stefan Nr.: 150 (Köln), Bastian Nr.: 092, Julius Nr.: 001
+
+%%%% Text des Antrages zur veröffentlichung %%%%
+
+
+%\section*{Antragstext}
+Im Februar diesen Jahres hat die US-Regierung unter Trump die bereits über sechs Jahrzehnte anhaltende, völkerrechtswidrige Blockade gegen Kuba weiter verschärft. Die Lieferung von Öl zur Insel wird seitdem durch Sanktionsdrohungen gegen liefernde Staaten von der USA vollständig unterbunden. Bereits vor der Verschärfung hatte die Blockade enorme wirtschaftliche, soziale, gesundheitliche und bildungspolitische 
+Folgen für das kubanische Volk. \\
+
+Nun ist mit der Ölblockade eine schwere Energie- und Versorgungskrise eingetreten und eine humanitäre Katastrophe droht. Bereits zum zweiten Mal in kürzester Zeit war die Insel von einem landesweiten Stromausfall betroffen, bei dem unter anderem Krankenhauspatienten aufgrund des Ausfalls von 
+Beatmungsgeräten erstickt sind. Ohne Energie kommt es zu Problemen beim Kühlen von Lebensmitteln und Medikamenten sowie der Telefon- und Internetverbindung. Aufgrund des Kraftstoffmangels ist eine Müllentsorgung nur eingeschränkt möglich. Der Unterricht an Schulen und Universitäten fällt aus.\\
+
+Als ZaPF sehen wir uns angehalten, gegen diese Aggression durch die Vereinigten Staaten auf Kuba Stellung zu beziehen. Nicht nur, weil die Blockade einen eklatanten Verstoß gegen das Völker- und Menschenrecht darstellt und somit im Sinne von Artikel 25 des Grundgesetzes jeden 
+%evtl. und jede? 
+etwas angeht. Wir beziehen Stellung, weil mit dieser Aggression auch konkret gegen die Errungenschaften, die auf Kuba bereits erreicht wurden und welche wir als ZaPF noch erstreiten müssen, vorgegangen wird.
+Dazu gehört ein für alle kostenfreies Bildungssystem, welchem eine hohe gesellschaftliche Priorisierung verliehen wird.\\
+
+Hierzu einige Auszüge aus dem Länderbericht des Deutschen Akademischen Austauschdienstes [1]:
+\glqq Vom Kindergarten bis zur Promotion ist die Nutzung von Bildungseinrichtungen für Kubanerinnen und Kubaner nach wie vor kostenfrei. Einem humanistischen Bildungsideal folgend wird der Zugang zu Bildung 
+als Menschenrecht angesehen, das keiner Kommerzialisierung unterliegen darf. Mit knapp 13 Prozent des BIP investiert der kubanische Staat laut Angaben der Weltbank so viel in Bildung, wie sonst kein anderes Land weltweit. […] Kuba [ist] das einzige Land in Lateinamerika, das die Ziele des UNESCO-Programms 
+\glqq Education for All\grqq erreicht hat.\grqq \\
+
+Im Gegensatz dazu heißt es im Beschluss des BVerfG vom 23.09.2024 [2]:
+\glqq Das Recht der Hochschulzugangsberechtigten […] auf gleiche Teilhabe am staatlichen Studienangebot […], umfasst aber kein Recht auf staatliche Leistungen zur Beseitigung von den gesellschaftlichen Verhältnissen geschuldeten Hindernissen für den Zugang zum Studium.\grqq \\
+
+Zudem übernimmt Kuba als Ausdruck gelebter internationaler Solidarität neben der Ausbildung seiner eigenen Bevölkerung Verantwortung für die Verbreitung von Bildung an diejenigen, denen sie sonst verwehrt bliebe:\\
+
+\glqq Laut UNESCO zählte Kuba lange zu den Top 5-Zielländern der mobilen Studierenden aus Lateinamerika und der Karibik. Aktuell kommen die meisten ausländischen Studierenden in Kuba v.a. aus Afrika: 1. Südafrika, 2. Kongo, 3. Angola, 4. Kolumbien und 5. Namibia.\grqq [1] Ein aktuelles Beispiel ist die Solidarität mit der palästinensischen Bevölkerung inmitten einer Situation in der laut der Untersuchungskommission des UN Menschenrechtsrats ein Genozid an dieser stattfindet [3]: hunderten palästinensischen Studierenden wurde bereits die kostenfreie ärztliche Ausbildung an der Lateinamerikanischen Hochschule 
+für Medizin ermöglicht, sodass sie ihre Mitmenschen vor Ort in Gaza und dem Westjordanland versorgen können.\\
+
+Wissenschaft ist ein inhärent kooperatives und internationales Unterfangen. Somit stellt die Blockade Kubas nicht nur einen Angriff auf die kubanische Bevölkerung dar, sondern wendet sich auch gegen die Avantgarde einer internationalistischen Wissenschaftsausrichtung.\\
+
+Wir als ZaPF sehen es als notwendig an, die Errungenschaften Kubas im Bereich der Bildung und Wissenschaft zu verbreiten, damit alle von dem lernen können was die US-Regierung bekämpft.\\
+
+[1] \url{https://www.daad.de/de/laenderinformationen/amerika/kuba/ueberblick-bildung-und-wissenschaft/}
+
+[2] \url{https://bundesverfassungsgericht.de/SharedDocs/Entscheidungen/DE/2024/09/ls20240923_1bvl000921.html}
+
+[3] \url{https://www.ohchr.org/sites/default/files/documents/hrbodies/hrcouncil/sessions-regular/session60/advance-version/a-hrc-60-crp-3.pdf}
+
+%\section*{Begründung}
+% Begründung
+
+\vspace{1cm} 
+%
+\vfill
+\begin{flushright}
+	Verabschiedet am 17. Mai 2026 \\
+	auf der ZaPF in Göttingen.
+\end{flushright}
+
+\end{document}

@@ -1,0 +1,174 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+%\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{url}
+%\usepackage{tocloft}             % Paket für Table of Contents
+\def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
+\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
+\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-}%
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+%\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+%\usepackage[scale=0.8,colorspec=0.9]{draftwatermark} % Wasserzeichen ``Entwurf''
+%\SetWatermarkText{Vorbehaltlich\\redaktioneller\\Änderungen}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{blue}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+%###############
+\initcomment{Philipp}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+\begin{document}
+
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+	\vspace{-1.8cm}
+	\includegraphics[width=80pt]{logos/logo.pdf}
+	\centering
+	\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \huge{Anschluss zur Resolution \glqq zum Vorschlag zur Änderung des Behindertengleichstellungsgesetzes (BGG) der Bundesregierung\grqq der 72. BuFaTaChemie}
+  \vspace{.25\baselineskip}
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+%%%% Metadaten %%%%
+
+%\paragraph{Adressierte: BuFaTaChemie} 
+ 
+%\paragraph{Antragstellende: Jojo, Nr.: 198, Uni Potsdam; Edgar, Nr.: 024, HUB; Leo, 011, FUB} 
+
+%%%% Text des Antrages zur veröffentlichung %%%%
+
+
+%\section*{Antragstext}
+Die ZaPF schließt sich der Resolution \glqq zum Vorschlag zur Änderung des Behindertengleichstellungsgesetzes (BGG) der Bundesregierung\grqq{} der 72. BuFaTaChemie an.\\
+
+\textbf{Text der Resolution}
+
+Wir, die 72. BuFaTaChemie, haben vom 13.05.2026 - 17.05.2026 getagt und beziehen im Folgendem Stellung zum Vorschlag der Bundesregierung für die Reform des Behindertengleichstellungsgesetz (\href{https://dserver.bundestag.de/btd/21/051/2105140.pdf}{21/5140}), im folgendem BGG abgekürzt. Dies ist notwendig, da wir als Studierendenvertretungen auch behinderte Studierende vertreten, welche nach Artikel 24 der UN-Behindertenrechtskonvention ein Recht auf Bildung haben.
+
+Der Vorschlag der Bundesregierung ist als mangelhaft zu werten, unter anderem aufgrund folgender
+Ausführungen:
+
+\begin{enumerate}
+	\item Im Gesetzesvorschlag wird vermehrt von individuellen Maßnahmen und Anpassungen gesprochen. Dadurch werden viele Aufgaben an die Betroffenen übergeben, welche bereits viel Eigenverantwortung tragen müssen. Der Gesetzesentwurf spricht von 16\% Menschen mit Behinderung in Deutschland. Zusätzlich zu dieser hohen Zahl ist Behinderung die einzige Form von Marginalisierung, die größtenteils erst im Laufe des Lebens erworben wird, womit potenziell alle betroffen sind. Damit sind strukturelle Maßnahmen dringend notwendig und Einzelfalllösungen unzureichend.
+	\item Wir kritisieren den Fokus auf wirtschaftliche Interessen privater Unternehmer*innen, welche genutzt werden, um fehlende Barrierefreiheit zu rechtfertigen.
+	\item Bauliche Anpassungen zu Gebäuden des Bundes müssen bis 2045 umgesetzt werden. Ebenso besagt das Gesetz, dass diese bei unangemessener wirtschaftlicher Belastung in Einzelfällen auch nicht umgesetzt werden müssen. Sowohl der zeitliche Rahmen als auch die Ausnahmeregelung sind für Betroffene untragbar.
+	\item Eine unangemessene wirtschaftliche Belastung der privaten Unternehmen ist im BGG nicht genau genug definiert. Eine exakte Definition muss dringend ergänzt werden.
+	\item  Maßnahmen zur Beseitigung von Barrieren sind für behinderte Menschen existenziell wichtig und sollten daher immer zumutbar sein.
+	\item Das einzurichtende Zentrum für Leichte Sprache und Gebärdensprache sollte Menschen aus den entsprechenden betroffenen Personengruppen verpflichtend als Mitarbeitende einstellen, um Bedarfe und Wirksamkeit besser einschätzen zu können und Barrieren wirksamer zu beseitigen.
+	\item Der Gesetzesentwurf ermöglicht keine Konsequenzen im Zuge einer Benachteiligung durch private Unternehmen. Es sollte konkretisiert werden, dass Schadensersatz und Beseitigungen von Benachteiligungen durch andere gesetzliche Regelungen erwirkt werden können.
+\end{enumerate}
+
+Die Studierbarkeit ist für Behinderte nicht nur von inneruniversitären Umständen abhängig, sondern auch von zugänglicher Infrastruktur und der allgemeinen Lebensqualität. Deshalb fordern wir eine eingehende Überarbeitung des Vorschlags zur Änderung des BGGs, unter Berücksichtigung der Empfehlungen der Behindertenverbände, welche folgend zu finden ist.
+
+\href{https://diefachverbaende.de/files/stellungnahmen/20251205_Stellungnahme_Die_Fachverbaende_BGG.pdf}{Stellungnahme der Fachverbände}
+
+
+
+%\section*{Begründung}
+% Wird im Plenum gegeben.
+
+\vspace{1cm} 
+%
+\vfill
+\begin{flushright}
+	Verabschiedet am 16. Mai 2026 \\
+	auf der ZaPF in Göttingen.
+\end{flushright}
+
+\end{document}

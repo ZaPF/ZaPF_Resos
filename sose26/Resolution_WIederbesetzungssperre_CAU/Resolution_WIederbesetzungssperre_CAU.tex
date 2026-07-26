@@ -1,0 +1,237 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+%\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{xurl}
+%\usepackage{tocloft}             % Paket für Table of Contents
+\def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
+\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
+\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-}%
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+%\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{blue}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+%###############
+\initcomment{Philipp}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+\begin{document}
+
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+	\vspace{-1.8cm}
+	\includegraphics[width=80pt]{logos/logo.pdf}
+	\centering
+	\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \huge{Resolution gegen die Wiederbesetzungssperre an der 
+CAU zu Kiel}
+  \vspace{.25\baselineskip}
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+%%%% Metadaten %%%%
+
+%\paragraph{Adressierte:} Präsidium CAU, Dekanate CAU, Stadt Kiel, Samet Yilmaz (Bürgermeister Kiel), Fraktionen Landtag Schleswig-Holstein, Parteien in Schleswig Holstein, Landesastenkonferenz SH, Bildungsministerium Schleswig-Holstein, Bundesministerium für Bildung (BMBFSFJ), StuPa, Fachschaftsverteiler CAU, NDR, Kieler Nachrichten, Der Albrecht (Studentische Zeitung der CAU), andere Bufatas, MeTaFa, GEW 
+ 
+%\paragraph{Antragstellende:} leon Nr. 147 Kiel
+
+%%%% Text des Antrages zur veröffentlichung %%%%
+
+
+%\section*{Antragstext}
+Das Präsidium der Christian-Albrechts-Universität zu Kiel hat am 25.02.2026, bis auf Widerruf, eine 
+neunmonatige Wiederbesetzungssperre verordnet und begründet dies mit den Kürzungen in der 
+Grundfinanzierung, die in den Ziel- und Leistungsvereinbarungen mit dem Land Schleswig-Holstein 
+beschlossen wurden. Die Folge: Die desolaten Zustände des Universitätshaushalts werden bestärkt, die 
+Auswirkungen auf den Lehr- und Forschungsbetrieb an der Universität sind fatal. Gleichzeitig strebt die 
+Universität Kiel einen Exzellenzstatus an.
+
+Bereits am 20.04.2026 äußerte sich der AStA der CAU zu Kiel zu 
+diesem Fahrplan: \glqq Exzellenz darf nicht unter Bedingungen erzwungen werden, die strukturelle 
+Unterfinanzierung fortschreiben oder verschärfen.\grqq [1] 
+
+Die Zusammenkunft aller Physik-Fachschaften (ZaPF) spricht sich hiermit gegen die oben genannte Wiederbesetzungssperre aus. Diese ist ein weiteres Symptom der chronischen Unterfinanzierung der 
+Hochschulen in Schleswig-Holstein, aus welcher bereits die Einführung des Verwaltungskostenbeitrags 
+resultierte. Beide Instrumente der Kosteneinsparung haben erhebliche negative Auswirkungen auf 
+Studium und Lehre, weshalb sich die ZaPF bereits im Sommer 2025 gegen den Verwaltungskostenbeitrag 
+positionierte [2,3]. Mit der Wiederbesetzungssperre wird erneut versucht, Unterfinanzierung von Bildung 
+in Schleswig-Holstein auf Kosten der Studierenden auszugleichen. 
+
+Aufgrund dieser Sperre bleiben vakante und frei werdende Stellen für mindestens neun Monate personell 
+unbesetzt, ohne die Möglichkeit einer temporären Vertretung und ohne eine nachhaltige Kompensierung. 
+Die Wiederbesetzungssperre wird durch das amtierende Präsidium der Christian-Albrechts-Universität zu 
+Kiel als alternativlos dargestellt, ohne dass andere Lösungen transparent diskutiert oder weitere 
+Perspektiven einbezogen wurden. Dasselbe Präsidium versicherte den Studierenden die Stabilisierung der 
+finanziellen Lage der Universität bereits mit der Einführung des Verwaltungskostenbeitrags ab dem 
+Sommersemester 2026, welche offensichtlich nicht zur erhofften Stabilität führte. Nun, durch das 
+Beschließen der Wiederbesetzungssperre, kommt es zu erneuter Verunsicherung der gesamten 
+Studierendenschaft und großer Teile der universitären Belegschaft.
+Zum aktuellen Zeitpunkt schließt die Wiederbesetzungssperre explizit alle denkbaren Vertretungen für 
+vakante Positionen, z. B. aufgrund von Elternzeit oder Langzeiterkrankungen, aus [4]. Dies hat zur 
+Konsequenz, dass die Einstellung und Förderung von ohnehin schon vulnerablen und benachteiligten 
+Personengruppen noch unattraktiver wird. Dies widerspricht jeglichen Diversitätskonzepten und 
+Gleichstellungsgrundsätzen [5] und verschärft zudem die bestehenden Ungleichheiten zwischen 
+Statusgruppen, Karrierephasen und Lebenssituationen.
+
+Die Wiederbesetzungssperre führt des Weiteren zu enormen Einschnitten in Studium und Lehre. Insbesondere in Studiengängen mit hoher Auslastung hat eine Verringerung des Lehrpersonals durch eine 
+Verschlechterung des Betreuungsverhältnisses und erhöhte Belastung des verbliebenen Personals direkte 
+negative Auswirkungen auf Lehrqualität und Studiendauer. In MINT Studiengängen ist eine intensive 
+Betreuung für Labore, Übungen und Abschlussarbeiten unverzichtbar. Wie eine Studierbarkeit und 
+Planungssicherheit für Studierende auch zukünftig abgesichert werden soll, wird auch auf Nachfrage nicht 
+erklärt. Die grundlegende Sicherstellung der Lehre und die Erhaltung der jetzt schon bedenklichen und 
+instabilen Lehrqualität stellen für das Präsidium keinen ausreichenden Grund zur Ausnahme der Sperre dar.
+
+Die Physik-Bachelor Studiengänge der CAU drohen bereits ab dem kommenden Wintersemester zwischen 
+Pflichtmodulen priorisieren zu müssen, womit einige Pflichtmodule für ein ganzes Jahr oder länger 
+gänzlich ausfallen könnten.
+
+Dies liegt daran, dass zwei der drei vorgesehen Professuren für theoretische Physik in den nächsten 
+beiden Semestern vakant werden. 
+
+Folglich ist es nicht möglich, alle Pflichtveranstaltungen anzubieten, welche angeboten werden müssen, 
+um einen Abschluss in Regelstudienzeit zu gewährleisten. Mangelnde Lehre, Reduzierung der Abschlussmöglichkeiten und Verlust finanzieller Absicherung sind absehbare Folgen für BAföG Beziehende, 
+StipendiantInnen, Auslandsstudierende, Menschen in Care-Arbeit und anderer benachteiligter 
+Personengruppen. Die Physik-Master Studiengänge der CAU drohen, im Bereich der Wahlmodule so weit 
+eingeschränkt zu werden, dass bestimmte Fachbereiche nicht mehr als Spezialisierungsmöglichkeit zur 
+Verfügung stehen. Die CAU ist die einzige Ausbildungsstätte für Physik-Gymnasial-Lehrkräfte in Schleswig
+Holstein. Der Studienstandort wird im bundesweiten Vergleich durch eine unzureichende Absicherung der 
+Lehre und drohende Unstudierbarkeit in Regelstudienzeit keine neuen potenziellen Lehrkräfte anwerben 
+können. Eine Ausfinanzierung der Lehre an Hochschulen ist somit eine direkte Grundvoraussetzung, um 
+dem Lehrkräftemangel in Schleswig-Holstein entgegenzuwirken. 
+
+Als Zusammenkunft aller Physik-Fachschaften fordern wir das Präsidium der CAU und die Landesregierung 
+auf, ihre Verantwortung gegenüber der Studierendenschaft und der Gesamtgesellschaft wahrzunehmen, 
+um die Lehrqualität und die Studierbarkeit sicher zu stellen. 
+
+Wir fordern die sofortige Aufhebung der Wiederbesetzungssperre.
+Mindestens aber:
+\begin{itemize}
+    \item Keine Wiederbesetzungssperre für Lehre, Mutterschutz- und Elternzeitvertretungen, Langzeiterkrankungen und stark ausgelastete Studiengänge.
+    \item Schutz vulnerabler Studierendengruppen vor Studienzeitverlängerung und finanziellen Folgen.
+    \item Besonderer Schutz für personal- und betreuungsintensive Bereiche wie Laborlehre und Praktika sowie stark betroffene Institute.
+    \item Eine transparente Offenlegung, welche Alternativen geprüft und warum sie verworfen wurden.
+    \item Keine Sparmaßnahmen mit Priorisierung zwischen Lehrinhalten, getragen von studentischen Gebühren oder Überlastungen auf Schultern der Studierenden und Mitarbeitenden.
+    \item Eine nachhaltige Finanzierung der Hochschulen durch das Land Schleswig-Holstein, die die Lehre, Forschung und Arbeit nicht einschränkt
+\end{itemize}
+Eine Universität, die nach Exzellenz strebt, aber gleichzeitig in grundlegender Sicherstellung der Bildung 
+scheitert, kann keine Spitzenforschenden von Morgen hervorbringen. Hin auf die Landtagswahl 2027 sind alle gefordert, für einen prinzipiellen Richtungswechsel und 
+die Rücknahme aller Kürzungen einzutreten.\\
+
+\textbf{Quellen}
+
+[1] Instagrampost \glqq Stellungnahme der Studierendenschaft zum Exellenzverfahren\grqq: \url{https://www.instagram.com/p/DXW343OFqJ6/ 20.04.2026}
+
+[2] Resolution \glqq Verwaltungsgebühren in Schleswig-Holstein verhindern\grqq: \url{https://zapfev.de/resolutionen/sose25/Verwaltungsgebuehren/Resolution_Verwaltungsgebuehren_in_Schleswig-Holstein_verhindern.pdf}
+
+[3] Resolution \glqq Verwaltungsgebühren an Hochschulen\grqq: \url{https://zapfev.de/resolutionen/sose25/Verwaltungsgebuehren/Resolution_Verwaltungsgebuehren_an_Hochschulen.pdf}
+
+[4] Verweise internes FAQ: CAU Wiederbesetzungssperre vom 3.3.26: \url{https://www.uni-kiel.de/de/insights/inhaltsseiten/2026/019-wiederbesetzungssperre und Widerbesetzungssperre vom 1.4.26: https://www.unikiel.de/de/insights/detailansicht/news/aktuelle-hinweise-zur-wiederbesetzungssperre-ausnahmen}
+
+[5] Ziel- und Leistungsvereinbarungen 2025, Kapitel Gleichstellung: \url{https://www.schleswig-holstein.de/DE/fachinhalte/H/hochschulreform/Downloads/CAU_EZV.pdf?__blob=publicationFile&v=3}
+%\section*{Begründung}
+% An der Christian-Albrechts-Universität zu Kiel wurde im Frühjahr 2026 eine universitätsweite Wiederbesetzungssperre beschlossen. Hintergrund sind nach Darstellung des CAU-Präsidiums massive Kürzungen in der Grundfinanzierung nach Abschluss der Ziel- und Leistungsvereinbarungen mit dem Land Schleswig-Holstein für die Jahre 2026 bis 2029 sowie gleichzeitig steigende Betriebskosten. Um kurzfristig Personalkosten zu reduzieren, sollen freiwerdende Stellen zunächst für neun Monate nicht wiederbesetzt werden. Auch vakante Professuren sowie temporäre Vakanzen, etwa durch Elternzeit oder Langzeiterkrankungen, sollen grundsätzlich nicht vertreten werden. Dies wird zu Einschränkungen in der Lehre führen, die die Studierbarkeit von Studiengängen in Regelstudienzeit gefährden.
+
+\vspace{1cm} 
+%
+\vfill
+\begin{flushright}
+	Verabschiedet am 17. Mai 2026 \\
+	auf der ZaPF in Göttingen.
+\end{flushright}
+
+\end{document}

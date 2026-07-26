@@ -1,0 +1,258 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+%\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{xurl}
+%\usepackage{tocloft}             % Paket für Table of Contents
+\def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
+\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
+\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-}%
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+%\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+%\usepackage[scale=0.8,colorspec=0.9]{draftwatermark} % Wasserzeichen ``Entwurf''
+%\SetWatermarkText{Vorbehaltlich\\redaktioneller\\Änderungen}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{blue}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+%###############
+\initcomment{Philipp}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+\begin{document}
+
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+	\vspace{-1.8cm}
+	\includegraphics[width=80pt]{logos/logo.pdf}
+	\centering
+	\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \LARGE{ Anschluss an die \glqq Stellungnahme der Psychologie
+Fachschaften-Konferenz e.V., des Forums für 
+Psychotherapeut*innen in Weiterbildung und des 
+PiA-Politik-Treffens zu den Honorarkürzungen in der 
+ambulanten Psychotherapie\grqq}
+  \vspace{.25\baselineskip}
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+%%%% Metadaten %%%%
+
+%\paragraph{Adressierte:} Gesundheitsministerien, Dr. Andreas Gassen, Nina Warken, PsyFaKo GKV-Spitzenverband, Gemeinsamer Bewertungsausschuss der GKV und kassenanärtzlichen Vereinigung 
+
+%\paragraph{Antragstellende:} Jojo (Potsdam)
+
+%%%% Text des Antrages zur veröffentlichung %%%%
+
+
+%\section*{Antragstext}
+Da Studierende deutlich häufiger von Angst- und depressiven Störungen betroffen sind
+als die Gesamtbevölkerung [1], ist ein zugängliches und umfassendes psychotherapeutisches Angebot von 
+großer Bedeutung. Die ZaPF solidarisiert sich mit den ambulant tätigen Psychotherapeut*innen und 
+unterstützt die Forderungen der Stellungnahme des Psychologie-Fachschaften-Konferenz e.V. (PsyFaKo), 
+des Forums für Psychotherapeut*innen in Weiterbildung (PtW-Forum) und des PiA-Politik-Treffens (PPT) zu 
+den Honorarkürzungen in der ambulanten Psychotherapie [2].\\
+
+\textbf{Quellen}
+
+$[1]$ Eissler, C. et al. Psychische Gesundheit und Belastung bei Studierenden. Präv Gesundheitsf15, 242–249 
+(2020). \url{https://doi.org/10.1007/s11553-019-00746-z}
+
+$[2]$ \url{https://psyfako.org/wp-content/uploads/2026-03-24-Stellungnahme-Honorarkurzungen.pdf}
+\newpage
+\textbf{Text der Stellungnahme}
+
+Sehr geehrte Frau Warken,
+
+sehr geehrte Damen und Herren,
+
+die Psychologie-Fachschaften-Konferenz (PsyFaKo), das PiA-Politik-Treffen (PPT) und das Forum für 
+Psychotherapeut*innen in Weiterbildung (PtW-Forum) vertreten die Interessen der 
+Psychologiestudierenden und der Psychotherapeut*innen in Aus- und Weiterbildung. Als 
+psychotherapeutischer Nachwuchs möchten wir gemeinsam zu dem Beschluss des Erweiterten 
+Bewertungsausschusses vom 11.03.2026, die Vergütung psychotherapeutischer Leistungen zum 01.04.2026 abzusenken, Stellung beziehen
+
+Der Erweiterte Bewertungsausschuss hat auf Betreiben des Spitzenverbandes der gesetzlichen 
+Krankenkassen (GKV-SV) beschlossen, die Vergütung für ambulante Leistungen zum 1. April 2026 um 4,5 % 
+abzusenken. Gleichzeitig wird der Strukturzuschlag um 14,25 % erhöht. Da die Erhöhung des 
+Strukturzuschlags die geringere Vergütung der Therapiestunden nicht ausgleicht, führt dies für 
+Psychotherapeut*innen dennoch zu einer Absenkung der Einnahmen. Für eine voll ausgelastete 
+psychotherapeutische Praxis beträgt die Reduktion der Vergütung ca. 2,8\% [1].
+
+Wir halten die Abwertung der Honorare für ein falsches Signal und sprechen uns entschieden dagegen 
+aus. Hierzu möchten wir auf die zahlreichen Stellungnahmen der Psychotherapeutenkammern, der 
+Kassenärztlichen Vereinigungen und der psychotherapeutischen Fach- und Berufsverbände verweisen. Besonders betonen möchten wir jedoch an dieser Stelle die negativen Auswirkungen auf den psychotherapeutischen Nachwuchs und die Konsequenzen für die Aus- und Weiterbildung. 
+
+Die Absenkung der Honorare betrifft nicht nur die bereits niedergelassenen Psychotherapeut*innen, 
+sondern auch den psychotherapeutischen Nachwuchs. Der Weg in den psychotherapeutischen Beruf ist 
+lang und mit erheblichen finanziellen Belastungen verbunden. Die Ausbildungsbedingungen für 
+Psychotherapeut*innen in Ausbildung (PiA) sind vielfach prekär. Die hohen Ausbildungskosten (u.a. 
+Theorie, Supervision und Selbsterfahrung) werden von den PiA zu einem großen Teil durch die im Rahmen 
+der Ausbildung geleisteten ambulanten Behandlungsstunden finanziert. Sinken die Honorare dafür, droht 
+eine erhebliche Verschlechterung der ohnehin schon unzumutbaren finanziellen Situation der PiA.
+
+Die Reform des Psychotherapeutengesetzes, das am 1. September 2020 in Kraft trat, hatte das 
+ausdrückliche Ziel, die Weiterbildung auf eine neue Grundlage zu stellen. Fast sechs Jahre nach 
+Inkrafttreten dieser Reform existieren im ambulanten Bereich nach wie vor kaum strukturell gesicherte 
+Weiterbildungsstellen. Die Vergütung der geleisteten Behandlungsstunden reicht auch heute nicht aus, 
+um diese Stellen nachhaltig zu finanzieren. Eine weitere Absenkung würde die Unterfinanzierung 
+verschärfen und die Schaffung einer bedarfsgerechten Anzahl angemessen vergüteter 
+Weiterbildungsstellen weiterhin verunmöglichen.
+
+Die vorgesehene Kürzung trifft damit nicht nur die niedergelassenen Psychotherapeut*innen, sondern 
+direkt die Weiterbildungsmöglichkeiten, auf die die nächste Generation von Psychotherapeut*innen 
+angewiesen ist. Sie sendet ein fatales Signal an den psychotherapeutischen Nachwuchs und gefährdet die 
+langfristige Sicherstellung der psychotherapeutischen Versorgung in Deutschland.
+
+Neben den direkten finanziellen Konsequenzen für Therapeut*innen setzt die Kürzung auch ein fatales 
+Zeichen gegenüber den Patient*innen: Der weiterhin steigende Bedarf nach qualifizierter 
+psychotherapeutischer Versorgung wird schon heute durch das vorhandene psychotherapeutische 
+Angebot nur unzureichend gedeckt, was sich in langen Wartezeiten äußert [2]. Die vorgesehene 
+Honorarkürzung zeigt den geringen Stellenwert, der psychischer Gesundheit im Vergleich zur somatischen 
+Medizin zugemessen wird. Die Kürzung betrifft dabei ausgerechnet die Gruppe der Psychotherapeut*innen, die unter allen vertragsärztlichen Fachgruppen ohnehin schon die niedrigsten 
+Erträge erwirtschaftet [3]. Hinweisen möchten wir an dieser Stelle auch auf den Aspekt, dass es sich bei 
+den Psychotherapeut*innen zugleich auch um die Fachgruppe mit dem höchsten Frauenanteil handelt. 
+Unter anderem aufgrund einer nach wie vor gesellschaftlich ungleichen Verteilung von Care-Arbeit und 
+familiären Verpflichtungen haben Frauen im Durchschnitt häufiger reduzierte Praxisumfänge. Sie 
+profitieren damit im Vergleich zu ihren männlichen Kollegen weniger stark von der Erhöhung der 
+Strukturzuschläge und sind somit von den Honorarkürzungen noch stärker betroffen. 
+
+Ärztliche und psychologische Psychotherapeut*innen durchlaufen einen langen und aufwändigen 
+Ausbildungsweg und leisten unerlässliche Arbeit in der Diagnostik, Behandlung und Prävention 
+psychischer Krankheiten und in der Begleitung von Menschen in akuten Krisensituationen. Nicht nur 
+gegenüber den niedergelassenen Psychotherapeut*innen und dem psychotherapeutischen Nachwuchs, 
+sondern auch gegenüber den Patient*innen signalisiert diese Entscheidung eine Geringschätzung des 
+Wertes psychischer Gesundheit und der Bedeutung psychotherapeutischer Arbeit. Wir wollen 
+Patient*innen behandeln und einen Beitrag zur Gesundheitsversorgung in Deutschland leisten, doch ohne 
+eine angemessene Vergütung unserer Arbeit und eine strukturell gesicherte Aus- und Weiterbildung wird 
+dies verunmöglicht
+
+Wir fordern Sie als Bundesministerin für Gesundheit daher auf, den Beschluss des Erweiterten 
+Bewertungsausschusses zu beanstanden und bitten Sie, sich für eine grundlegende zeitgemäße 
+Anpassung der Vergütungssystematik für Psychotherapie einzusetzen\\
+
+Mit freundlichen Grüßen
+
+PsyFaKo e.V.    \quad PtW-Forum  \quad  PiA-Politik-Treffen
+
+\textit{Die Psychologie-Fachschaften-Konferenz (PsyFaKo e.V.) ist die Interessensvertretung aller 
+Psychologiestudierenden im deutschsprachigen Raum.}
+
+\textit{Das Forum für Psychotherapeut*innen in Weiterbildung (PtW-Forum) setzt sich bundesweit für die Interes
+sen der (zukünftigen) Psychotherapeut*innen in Weiterbildung ein.}
+
+\textit{Das PiA-Politik-Treffen (PPT) vertritt die Psychotherapeut*innen in Ausbildung (PiA) und engagiert sich für 
+eine Verbesserung der Ausbildungsqualität und der Ausbildungsbedingungen der PiA.}\\
+
+\textbf{Literatur}
+
+[1] Stellungnahme der Bundespsychotherapeutenkammer vom 12.03.2026:
+\url{https://www.bptk.de/pressemitteilungen/absenkung-der-psychotherapeutischen-honorareinakzeptabel/}
+
+[2] Stellungnahme der Bundespsychotherapeutenkammer vom 09.12.2022: \url{https://www.bptk.de/pressemitteilungen/psychisch-kranke-warten-142-tage-auf-eine psychotherapeutische-behandlung/}
+
+[3] Zentralinstitut für die kassenärztliche Versorgung (Zi): Zi-Praxis-Panel (ZiPP) (18.12.2024) \url{https://www.zi.de/fileadmin/Downloads/Themen/Praxis-Befragungen/Veroeffentlichungen/Jahresberichte/ZiPP_Jahresbericht_2023.pdf}
+%\section*{Begründung}
+% Die ZaPF vertritt zahlreiche Studis, die Bedarf auf einen Psychotherapieplatz haben. Kürzungen von Honoraren führt am Ende zu weniger Menschen, die Psychotherapeutika sein können, und damit zu weniger Angebot in einem System was eh schon völlig überlastet ist. Das Thema Mental Health gibt es regelmäßig auf der ZaPF und Psychotherapie ist ein wichtiges Angebot im Bereich mentale Gesundheit.
+
+\vspace{1cm} 
+%
+\vfill
+\begin{flushright}
+	Verabschiedet am 16. Mai 2026 \\
+	auf der ZaPF in Göttingen.
+\end{flushright}
+\end{document}

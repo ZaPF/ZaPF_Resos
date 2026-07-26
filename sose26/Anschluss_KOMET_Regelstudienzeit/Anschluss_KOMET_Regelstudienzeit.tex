@@ -1,0 +1,172 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+%\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{url}
+%\usepackage{tocloft}             % Paket für Table of Contents
+\def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
+\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
+\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-}%
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+%\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+%\usepackage[scale=0.8,colorspec=0.9]{draftwatermark} % Wasserzeichen ``Entwurf''
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{blue}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+%###############
+\initcomment{Philipp}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+\begin{document}
+
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+	\vspace{-1.8cm}
+	\includegraphics[width=80pt]{logos/logo.pdf}
+	\centering
+	\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \huge{Anschluss an die \glqq Resolution zur Regelstudienzeit\grqq der 
+KOMET}
+  \vspace{.25\baselineskip}
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+%%%% Metadaten %%%%
+
+%\paragraph{Adressierte:} KOMET
+
+
+%\paragraph{Antragstellende:} Sophie Nr.: 018, Katrin Nr.: 065 (Darmstadt)
+
+%%%% Text des Antrages zur veröffentlichung %%%%
+
+
+%\section*{Antragstext}
+Die ZaPF schließt sich der \href{https://die-komet.org/resolutionen/}{Resolution zur Regelstudienzeit} der 5. KOMET an und unterstützt die dort 
+genannten Forderungen. \\
+
+\textbf{Text der Resolution}
+
+In Anlehnung an die Resolution der 45,5. Konferenz der Informatikfachschaften \href{https://wiki.kif.rocks/w/index.php?title=KIF455:Statistiken_zur_Studiendauer}{\glqq Statistiken zur 
+Studiendauer\grqq} und der Resolution der 46. Konferenz der Informatikfachschaften \href{https://wiki.kif.rocks/wiki/KIF460:Resolutionen/Anpassung_BAf%C3%B6G_an_reale_Lebens-_und_Studienverh%C3%A4ltnisse}{\glqq Anpassung BAföG an 
+reale Lebens- und Studienverhältnisse\grqq} merkt die 5. Konferenz der Medizintechnikfachschaften an, dass 
+der Begriff der Regelstudienzeit irreführend ist. In der Realität beträgt die durchschnittliche Studiendauer 
+an den meisten Hochschulen länger als die festgelegte Regelstudienzeit. Fälschlicherweise wird der 
+Begriff der Regelstudienzeit als vorgeschriebene Studiendauer interpretiert, dadurch entsteht eine 
+falsche Erwartungshaltung prospektiver Studierender sowie fördernder Ämter.\\
+Die 5. Konferenz der Medizintechnikfachschaften fordert:\\
+\begin{enumerate}
+    \item Die staatlichen und staatlich anerkannten Hochschulen sollen Transparenz schaffen, indem sie 
+Statistiken zur durchschnittlichen Studiendauer der angebotenen Studiengänge offenlegen. 
+\item Der Gesetzgeber soll diese veröffentlichten Statistiken bei der individuellen Förderung der Ausbildung 
+(Bundesausbildungsförderungsgesetz – BAföG) als Referenz berücksichtigen.
+\end{enumerate}
+
+
+
+
+%\section*{Begründung}
+% Wir schließen uns der Ansicht an, dass der Begriff Regelstudienzeit irreführend ist, da gerade in der Physik die reale Studiendauer länger als die angegebene Regelstudienzeit ist. Dies führt auch bei uns zu falschen Erwartungshaltungen der Studiumseinsteiger:innen und im späteren Studienverlauf zu Komplikationen mit dem BAföG-Amt. Wir denken, dass die Angabe der durchschnittlichen Studiendauer in der Physik sehr viel aussagekräftiger und hilfreicher für Menschen ist, die überlegen, Physik zu studieren. Außerdem können mit aussagekräftigen Statistiken zur Studiendauer zukünftige Maßnahmen, bspw. zur Abschafffung der Regelstudienzeit, besser unterstüzt werden.
+\vspace{1cm} 
+%
+\vfill
+\begin{flushright}
+	Verabschiedet am 16. Mai 2026 \\
+	auf der ZaPF in Göttingen.
+\end{flushright}
+
+\end{document}

@@ -1,0 +1,173 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+%\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{xurl}
+%\usepackage{tocloft}             % Paket für Table of Contents
+\def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
+\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
+\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-}%
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+%\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+%\usepackage[scale=0.8,colorspec=0.9]{draftwatermark} % Wasserzeichen ``Entwurf''
+%\SetWatermarkText{Vorbehaltlich\\redaktioneller\\Änderungen}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{blue}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+%###############
+\initcomment{Philipp}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+\begin{document}
+
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+	\vspace{-1.8cm}
+	\includegraphics[width=80pt]{logos/logo.pdf}
+	\centering
+	\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \huge{Resolution zur geplanten Änderung des Niedersächsischen Hochschulgesetzes}
+  \vspace{.25\baselineskip}
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+%%%% Metadaten %%%%
+
+%\paragraph{Adressierte: Nds. Landesregierung (B90/Die Grünen Niedersachsen, SPD Niedersachsen), deren Jugendgruppen (JUSOS Niedersachsen, Grüne Jugend Niedersachsen)/Hochschulgruppen (jusohochschulgruppen Niedersachsen, Campus Grün Niedersachsen, Grüne Hochschulgruppe Göttingen), nds. Kultusministerium} 
+ 
+%\paragraph{Antragstellende: Jorim; Nr.: 224} 
+
+%%%% Text des Antrages zur veröffentlichung %%%%
+
+
+%\section*{Antragstext}
+Wie bereits zu den Gesetzesentwürfen in Berlin und NRW, die das sogenannte \enquote{Ordnungsrecht} in die
+entsprechenden Hochschulgesetze einfügen, lehnt die ZaPF auch
+gleichartige Änderungen im Niedersächsischen Hochschulgesetz (NHG) ab [1][2][3].
+
+Daher fordert die ZaPF, dass im NHG keine parallelen quasi-gerichtlichen Strukturen an Hochschulen geschaffen und keine hochschulübergreifende Sperrfrist einführt werden.
+
+Der Verlust von hochschulinternen Kontrollmechanismen durch die Änderungen im Paragraphen zur Abwahl von Präsidiumsmitgliedern stellt eine Schwächung der akademischen Selbstverwaltung dar.
+Insbesondere ist sie eine starke Reduktion der studentischen Stimme in den höchsten Ebenen der Universitäten. Auch dies lehnt die ZaPF ab und fordert einen Erhalt der bestehenden Regelung.
+Eine detaillierte Diskussion der einzelnen Änderungsvorschläge hat das Studierendenparlament der Universität Göttingen in ihrer
+\glqq Resolution der Studierendenschaft der Universität Göttingen zur geplanten Änderung des
+Niedersächsischen Hochschulgesetzes\grqq [4]
+erarbeitet.
+Dieser Resolution wollen wir hiermit noch einmal Nachdruck verleihen und uns anschließen.\\
+
+\textbf{Quellen}
+
+[1] \url{https://zapfev.de/resolutionen/sose24/Ordnungsrecht/Reso\_Ordnungsrecht.pdf}
+
+[2] \url{https://zapfev.de/resolutionen/sose25/Hochschulgesetze/Resolution\_NRW\_Hochschulgesetz.pdf}
+
+[3] \url{https://www.landtag-niedersachsen.de/Drucksachen/Drucksachen\_19\_10000/09501-10000/19-09621.pdf}
+
+[4] \url{https://asta.uni-goettingen.de/wp-content/uploads/2026/03/ResolutionNHGNovelle.pdf}
+
+%\section*{Begründung}
+% In der Novelle sollen das "Ordnungsrecht", also mehr möglichkeiten zur Exmatrikulation aufgrund von "Störungen des Hochschulbetriebs" o.Ä., eingeführt werden, sowie das Abwählen von Präsidiumsmitgliedern schwieriger gemacht werden. Insbesondere mit dem Ordnungsrecht hat sich die ZaPF schon viel beschäftigt und sich klar dagegen Positioniert.
+
+\vspace{1cm} 
+%
+\vfill
+\begin{flushright}
+	Verabschiedet am 17. Mai 2026 \\
+	auf der ZaPF in Göttingen.
+\end{flushright}
+
+\end{document}

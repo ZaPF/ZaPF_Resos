@@ -1,0 +1,248 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+%\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{xurl}
+%\usepackage{tocloft}             % Paket für Table of Contents
+\def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
+\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
+\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-}%
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+%\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+%\usepackage[scale=0.8,colorspec=0.9]{draftwatermark} % Wasserzeichen ``Entwurf''
+%\SetWatermarkText{Vorbehaltlich\\redaktioneller\\Änderungen}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{blue}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+%###############
+\initcomment{Philipp}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+\begin{document}
+
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+	\vspace{-1.8cm}
+	\includegraphics[width=80pt]{logos/logo.pdf}
+	\centering
+	\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \huge{Anschluss an die Resolution "`Hohe Mieten"' der KIF}
+  \vspace{.25\baselineskip}
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+%%%% Metadaten %%%%
+
+%\paragraph{Adressierte:} 
+%Adressatika:
+
+ %Bundesministerium für Wohnen, Stadtentwicklung und Bauwesen; Deutsches
+ %Studierendenwerk;
+
+ %Deutsche Wohnen & Co enteignen; Hamburg Enteignet
+
+ %-----
+ 
+%\paragraph{Antragstellende:} 
+
+%%%% Text des Antrages zur veröffentlichung %%%%
+
+
+%\section*{Antragstext}
+
+Die ZaPF schließt sich der Resolution \href{https://wiki.kif.rocks/wiki/KIF535:Resolutionen/Hohe_Mieten}{\glqq Hohe Mieten \grqq} der 53,5. Konferenz
+der deutschsprachigen Informatikfachschaften an.\\
+
+\textbf{Text der Resolution:}
+
+ Die 53,5. Konferenz der deutschsprachigen Informatikfachschaften fordert bessere
+ Bedingungen für Studierenden in Bezug auf Wohnen. Wie auch der freie zusammenschluss
+ von student*innenschaften (fzs) in ihren Stellungnahmen[1] [2] darstellt, sehen wir
+ ebenfalls deutliche Probleme in der Bildungsgerechtigkeit durch die prekäre
+ Wohnungslage,[3] trotz Förderprogramme des Bundesministeriums für Wohnen,
+ Stadtentwicklung und Bauwesen (BMWSB) wie beispielsweise \glqq Junges Wohnen\grqq.
+
+ Unsere Forderungen für einen gleichberechtigten Zugang zu Bildung durch die
+ Sicherstellung von bezahlbaren Wohnungen sind:
+
+\begin{enumerate}
+    \item Die Vergabe von Förderungen an Privatunternehmen an höhere Bedingungen zu knüpfen, wie beispielsweise eine längere Sozialbindung.
+    \item Mehr Unterstützungen für nicht-kommerzielle Wohnungsanbieter, wie selbstverwaltete Wohnheime und Wohnungsgenossenschaften.
+    \item Eine Schärfung der Mietpreisbremse, um Mietsteigerungen effektiver zu begrenzen.
+    \item Kostendeckende, ortsangepasste Wohnkostenzuschüsse im BAföG sowie ein für Studierende geöffnetes Wohngeld.
+    \item Maßnahmen zu ergreifen, um den Leerstand von Wohnungen zu reduzieren.
+    \item Anregungen zu schaffen, geeignete Immobilien WG-tauglich umzubauen.
+    \item Volksentscheide zur Vergesellschaftung oder Enteignung, wie im Grundgesetz verankert,[4] konsequent umsetzen.
+\end{enumerate}
+
+ Darüber hinaus fordern wir Vermietende auf, bei der Vergabe von Wohnungen auf die
+ Bedürfnisse von sozial Benachteiligten zu achten.\\
+
+ \textbf{Begründung:}
+
+ Wohnen ist ein Grundbedürfnis und ist alternativlos. Aufgrund der steigenden
+ Nachfrage,[5] des hohen Leerstands[6] und des stagnierenden Wohnungsbaus, sowie der
+ Tatsache, dass zu wenige Studierende in Wohnheimen untergebracht werden können,
+ entsteht ein Machtgefälle zwischen Studierenden und Vermietenden bei der
+ Wohnungssuche. Da insbesondere Studierende häufig umziehen[7] und sich Mieten bei
+ Mietendenwechseln besonders stark erhöhen, ergibt sich eine überdurchschnittliche
+ finanzielle Belastung bei Studierenden.[8]
+
+ Studierende müssen viele Faktoren beachten, die ihre Standortwahl beeinflussen. Unter
+ anderem sind nicht alle Studiengänge überall zu finden. In größeren Städten sind die
+ Mieten deutlich höher als im ländlichen Raum. Eine gute Anbindung mit öffentlichen
+ Verkehrsmitteln ist für Studierende ohne Auto eine Grundvoraussetzung. Dadurch bleibt
+ oft nur die Möglichkeit, in die jeweilige Stadt zu ziehen.
+
+ Die Mehrheit beim Volksentscheid \glqq Deutsche Wohnen \& Co enteignen\grqq in Berlin 2021
+ zeigt, dass viele Menschen unzufrieden mit der aktuellen Wohnungslage sind.[9]
+ Vergesellschaftungen von gewinnorientierten Unternehmen können dabei eine Option
+ sein, da so keine Profite mit den Mieten finanziert werden müssen.[10]
+
+ Notfall-Maßnahmen wie \glqq UniSofa\grqq des AStA der Universität Oldenburg[11] begrüßen wir,
+ sind aber nur temporäre Symptomlinderung.\\
+
+ \textbf{Quellen}
+
+ [1] \url{ https://www.fzs.de/wp-content/uploads/2023/04/Stellungnahme_studentische-Beduerfnisse-beim-Thema-wohnen.pdf}
+
+
+ [2] \url{https://www.fzs.de/2025/09/30/pressemitteilung-semesterbeginn-in-der-turnhalle-studentisches-wohnen-steckt-weiter-in-der-krise-trotz-wg-garantie-im-koalitionsvertrag/}
+ 
+
+ [3] \url{https://www.tagesschau.de/inland/wohnen-studierende-auszubildende-100.html}
+
+ [4] \url{https://www.gesetze-im-internet.de/gg/art_14.html}, und
+ \url{https://www.gesetze-im-internet.de/gg/art_15.html}
+
+ [5] \url{https://www.studierendenwerke.de/fileadmin/user_upload/_230327_DSW_Wohnen22_web.pdf}
+
+ [6] \url{https://www.bpb.de/kurz-knapp/hintergrund-aktuell/559435/mangel-an-wohnraum/#node-content-title-3}
+
+ [7] \url{https://pwiweb.uzh.ch/wordpress/blog/2017/12/17/13917/}
+
+ [8] \url{ https://www.bmftr.bund.de/SharedDocs/Publikationen/DE/4/31790_22_Sozialerhebung_2021.pdf?__blob=publicationFile&v=6}
+
+
+ [9] \url{https://www.spiegel.de/wirtschaft/soziales/volksentscheid-in-berlin-werden-die-wohnungskonzerne-jetzt-wirklich-enteignet-a-52576f31-6771-4ce8-bbd3-9f6d91de272e}
+ 
+
+ [10] \url{https://dwenteignen.de/argumente}
+
+ [11] \url{https://www.instagram.com/p/DOvkXjADE1L/}
+
+
+
+
+
+%\section*{Begründung}
+% Begründung
+
+%%%%Quellen
+%\begin{thebibliography}{99}
+    %\bibitem{1} Test
+%\end{thebibliography}
+
+\vspace{1cm} 
+%
+\vfill
+\begin{flushright}
+	Verabschiedet am 16. Mai 2026 \\
+	auf der ZaPF in Göttingen.
+\end{flushright}
+
+\end{document}

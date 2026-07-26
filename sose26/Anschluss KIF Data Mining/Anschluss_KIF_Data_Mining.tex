@@ -1,0 +1,197 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+%\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{xurl}
+%\usepackage{tocloft}             % Paket für Table of Contents
+\def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
+\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
+\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-}%
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+%\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+%\usepackage[scale=0.8,colorspec=0.9]{draftwatermark} % Wasserzeichen ``Entwurf''
+%\SetWatermarkText{Vorbehaltlich\\redaktioneller\\Änderungen}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{blue}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+%###############
+\initcomment{Philipp}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+\begin{document}
+
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+	\vspace{-1.8cm}
+	\includegraphics[width=80pt]{logos/logo.pdf}
+	\centering
+	\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \huge{Anschluss an die Resolution \glqq Data Mining der Bevölkerung\grqq der KIF}
+  \vspace{.25\baselineskip}
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+%%%% Metadaten %%%%
+
+%\paragraph{Adressierte: Innenministerien der Bundes- und Landesregierungen, parlamentarische Kontrollgremien von Bund und Ländern, DPolG, GdP, KIF} 
+ 
+%\paragraph{Antragstellende: Fritz Nr.: 010, Leo Nr.: 011} 
+
+%%%% Text des Antrages zur veröffentlichung %%%%
+
+
+%\section*{Antragstext}
+Die ZaPF schließt sich der Resolution \href{https://wiki.kif.rocks/wiki/KIF535:Resolutionen/Data_Mining_der_Bev%C3%B6lkerung}{\glqq Data Mining der Bevölkerung\grqq} von der 53,5. Konferenz der deutschsprachigen Informatikfachschaften an.\\
+
+\textbf{Text der Resolution}
+
+Die 53,5. Konferenz der deutschsprachigen Informatikfachschaften fordert die Bundes- und Landesregierungen auf, zum Zwecke der Strafverfolgung, Verfolgung von Ordnungswidrigkeiten oder Gefahrenabwehr auf die Verwendung von Werkzeugen zu verzichten, welche präemptiv personenbezogene Daten der allgemeinen Bevölkerung zusammenführen und/oder automatisiert auswerten.
+
+Insbesondere soll hierfür keine EU-externe, proprietäre Software verwendet werden und keine Auswertung dieser Daten mittels KI, oder anderweitiger automatisiert, stattfinden. Die 53,5. Konferenz der deutschsprachigen Informatikfachschaften fordert, bestehende Verträge zur Nutzung derartiger Software zu kündigen und keine Ausnahmeregelungen zu schaffen, welche die Nutzung von Software dieser Art für einzelne Behörden erlauben.
+
+Die Nutzung dieser Werkzeuge ist ein Einschnitt in die Privatsphäre aller Bürger*innen und schränkt verfassungsrechtlich geschützte Freiheiten ein.\cite{freiheitsrechteArtikel} Derlei Einschränkungen wurden bereits durch das BVerfG als verfassungswidrig erklärt.\cite{Bundesverfassungsgericht}
+
+Weiterhin führt die präemptive Nutzung dieser Werkzeuge dazu, dass jedes Mitglied der Bevölkerung als potentielle Straftäter behandelt wird. Die Nutzung dieser Tools – auch zu Testzwecken – mit Daten der Allgemeinbevölkerung entspricht daher einer Zweckentfremdung personenbezogener Daten.\cite{netzpolitikArtikel}
+
+Die Sicherheit polizeilicher Daten ist leider nicht gewährleistet. So sind bereits in mehreren Bundesländern Daten marginalisierter und gefährdeter Personen aus Polizeidatenbanken an Rechtsextremisten abgeflossen.\cite{datenabfragePolizei} \cite{netzpolitikAbfragePolizei} Das Verhindern der Zweckentfremdung der gesammelten Daten, zum Beispiel zur Verfolgung gefährdeter Personengruppen, kann ebenfalls nicht garantiert werden. Eine weitere Zusammenführung von Daten verbessert daher nicht die Sicherheit der Bevölkerung, sondern bedroht diese.
+
+Die Nutzung von KI zur Auswertung solcher Daten kann die Leben von Personen, die fälschlicherweise verdächtigt wurden, negativ beeinflussen. Selbst bei einer niedrigen Falsch-Positiv-Rate würden übermäßig viele Unschuldige verdächtigt werden, da der Anteil von Kriminellen an der Allgemeinbevölkerung relativ gering ist.\cite{Statista}
+
+Weiterhin ist es unmöglich, vor nicht nachvollziehbaren Biases zu schützen, die dazu führen können, dass
+bestimmte Personengruppen übermäßig häufig verdächtigt werden.\cite{springer}
+
+\textbf{Nicht-EU-Software}
+
+Der Betrieb proprietärer nicht-europäisch entwickelter und gehosteter Software erhöht zusätzlich massivst die Gefahr eines Abflusses von sensiblen Daten aus der EU an unter anderem fremde Regierungen und Nachrichtendienste.\cite{Reuters} Dies ist insbesondere bei dieser Art von Software der Fall, da der Betrieb eine enge Kooperation mit den Entwickler*innen erfordert und die gesammelten Daten besonders wertvoll sind. Diese Möglichkeit unautorisierter Datenweitergabe ist ein kaum kontrollierbares sicherheitspolitisches Risiko. Entsprechend sollten Nicht-EU-Produkte vollständig gemieden werden.
+
+Insbesondere in Anbetracht des einflussreichen und demokratiefeindlichen Umfelds sowie den politischen Überzeugungen von Palantir-Gründer Peter Thiel halten wir den Einsatz von Palantir-Produkten für besonders problematisch. \cite{PeterThiel}
+
+\begin{thebibliography}{99}
+    %1
+    \bibitem{freiheitsrechteArtikel} \url{https://freiheitsrechte.org/ueber-die-gff/presse/pressemitteilungen-der-gesellschaft-fur-freiheitsrechte/blackbox-palantir-gff-erhebt-verfassungsbeschwerde-gegen-massenhafte-datenauswertung-durch-polizei-in-bayern}
+    %2
+    \bibitem{Bundesverfassungsgericht} \url{https://www.bundesverfassungsgericht.de/SharedDocs/Pressemitteilungen/DE/2023/bvg23-018.html?nn=148438}
+    %3
+    \bibitem{netzpolitikArtikel} \url{https://netzpolitik.org/2025/baden-wuerttemberg-gruene-geben-polizeidaten-fuer-palantir-frei/}
+    %4
+    \bibitem{datenabfragePolizei} \url{https://www.fr.de/rhein-main/nsu-mysterioese-datenabfragen-bei-der-polizei-91481033.html}
+    %5
+    \bibitem{netzpolitikAbfragePolizei} \url{https://netzpolitik.org/2023/datenabfragen-durch-afd-nahen-polizisten-keine-hoffnung-mehr-auf-weitere-aufklaerung/}
+    %6
+    \bibitem{Statista} \url{https://de.statista.com/statistik/daten/studie/3451/umfrage/entwicklung-der-haeufigkeitszahl-bekannt-gewordener-straftaten-seit-1980/}
+    %7
+    \bibitem{springer} \url{https://link.springer.com/article/10.1007/s00146-021-01192-2#Sec10}
+    %8
+    \bibitem{Reuters} \url{https://www.reuters.com/world/us/spy-agency-ducks-questions-about-back-doors-tech-products-2020-10-28/}
+    %9
+    \bibitem{PeterThiel} \url{https://press.farm/what-are-peter-thiels-political-beliefs}
+\end{thebibliography}
+
+
+
+%\section*{Begründung}
+% Begründung
+
+\vspace{1cm} 
+%
+\vfill
+\begin{flushright}
+	Verabschiedet am 16. Mai 2026 \\
+	auf der ZaPF in Göttingen.
+\end{flushright}
+
+\end{document}

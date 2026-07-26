@@ -1,0 +1,191 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+%\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{xurl}
+%\usepackage{tocloft}             % Paket für Table of Contents
+\def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
+\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
+\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-}%
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+%\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{blue}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+%###############
+\initcomment{Philipp}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+\begin{document}
+
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+	\vspace{-1.8cm}
+	\includegraphics[width=80pt]{logos/logo.pdf}
+	\centering
+	\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \huge{Resolution: NEIN zur Wehrpflicht}
+  \vspace{.25\baselineskip}
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+%%%% Metadaten %%%%
+
+%\paragraph{Adressierte:}  Bundeskanzler, Bundesverteidigungsminister, alle Bundestagsfraktionen
+ 
+%\paragraph{Antragstellende:} Sophie Nr.: 018, Merle Nr.: 181, Anton Nr.: 152, Michael Nr.: 064, Swamy Nr.: 020
+
+%%%% Text des Antrages zur veröffentlichung %%%%
+
+
+%\section*{Antragstext}
+Mit dem Wehrdienst-Modernisierungsgesetz und dem seit 1. Januar 2026 verpflichtenden Fragebogen, 
+sehen wir einen starken Einschnitt in die Freiheit und Selbstbestimmung junger Erwachsener, wie 
+beispielsweise Schüler*innen und Studierenden, sowie eine Vorbereitung zur Wiederaufnahme der 
+Wehrpflicht.
+
+Die junge Generation wird durch diesen Zwang dazu genötigt, den Interessenkonflikt der alten Generation 
+auszutragen und im Zuge dessen werden ihre politischen Interessen von Seiten der älteren Generation 
+und der Regierung übergangen.
+
+Ihnen wird durch den Aufzwang dieser \glqq gesellschaftlichen Verantwortung\grqq die Entscheidungsgewalt, sich 
+bewusst gegen eine Inkaufnahme, an der Front zu sterben und andere Menschen zu töten, zu entscheiden, 
+abgenommen. Dass junge Menschen diesen Zwang ablehnen, wird in den Schulstreiks gegen die 
+Wehrpflicht mehr als deutlich.
+
+Wir wollen kein Teil der fortschreitenden Militarisierung Deutschlands sein, welche ein Aufkochen 
+internationaler Spannungen anregt, und die Aufrüstungspolitik anderer Staaten und Akteur*innen befeuert.
+
+Die Entscheidung der Bundesregierung Aufrüstungspolitik zu betreiben, sehen wir als fatalen Fehler, da 
+Deutschland dadurch die Aufrüstungsspirale befeuert. Besonders unter dem Gesichtspunkt, dass 
+Deutschland der größte Militärinvestor in Europa ist - viertgrößter weltweit - und Partnerstaaten dazu 
+verleitet, diesem Negativbeispiel zu folgen.
+
+Ab 2027 soll fast ein Fünftel des gesamten Bundeshaushalts für den Wehretat ausgegeben werden, dieser 
+Betrag soll bis 2030 weiter steigen.
+
+Um diese Unsummen für die Rüstung zu finanzieren, werden Gelder in sämtlichen sozialen Bereichen und 
+der Bildung gekürzt. Diese Kürzungen werden uns maßgeblich betreffen und in unserem Werdegang 
+erheblich einschränken.
+Des Weiteren stufen wir die großangelegte Werbung für die Bundeswehr als kritisch ein, weil es die 
+Realität vom Krieg verzerrt.
+
+Dies, zusammen mit den neu gesetzten Anreizen für den Wehrdienst, nutzt besonders die 
+sozioökonomische Lage von Jugendlichen aus einkommensschwächeren Haushalten aus.
+
+Auch die Hürden, welche mit einer Verweigerung der Wehrpflicht verbunden sind, sind für diese Personengruppen spürbar höher. Damit wird die Frage des Dienstes zunehmend zu einer Frage der Klasse und die Bundeswehr zu einer Armee des Prekariats.
+
+Zudem diskriminiert § 9 SBGG Trans*-Personen, deren Selbstbestimmung in einem Spannungs-/
+Verteidigungsfall direkt eingeschränkt wird.
+
+Aus diesen Gründen fordern wir als ZaPF die Abschaffung des neuen Wehrdienst-Modernisierungsgesetzes, die Streichung des Artikels 12a (Wehrpflicht) aus dem Grundgesetz, sowie die 
+Streichung des § 9 SBGG (Zuordnung zum männlichen Geschlecht im Spannungs- und Verteidigungsfall).
+
+Zudem wollen wir uns mit „Schulstreik gegen Wehrpflicht“ solidarisieren. 
+
+%\section*{Begründung}
+% Wir sind gegen die Wehrpflicht und sprechen uns dagegen aus.
+
+\vspace{1cm} 
+%
+\vfill
+\begin{flushright}
+	Verabschiedet am 17. Mai 2026 \\
+	auf der ZaPF in Göttingen.
+\end{flushright}
+
+\end{document}

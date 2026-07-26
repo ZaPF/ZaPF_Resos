@@ -1,0 +1,188 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+%\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{xurl}
+%\usepackage{tocloft}             % Paket für Table of Contents
+\def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
+\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
+\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-}%
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+%\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+%\usepackage[scale=0.8,colorspec=0.9]{draftwatermark} % Wasserzeichen ``Entwurf''
+%\SetWatermarkText{Vorbehaltlich\\redaktioneller\\Änderungen}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{blue}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+%###############
+\initcomment{Philipp}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+\begin{document}
+
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+	\vspace{-1.8cm}
+	\includegraphics[width=80pt]{logos/logo.pdf}
+	\centering
+	\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \huge{Resolution gegen die Exzellenzstrategie des Bundes}
+  \vspace{.25\baselineskip}
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+%%%% Metadaten %%%%
+
+%\paragraph{Adressierte: Rektorate,Fachschaften, ASten, Sturas, GEW, fzs} 
+ 
+%\paragraph{Antragstellende: Rasmus Nr.: 148, Lisa Nr.: 168, Anton Nr.: 167, Christoph Nr.: 169, Annika Nr.: 154, Annemarie Nr.: 153, Leo Nr.: 011, Julius Nr.: 001, Stefan Nr.: 150} 
+
+%%%% Text des Antrages zur veröffentlichung %%%%
+
+
+%\section*{Antragstext}
+Anlässlich des laufenden Vergabeverfahrens der \glqq Exzellenz\grqq{}strategie mit Verkündung im Oktober äußert sich die ZaPF erneut kritisch zur \glqq Exzellenz\grqq{}strategie des Bundes und der Länder [1].
+
+Die \glqq Exzellenz\grqq{}strategie steht einer flächendeckenden Ausfinanzierung der Hochschulen entgegen. Sie fördert weiterhin Konkurrenz statt Solidarität zwischen verschiedenen, aber auch innerhalb von Hochschulen (s. Resolution zur \glqq Exzellenz\grqq{}initiative III [2]).
+
+Allgemein ist die \glqq Exzellenz\grqq{} allein kaum wirtschaftlich tragbar, insbesondere bei näherer Betrachtung, da die Gelder starke Abhängigkeiten schaffen:
+
+Sie selbst decken meist nur direkte Kosten; benötigte Infrastruktur und weitere Lohnkosten müssen die Hochschulen häufig selbst tragen. Jeder zusätzlich eingenommene Euro verursacht dazu bis zu 80 Cent Folgekosten [3].
+
+Nach dem Auslaufen der Gelder muss die Weiterfinanzierung auf Kosten der Grundmittel, aus denen auch die Lehre finanziert wird, erfolgen.
+
+Damit werden an den demokratischen Gremien vorbei viel mehr Grundmittel in Hinterzimmern dauerhaft umverteilt, als mit dem \glqq Exzellenz\grqq{}status einhergehen. Tatsächlich ist dies auch erklärtes Ziel aller von Bundesregierung und EU aufgelegte Drittmittelprojekte. Und obendrein verschlechtern sich die Kampfbedingungen der Hochschulen für eine ausreichende Bildungsfinanzierung.
+
+Es bleibt also nur, dem Drittmittelversprechen hinterherzulaufen und mithilfe des
+\glqq Exzellenz\grqq{}status weitere Drittmittel einzuwerben, was die Wissenschaftsfreiheit stückweise aushöhlt und exakt die gleichen Probleme mit sich bringt.
+
+In dem großen Konkurrenzkampf zwischen den Hochschulen um die Gelder und Status der \glqq Exzellenz\grqq priorisieren die Hochschulen die Ausgestaltung des Weges der \glqq Exzellenz\grqq{}begehung, statt den teils offensichtlich prekären Zustand der Gebäude zu verbessern. Dieses Schauspiel muss ebenfalls finanziert werden.
+
+Studierende werden instrumentalisiert, um für diese Inszenierung eines regelrechten Theaterstücks durch detaillierte Ablaufpläne Studierendenerfahrungen vorzutäuschen. Das zeigt, dass es sich weniger um Überzeugendes als um eine Schaumschlägerei bei Modethemen handelt.
+
+Für die Studierenden bringt die \glqq Exzellenz\grqq kaum Vorteile. Sie bezieht sich allein auf die Forschung, eine aktive Verbesserung der Lehre bringt sie allerdings nicht. Der allgemeine Vorteil für die Hochschulen ist ebenfalls unklar.
+
+Aus Erfahrungsberichten geht hervor, dass der \glqq Exzellenz\grqq{}status einer Hochschule den Anspruch der Lehrenden an die Studierenden im bundesweiten Vergleich erhöht, während die Qualität der Lehre unverändert bleibt.
+
+Es entsteht Konkurrenz statt Solidarität. Auch Wissenschaftler\*innen und Hochschulen kämpfen untereinander um limitierte Gelder, anstatt gemeinsam für eine dauerhaft ausreichende Grundfinanzierung einzutreten.
+
+Dies schadet nicht nur der wissenschaftlichen Kooperation, sondern teilt auch die Hochschulen in zwei Klassen auf.
+
+Daher fordert die ZaPF alle Hochschulleitungen, Fachschaften, ASten und andere Hochschulgruppen dazu auf, sich gegen die sogenannte \glqq Exzellenz\grqq{}initiative und für eine bedarfsdeckende Grundfinanzierung einzusetzen.\\
+
+\textbf{Quellen}
+
+[1] \url{https://www.exzellenzstrategie.de}
+
+[2] \url{https://zapf.wiki/Datei:ExIni_SoSe17.pdf}
+
+[3] Rektoratsbericht aus dem Kölner Senat von 2018
+
+%https://www.gew.de/presse/pressemitteilungen/detailseite/gew-exzellenzstrategie-die-verlierer-stehen-schon-fest
+
+%\section*{Begründung}
+% Begründung ist der Text.
+
+\vspace{1cm} 
+%
+\vfill
+\begin{flushright}
+	Verabschiedet am 17. Mai 2026 \\
+	auf der ZaPF in Göttingen.
+\end{flushright}
+
+\end{document}

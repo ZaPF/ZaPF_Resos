@@ -1,0 +1,212 @@
+\documentclass[DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[draft, markup=underlined]{changes}
+\usepackage{csquotes}
+\usepackage{eurosym}
+
+\usepackage{ulem}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{paralist}
+%\usepackage{fixltx2e}
+%\usepackage{ellipsis}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{lmodern}              % Ersatz fuer Computer Modern-Schriften
+%\usepackage{hfoldsty}
+
+%\usepackage{fourier}             % Schriftart
+\usepackage[scaled=0.81]{helvet}     % Schriftart
+
+\usepackage{xurl}
+%\usepackage{tocloft}             % Paket für Table of Contents
+\def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
+\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
+\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-}%
+
+\usepackage{xcolor}
+\definecolor{urlred}{HTML}{660000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+%\usepackage{mdwlist}     % Änderung der Zeilenabstände bei itemize und enumerate
+%\usepackage[scale=0.8,colorspec=0.9]{draftwatermark} % Wasserzeichen ``Entwurf''
+%\SetWatermarkText{Vorbehaltlich\\redaktioneller\\Änderungen}
+
+\parindent 0pt                 % Absatzeinrücken verhindern
+\parskip 12pt                 % Absätze durch Lücke trennen
+
+\setlength{\textheight}{23cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\cfoot{}
+\lfoot{Zusammenkunft aller Physik-Fachschaften}
+\rfoot{www.zapfev.de\\stapf@zapf.in}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\newcommand{\gen}{*innen}
+\addto{\captionsngerman}{\renewcommand{\refname}{Quellen}}
+
+%%%% Mit-TeXen Kommandoset
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xspace} 
+
+\newcommand{\replace}[2]{
+    \sout{\textcolor{blue}{#1}}~\textcolor{blue}{#2}}
+\newcommand{\delete}[1]{
+    \sout{\textcolor{red}{#1}}}
+\newcommand{\add}[1]{
+    \textcolor{blue}{#1}}
+
+\newif\ifcomments
+\commentsfalse
+%\commentstrue
+
+\newcommand{\red}[1]{{\ifcomments\color{red} {#1}\else{#1}\fi}\xspace}
+\newcommand{\blue}[1]{{\ifcomments\color{blue} {#1}\else{#1}\fi}\xspace}
+\newcommand{\green}[1]{{\ifcomments\color{green} {#1}\else{#1}\fi}\xspace}
+
+\newcommand{\repl}[2]{{\ifcomments{\color{red} \sout{#1}}{\color{blue} {\xspace #2}}\else{#2}\fi}}
+%\newcommand{\repl}[2]{{\color{red} \sout{#1}\xspace{\color{blue} {#2}}\else{#2}\fi}\xspace}
+
+\newcommand{\initcomment}[2]{%
+	\expandafter\newcommand\csname#1\endcsname{%
+		\def\thiscommentname{#1}%
+		\definecolor{col}{rgb}{#2}%
+		\def\thiscommentcolor{col}%
+}}
+
+% initcomment Name RGB-color
+%###############
+\initcomment{Philipp}{0, 0.5, 0}
+
+%\renewcommand{\comment}[1]{{\ifcomments{\color{red} {#1}}{}\fi}\xspace}
+
+\renewcommand{\comment}[2][\nobody]{
+	\ifdefined#1
+	{\ifcomments{#1 \expandafter\color{\thiscommentcolor}{\thiscommentname: #2}}{}\fi}\xspace
+	\else
+	{\ifcomments{\color{red} {#2}}{}\fi}\xspace
+	\fi
+}
+
+\newcommand{\zapf}{ZaPF\xspace}
+
+\let\oldgrqq=\grqq
+\def\grqq{\oldgrqq\xspace}
+
+\setlength{\parskip}{.6em}
+\setlength{\parindent}{0mm}
+
+%\usepackage{geometry}
+%\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=3.5cm}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+\begin{document}
+
+\hspace{0.87\textwidth}
+\begin{minipage}{120pt}
+	\vspace{-1.8cm}
+	\includegraphics[width=80pt]{logos/logo.pdf}
+	\centering
+	\small Zusammenkunft aller Physik-Fachschaften
+\end{minipage}
+
+\begin{center}
+  \huge{ Anschluss an die \glqq Stellungnahme der 71. BuFaTaChemie 
+zu der Stadtbildaussage von Bundeskanzler Friedrich Merz\grqq}
+  \vspace{.25\baselineskip}
+  \normalsize
+\end{center}
+\vspace{1cm}
+
+%%%% Metadaten %%%%
+
+%\paragraph{Adressierte:} 
+ 
+%\paragraph{Antragstellende:} 
+
+%%%% Text des Antrages zur veröffentlichung %%%%
+
+
+%\section*{Antragstext}
+Die ZaPF schließt sich der Stellungnahme der 71. BuFaTaChemie zu der Stadtbildaussage von Bundeskanzler Friedrich Merz an.\\
+
+\textbf{Text der Stellungnahme}
+
+Mit der Stadtbildaussage, die Bundeskanzler Friedrich Merz in der Fragerunde nach der Pressekonferenz 
+des 14.10.2025 getätigt und am 20. wie 21.10.2025 auch auf weiteren Pressekonferenzen noch einmal selbst 
+bestärkt hat,[1] zeigt er eine offen und unmissverständlich rassistische Haltung.
+
+Eine derart diskriminierende Einstellung spricht gegen die Grundsätze der Bundesrepublik und des Amtes, 
+welches er momentan bekleidet. Hiermit zeigt er der Öffentlichkeit, dass er dieser Position nicht würdig 
+ist.
+
+Als Studierendenvertretung sind Gleichberechtigung und Arbeit gegen Diskriminierung in unserem 
+Selbstverständnis verankert, weshalb wir keine andere Möglichkeit sehen, als uns zu diesen Aussagen zu 
+positionieren. Wir vertreten Studierende von Hochschulen im deutschsprachigen Raum, die sich durch 
+diese Aussage angegriffen und verletzt gefühlt haben, da sie nach Merz‘ Vorstellungen potenziell nicht in 
+sein  \glqq Stadtbild \grqq passen würden.
+
+Diese Formulierung, die eine ästhetisch uniforme Vorstellung der deutschen Bevölkerung suggeriert, 
+spricht Menschen aufgrund ihres Aussehens die Zugehörigkeit zu Deutschland ab. Eine solche 
+rassifizierende Form des Othering[2] ist im rechtskonservativen und rechtsextremen Diskurs nicht 
+unüblich und wirkt wie eine weitere Annäherung an die rechtspopulistischen Parolen der Partei 
+\glqq Alternative für Deutschland\grqq (AfD).
+
+Die Tatsache, dass Merz anscheinend eine spezifische Vorstellung über „deutsches Aussehen“ hat und 
+Menschen, die diesem nicht entsprechen eine Störung des Stadtbilds unterstellt, hat bereits dazu geführt, 
+dass die Kreisverbände der Partei „Bündnis 90/Die Grünen“ in Castrop-Rauxel und in Berlin 
+Friedrichshain-Kreuzberg wie auch die Kreisverbände der Partei „Die Linke“ in Bochum und Essen und 
+Einzelpersonen ihn wegen Volksverhetzung angezeigt haben.[3]
+
+Wir befinden uns in einem Land, dessen Stadtbilder durch Gastarbeiter*innen und ausländische 
+Vertragsarbeiter*innen geprägt und aktiv geformt wurden. Das Verwerfen dieser historischen Tatsache 
+kann als ein Versuch einer modernen fiktiven und revisionistischen \glqq deutschen \grqq Ethnogenese gewertet 
+werden und erschüttert uns zutiefst. Das Ziel, die Umfrageergebnisse der AfD zu halbieren, welches Merz 
+vor dieser Aussage formuliert hatte, sollte keineswegs durch die Übernahme rechtsextremer Rhetorik und 
+demokratiefeindlichen Gedankenguts erreicht werden.
+
+Wir als 71. BuFaTaChemie fordern von Bundeskanzler Friedrich Merz eine öffentlichkeitswirksame 
+Entschuldigung bei den durch ihn stereotypisierten marginalisierten Gruppen oder seinen Rücktritt, wenn 
+er sich weiterhin weigert, sein Fehlverhalten einzusehen.
+Des Weiteren fordern wir andere studentische Vertretungen dazu auf, sich dieser Stellungnahme anzuschließen.\\
+
+\textbf{Quellen}
+
+[1] vgl. Grasnick, B., Merz‘ Problem mit dem ,,Stadtbild‘‘. Analyse. Aussage des Kanzlers, Tagesschau24, 
+17.10.2025. \url{https://www.tagesschau.de/inland/innenpolitik/merz-stadtbild-migration-100.html}(Letzter
+Aufruf 01.11.2025), \\vgl. Pressekonferenz mit Bundeskanzler Friedrich Merz und dem Generalsekretär Dr. 
+Carsten Linnemann, Live-Übertragung am 20.10.2025, YouTube-Kanal der CDU, 20.10.2025. https://
+\url{www.youtube.com/watch?v=AjGX_ZmgOVg} (Letzter Aufruf 01.11.2025) \\vgl. „Ein besonders erfolgreiches Land 
+der Tüftler und der Innovation”. Pressekonferenz von Bundeskanzler Merz und Ministerpräsident 
+Kretschmann zum Antrittsbesuch in Baden-Württemberg, Mitschrift der Bundesregierung online, 
+21.10.2025. \url{https://www.bundeskanzler.de/bk-de/aktuelles/pressekonferenz-kanzler-badenwuerttemberg-2390358} (Letzter Aufruf 01.11.2025)
+
+[2] vgl. König, E., Othering. Grundbegriffe der politischen Bildung, Bundesausschuss Politische Bildung, 
+2022. \url{https://profession-politischebildung.de/grundlagen/grundbegriffe/othering}/(Letzter Aufruf 
+01.11.2025)
+
+[3] vgl. Sense, M., Volksverhetzung. Grüne in Castrop-Rauxel zeigen Bundeskanzler Merz an, WDR online, 
+22.10.2025. \url{https://www1.wdr.de/nachrichten/ruhrgebiet/gruene-castrop-anzeige-gegen-Merz-100.html}
+(Letzter Aufruf 01.11.2025) \\vgl. Klages, R., Update. Wegen „Stadtbild“-Aussagen. Kreuzberger Grüne stellen 
+Strafanzeige gegen Merz, Tagesspielgel online, 27.10.2025 \url{https://www.tagesspiegel.de/berlin/bezirke/friedrichshain-kreuzberg/wegen-stadtbild-aussagen-kreuzberger-grune-stellen-strafanzeige-gegenbundeskanzler-merz-14671055.html} (Letzter Aufruf 01.11.2025)
+
+%\section*{Begründung}
+% Begründung
+
+\vspace{1cm} 
+%
+\vfill
+\begin{flushright}
+	Verabschiedet am 16. Mai 2026 \\
+	auf der ZaPF in Göttingen.
+\end{flushright}
+
+\end{document}
